@@ -30,3 +30,21 @@
 .eq5e-aa-browser .aa-entry{display:flex;justify-content:space-between;gap:8px;align-items:flex-start;padding:8px;border-bottom:1px solid rgba(255,255,255,0.10)}
 .eq5e-aa-browser .aa-entry .meta{opacity:0.75;font-size:12px;margin-top:2px}
 .eq5e-aa-browser .aa-entry .prereq{margin-top:3px;font-size:12px;opacity:0.85}
+
+.eq5e-setup .notes{opacity:.8}
+.eq5e-setup .muted{opacity:.7;font-size:11px}
+.eq5e-setup fieldset{border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:10px;margin:10px 0}
+.eq5e-setup .checkbox{display:block;margin:6px 0}
+.eq5e-setup .checkbox.disabled{opacity:.55}
+.eq5e-setup .buttons{display:flex;gap:10px;margin:10px 0}
+.eq5e-setup .buttons button{flex:1}
+.eq5e-setup-log{max-height:220px;overflow:auto;padding:8px;border:1px solid rgba(255,255,255,0.12);border-radius:12px;background:rgba(0,0,0,0.2)}
+.eq5e-setup-log .line{font-family:monospace;font-size:12px;margin:2px 0;white-space:pre-wrap}
+
+.eq5e-setup .actor-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
+.eq5e-setup .actor{display:flex;align-items:center;gap:8px;padding:4px 6px;border:1px solid rgba(255,255,255,0.08);border-radius:10px}
+.eq5e-setup .actor .nm{flex:1}
+.eq5e-setup .actor .cls{opacity:.7;font-size:11px;text-transform:lowercase}
+
+.eq5e-setup .actor-row{display:grid;grid-template-columns:1fr 180px;gap:8px;align-items:center}
+.eq5e-setup .classSel{width:100%}

@@ -1,0 +1,66 @@
+<form class="eq5e-setup">
+  <p class="notes">
+    This wizard imports EQ5e content into <b>world compendiums</b> (safe to edit) while keeping system/module compendiums pristine.
+  </p>
+
+  <fieldset>
+    <legend>Core Imports</legend>
+    <label class="checkbox">
+      <input type="checkbox" name="importConditions" checked>
+      Import core Conditions into <code>world.eq5e-conditions</code>
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" name="importAAs" checked>
+      Ensure shared AA pack <code>world.eq5e-aa</code> and import AA definitions from selected class modules
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" name="importClasses" checked>
+      Import spells/disciplines/features from selected class modules into world packs
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Class Modules</legend>
+    <p class="notes">Only installed & enabled modules will import.</p>
+    {{#each classes as |c|}}
+      <label class="checkbox {{#unless c.installed}}disabled{{/unless}}">
+        <input type="checkbox" name="classes" value="{{c.module}}" {{#if c.installed}}checked{{else}}disabled{{/if}}>
+        {{c.name}} <span class="muted">({{c.module}})</span>
+      </label>
+    {{/each}}
+  </fieldset>
+
+
+<fieldset>
+  <legend>Apply to Actors</legend>
+  <label class="checkbox">
+    <input type="checkbox" name="applyToActors">
+    Apply imported class content directly onto selected character sheets (adds missing items; safe to rerun)
+  </label>
+
+  <div class="actor-grid">
+    {{#each actors as |a|}}
+  <div class="actor-row">
+    <label class="actor checkbox">
+      <input type="checkbox" name="actors" value="{{a.id}}">
+      <span class="nm">{{a.name}}</span>
+      <span class="cls">{{a.classId}}</span>
+    </label>
+    <select class="classSel" data-action="set-class" data-actor-id="{{a.id}}">
+      {{#each ../classOptions as |co|}}
+        <option value="{{co.id}}" {{#if (eq co.id a.classId)}}selected{{/if}}>{{co.label}}</option>
+      {{/each}}
+    </select>
+  </div>
+{{/each}}
+  </div>
+  <p class="notes muted">Tip: Make sure your character has <code>flags.eq5e.class.id</code> set (e.g., ranger, bard) so the wizard knows which class pack to apply.</p>
+</fieldset>
+
+  <div class="buttons">
+    <button type="button" data-action="run"><i class="fas fa-play"></i> Run Setup</button>
+    <button type="button" data-action="close"><i class="fas fa-xmark"></i> Close</button>
+  </div>
+
+  <div class="eq5e-setup-log"></div>
+</form>

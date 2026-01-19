@@ -2035,7 +2035,14 @@ Hooks.on("deleteActiveEffect", async (effect, _opts, _userId) => {
   }
 });
 
-Hooks.once("init", () => {
+Hooks.once("init", async () => {
+  try { Handlebars.registerHelper("eq", (a,b) => String(a) === String(b)); } catch (e) {}
+
+  try {
+    const sw = await import("./setup/setup-wizard.js");
+    sw.registerEQ5eSetupWizard();
+  } catch (e) { console.error("[EQ5E] setup wizard init failed", e); }
+
   console.log("[EQ5E] System init");
   game.eq5e = game.eq5e || {};
   game.eq5e.api = {

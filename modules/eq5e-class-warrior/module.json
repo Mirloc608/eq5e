@@ -25,8 +25,5 @@
   ],
   "media": {
     "icon": "assets/eq5e-class-warrior.png"
-  },
-  "url": "https://github.com/Mirloc608/EQ5e",
-  "manifest": "https://github.com/Mirloc608/EQ5e/raw/main/modules/eq5e-class-warrior/module.json",
-  "download": "https://github.com/Mirloc608/EQ5e/releases/latest/download/eq5e-class-warrior.zip"
+  }
 }

@@ -2,7 +2,7 @@
   "id": "eq5e",
   "title": "EverQuest 5e",
   "description": "EverQuest-inspired campaign system using D&D 5e as a guide.",
-  "version": "3.9.0-alpha",
+  "version": "3.9.3-alpha",
   "authors": [
     {
       "name": "David"
@@ -35,8 +35,5 @@
   },
   "media": {
     "icon": "assets/eq5e.png"
-  },
-  "url": "https://github.com/Mirloc608/EQ5e",
-  "manifest": "https://github.com/Mirloc608/EQ5e/raw/main/system/eq5e/system.json",
-  "download": "https://github.com/Mirloc608/EQ5e/releases/latest/download/eq5e.zip"
+  }
 }
