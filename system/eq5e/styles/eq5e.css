@@ -1,0 +1,32 @@
+
+.eq5e {
+  font-family: system-ui, sans-serif;
+}
+
+/* EQ5E Pet HUD controls */
+.eq5e-pet-controls .control-icon i { pointer-events: none; }
+
+.eq5e-pet-status { color: rgba(255,255,255,0.92); }
+.eq5e-pet-status i { opacity: 0.9; }
+
+.eq5e-pet-block { color: rgba(255,255,255,0.92); }
+
+/* AA Widget */
+.eq5e-aa-widget{margin:8px 0;padding:8px;border:1px solid rgba(255,255,255,0.14);border-radius:12px;background:rgba(0,0,0,0.18)}
+.eq5e-aa-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.eq5e-aa-head .title{font-weight:700}
+.eq5e-aa-row{display:flex;gap:8px;align-items:center;margin:4px 0}
+.eq5e-aa-row label{min-width:140px;opacity:0.85}
+.eq5e-aa-row select{flex:0 0 160px}
+.eq5e-aa-row .hint{opacity:0.7;font-size:12px}
+.eq5e-aa-browser .aa-entry{display:flex;justify-content:space-between;align-items:center;padding:6px;border-bottom:1px solid rgba(0,0,0,0.12)}
+.eq5e-aa-browser .aa-entry .meta{opacity:0.75;font-size:12px}
+.eq5e-aa-browser .aa-entry .buy{padding:3px 8px;border-radius:8px}
+
+/* AA Browser tabs */
+.eq5e-aa-browser .aa-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+.eq5e-aa-browser .aa-tab{padding:3px 8px;border-radius:999px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.06);cursor:pointer;font-size:12px}
+.eq5e-aa-browser .aa-tab.active{background:rgba(0,120,255,0.16);border-color:rgba(0,120,255,0.28)}
+.eq5e-aa-browser .aa-entry{display:flex;justify-content:space-between;gap:8px;align-items:flex-start;padding:8px;border-bottom:1px solid rgba(255,255,255,0.10)}
+.eq5e-aa-browser .aa-entry .meta{opacity:0.75;font-size:12px;margin-top:2px}
+.eq5e-aa-browser .aa-entry .prereq{margin-top:3px;font-size:12px;opacity:0.85}

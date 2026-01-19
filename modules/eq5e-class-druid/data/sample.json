@@ -1,0 +1,10 @@
+{
+  "name": "EQ5e Class: Druid Sample",
+  "type": "feature",
+  "flags": {
+    "eq5e": {
+      "template": true,
+      "module": "eq5e-class-druid"
+    }
+  }
+}

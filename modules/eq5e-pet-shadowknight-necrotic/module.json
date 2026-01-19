@@ -1,0 +1,42 @@
+{
+  "id": "eq5e-pet-shadowknight-necrotic",
+  "title": "EQ5e Shadowknight Pet: Necrotic (Minor)",
+  "description": "Minor necrotic/undead pet templates for Shadowknights (weaker than Necromancer pets).",
+  "version": "3.8.0-alpha",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "relationships": {
+    "requires": [
+      {
+        "id": "eq5e",
+        "type": "system"
+      },
+      {
+        "id": "eq5e-ai",
+        "type": "module"
+      },
+      {
+        "id": "eq5e-class-shadowknight",
+        "type": "module"
+      }
+    ],
+    "recommends": [
+      {
+        "id": "eq5e-pet-necro-undead",
+        "type": "module"
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "media": {
+    "icon": "assets/eq5e-pet-shadowknight-necrotic.png"
+  },
+  "url": "https://github.com/Mirloc608/EQ5e",
+  "manifest": "https://github.com/Mirloc608/EQ5e/raw/main/modules/eq5e-pet-shadowknight-necrotic/module.json",
+  "download": "https://github.com/Mirloc608/EQ5e/releases/latest/download/eq5e-pet-shadowknight-necrotic.zip"
+}

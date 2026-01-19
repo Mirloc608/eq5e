@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Brass Horn (Example)",
+    "type": "equipment",
+    "img": "icons/tools/instruments/horn-brass.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "bard": {
+          "instrument": "brass",
+          "instrumentMult": 1.0
+        },
+        "sourceId": "bard.inst.brass.1"
+      }
+    }
+  },
+  {
+    "name": "Lute (Example Strings)",
+    "type": "equipment",
+    "img": "icons/tools/instruments/lute-golden.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "bard": {
+          "instrument": "strings",
+          "instrumentMult": 1.0
+        },
+        "sourceId": "bard.inst.strings.1"
+      }
+    }
+  },
+  {
+    "name": "Hand Drum (Example Percussion)",
+    "type": "equipment",
+    "img": "icons/tools/instruments/drum-brown.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "bard": {
+          "instrument": "percussion",
+          "instrumentMult": 1.0
+        },
+        "sourceId": "bard.inst.perc.1"
+      }
+    }
+  }
+]

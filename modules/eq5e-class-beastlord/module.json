@@ -1,0 +1,33 @@
+{
+  "id": "eq5e-class-beastlord",
+  "title": "EQ5e Class: Beastlord",
+  "description": "EverQuest Beastlord class with warder pets, spells, and AA integration for EQ5e.",
+  "version": "3.7.1-alpha",
+  "authors": [
+    {
+      "name": "EQ5e Team"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "relationships": {
+    "requires": [
+      {
+        "id": "eq5e",
+        "type": "system"
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js",
+    "scripts/warder-ui.js"
+  ],
+  "styles": [
+    "styles/beastlord.css"
+  ],
+  "url": "https://github.com/Mirloc608/EQ5e",
+  "manifest": "https://github.com/Mirloc608/EQ5e/raw/main/modules/eq5e-class-beastlord/module.json",
+  "download": "https://github.com/Mirloc608/EQ5e/releases/latest/download/eq5e-class-beastlord.zip"
+}

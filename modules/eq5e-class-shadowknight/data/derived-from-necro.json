@@ -1,0 +1,17 @@
+[
+  {
+    "sourceSpellId": "necro.lifetap.1",
+    "potencyMult": 0.6,
+    "namePrefix": "SK "
+  },
+  {
+    "sourceSpellId": "necro.disease-dot.1",
+    "potencyMult": 0.6,
+    "namePrefix": "SK "
+  },
+  {
+    "sourceSpellId": "necro.terror-mez.1",
+    "potencyMult": 0.5,
+    "namePrefix": "SK "
+  }
+]

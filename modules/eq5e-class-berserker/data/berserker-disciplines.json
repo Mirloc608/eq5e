@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Frenzy Strike (Example)",
+    "type": "spell",
+    "img": "icons/skills/melee/strike-sword-double-red.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "bers.disc.frenzy.1",
+          "kind": "discipline",
+          "rangeFt": 5,
+          "manaCost": 0,
+          "priority": 80,
+          "damage": [
+            {
+              "formula": "1d8",
+              "type": "slashing",
+              "category": "weapon"
+            }
+          ],
+          "conditions": [],
+          "meta": {
+            "discipline": true,
+            "cooldownRounds": 2,
+            "requiresMelee": true,
+            "multiattack": 2,
+            "notes": "Two quick swings; deterministic multiattack example."
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Rampage (Example)",
+    "type": "spell",
+    "img": "icons/skills/melee/sword-swing-red.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "bers.disc.rampage.1",
+          "kind": "discipline",
+          "rangeFt": 5,
+          "manaCost": 0,
+          "priority": 70,
+          "damage": [
+            {
+              "formula": "1d10",
+              "type": "slashing",
+              "category": "weapon"
+            }
+          ],
+          "conditions": [],
+          "meta": {
+            "discipline": true,
+            "cooldownRounds": 4,
+            "requiresMelee": true,
+            "cleave": true,
+            "notes": "Extra hit against secondary target if available (future hook)."
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Blood Pact (Example)",
+    "type": "spell",
+    "img": "icons/magic/life/blood-drop-crystal-red.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "bers.disc.bloodpact.1",
+          "kind": "discipline",
+          "rangeFt": 5,
+          "manaCost": 0,
+          "priority": 60,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "discipline": true,
+            "cooldownRounds": 5,
+            "requiresMelee": true,
+            "selfBuff": true,
+            "durationRounds": 3
+          }
+        }
+      }
+    }
+  }
+]

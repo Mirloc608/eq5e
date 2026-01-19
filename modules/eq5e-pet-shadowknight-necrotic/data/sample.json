@@ -1,0 +1,24 @@
+{
+  "name": "Minor Necrotic Pet (Template)",
+  "type": "actor",
+  "flags": {
+    "eq5e": {
+      "template": true,
+      "module": "eq5e-pet-shadowknight-necrotic",
+      "pet": {
+        "role": "melee",
+        "ownerUuid": "Actor.<OWNER_UUID_HERE>"
+      },
+      "ai": {
+        "enabled": true,
+        "mode": "assist",
+        "allowSpells": false
+      },
+      "balance": {
+        "hpMult": 0.7,
+        "dmgMult": 0.7,
+        "threatMult": 0.8
+      }
+    }
+  }
+}

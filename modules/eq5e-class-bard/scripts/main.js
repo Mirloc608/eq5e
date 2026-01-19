@@ -1,0 +1,418 @@
+// EQ5e Bard module: generates a world compendium of Bard Songs (Items) deterministically.
+// Upsert key: flags.eq5e.spell.spellId
+
+const BARD_MODULE = "eq5e-class-bard";
+
+async function _fetchJSON(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(`Fetch failed ${res.status} for ${path}`);
+  return res.json();
+}
+
+function _modulePath(moduleId, rel) {
+  const mod = game.modules?.get(moduleId);
+  if (!mod) throw new Error(`Module not found: ${moduleId}`);
+  return `${mod.path}/${rel}`;
+}
+
+function _stableHash(obj) {
+  const s = JSON.stringify(obj);
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return (h >>> 0).toString(16);
+}
+
+async function ensureWorldPack({ key, label }) {
+  const existing = game.packs?.get(key);
+  if (existing) return existing;
+  if (!game.user.isGM) throw new Error("Only GM can create world compendiums.");
+  return CompendiumCollection.createCompendium({
+    label,
+    name: key.split(".")[1],
+    type: "Item",
+    package: "world"
+  });
+}
+
+async function upsertItems(pack, items) {
+  const existing = await pack.getDocuments();
+  const bySpellId = new Map();
+  for (const d of existing) {
+    const sid = d?.flags?.eq5e?.spell?.spellId;
+    if (sid) bySpellId.set(sid, d);
+  }
+
+  const toCreate = [];
+  const toUpdate = [];
+
+  for (const it of (items ?? [])) {
+    const sid = it?.flags?.eq5e?.spell?.spellId;
+    if (!sid) continue;
+    const doc = bySpellId.get(sid);
+    const h = _stableHash(it);
+
+    if (!doc) {
+      it.flags = it.flags ?? {};
+      it.flags.eq5e = it.flags.eq5e ?? {};
+      it.flags.eq5e.derivedHash = h;
+      toCreate.push(it);
+    } else {
+      const old = doc?.flags?.eq5e?.derivedHash;
+      if (old !== h) {
+        const upd = foundry.utils.duplicate(it);
+        upd._id = doc.id;
+        upd.flags = upd.flags ?? {};
+        upd.flags.eq5e = upd.flags.eq5e ?? {};
+        upd.flags.eq5e.derivedHash = h;
+        toUpdate.push(upd);
+      }
+    }
+  }
+
+  if (toCreate.length) await pack.documentClass.createDocuments(toCreate, { pack: pack.collection });
+  if (toUpdate.length) await pack.documentClass.updateDocuments(toUpdate, { pack: pack.collection });
+  return { created: toCreate.length, updated: toUpdate.length };
+}
+
+export async function generateBardSongsCompendium({
+  key = "world.eq5e-bard-songs",
+  label = "EQ5e Bard Songs"
+} = {}) {
+  const path = _modulePath(BARD_MODULE, "data/bard-songs.json");
+  const items = await _fetchJSON(path);
+  const pack = await ensureWorldPack({ key, label });
+  const res = await upsertItems(pack, items);
+  ui.notifications?.info(`EQ5E: Bard songs upserted: created ${res.created}, updated ${res.updated}.`);
+  return { ok: true, pack: pack.collection, ...res };
+}
+
+async function buildNowPlayingHTML(actor) {
+  const songs = actor?.flags?.eq5e?.songs ?? {};
+  const perf = songs.performance ?? {};
+  const active = Array.isArray(songs.active) ? songs.active : [];
+  const round = game.combat?.round ?? 0;
+
+  const nameForSpellId = (sid) => {
+    const it = actor.items?.find(i => i?.flags?.eq5e?.spell?.spellId === sid);
+    return it?.name ?? sid;
+  };
+
+  const currentId = perf.currentSpellId ?? null;
+  const currentName = currentId ? nameForSpellId(currentId) : "—";
+
+  
+const rows = (await Promise.all(active
+  .slice()
+  .sort((a,b) => (a.expiresRound ?? 0) - (b.expiresRound ?? 0))
+  .map(async (inst) => {
+    const sid = inst.spellId;
+    const nm = nameForSpellId(sid);
+    const grp = inst.group ?? "song";
+    const rem = Math.max(0, (inst.expiresRound ?? round) - round);
+
+    // Special clarity for pulsed mez songs (e.g., Lullaby)
+    let hint = "";
+    const item = actor.items?.find(i => i?.flags?.eq5e?.spell?.spellId === sid);
+    const sp = item?.flags?.eq5e?.spell ?? null;
+    const meta = sp?.meta ?? {};
+    const hasMez = Array.isArray(sp?.conditions) && sp.conditions.some(c => c?.id === "mezzed");
+    const pulsed = !!(meta?.pulseConditions || meta?.conditionPulse);
+    if (hasMez && pulsed && inst.targetUuid) {
+      try {
+        const tdoc = await fromUuid(inst.targetUuid);
+        const targ = (tdoc?.documentName === "Actor") ? tdoc : null;
+        const mezzed = targ?.flags?.eq5e?.conditions?.mezzed?.active === true;
+        hint = mezzed
+          ? `<span class="hint ok" title="Mez is currently holding.">Holding</span>`
+          : `<span class="hint warn" title="Mez was broken by damage; it will re-apply on the next pulse if the song is still maintained.">Will re-mez</span>`;
+      } catch (e) {}
+    }
+
+    return `<div class="eq5e-bard-song-row">
+      <span class="name" title="${sid}">${nm}</span>${targetLine ? `<span class="tgt">→ ${targetLine}</span>` : ""}
+      <span class="meta">${grp}</span>
+      <span class="rem">${rem}r</span>
+      ${hint}
+    </div>`;
+  }))).join("");
+
+  return `
+    <div class="eq5e-bard-now-playing">
+      <div class="eq5e-bard-np-head">
+        <span class="label">Now Playing:</span>
+        <span class="value" title="${currentId ?? ""}">${currentName}</span>
+        <span class="round">Round ${round}</span>
+      </div>
+      <div class="eq5e-bard-np-sub">Maintained Songs</div>
+      <div class="eq5e-bard-np-list">
+        ${rows || `<div class="eq5e-bard-empty">—</div>`}
+      </div>
+    </div>
+  `;
+}
+
+export async function generateBardInstrumentsCompendium({
+  key = "world.eq5e-bard-instruments",
+  label = "EQ5e Bard Instruments"
+} = {}) {
+  const path = _modulePath(BARD_MODULE, "data/bard-instruments.json");
+  const items = await _fetchJSON(path);
+  const pack = await ensureWorldPack({ key, label });
+  // Upsert by flags.eq5e.sourceId for instruments
+  for (const it of items) {
+    it.flags = it.flags ?? {};
+    it.flags.eq5e = it.flags.eq5e ?? {};
+    it.flags.eq5e.sourceId = it.flags.eq5e.sourceId ?? it.flags.eq5e?.bard?.instrument ?? it.name;
+  }
+  const res = await upsertItems(pack, items.map(it => {
+    // Mirror key into spellId slot so upsertItems works without changing it
+    it.flags.eq5e.spell = it.flags.eq5e.spell ?? {};
+    it.flags.eq5e.spell.spellId = it.flags.eq5e.spell.spellId ?? it.flags.eq5e.sourceId;
+    return it;
+  }));
+  ui.notifications?.info(`EQ5E: Bard instruments upserted: created ${res.created}, updated ${res.updated}.`);
+  return { ok: true, pack: pack.collection, ...res };
+}
+
+export async function generateBardFeaturesCompendium({
+  key = "world.eq5e-bard-features",
+  label = "EQ5e Bard Class Features"
+} = {}) {
+  const path = _modulePath(BARD_MODULE, "data/bard-features.json");
+  const items = await _fetchJSON(path);
+  const pack = await ensureWorldPack({ key, label });
+  for (const it of items) {
+    it.flags = it.flags ?? {};
+    it.flags.eq5e = it.flags.eq5e ?? {};
+    it.flags.eq5e.sourceId = it.flags.eq5e.sourceId ?? it.name;
+    it.flags.eq5e.spell = it.flags.eq5e.spell ?? {};
+    it.flags.eq5e.spell.spellId = it.flags.eq5e.spell.spellId ?? it.flags.eq5e.sourceId;
+  }
+  const res = await upsertItems(pack, items);
+  ui.notifications?.info(`EQ5E: Bard features upserted: created ${res.created}, updated ${res.updated}.`);
+  return { ok: true, pack: pack.collection, ...res };
+}
+
+async function _getWorldPack(key) {
+  return game.packs?.get(key) ?? null;
+}
+
+async function _findInPackByName(pack, name) {
+  if (!pack) return null;
+  const idx = pack.index ?? await pack.getIndex();
+  const row = idx.find(r => r.name === name);
+  if (!row) return null;
+  return await pack.getDocument(row._id);
+}
+
+async function _importItemsToActor(actor, items) {
+  if (!actor || !items?.length) return { created: 0 };
+  const data = items.map(d => {
+    const obj = d.toObject();
+    delete obj._id;
+    return obj;
+  });
+  const created = await actor.createEmbeddedDocuments("Item", data);
+  return { created: created?.length ?? 0 };
+}
+
+async function bardClassSetup(actor) {
+  if (!game.user || !actor) return;
+  if (!actor.isOwner) {
+    ui.notifications?.warn("You don't have permission to set up this actor.");
+    return;
+  }
+
+  // Ensure Bard flags are enabled
+  await actor.setFlag("eq5e", "bard", foundry.utils.mergeObject(actor.flags?.eq5e?.bard ?? {}, { enabled: true }, { inplace: false }));
+
+  // Default twist settings if not set
+  const songs = actor.flags?.eq5e?.songs ?? {};
+  if (!Number.isFinite(songs.cadenceRounds)) await actor.setFlag("eq5e", "songs", foundry.utils.mergeObject(songs, { cadenceRounds: game.settings.get("eq5e","bardDefaultCadenceRounds") ?? 1 }, { inplace: false }));
+  const songs2 = actor.flags?.eq5e?.songs ?? {};
+  if (!Number.isFinite(songs2.maxActive)) await actor.setFlag("eq5e", "songs", foundry.utils.mergeObject(songs2, { maxActive: game.settings.get("eq5e","bardDefaultMaxActiveSongs") ?? 3 }, { inplace: false }));
+
+  // Import class features and instruments from world packs if available
+  const featurePack = await _getWorldPack("world.eq5e-bard-features");
+  const instPack = await _getWorldPack("world.eq5e-bard-instruments");
+
+  const wantFeatures = ["Bard (Class Feature)", "Song Twisting", "Instrument Mastery"];
+  const existingNames = new Set(actor.items?.map(i => i.name) ?? []);
+
+  const docs = [];
+  for (const nm of wantFeatures) {
+    if (existingNames.has(nm)) continue;
+    const d = await _findInPackByName(featurePack, nm);
+    if (d) docs.push(d);
+  }
+
+  // Optional: add one of each instrument item (or skip if you prefer)
+  const wantInstruments = ["Brass Horn (Example)", "Lute (Example Strings)", "Hand Drum (Example Percussion)"];
+  for (const nm of wantInstruments) {
+    if (existingNames.has(nm)) continue;
+    const d = await _findInPackByName(instPack, nm);
+    if (d) docs.push(d);
+  }
+
+  const res = await _importItemsToActor(actor, docs);
+  ui.notifications?.info(`EQ5E: Bard setup complete (imported ${res.created} items).`);
+}
+
+Hooks.once("init", () => {
+  game.settings.register("eq5e", "bardSongsOnStartup", {
+    name: "Generate Bard song compendium on startup",
+    hint: "Creates/updates world.eq5e-bard-songs with Bard songs (examples).",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: true
+  });
+
+game.settings.register("eq5e", "bardInstrumentsOnStartup", {
+  name: "Generate Bard instrument compendium on startup",
+  hint: "Creates/updates world.eq5e-bard-instruments with example instruments.",
+  scope: "world",
+  config: true,
+  type: Boolean,
+  default: true
+});
+
+game.settings.register("eq5e", "bardFeaturesOnStartup", {
+  name: "Generate Bard class feature compendium on startup",
+  hint: "Creates/updates world.eq5e-bard-features with class feature items.",
+  scope: "world",
+  config: true,
+  type: Boolean,
+  default: true
+});
+});
+
+Hooks.once("ready", async () => {
+  if (!game.user.isGM) return;
+  if (!game.settings.get("eq5e", "bardSongsOnStartup")) return;
+  try {
+    await generateBardSongsCompendium();
+    if (game.settings.get("eq5e", "bardInstrumentsOnStartup")) await generateBardInstrumentsCompendium();
+    if (game.settings.get("eq5e", "bardFeaturesOnStartup")) await generateBardFeaturesCompendium();
+  } catch (e) {
+    console.error("[EQ5E] Bard song compendium generation failed", e);
+  }
+});
+
+/* ----------------------------- BARD SHEET WIDGET ---------------------------- */
+
+function _isBardActor(actor) {
+  if (!actor) return false;
+  if (actor?.flags?.eq5e?.bard?.enabled) return true;
+  if (actor?.flags?.eq5e?.bard?.instrument) return true;
+  if (actor?.flags?.eq5e?.songs?.active?.length) return true;
+  // Detect via owned items that look like songs
+  return actor.items?.some(i => i?.flags?.eq5e?.spell?.meta?.isSong) ?? false;
+}
+
+async function _setBardFlag(actor, path, value) {
+  // path like "bard.instrument" or "songs.cadenceRounds"
+  return actor.setFlag('eq5e', path, value);
+}
+
+function _getFlag(actor, dotted, fallback=null) {
+  const parts = dotted.split('.');
+  let cur = actor?.flags?.eq5e;
+  for (const p of parts) {
+    if (cur == null) return fallback;
+    cur = cur[p];
+  }
+  return (cur === undefined) ? fallback : cur;
+}
+
+function _renderBardWidget(app, html) {
+  const actor = app?.actor;
+  if (!actor) return;
+  if (!actor.isOwner) return;
+  if (!_isBardActor(actor)) return;
+
+  // Prevent duplicates
+  if (html.find('.eq5e-bard-widget').length) return;
+
+  const instrument = String(_getFlag(actor, 'bard.instrument', '') ?? '');
+  const enabled = !!_getFlag(actor, 'bard.enabled', false);
+
+  const cadence = Number(_getFlag(actor, 'songs.cadenceRounds', game.settings?.get('eq5e','bardDefaultCadenceRounds') ?? 1));
+  const maxActive = Number(_getFlag(actor, 'songs.maxActive', game.settings?.get('eq5e','bardDefaultMaxActiveSongs') ?? 3));
+
+  const widget = $(`
+    <section class="eq5e-bard-widget">
+      <header style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+        <h3 style="margin:0; font-size:14px;">Bard</h3>
+        <label style="display:flex; align-items:center; gap:6px; margin:0; font-size:12px; opacity:.9;">
+          <input class="eq5e-bard-enabled" type="checkbox" ${enabled ? 'checked' : ''} />
+          Enable Bard Controls
+        </label>
+      </header>
+
+      <div class="eq5e-bard-row">
+        <label>Instrument</label>
+        <select class="eq5e-bard-instrument">
+          <option value="" ${instrument===''?'selected':''}>(none)</option>
+          <option value="brass" ${instrument==='brass'?'selected':''}>Brass</option>
+          <option value="strings" ${instrument==='strings'?'selected':''}>Strings</option>
+          <option value="percussion" ${instrument==='percussion'?'selected':''}>Percussion</option>
+        </select>
+        <span class="eq5e-bard-value"></span>
+      </div>
+
+      <div class="eq5e-bard-row">
+        <label>Twist cadence</label>
+        <input class="eq5e-bard-cadence" type="range" min="0" max="3" step="1" value="${Number.isFinite(cadence)?cadence:1}" />
+        <span class="eq5e-bard-cadence-val eq5e-bard-value">${Number.isFinite(cadence)?cadence:1}</span>
+      </div>
+
+      <div class="eq5e-bard-row">
+        <label>Max maintained</label>
+        <input class="eq5e-bard-maxactive" type="range" min="1" max="6" step="1" value="${Number.isFinite(maxActive)?maxActive:3}" />
+        <span class="eq5e-bard-maxactive-val eq5e-bard-value">${Number.isFinite(maxActive)?maxActive:3}</span>
+      </div>
+
+      
+      <div class="eq5e-bard-setup-row">
+        <button type="button" class="eq5e-bard-setup-btn"><i class="fa-solid fa-wand-magic-sparkles"></i> Bard Class Setup</button>
+      </div>
+<p style="margin:6px 0 0; font-size:12px; opacity:.85;">
+        Tip: Twisting = recast songs before they expire. Instrument bonuses apply when the song’s preferred instrument matches.
+      </p>
+    </section>
+  `);
+
+  // Insert near top of sheet
+  const form = html.find('form');
+  if (form.length) form.prepend(widget);
+  else html.prepend(widget);
+
+  // Handlers
+  widget.find('.eq5e-bard-enabled').on('change', async (ev) => {
+    await _setBardFlag(actor, 'bard.enabled', !!ev.currentTarget.checked);
+  });
+
+  widget.find('.eq5e-bard-instrument').on('change', async (ev) => {
+    await _setBardFlag(actor, 'bard.instrument', String(ev.currentTarget.value || ''));
+  });
+
+  widget.find('.eq5e-bard-cadence').on('input', (ev) => {
+    widget.find('.eq5e-bard-cadence-val').text(ev.currentTarget.value);
+  });
+  widget.find('.eq5e-bard-cadence').on('change', async (ev) => {
+    await _setBardFlag(actor, 'songs.cadenceRounds', Number(ev.currentTarget.value));
+  });
+
+  widget.find('.eq5e-bard-maxactive').on('input', (ev) => {
+    widget.find('.eq5e-bard-maxactive-val').text(ev.currentTarget.value);
+  });
+  widget.find('.eq5e-bard-maxactive').on('change', async (ev) => {
+    await _setBardFlag(actor, 'songs.maxActive', Number(ev.currentTarget.value));
+  });
+}
+
+Hooks.on('renderActorSheet', (app, html) => {
+  try { _renderBardWidget(app, html); } catch (e) { console.error('[EQ5E] Bard widget error', e); }
+});
+

@@ -1,0 +1,214 @@
+[
+  {
+    "name": "Lifetap I",
+    "type": "spell",
+    "img": "icons/magic/death/hand-dirt-undead.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "necro.lifetap.1",
+          "kind": "nuke",
+          "rangeFt": 60,
+          "manaCost": 8,
+          "priority": 50,
+          "damage": [
+            {
+              "formula": "2d6+2",
+              "type": "magic",
+              "category": "spell"
+            }
+          ],
+          "conditions": []
+        }
+      }
+    }
+  },
+  {
+    "name": "Disease DoT I",
+    "type": "spell",
+    "img": "icons/magic/acid/droplet-bubble.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "necro.disease-dot.1",
+          "kind": "dot",
+          "rangeFt": 60,
+          "manaCost": 10,
+          "priority": 40,
+          "damage": [
+            {
+              "formula": "1d6+1",
+              "type": "disease",
+              "category": "spell"
+            }
+          ],
+          "conditions": []
+        }
+      }
+    }
+  },
+  {
+    "name": "Terror (Minor Mez)",
+    "type": "spell",
+    "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "necro.terror-mez.1",
+          "kind": "mez",
+          "rangeFt": 60,
+          "manaCost": 12,
+          "priority": 30,
+          "damage": [],
+          "conditions": [
+            {
+              "id": "mezzed",
+              "duration": {
+                "rounds": 1
+              },
+              "meta": {
+                "breakOnDamage": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Summon Undead Servant: Skeleton",
+    "type": "spell",
+    "img": "icons/creatures/undead/skeleton-warrior.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "necro.summon.undead.skeleton.1",
+          "kind": "utility",
+          "rangeFt": 0,
+          "manaCost": 12,
+          "priority": 60,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "summon": {
+              "pack": "world.eq5e-necro-undead-pets",
+              "name": "Undead Servant (Skeleton)",
+              "tokenName": "Undead Servant",
+              "ai": {
+                "mode": "assist",
+                "enabled": true
+              },
+              "summonId": "necro.undead-servant",
+              "durationRounds": null,
+              "summonType": "undead",
+              "abilitiesPack": "world.eq5e-necro-undead-abilities"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Summon Undead Servant: Zombie",
+    "type": "spell",
+    "img": "icons/creatures/undead/skeleton-warrior.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "necro.summon.undead.zombie.1",
+          "kind": "utility",
+          "rangeFt": 0,
+          "manaCost": 12,
+          "priority": 60,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "summon": {
+              "pack": "world.eq5e-necro-undead-pets",
+              "name": "Undead Servant (Zombie)",
+              "tokenName": "Undead Servant",
+              "ai": {
+                "mode": "assist",
+                "enabled": true
+              },
+              "summonId": "necro.undead-servant",
+              "durationRounds": null,
+              "summonType": "undead",
+              "abilitiesPack": "world.eq5e-necro-undead-abilities"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Summon Undead Servant: Wraith",
+    "type": "spell",
+    "img": "icons/creatures/undead/skeleton-warrior.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "necro.summon.undead.wraith.1",
+          "kind": "utility",
+          "rangeFt": 0,
+          "manaCost": 12,
+          "priority": 60,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "summon": {
+              "pack": "world.eq5e-necro-undead-pets",
+              "name": "Undead Servant (Wraith)",
+              "tokenName": "Undead Servant",
+              "ai": {
+                "mode": "assist",
+                "enabled": true
+              },
+              "summonId": "necro.undead-servant",
+              "durationRounds": null,
+              "summonType": "undead",
+              "abilitiesPack": "world.eq5e-necro-undead-abilities"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Dismiss Undead Servant",
+    "type": "spell",
+    "img": "icons/magic/death/hand-skull-pink.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "necro.dismiss.undead-servant.1",
+          "kind": "utility",
+          "rangeFt": 0,
+          "manaCost": 1,
+          "priority": 70,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "dismissSummon": {
+              "summonId": "necro.undead-servant"
+            }
+          }
+        }
+      }
+    }
+  }
+]

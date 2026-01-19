@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Claw",
+    "type": "feature",
+    "img": "icons/creatures/abilities/claw-pinch-glowing-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "attack": {
+          "enabled": true,
+          "type": "melee",
+          "ability": "str",
+          "proficient": true,
+          "attackBonus": 0,
+          "priority": 50,
+          "damage": [
+            {
+              "formula": "1d6+@mod",
+              "type": "physical",
+              "category": "physical"
+            }
+          ],
+          "crit": {
+            "extraDamage": "1d6"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Necrotic Bite",
+    "type": "feature",
+    "img": "icons/creatures/abilities/fang-tooth-bite-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "attack": {
+          "enabled": true,
+          "type": "melee",
+          "ability": "str",
+          "proficient": true,
+          "attackBonus": -1,
+          "priority": 40,
+          "damage": [
+            {
+              "formula": "1d4+@mod",
+              "type": "disease",
+              "category": "spell"
+            }
+          ],
+          "crit": {
+            "extraDamage": "1d4"
+          }
+        }
+      }
+    }
+  }
+]

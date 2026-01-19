@@ -1,0 +1,37 @@
+{
+  "id": "eq5e-pet-ranger-companion",
+  "title": "EQ5e Pets: Ranger Companions",
+  "description": "Ranger animal companions and companion ability pack.",
+  "version": "3.9.0-alpha",
+  "authors": [
+    {
+      "name": "EQ5e"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "eq5e",
+        "type": "system",
+        "manifest": "systems/eq5e/system.json"
+      }
+    ],
+    "requires": [
+      {
+        "id": "eq5e-ai",
+        "type": "module"
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "packs": [],
+  "url": "https://github.com/Mirloc608/EQ5e",
+  "manifest": "https://github.com/Mirloc608/EQ5e/raw/main/modules/eq5e-pet-ranger-companion/module.json",
+  "download": "https://github.com/Mirloc608/EQ5e/releases/latest/download/eq5e-pet-ranger-companion.zip"
+}

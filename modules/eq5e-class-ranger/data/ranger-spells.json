@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Snare",
+    "type": "spell",
+    "img": "icons/magic/nature/vines-thorned-entangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "rng.snare.1",
+          "kind": "debuff",
+          "rangeFt": 60,
+          "manaCost": 2,
+          "priority": 40,
+          "damage": [],
+          "conditions": [
+            {
+              "id": "snared",
+              "duration": {
+                "rounds": 3
+              },
+              "meta": {
+                "moveMult": 0.6
+              }
+            }
+          ],
+          "cooldown": {
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Flame Lick",
+    "type": "spell",
+    "img": "icons/magic/fire/flame-burning-creature-orange.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "rng.flame-lick.1",
+          "kind": "damage",
+          "rangeFt": 60,
+          "manaCost": 3,
+          "priority": 35,
+          "damage": [
+            {
+              "type": "fire",
+              "formula": "1d6"
+            }
+          ],
+          "conditions": [],
+          "cooldown": {
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Call of the Predator",
+    "type": "spell",
+    "img": "icons/creatures/mammals/wolf-howl-moonlit-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "rng.predator.1",
+          "kind": "buff",
+          "rangeFt": 30,
+          "manaCost": 4,
+          "priority": 10,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "activeEffect": {
+              "label": "Predator's Focus",
+              "durationRounds": 5,
+              "changes": [
+                {
+                  "key": "flags.eq5e.ranger.archeryHitBonus",
+                  "mode": 2,
+                  "value": "1",
+                  "priority": 20
+                }
+              ]
+            }
+          },
+          "cooldown": {
+            "value": 5
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Summon Animal Companion",
+    "type": "spell",
+    "img": "icons/creatures/mammals/wolf-grey.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "rng.summon-companion.1",
+          "kind": "utility",
+          "rangeFt": 5,
+          "manaCost": 5,
+          "priority": 5,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "summon": {
+              "pack": "world.eq5e-ranger-companions",
+              "name": "Companion (Wolf)",
+              "tokenName": "Companion",
+              "summonId": "ranger.companion",
+              "summonType": "pet",
+              "durationRounds": null,
+              "abilitiesPack": "world.eq5e-ranger-companion-abilities",
+              "abilitiesQuery": "Wolf:"
+            }
+          },
+          "cooldown": {
+            "value": 10
+          }
+        }
+      }
+    }
+  }
+]

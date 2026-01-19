@@ -1,0 +1,160 @@
+[
+  {
+    "name": "Silence (AE Example)",
+    "type": "spell",
+    "img": "icons/magic/control/silhouette-hold-quiet.webp",
+    "system": {},
+    "effects": [
+      {
+        "_id": "ae_silence",
+        "name": "Silence (sets condition)",
+        "icon": "icons/svg/aura.svg",
+        "origin": null,
+        "disabled": false,
+        "duration": {
+          "rounds": 2
+        },
+        "changes": [],
+        "flags": {
+          "eq5e": {
+            "conditions": [
+              "silenced"
+            ]
+          }
+        }
+      }
+    ],
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "ae.example.silence.1",
+          "kind": "silence",
+          "rangeFt": 60,
+          "manaCost": 10,
+          "priority": 85
+        }
+      }
+    }
+  },
+  {
+    "name": "Mesmerize (AE Example)",
+    "type": "spell",
+    "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+    "system": {},
+    "effects": [
+      {
+        "_id": "ae_mez",
+        "name": "Mez (sets condition)",
+        "icon": "icons/svg/aura.svg",
+        "origin": null,
+        "disabled": false,
+        "duration": {
+          "rounds": 2
+        },
+        "changes": [],
+        "flags": {
+          "eq5e": {
+            "conditions": [
+              "mezzed"
+            ]
+          }
+        }
+      }
+    ],
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "ae.example.mez.1",
+          "kind": "mez",
+          "rangeFt": 60,
+          "manaCost": 8,
+          "priority": 90
+        }
+      }
+    }
+  },
+  {
+    "name": "Entangle (AE Example Root)",
+    "type": "spell",
+    "img": "icons/magic/nature/vines-thorned-entangle.webp",
+    "system": {},
+    "effects": [
+      {
+        "_id": "ae_root",
+        "name": "Root (sets condition)",
+        "icon": "icons/svg/aura.svg",
+        "origin": null,
+        "disabled": false,
+        "duration": {
+          "rounds": 3
+        },
+        "changes": [
+          {
+            "key": "flags.eq5e.conditions.rooted.active",
+            "mode": 2,
+            "value": "true",
+            "priority": 20
+          }
+        ],
+        "flags": {
+          "eq5e": {}
+        }
+      }
+    ],
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "ae.example.root.1",
+          "kind": "root",
+          "rangeFt": 60,
+          "manaCost": 6,
+          "priority": 80
+        }
+      }
+    }
+  },
+  {
+    "name": "Crippling Snare (AE Example)",
+    "type": "spell",
+    "img": "icons/magic/nature/footsteps-leaves-trail.webp",
+    "system": {},
+    "effects": [
+      {
+        "_id": "ae_snare",
+        "name": "Snare (sets condition)",
+        "icon": "icons/svg/aura.svg",
+        "origin": null,
+        "disabled": false,
+        "duration": {
+          "rounds": 5
+        },
+        "changes": [
+          {
+            "key": "flags.eq5e.conditions.snared.active",
+            "mode": 2,
+            "value": "true",
+            "priority": 20
+          }
+        ],
+        "flags": {
+          "eq5e": {}
+        }
+      }
+    ],
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "ae.example.snare.1",
+          "kind": "snare",
+          "rangeFt": 60,
+          "manaCost": 6,
+          "priority": 70
+        }
+      }
+    }
+  }
+]

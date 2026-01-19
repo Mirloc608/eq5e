@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Claw Swipe",
+    "type": "spell",
+    "img": "icons/skills/melee/strike-slash-blood-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.necro.undead.claw.1",
+          "kind": "attack",
+          "rangeFt": 5,
+          "manaCost": 0,
+          "priority": 30,
+          "damage": [
+            {
+              "type": "slashing",
+              "formula": "1d6"
+            }
+          ],
+          "conditions": [],
+          "cooldown": {
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Rotting Bite",
+    "type": "spell",
+    "img": "icons/skills/melee/strike-bite-blood-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.necro.undead.bite.1",
+          "kind": "attack",
+          "rangeFt": 5,
+          "manaCost": 0,
+          "priority": 40,
+          "damage": [
+            {
+              "type": "necrotic",
+              "formula": "1d6"
+            }
+          ],
+          "conditions": [],
+          "cooldown": {
+            "value": 2
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Shadow Bolt",
+    "type": "spell",
+    "img": "icons/magic/death/projectile-skull-fire-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.necro.undead.shadowbolt.1",
+          "kind": "nuke",
+          "rangeFt": 60,
+          "manaCost": 6,
+          "priority": 50,
+          "damage": [
+            {
+              "type": "necrotic",
+              "formula": "2d6"
+            }
+          ],
+          "conditions": [],
+          "cooldown": {
+            "value": 2
+          }
+        }
+      }
+    }
+  }
+]

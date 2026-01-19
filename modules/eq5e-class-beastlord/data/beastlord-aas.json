@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Enhanced Warder (AA Example)",
+    "type": "feat",
+    "img": "icons/creatures/mammals/wolf-howl-grey.webp",
+    "system": {},
+    "effects": [
+      {
+        "name": "Enhanced Warder",
+        "changes": [
+          {
+            "key": "flags.eq5e.pet.hpBonus",
+            "mode": 2,
+            "value": "5",
+            "priority": 20
+          }
+        ]
+      }
+    ],
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.enhanced-warder",
+          "category": "Pet",
+          "cost": 3,
+          "maxRank": 5,
+          "rank": 0,
+          "scales": {
+            "petHpPerRank": 5
+          },
+          "prereq": {
+            "minLevel": 10
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Bestial Frenzy (AA Example)",
+    "type": "feat",
+    "img": "icons/skills/melee/strike-claw-red.webp",
+    "system": {},
+    "effects": [
+      {
+        "name": "Bestial Frenzy",
+        "changes": [
+          {
+            "key": "flags.eq5e.combat.attackBonus",
+            "mode": 2,
+            "value": "1",
+            "priority": 20
+          }
+        ]
+      }
+    ],
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.bestial-frenzy",
+          "category": "Combat",
+          "cost": 2,
+          "maxRank": 3,
+          "rank": 0,
+          "scales": {
+            "attackBonusPerRank": 1
+          },
+          "prereq": {
+            "minLevel": 15
+          }
+        }
+      }
+    }
+  }
+]

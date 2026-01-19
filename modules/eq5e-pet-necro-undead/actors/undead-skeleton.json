@@ -1,0 +1,26 @@
+{
+  "name": "Undead Servant (Skeleton)",
+  "type": "npc",
+  "img": "icons/creatures/undead/skeleton-warrior.webp",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 22,
+        "max": 22
+      },
+      "movement": {
+        "walk": 30
+      }
+    }
+  },
+  "flags": {
+    "eq5e": {
+      "pet": {
+        "role": "melee",
+        "ai": "dps",
+        "ownerClass": "necromancer",
+        "family": "undead"
+      }
+    }
+  }
+}
