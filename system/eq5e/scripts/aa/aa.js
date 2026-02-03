@@ -174,6 +174,25 @@ async function _applyRankScaling(actor, item) {
       if (key === "flags.eq5e.ranger.companionDamagePct" && Number.isFinite(scales.companionDamagePctPerRank)) {
         ch.value = String(Number(scales.companionDamagePctPerRank) * rank);
       }
+      if (key === "flags.eq5e.druid.healBonus" && Number.isFinite(scales.healBonusPerRank)) {
+        ch.value = String(Number(scales.healBonusPerRank) * rank);
+      }
+      if (key === "flags.eq5e.druid.spellDamagePct" && Number.isFinite(scales.spellDamagePctPerRank)) {
+        ch.value = String(Number(scales.spellDamagePctPerRank) * rank);
+      }
+      if (key === "flags.eq5e.druid.wildshapeMastery" && Number.isFinite(scales.wildshapeMitigationPerRank)) {
+        ch.value = String(Number(scales.wildshapeMitigationPerRank) * rank);
+      }
+      if (key === "flags.eq5e.druid.companionHpBonus" && Number.isFinite(scales.companionHpPerRank)) {
+        ch.value = String(Number(scales.companionHpPerRank) * rank);
+      }
+      if (key === "flags.eq5e.druid.companionDamagePct" && Number.isFinite(scales.companionDamagePctPerRank)) {
+        ch.value = String(Number(scales.companionDamagePctPerRank) * rank);
+      }
+
+
+        ch.value = String(Number(scales.companionDamagePctPerRank) * rank);
+      }
 
       if (key === "flags.eq5e.pet.hpBonus" && Number.isFinite(scales.petHpPerRank)) {
         ch.value = String(Number(scales.petHpPerRank) * rank);

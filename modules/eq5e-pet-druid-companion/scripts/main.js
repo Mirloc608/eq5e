@@ -1,6 +1,4 @@
-import { registerDruidWidget } from "./druid-widget.js";
-
-const MOD = "eq5e-class-druid";
+const MOD = "eq5e-pet-druid-companion";
 
 async function _fetchJSON(path) {
   const res = await fetch(path);
@@ -18,13 +16,13 @@ function _stableHash(obj) {
   for (let i=0;i<s.length;i++){h ^= s.charCodeAt(i); h = Math.imul(h, 16777619);}
   return (h>>>0).toString(16);
 }
-async function ensureWorldPack({ key, label, type="Item" }) {
+async function ensureWorldPack({ key, label, type }) {
   const existing = game.packs?.get(key);
   if (existing) return existing;
   return CompendiumCollection.createCompendium({ type, label, name: key.split(".")[1], package: "world" });
 }
 async function upsertByKey(pack, docs, getKey) {
-  const idx = await pack.getIndex({ fields: ["name","flags.eq5e.spell.spellId","flags.eq5e.aa.aaId","flags.eq5e.derivedHash"] });
+  const idx = await pack.getIndex({ fields: ["name","flags.eq5e.spell.spellId","flags.eq5e.derivedHash"] });
   const byKey = new Map();
   for (const e of idx) byKey.set(String(getKey(e)), e._id);
   const toCreate=[], toUpdate=[];
@@ -51,30 +49,32 @@ async function upsertByKey(pack, docs, getKey) {
   return { created: toCreate.length, updated: toUpdate.length };
 }
 
-export async function generateDruidPacks() {
-  const spells = await _fetchJSON(_modulePath("data/druid-spells.json"));
-  const spellPack = await ensureWorldPack({ key: "world.eq5e-druid-spells", label: "EQ5e Druid Spells" });
-  await upsertByKey(spellPack, spells, d => d?.flags?.eq5e?.spell?.spellId);
-  ui.notifications?.info("EQ5E: Druid spells pack generated/updated.");
-}
+export async function generateDruidCompanionPacks() {
+  const pets = await _fetchJSON(_modulePath("data/druid-companions.json"));
+  const abilities = await _fetchJSON(_modulePath("data/druid-companion-abilities.json"));
 
-export async function mergeDruidAAsIntoSharedPack() {
-  const aas = await _fetchJSON(_modulePath("data/druid-aas.json"));
-  const aaPack = await ensureWorldPack({ key: "world.eq5e-aa", label: "EQ5e Alternate Abilities" });
-  await upsertByKey(aaPack, aas, d => d?.flags?.eq5e?.aa?.aaId);
-  ui.notifications?.info("EQ5E: Druid AAs merged into shared AA pack.");
+  const petPack = await ensureWorldPack({ key:"world.eq5e-druid-companions", label:"EQ5e Druid Companions", type:"Actor" });
+  const abPack  = await ensureWorldPack({ key:"world.eq5e-druid-companion-abilities", label:"EQ5e Druid Companion Abilities", type:"Item" });
+
+  await upsertByKey(petPack, pets, d => d.name);
+  await upsertByKey(abPack, abilities, d => d?.flags?.eq5e?.spell?.spellId);
+
+  ui.notifications?.info("EQ5E: Druid companion packs generated/updated.");
 }
 
 Hooks.once("init", () => {
-  game.settings.register("eq5e", "druidOnStartup", { name: "Druid: Generate Packs on Startup", scope: "world", config: true, type: Boolean, default: true });
-  game.settings.register("eq5e", "druidAAsOnStartup", { name: "Druid: Merge AAs on Startup", scope: "world", config: true, type: Boolean, default: true });
-  registerDruidWidget();
+  game.settings.register("eq5e", "druidCompanionsOnStartup", {
+    name: "Druid Companions: Generate Packs on Startup",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: true
+  });
 });
 
 Hooks.once("ready", async () => {
   if (!game.user.isGM) return;
   try {
-    if (game.settings.get("eq5e", "druidOnStartup")) await generateDruidPacks();
-    if (game.settings.get("eq5e", "druidAAsOnStartup")) await mergeDruidAAsIntoSharedPack();
-  } catch (e) { console.error("[EQ5E] Druid startup failed", e); }
+    if (game.settings.get("eq5e", "druidCompanionsOnStartup")) await generateDruidCompanionPacks();
+  } catch (e) { console.error("[EQ5E] Druid companion startup failed", e); }
 });

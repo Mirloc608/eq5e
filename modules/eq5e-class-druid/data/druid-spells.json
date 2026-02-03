@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Skin Like Nature",
+    "type": "spell",
+    "img": "icons/magic/nature/root-vine-entangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.skin-like-nature.1",
+          "kind": "buff",
+          "rangeFt": 30,
+          "manaCost": 4,
+          "priority": 12,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "activeEffect": {
+              "label": "Skin Like Nature",
+              "durationRounds": 5,
+              "changes": [
+                {
+                  "key": "flags.eq5e.mitigation.physical",
+                  "mode": 2,
+                  "value": "1",
+                  "priority": 20
+                },
+                {
+                  "key": "flags.eq5e.resists.magic",
+                  "mode": 2,
+                  "value": "1",
+                  "priority": 20
+                }
+              ]
+            }
+          },
+          "cooldown": {
+            "value": 5
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Healing",
+    "type": "spell",
+    "img": "icons/magic/life/cross-flare-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.heal.1",
+          "kind": "heal",
+          "rangeFt": 30,
+          "manaCost": 4,
+          "priority": 8,
+          "damage": [
+            {
+              "type": "healing",
+              "formula": "1d8+2"
+            }
+          ],
+          "conditions": [],
+          "cooldown": {
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Firestrike",
+    "type": "spell",
+    "img": "icons/magic/fire/projectile-fireball-orange.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.firestrike.1",
+          "kind": "damage",
+          "rangeFt": 90,
+          "manaCost": 4,
+          "priority": 30,
+          "damage": [
+            {
+              "type": "fire",
+              "formula": "2d6"
+            }
+          ],
+          "conditions": [],
+          "cooldown": {
+            "value": 2
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Root",
+    "type": "spell",
+    "img": "icons/magic/nature/vines-thorned-entangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.root.1",
+          "kind": "debuff",
+          "rangeFt": 60,
+          "manaCost": 3,
+          "priority": 25,
+          "damage": [],
+          "conditions": [
+            {
+              "id": "rooted",
+              "duration": {
+                "rounds": 2
+              }
+            }
+          ],
+          "cooldown": {
+            "value": 2
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Snare",
+    "type": "spell",
+    "img": "icons/magic/nature/leaf-juggle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.snare.1",
+          "kind": "debuff",
+          "rangeFt": 60,
+          "manaCost": 2,
+          "priority": 20,
+          "damage": [],
+          "conditions": [
+            {
+              "id": "snared",
+              "duration": {
+                "rounds": 3
+              },
+              "meta": {
+                "moveMult": 0.6
+              }
+            }
+          ],
+          "cooldown": {
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Spirit of Wolf",
+    "type": "spell",
+    "img": "icons/creatures/mammals/wolf-howl-moonlit-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.sow.1",
+          "kind": "buff",
+          "rangeFt": 30,
+          "manaCost": 3,
+          "priority": 10,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "activeEffect": {
+              "label": "Spirit of Wolf",
+              "durationRounds": 5,
+              "changes": [
+                {
+                  "key": "flags.eq5e.movement.mult",
+                  "mode": 2,
+                  "value": "0.25",
+                  "priority": 20
+                }
+              ]
+            }
+          },
+          "cooldown": {
+            "value": 5
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Wild Shape: Wolf Form",
+    "type": "spell",
+    "img": "icons/creatures/mammals/wolf-grey.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.wildshape.wolf.1",
+          "kind": "utility",
+          "rangeFt": 0,
+          "manaCost": 2,
+          "priority": 5,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "wildshape": {
+              "form": "wolf",
+              "durationRounds": 5,
+              "changes": [
+                {
+                  "key": "flags.eq5e.druid.wildshape.form",
+                  "mode": 5,
+                  "value": "wolf",
+                  "priority": 5
+                },
+                {
+                  "key": "flags.eq5e.movement.mult",
+                  "mode": 2,
+                  "value": "0.25",
+                  "priority": 20
+                },
+                {
+                  "key": "flags.eq5e.ranger.archeryHitBonus",
+                  "mode": 2,
+                  "value": "0",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          "cooldown": {
+            "value": 6
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Wild Shape: Bear Form",
+    "type": "spell",
+    "img": "icons/creatures/mammals/bear-brown.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.wildshape.bear.1",
+          "kind": "utility",
+          "rangeFt": 0,
+          "manaCost": 2,
+          "priority": 5,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "wildshape": {
+              "form": "bear",
+              "durationRounds": 5,
+              "changes": [
+                {
+                  "key": "flags.eq5e.druid.wildshape.form",
+                  "mode": 5,
+                  "value": "bear",
+                  "priority": 5
+                },
+                {
+                  "key": "flags.eq5e.mitigation.physical",
+                  "mode": 2,
+                  "value": "1",
+                  "priority": 20
+                },
+                {
+                  "key": "flags.eq5e.warding.physical",
+                  "mode": 2,
+                  "value": "2",
+                  "priority": 20
+                }
+              ]
+            }
+          },
+          "cooldown": {
+            "value": 6
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Dismiss Wild Shape",
+    "type": "spell",
+    "img": "icons/magic/control/debuff-energy-hold-teal.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.wildshape.dismiss",
+          "kind": "utility",
+          "rangeFt": 0,
+          "manaCost": 0,
+          "priority": 1,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "wildshape": {
+              "dismiss": true
+            }
+          },
+          "cooldown": {
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Summon Animal Companion",
+    "type": "spell",
+    "img": "icons/creatures/mammals/elk-deer-brown.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.summon-companion.1",
+          "kind": "utility",
+          "rangeFt": 5,
+          "manaCost": 5,
+          "priority": 5,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "summon": {
+              "pack": "world.eq5e-druid-companions",
+              "name": "Companion (Bear)",
+              "tokenName": "Companion",
+              "summonId": "druid.companion",
+              "summonType": "pet",
+              "durationRounds": null,
+              "abilitiesPack": "world.eq5e-druid-companion-abilities",
+              "abilitiesQuery": "Bear:"
+            }
+          },
+          "cooldown": {
+            "value": 10
+          }
+        }
+      }
+    }
+  }
+]

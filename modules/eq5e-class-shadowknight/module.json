@@ -39,5 +39,8 @@
   },
   "styles": [
     "styles/shadowknight.css"
-  ]
+  ],
+  "url": "https://github.com/Mirloc608/EQ5e",
+  "manifest": "https://github.com/Mirloc608/EQ5e/raw/main/modules/eq5e-class-shadowknight/module.json",
+  "download": "https://github.com/Mirloc608/EQ5e/releases/latest/download/eq5e-class-shadowknight.zip"
 }

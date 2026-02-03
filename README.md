@@ -85,3 +85,5 @@ Casting that spell spawns the pet token adjacent to the caster (GM only).
 - Enchanter AAs now modify mez/charm durations and break chances deterministically: Extended Mez adds rounds + reduces mez break chance; Charm Mastery adds rounds + reduces charm break chance; Total Domination further stabilizes charm.
 - Bard: Lullaby now functions as a real mezzing control song via song pulse condition application (meta.pulseConditions). While maintained, it re-applies mezzed each pulse; damage can still break it, but the next pulse can re-mez if the song is still active.
 - Added Ranger class module (spells, disciplines, AAs) and Ranger Companion pet module (companions + abilities). Includes Ranger Animal Companion sheet widget and core support for taunt meta + ranger archery bonuses.
+
+- Added Druid class module (spells, wild shape, AAs) and Druid companion pet module.

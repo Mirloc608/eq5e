@@ -765,6 +765,41 @@ async function castSpell({ caster, casterToken, target, targetToken, item, optio
     if (flat) await addThreat({ npcActor: target, actor: caster, amount: flat, reason: `taunt:${item.name}` });
   }
 
+
+// Wild Shape (deterministic, Active Effect-based)
+if (sp?.meta?.wildshape) {
+  const ws = sp.meta.wildshape;
+  // Dismiss current form
+  if (ws.dismiss) {
+    const effects = caster.effects?.filter(e => e?.getFlag("eq5e","wildshape") === true) ?? [];
+    for (const ef of effects) await ef.delete();
+    await caster.unsetFlag("eq5e", "druid.wildshape.form");
+  } else {
+    // remove existing wildshape AEs
+    const effects = caster.effects?.filter(e => e?.getFlag("eq5e","wildshape") === true) ?? [];
+    for (const ef of effects) await ef.delete();
+
+    const duration = Number(ws.durationRounds ?? 5);
+    const changes = Array.isArray(ws.changes) ? ws.changes : [];
+    const ae = {
+      label: `Wild Shape: ${ws.form ?? "Form"}`,
+      icon: item.img,
+      origin: item.uuid,
+      disabled: false,
+      duration: { rounds: duration, startRound: game.combat?.round ?? 0, startTime: game.time.worldTime },
+      changes
+    };
+    const created = await caster.createEmbeddedDocuments("ActiveEffect", [ae]);
+    if (created?.[0]) await created[0].setFlag("eq5e","wildshape", true);
+
+    // Apply AA mastery as simple bonus by form (no mechanical randomness)
+    const mastery = Number(caster.flags?.eq5e?.druid?.wildshapeMastery ?? 0);
+    if (mastery && String(ws.form ?? "").toLowerCase() === "bear") {
+      await caster.setFlag("eq5e","mitigation.physical", Number(caster.flags?.eq5e?.mitigation?.physical ?? 0) + mastery);
+    }
+  }
+}
+
 // Summons: if a spell declares meta.summon, spawn a pet from a compendium
 // sp.meta.summon = { pack, name, tokenName?, ai?, summonId?, durationRounds?, abilitiesPack?, summonType? }
 if (sp?.meta?.summon && casterToken) {
@@ -783,11 +818,31 @@ if (sp?.meta?.summon && casterToken) {
     content: `<b>${caster.name}</b> casts <b>${item.name}</b> on <b>${target.name}</b>.`
   });
 
+
+// Deterministic caster modifiers (from AAs / class flags)
+const healFlatBonus = Number(caster.flags?.eq5e?.druid?.healBonus ?? 0);
+const spellDamagePct = Number(caster.flags?.eq5e?.druid?.spellDamagePct ?? 0);
+const petSpellDamagePct = Number(caster.flags?.eq5e?.petDamagePctBonus ?? 0);
+
   const dmgParts = [];
   for (const d of (sp.damage ?? [])) {
     const r = await (new Roll(String(d.formula ?? "1d4"))).evaluate();
-    await r.toMessage({ speaker: ChatMessage.getSpeaker({ actor: caster, token: casterToken }), flavor: `${item.name} damage (${d.type ?? "spell"})` });
-    dmgParts.push({ amount: r.total, type: d.type ?? "magic", category: d.category ?? "spell" });
+    await r.toMessage({ speaker: ChatMessage.getSpeaker({ actor: caster, token: casterToken }), flavor: `${item.name} damage (${d.type ?? "spell"})` + ((amt !== base) ? ` [mod ${amt>=base?'+':''}${amt-base}]` : '') });
+
+const base = Number(r.total ?? 0);
+const dtype = String(d.type ?? "magic").toLowerCase();
+const isHealing = dtype === "healing" || String(sp.kind ?? "").toLowerCase() === "heal";
+
+// Apply flat healing bonus and % spell damage bonus deterministically
+let amt = base;
+if (isHealing && healFlatBonus) amt = amt + healFlatBonus;
+if (!isHealing) {
+  const pct = (spellDamagePct ? (1 + spellDamagePct) : 1) * (petSpellDamagePct ? (1 + petSpellDamagePct) : 1);
+  amt = Math.round(amt * pct);
+}
+amt = Math.max(0, amt);
+
+dmgParts.push({ amount: amt, type: d.type ?? "magic", category: d.category ?? "spell", _base: base, _mod: amt - base });
   }
   if (dmgParts.length) {
     const packet = {
@@ -1136,6 +1191,25 @@ async function dismissSummonedPet({ ownerUuid, summonId, reason="dismissed" }) {
   const actor = findActiveSummonedPetActor({ ownerUuid, summonId });
   if (!actor) return { ok: false, reason: "no-active-summon" };
   return despawnSummonedPet({ actor, reason });
+}
+
+async function applyDruidCompanionBonuses({ owner, petActor }) {
+  try {
+    if (!owner || !petActor) return;
+    const cls = String(owner.flags?.eq5e?.class?.id ?? owner.flags?.eq5e?.classId ?? "").toLowerCase();
+    if (cls !== "druid") return;
+
+    const hpBonus = Number(owner.flags?.eq5e?.druid?.companionHpBonus ?? 0);
+    const dmgPct = Number(owner.flags?.eq5e?.druid?.companionDamagePct ?? 0);
+
+    if (hpBonus) {
+      const hp = foundry.utils.duplicate(petActor.system?.attributes?.hp ?? {});
+      const max = Number(hp.max ?? 0) + hpBonus;
+      const val = Number(hp.value ?? 0) + hpBonus;
+      await petActor.update({ "system.attributes.hp.max": max, "system.attributes.hp.value": val });
+    }
+    if (dmgPct) await petActor.setFlag("eq5e", "petDamagePctBonus", dmgPct);
+  } catch (e) { console.error("[EQ5E] applyDruidCompanionBonuses failed", e); }
 }
 
 async function summonPetFromCompendium({ caster, casterToken, summon, ownerUuid=null }) {

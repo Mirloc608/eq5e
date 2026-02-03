@@ -105,7 +105,13 @@ const CLASS_IMPORTS = [
     { rel: "data/shadowknight-spells.json", pack: "world.eq5e-shadowknight-spells", label: "EQ5e Shadowknight Spells", type: "Item", key: d => d?.flags?.eq5e?.spell?.spellId },
     { rel: "data/shadowknight-aas.json", pack: "world.eq5e-aa", label: "EQ5e Alternate Abilities", type: "Item", key: d => d?.flags?.eq5e?.aa?.aaId }
   ]},
-  { module: "eq5e-class-ranger", name: "Ranger", classId: "ranger", files: [
+  
+{ module: "eq5e-class-druid", name: "Druid", classId: "druid", files: [
+  { rel: "data/druid-spells.json", pack: "world.eq5e-druid-spells", label: "EQ5e Druid Spells", type: "Item", key: d => d?.flags?.eq5e?.spell?.spellId },
+  { rel: "data/druid-aas.json", pack: "world.eq5e-aa", label: "EQ5e Alternate Abilities", type: "Item", key: d => d?.flags?.eq5e?.aa?.aaId }
+]},
+
+{ module: "eq5e-class-ranger", name: "Ranger", classId: "ranger", files: [
     { rel: "data/ranger-spells.json", pack: "world.eq5e-ranger-spells", label: "EQ5e Ranger Spells", type: "Item", key: d => d?.flags?.eq5e?.spell?.spellId },
     { rel: "data/ranger-disciplines.json", pack: "world.eq5e-ranger-disciplines", label: "EQ5e Ranger Disciplines", type: "Item", key: d => d?.flags?.eq5e?.spell?.spellId },
     { rel: "data/ranger-features.json", pack: "world.eq5e-ranger-features", label: "EQ5e Ranger Class Features", type: "Item", key: d => d?.flags?.eq5e?.spell?.spellId },
