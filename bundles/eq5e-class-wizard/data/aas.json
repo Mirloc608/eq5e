@@ -1,0 +1,796 @@
+[
+  {
+    "name": "Fury of Magic",
+    "type": "feat",
+    "img": "icons/magic/fire/flame-burning-eye.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.fury-of-magic",
+          "tab": "Offense",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Increases direct damage spell damage by 6% per rank.",
+          "scales": {
+            "spellDamagePctPerRank": 0.06
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.spellDamagePct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Mana Preservation",
+    "type": "feat",
+    "img": "icons/magic/arcane/circle-energy-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.mana-preservation",
+          "tab": "Utility",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Reduces mana cost of wizard spells by 5% per rank.",
+          "scales": {
+            "manaCostReductionPctPerRank": 0.05
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.manaReductionPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Familiar Mastery",
+    "type": "feat",
+    "img": "icons/creatures/birds/owl-horned-moon.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.familiar-mastery",
+          "tab": "Familiar",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Improves your familiar's support. +2% mana regen and +2% spell crit chance per rank (deterministic).",
+          "scales": {
+            "familiarManaRegenPctPerRank": 0.02,
+            "familiarCritPctPerRank": 0.02
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.familiarManaRegenPct",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.wizard.familiarCritPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Flame Familiar Focus",
+    "type": "feat",
+    "img": "icons/magic/fire/flame-burning-eye.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.familiar-focus-fire",
+          "tab": "Familiar",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Your familiar enhances your fire magic. +3% fire spell damage per rank (stackable).",
+          "scales": {
+            "fireFocusPctPerRank": 0.03
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.fireFocusPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Frost Familiar Focus",
+    "type": "feat",
+    "img": "icons/magic/water/snowflake-ice-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.familiar-focus-cold",
+          "tab": "Familiar",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Your familiar enhances your cold magic. +3% cold spell damage per rank (stackable).",
+          "scales": {
+            "coldFocusPctPerRank": 0.03
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.coldFocusPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Arcane Familiar Focus",
+    "type": "feat",
+    "img": "icons/magic/arcane/circle-energy-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.familiar-focus-arcane",
+          "tab": "Familiar",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Your familiar sharpens your arcane power. +2% arcane penetration per rank (stackable).",
+          "scales": {
+            "arcanePenPctPerRank": 0.02
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.arcanePenPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Familiar Durability",
+    "type": "feat",
+    "img": "icons/creatures/mammals/wolf-grey.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.familiar-durability",
+          "tab": "Familiar",
+          "maxRank": 5,
+          "costPerRank": 2,
+          "description": "Toughens your familiar. +4 HP and +0.5 warding per rank (deterministic).",
+          "scales": {
+            "familiarHpPerRank": 4,
+            "familiarWardingPerRank": 0.5
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.familiarHpBonus",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.wizard.familiarWardingBonus",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Familiar Channeling",
+    "type": "feat",
+    "img": "icons/magic/arcane/energy-swirls-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.familiar-channeling",
+          "tab": "Familiar",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Every 5 casts, your familiar refunds mana equal to 2% of the spell's cost per rank (deterministic).",
+          "scales": {
+            "manaRefundPctPerRank": 0.02
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.familiarManaRefundPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Critical Affinity",
+    "type": "feat",
+    "img": "icons/magic/fire/flame-burning-eye.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.critical-affinity",
+          "tab": "Offense",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Increases spell critical chance by 2% per rank (deterministic).",
+          "scales": {
+            "spellCritPctPerRank": 0.02
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.spellCritPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Destructive Fury",
+    "type": "feat",
+    "img": "icons/magic/fire/sun-explosion.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.destructive-fury",
+          "tab": "Offense",
+          "maxRank": 5,
+          "costPerRank": 5,
+          "description": "Increases spell critical damage by 5% per rank (deterministic).",
+          "scales": {
+            "spellCritDmgPctPerRank": 0.05
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.spellCritDmgPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Fire Specialization",
+    "type": "feat",
+    "img": "icons/magic/fire/flame-jet-orange.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.fire-specialization",
+          "tab": "Specialization",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Increases fire spell damage by 4% per rank (deterministic).",
+          "scales": {
+            "fireSpecPctPerRank": 0.04
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.fireSpecPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Cold Specialization",
+    "type": "feat",
+    "img": "icons/magic/water/ice-snowball.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.cold-specialization",
+          "tab": "Specialization",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Increases cold spell damage by 4% per rank (deterministic).",
+          "scales": {
+            "coldSpecPctPerRank": 0.04
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.coldSpecPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Improved Lures",
+    "type": "feat",
+    "img": "icons/magic/fire/flame-burning-eye.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.improved-lures",
+          "tab": "Specialization",
+          "maxRank": 3,
+          "costPerRank": 4,
+          "description": "Improves lure partial resist effectiveness (+10% per rank).",
+          "scales": {
+            "lurePartialResistBonusPerRank": 0.1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.lurePartialResistBonus",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Rain Mastery",
+    "type": "feat",
+    "img": "icons/magic/fire/rain-fireballs.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.rain-mastery",
+          "tab": "Specialization",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Increases rain tick damage by 4% per rank (deterministic).",
+          "scales": {
+            "rainTickDmgPctPerRank": 0.04
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.rainTickDmgPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Casting Subtlety",
+    "type": "feat",
+    "img": "icons/skills/social/theft-pickpocket.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.casting-subtlety",
+          "tab": "Utility",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Reduces threat generated by your spells by 6% per rank (deterministic).",
+          "scales": {
+            "spellThreatRedPctPerRank": 0.06
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.spellThreatRedPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Harvest Mastery",
+    "type": "feat",
+    "img": "icons/magic/arcane/circle-energy-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.harvest-mastery",
+          "tab": "Efficiency",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Improves out-of-combat mana regen by 4% per rank (deterministic).",
+          "scales": {
+            "oocManaRegenPctPerRank": 0.04
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.oocManaRegenPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Spell Haste",
+    "type": "feat",
+    "img": "icons/magic/time/arrows-circling-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.wiz.spell-haste",
+          "tab": "Efficiency",
+          "maxRank": 5,
+          "costPerRank": 5,
+          "description": "Reduces wizard spell cooldowns by 3% per rank (deterministic).",
+          "scales": {
+            "cooldownRedPctPerRank": 0.03
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.wizard.cooldownRedPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  }
+]

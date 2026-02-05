@@ -1,0 +1,132 @@
+[
+  {
+    "name": "Luclin Riding Horse",
+    "type": "mount",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "era": "luclin",
+      "speed": 50,
+      "carry": 520,
+      "hp": 45,
+      "canFight": false,
+      "traits": [
+        "magical",
+        "lunar"
+      ],
+      "requires": [
+        "saddle"
+      ]
+    },
+    "flags": {
+      "eq5e": {
+        "mount": {
+          "mountId": "luclin_riding_horse"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "luclin"
+        }
+      }
+    }
+  },
+  {
+    "name": "Spirit Wolf Mount",
+    "type": "mount",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "era": "luclin",
+      "speed": 55,
+      "carry": 480,
+      "hp": 42,
+      "canFight": false,
+      "traits": [
+        "magical",
+        "beast",
+        "spirit"
+      ],
+      "requires": [
+        "saddle"
+      ],
+      "restrictedClasses": [
+        "ranger",
+        "druid"
+      ]
+    },
+    "flags": {
+      "eq5e": {
+        "mount": {
+          "mountId": "spirit_wolf_mount"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "luclin"
+        }
+      }
+    }
+  },
+  {
+    "name": "Shissar War Lizard",
+    "type": "mount",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "era": "luclin",
+      "speed": 50,
+      "carry": 560,
+      "hp": 50,
+      "canFight": false,
+      "traits": [
+        "reptilian",
+        "magical"
+      ],
+      "requires": [
+        "saddle"
+      ],
+      "restrictedRaces": [
+        "iksar"
+      ]
+    },
+    "flags": {
+      "eq5e": {
+        "mount": {
+          "mountId": "shissar_war_lizard"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "luclin"
+        }
+      }
+    }
+  },
+  {
+    "name": "Drogar",
+    "type": "mount",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "era": "luclin",
+      "speed": 55,
+      "carry": 620,
+      "hp": 55,
+      "canFight": false,
+      "traits": [
+        "magical",
+        "lunar",
+        "sturdy"
+      ],
+      "requires": [
+        "saddle"
+      ],
+      "notes": "High-end Luclin mount."
+    },
+    "flags": {
+      "eq5e": {
+        "mount": {
+          "mountId": "drogar"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "luclin"
+        }
+      }
+    }
+  }
+]

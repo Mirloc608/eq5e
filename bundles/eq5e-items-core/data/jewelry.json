@@ -1,0 +1,1888 @@
+[
+  {
+    "name": "Plain Copper Earring",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Plain Copper Earring.</p><p><em>Common</em> jewelry.</p>"
+      },
+      "rarity": "common",
+      "tier": "Common",
+      "slot": "ear1",
+      "slotGroup": "ear",
+      "equippable": true,
+      "bonuses": {
+        "ac": 0,
+        "hp": 0,
+        "mana": 0,
+        "str": 0,
+        "dex": 0,
+        "agi": 0,
+        "con": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "value": {
+        "gp": 25
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_plain_copper_earring",
+        "sourceId": "jwl_plain_copper_earring",
+        "tier": "Common",
+        "rarity": "Common",
+        "slot": "ear1",
+        "slotGroup": "ear"
+      }
+    }
+  },
+  {
+    "name": "Traveler's Bronze Stud",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Traveler's Bronze Stud.</p><p><em>Common</em> jewelry.</p>"
+      },
+      "rarity": "common",
+      "tier": "Common",
+      "slot": "ear1",
+      "slotGroup": "ear",
+      "equippable": true,
+      "bonuses": {
+        "ac": 0,
+        "hp": 0,
+        "mana": 0,
+        "str": 0,
+        "dex": 0,
+        "agi": 0,
+        "con": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "value": {
+        "gp": 25
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_traveler_s_bronze_stud",
+        "sourceId": "jwl_traveler_s_bronze_stud",
+        "tier": "Common",
+        "rarity": "Common",
+        "slot": "ear1",
+        "slotGroup": "ear"
+      }
+    }
+  },
+  {
+    "name": "Worn Bone Loop",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Worn Bone Loop.</p><p><em>Common</em> jewelry.</p>"
+      },
+      "rarity": "common",
+      "tier": "Common",
+      "slot": "ear1",
+      "slotGroup": "ear",
+      "equippable": true,
+      "bonuses": {
+        "ac": 0,
+        "hp": 0,
+        "mana": 0,
+        "str": 0,
+        "dex": 0,
+        "agi": 0,
+        "con": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "value": {
+        "gp": 25
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_worn_bone_loop",
+        "sourceId": "jwl_worn_bone_loop",
+        "tier": "Common",
+        "rarity": "Common",
+        "slot": "ear1",
+        "slotGroup": "ear"
+      }
+    }
+  },
+  {
+    "name": "Plain Copper Ring",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Plain Copper Ring.</p><p><em>Common</em> jewelry.</p>"
+      },
+      "rarity": "common",
+      "tier": "Common",
+      "slot": "ring1",
+      "slotGroup": "ring",
+      "equippable": true,
+      "bonuses": {
+        "ac": 0,
+        "hp": 0,
+        "mana": 0,
+        "str": 0,
+        "dex": 0,
+        "agi": 0,
+        "con": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "value": {
+        "gp": 25
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_plain_copper_ring",
+        "sourceId": "jwl_plain_copper_ring",
+        "tier": "Common",
+        "rarity": "Common",
+        "slot": "ring1",
+        "slotGroup": "ring"
+      }
+    }
+  },
+  {
+    "name": "Traveler's Bronze Band",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Traveler's Bronze Band.</p><p><em>Common</em> jewelry.</p>"
+      },
+      "rarity": "common",
+      "tier": "Common",
+      "slot": "ring1",
+      "slotGroup": "ring",
+      "equippable": true,
+      "bonuses": {
+        "ac": 0,
+        "hp": 0,
+        "mana": 0,
+        "str": 0,
+        "dex": 0,
+        "agi": 0,
+        "con": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "value": {
+        "gp": 25
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_traveler_s_bronze_band",
+        "sourceId": "jwl_traveler_s_bronze_band",
+        "tier": "Common",
+        "rarity": "Common",
+        "slot": "ring1",
+        "slotGroup": "ring"
+      }
+    }
+  },
+  {
+    "name": "Worn Bone Signet",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Worn Bone Signet.</p><p><em>Common</em> jewelry.</p>"
+      },
+      "rarity": "common",
+      "tier": "Common",
+      "slot": "ring1",
+      "slotGroup": "ring",
+      "equippable": true,
+      "bonuses": {
+        "ac": 0,
+        "hp": 0,
+        "mana": 0,
+        "str": 0,
+        "dex": 0,
+        "agi": 0,
+        "con": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "value": {
+        "gp": 25
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_worn_bone_signet",
+        "sourceId": "jwl_worn_bone_signet",
+        "tier": "Common",
+        "rarity": "Common",
+        "slot": "ring1",
+        "slotGroup": "ring"
+      }
+    }
+  },
+  {
+    "name": "Plain Copper Necklace",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Plain Copper Necklace.</p><p><em>Common</em> jewelry.</p>"
+      },
+      "rarity": "common",
+      "tier": "Common",
+      "slot": "neck",
+      "slotGroup": "neck",
+      "equippable": true,
+      "bonuses": {
+        "ac": 0,
+        "hp": 0,
+        "mana": 0,
+        "str": 0,
+        "dex": 0,
+        "agi": 0,
+        "con": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "value": {
+        "gp": 25
+      },
+      "weight": 0.2
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_plain_copper_necklace",
+        "sourceId": "jwl_plain_copper_necklace",
+        "tier": "Common",
+        "rarity": "Common",
+        "slot": "neck",
+        "slotGroup": "neck"
+      }
+    }
+  },
+  {
+    "name": "Traveler's Bronze Amulet",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Traveler's Bronze Amulet.</p><p><em>Common</em> jewelry.</p>"
+      },
+      "rarity": "common",
+      "tier": "Common",
+      "slot": "neck",
+      "slotGroup": "neck",
+      "equippable": true,
+      "bonuses": {
+        "ac": 0,
+        "hp": 0,
+        "mana": 0,
+        "str": 0,
+        "dex": 0,
+        "agi": 0,
+        "con": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "value": {
+        "gp": 25
+      },
+      "weight": 0.2
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_traveler_s_bronze_amulet",
+        "sourceId": "jwl_traveler_s_bronze_amulet",
+        "tier": "Common",
+        "rarity": "Common",
+        "slot": "neck",
+        "slotGroup": "neck"
+      }
+    }
+  },
+  {
+    "name": "Worn Bone Pendant",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Worn Bone Pendant.</p><p><em>Common</em> jewelry.</p>"
+      },
+      "rarity": "common",
+      "tier": "Common",
+      "slot": "neck",
+      "slotGroup": "neck",
+      "equippable": true,
+      "bonuses": {
+        "ac": 0,
+        "hp": 0,
+        "mana": 0,
+        "str": 0,
+        "dex": 0,
+        "agi": 0,
+        "con": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "value": {
+        "gp": 25
+      },
+      "weight": 0.2
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_worn_bone_pendant",
+        "sourceId": "jwl_worn_bone_pendant",
+        "tier": "Common",
+        "rarity": "Common",
+        "slot": "neck",
+        "slotGroup": "neck"
+      }
+    }
+  },
+  {
+    "name": "Plain Copper Bracelet",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Plain Copper Bracelet.</p><p><em>Common</em> jewelry.</p>"
+      },
+      "rarity": "common",
+      "tier": "Common",
+      "slot": "wrists",
+      "slotGroup": "wrist",
+      "equippable": true,
+      "bonuses": {
+        "ac": 0,
+        "hp": 0,
+        "mana": 0,
+        "str": 0,
+        "dex": 0,
+        "agi": 0,
+        "con": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "value": {
+        "gp": 25
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_plain_copper_bracelet",
+        "sourceId": "jwl_plain_copper_bracelet",
+        "tier": "Common",
+        "rarity": "Common",
+        "slot": "wrists",
+        "slotGroup": "wrist"
+      }
+    }
+  },
+  {
+    "name": "Traveler's Bronze Bracer",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Traveler's Bronze Bracer.</p><p><em>Common</em> jewelry.</p>"
+      },
+      "rarity": "common",
+      "tier": "Common",
+      "slot": "wrists",
+      "slotGroup": "wrist",
+      "equippable": true,
+      "bonuses": {
+        "ac": 0,
+        "hp": 0,
+        "mana": 0,
+        "str": 0,
+        "dex": 0,
+        "agi": 0,
+        "con": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "value": {
+        "gp": 25
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_traveler_s_bronze_bracer",
+        "sourceId": "jwl_traveler_s_bronze_bracer",
+        "tier": "Common",
+        "rarity": "Common",
+        "slot": "wrists",
+        "slotGroup": "wrist"
+      }
+    }
+  },
+  {
+    "name": "Worn Bone Wristband",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Worn Bone Wristband.</p><p><em>Common</em> jewelry.</p>"
+      },
+      "rarity": "common",
+      "tier": "Common",
+      "slot": "wrists",
+      "slotGroup": "wrist",
+      "equippable": true,
+      "bonuses": {
+        "ac": 0,
+        "hp": 0,
+        "mana": 0,
+        "str": 0,
+        "dex": 0,
+        "agi": 0,
+        "con": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "value": {
+        "gp": 25
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_worn_bone_wristband",
+        "sourceId": "jwl_worn_bone_wristband",
+        "tier": "Common",
+        "rarity": "Common",
+        "slot": "wrists",
+        "slotGroup": "wrist"
+      }
+    }
+  },
+  {
+    "name": "Carved Silver Earring",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Carved Silver Earring.</p><p><em>Uncommon</em> jewelry.</p>"
+      },
+      "rarity": "uncommon",
+      "tier": "Uncommon",
+      "slot": "ear1",
+      "slotGroup": "ear",
+      "equippable": true,
+      "bonuses": {
+        "ac": 1,
+        "hp": 5,
+        "mana": 5
+      },
+      "value": {
+        "gp": 50
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_carved_silver_earring",
+        "sourceId": "jwl_carved_silver_earring",
+        "tier": "Uncommon",
+        "rarity": "Uncommon",
+        "slot": "ear1",
+        "slotGroup": "ear"
+      }
+    }
+  },
+  {
+    "name": "Adept Jade Stud",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Adept Jade Stud.</p><p><em>Uncommon</em> jewelry.</p>"
+      },
+      "rarity": "uncommon",
+      "tier": "Uncommon",
+      "slot": "ear1",
+      "slotGroup": "ear",
+      "equippable": true,
+      "bonuses": {
+        "ac": 1,
+        "hp": 5,
+        "mana": 5
+      },
+      "value": {
+        "gp": 50
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_adept_jade_stud",
+        "sourceId": "jwl_adept_jade_stud",
+        "tier": "Uncommon",
+        "rarity": "Uncommon",
+        "slot": "ear1",
+        "slotGroup": "ear"
+      }
+    }
+  },
+  {
+    "name": "Runed Shell Loop",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Runed Shell Loop.</p><p><em>Uncommon</em> jewelry.</p>"
+      },
+      "rarity": "uncommon",
+      "tier": "Uncommon",
+      "slot": "ear1",
+      "slotGroup": "ear",
+      "equippable": true,
+      "bonuses": {
+        "ac": 1,
+        "hp": 5,
+        "mana": 5
+      },
+      "value": {
+        "gp": 50
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_runed_shell_loop",
+        "sourceId": "jwl_runed_shell_loop",
+        "tier": "Uncommon",
+        "rarity": "Uncommon",
+        "slot": "ear1",
+        "slotGroup": "ear"
+      }
+    }
+  },
+  {
+    "name": "Carved Silver Ring",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Carved Silver Ring.</p><p><em>Uncommon</em> jewelry.</p>"
+      },
+      "rarity": "uncommon",
+      "tier": "Uncommon",
+      "slot": "ring1",
+      "slotGroup": "ring",
+      "equippable": true,
+      "bonuses": {
+        "ac": 1,
+        "hp": 5,
+        "mana": 5
+      },
+      "value": {
+        "gp": 50
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_carved_silver_ring",
+        "sourceId": "jwl_carved_silver_ring",
+        "tier": "Uncommon",
+        "rarity": "Uncommon",
+        "slot": "ring1",
+        "slotGroup": "ring"
+      }
+    }
+  },
+  {
+    "name": "Adept Jade Band",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Adept Jade Band.</p><p><em>Uncommon</em> jewelry.</p>"
+      },
+      "rarity": "uncommon",
+      "tier": "Uncommon",
+      "slot": "ring1",
+      "slotGroup": "ring",
+      "equippable": true,
+      "bonuses": {
+        "ac": 1,
+        "hp": 5,
+        "mana": 5
+      },
+      "value": {
+        "gp": 50
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_adept_jade_band",
+        "sourceId": "jwl_adept_jade_band",
+        "tier": "Uncommon",
+        "rarity": "Uncommon",
+        "slot": "ring1",
+        "slotGroup": "ring"
+      }
+    }
+  },
+  {
+    "name": "Runed Shell Signet",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Runed Shell Signet.</p><p><em>Uncommon</em> jewelry.</p>"
+      },
+      "rarity": "uncommon",
+      "tier": "Uncommon",
+      "slot": "ring1",
+      "slotGroup": "ring",
+      "equippable": true,
+      "bonuses": {
+        "ac": 1,
+        "hp": 5,
+        "mana": 5
+      },
+      "value": {
+        "gp": 50
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_runed_shell_signet",
+        "sourceId": "jwl_runed_shell_signet",
+        "tier": "Uncommon",
+        "rarity": "Uncommon",
+        "slot": "ring1",
+        "slotGroup": "ring"
+      }
+    }
+  },
+  {
+    "name": "Carved Silver Necklace",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Carved Silver Necklace.</p><p><em>Uncommon</em> jewelry.</p>"
+      },
+      "rarity": "uncommon",
+      "tier": "Uncommon",
+      "slot": "neck",
+      "slotGroup": "neck",
+      "equippable": true,
+      "bonuses": {
+        "ac": 1,
+        "hp": 5,
+        "mana": 5
+      },
+      "value": {
+        "gp": 50
+      },
+      "weight": 0.2
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_carved_silver_necklace",
+        "sourceId": "jwl_carved_silver_necklace",
+        "tier": "Uncommon",
+        "rarity": "Uncommon",
+        "slot": "neck",
+        "slotGroup": "neck"
+      }
+    }
+  },
+  {
+    "name": "Adept Jade Amulet",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Adept Jade Amulet.</p><p><em>Uncommon</em> jewelry.</p>"
+      },
+      "rarity": "uncommon",
+      "tier": "Uncommon",
+      "slot": "neck",
+      "slotGroup": "neck",
+      "equippable": true,
+      "bonuses": {
+        "ac": 1,
+        "hp": 5,
+        "mana": 5
+      },
+      "value": {
+        "gp": 50
+      },
+      "weight": 0.2
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_adept_jade_amulet",
+        "sourceId": "jwl_adept_jade_amulet",
+        "tier": "Uncommon",
+        "rarity": "Uncommon",
+        "slot": "neck",
+        "slotGroup": "neck"
+      }
+    }
+  },
+  {
+    "name": "Runed Shell Pendant",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Runed Shell Pendant.</p><p><em>Uncommon</em> jewelry.</p>"
+      },
+      "rarity": "uncommon",
+      "tier": "Uncommon",
+      "slot": "neck",
+      "slotGroup": "neck",
+      "equippable": true,
+      "bonuses": {
+        "ac": 1,
+        "hp": 5,
+        "mana": 5
+      },
+      "value": {
+        "gp": 50
+      },
+      "weight": 0.2
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_runed_shell_pendant",
+        "sourceId": "jwl_runed_shell_pendant",
+        "tier": "Uncommon",
+        "rarity": "Uncommon",
+        "slot": "neck",
+        "slotGroup": "neck"
+      }
+    }
+  },
+  {
+    "name": "Carved Silver Bracelet",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Carved Silver Bracelet.</p><p><em>Uncommon</em> jewelry.</p>"
+      },
+      "rarity": "uncommon",
+      "tier": "Uncommon",
+      "slot": "wrists",
+      "slotGroup": "wrist",
+      "equippable": true,
+      "bonuses": {
+        "ac": 1,
+        "hp": 5,
+        "mana": 5
+      },
+      "value": {
+        "gp": 50
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_carved_silver_bracelet",
+        "sourceId": "jwl_carved_silver_bracelet",
+        "tier": "Uncommon",
+        "rarity": "Uncommon",
+        "slot": "wrists",
+        "slotGroup": "wrist"
+      }
+    }
+  },
+  {
+    "name": "Adept Jade Bracer",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Adept Jade Bracer.</p><p><em>Uncommon</em> jewelry.</p>"
+      },
+      "rarity": "uncommon",
+      "tier": "Uncommon",
+      "slot": "wrists",
+      "slotGroup": "wrist",
+      "equippable": true,
+      "bonuses": {
+        "ac": 1,
+        "hp": 5,
+        "mana": 5
+      },
+      "value": {
+        "gp": 50
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_adept_jade_bracer",
+        "sourceId": "jwl_adept_jade_bracer",
+        "tier": "Uncommon",
+        "rarity": "Uncommon",
+        "slot": "wrists",
+        "slotGroup": "wrist"
+      }
+    }
+  },
+  {
+    "name": "Runed Shell Wristband",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Runed Shell Wristband.</p><p><em>Uncommon</em> jewelry.</p>"
+      },
+      "rarity": "uncommon",
+      "tier": "Uncommon",
+      "slot": "wrists",
+      "slotGroup": "wrist",
+      "equippable": true,
+      "bonuses": {
+        "ac": 1,
+        "hp": 5,
+        "mana": 5
+      },
+      "value": {
+        "gp": 50
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_runed_shell_wristband",
+        "sourceId": "jwl_runed_shell_wristband",
+        "tier": "Uncommon",
+        "rarity": "Uncommon",
+        "slot": "wrists",
+        "slotGroup": "wrist"
+      }
+    }
+  },
+  {
+    "name": "Gleaming Gold Earring",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Gleaming Gold Earring.</p><p><em>Rare</em> jewelry.</p>"
+      },
+      "rarity": "rare",
+      "tier": "Rare",
+      "slot": "ear1",
+      "slotGroup": "ear",
+      "equippable": true,
+      "bonuses": {
+        "ac": 2,
+        "hp": 10,
+        "mana": 10
+      },
+      "value": {
+        "gp": 75
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_gleaming_gold_earring",
+        "sourceId": "jwl_gleaming_gold_earring",
+        "tier": "Rare",
+        "rarity": "Rare",
+        "slot": "ear1",
+        "slotGroup": "ear"
+      }
+    }
+  },
+  {
+    "name": "Warder’s Moonstone Stud",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Warder’s Moonstone Stud.</p><p><em>Rare</em> jewelry.</p>"
+      },
+      "rarity": "rare",
+      "tier": "Rare",
+      "slot": "ear1",
+      "slotGroup": "ear",
+      "equippable": true,
+      "bonuses": {
+        "ac": 2,
+        "hp": 10,
+        "mana": 10
+      },
+      "value": {
+        "gp": 75
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_warder_s_moonstone_stud",
+        "sourceId": "jwl_warder_s_moonstone_stud",
+        "tier": "Rare",
+        "rarity": "Rare",
+        "slot": "ear1",
+        "slotGroup": "ear"
+      }
+    }
+  },
+  {
+    "name": "Gleaming Gold Ring",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Gleaming Gold Ring.</p><p><em>Rare</em> jewelry.</p>"
+      },
+      "rarity": "rare",
+      "tier": "Rare",
+      "slot": "ring1",
+      "slotGroup": "ring",
+      "equippable": true,
+      "bonuses": {
+        "ac": 2,
+        "hp": 10,
+        "mana": 10
+      },
+      "value": {
+        "gp": 75
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_gleaming_gold_ring",
+        "sourceId": "jwl_gleaming_gold_ring",
+        "tier": "Rare",
+        "rarity": "Rare",
+        "slot": "ring1",
+        "slotGroup": "ring"
+      }
+    }
+  },
+  {
+    "name": "Warder’s Moonstone Band",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Warder’s Moonstone Band.</p><p><em>Rare</em> jewelry.</p>"
+      },
+      "rarity": "rare",
+      "tier": "Rare",
+      "slot": "ring1",
+      "slotGroup": "ring",
+      "equippable": true,
+      "bonuses": {
+        "ac": 2,
+        "hp": 10,
+        "mana": 10
+      },
+      "value": {
+        "gp": 75
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_warder_s_moonstone_band",
+        "sourceId": "jwl_warder_s_moonstone_band",
+        "tier": "Rare",
+        "rarity": "Rare",
+        "slot": "ring1",
+        "slotGroup": "ring"
+      }
+    }
+  },
+  {
+    "name": "Gleaming Gold Necklace",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Gleaming Gold Necklace.</p><p><em>Rare</em> jewelry.</p>"
+      },
+      "rarity": "rare",
+      "tier": "Rare",
+      "slot": "neck",
+      "slotGroup": "neck",
+      "equippable": true,
+      "bonuses": {
+        "ac": 2,
+        "hp": 10,
+        "mana": 10
+      },
+      "value": {
+        "gp": 75
+      },
+      "weight": 0.2
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_gleaming_gold_necklace",
+        "sourceId": "jwl_gleaming_gold_necklace",
+        "tier": "Rare",
+        "rarity": "Rare",
+        "slot": "neck",
+        "slotGroup": "neck"
+      }
+    }
+  },
+  {
+    "name": "Warder’s Moonstone Amulet",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Warder’s Moonstone Amulet.</p><p><em>Rare</em> jewelry.</p>"
+      },
+      "rarity": "rare",
+      "tier": "Rare",
+      "slot": "neck",
+      "slotGroup": "neck",
+      "equippable": true,
+      "bonuses": {
+        "ac": 2,
+        "hp": 10,
+        "mana": 10
+      },
+      "value": {
+        "gp": 75
+      },
+      "weight": 0.2
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_warder_s_moonstone_amulet",
+        "sourceId": "jwl_warder_s_moonstone_amulet",
+        "tier": "Rare",
+        "rarity": "Rare",
+        "slot": "neck",
+        "slotGroup": "neck"
+      }
+    }
+  },
+  {
+    "name": "Gleaming Gold Bracelet",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Gleaming Gold Bracelet.</p><p><em>Rare</em> jewelry.</p>"
+      },
+      "rarity": "rare",
+      "tier": "Rare",
+      "slot": "wrists",
+      "slotGroup": "wrist",
+      "equippable": true,
+      "bonuses": {
+        "ac": 2,
+        "hp": 10,
+        "mana": 10
+      },
+      "value": {
+        "gp": 75
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_gleaming_gold_bracelet",
+        "sourceId": "jwl_gleaming_gold_bracelet",
+        "tier": "Rare",
+        "rarity": "Rare",
+        "slot": "wrists",
+        "slotGroup": "wrist"
+      }
+    }
+  },
+  {
+    "name": "Warder’s Moonstone Bracer",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Warder’s Moonstone Bracer.</p><p><em>Rare</em> jewelry.</p>"
+      },
+      "rarity": "rare",
+      "tier": "Rare",
+      "slot": "wrists",
+      "slotGroup": "wrist",
+      "equippable": true,
+      "bonuses": {
+        "ac": 2,
+        "hp": 10,
+        "mana": 10
+      },
+      "value": {
+        "gp": 75
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_warder_s_moonstone_bracer",
+        "sourceId": "jwl_warder_s_moonstone_bracer",
+        "tier": "Rare",
+        "rarity": "Rare",
+        "slot": "wrists",
+        "slotGroup": "wrist"
+      }
+    }
+  },
+  {
+    "name": "Mythic Mithril Earring",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Mythic Mithril Earring.</p><p><em>Epic</em> jewelry.</p>"
+      },
+      "rarity": "epic",
+      "tier": "Epic",
+      "slot": "ear1",
+      "slotGroup": "ear",
+      "equippable": true,
+      "bonuses": {
+        "ac": 3,
+        "hp": 20,
+        "mana": 20
+      },
+      "value": {
+        "gp": 100
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_mythic_mithril_earring",
+        "sourceId": "jwl_mythic_mithril_earring",
+        "tier": "Epic",
+        "rarity": "Epic",
+        "slot": "ear1",
+        "slotGroup": "ear"
+      }
+    }
+  },
+  {
+    "name": "Archmage Star Ruby Stud",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Archmage Star Ruby Stud.</p><p><em>Epic</em> jewelry.</p>"
+      },
+      "rarity": "epic",
+      "tier": "Epic",
+      "slot": "ear1",
+      "slotGroup": "ear",
+      "equippable": true,
+      "bonuses": {
+        "ac": 3,
+        "hp": 20,
+        "mana": 20
+      },
+      "value": {
+        "gp": 100
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_archmage_star_ruby_stud",
+        "sourceId": "jwl_archmage_star_ruby_stud",
+        "tier": "Epic",
+        "rarity": "Epic",
+        "slot": "ear1",
+        "slotGroup": "ear"
+      }
+    }
+  },
+  {
+    "name": "Mythic Mithril Ring",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Mythic Mithril Ring.</p><p><em>Epic</em> jewelry.</p>"
+      },
+      "rarity": "epic",
+      "tier": "Epic",
+      "slot": "ring1",
+      "slotGroup": "ring",
+      "equippable": true,
+      "bonuses": {
+        "ac": 3,
+        "hp": 20,
+        "mana": 20
+      },
+      "value": {
+        "gp": 100
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_mythic_mithril_ring",
+        "sourceId": "jwl_mythic_mithril_ring",
+        "tier": "Epic",
+        "rarity": "Epic",
+        "slot": "ring1",
+        "slotGroup": "ring"
+      }
+    }
+  },
+  {
+    "name": "Archmage Star Ruby Band",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Archmage Star Ruby Band.</p><p><em>Epic</em> jewelry.</p>"
+      },
+      "rarity": "epic",
+      "tier": "Epic",
+      "slot": "ring1",
+      "slotGroup": "ring",
+      "equippable": true,
+      "bonuses": {
+        "ac": 3,
+        "hp": 20,
+        "mana": 20
+      },
+      "value": {
+        "gp": 100
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_archmage_star_ruby_band",
+        "sourceId": "jwl_archmage_star_ruby_band",
+        "tier": "Epic",
+        "rarity": "Epic",
+        "slot": "ring1",
+        "slotGroup": "ring"
+      }
+    }
+  },
+  {
+    "name": "Mythic Mithril Necklace",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Mythic Mithril Necklace.</p><p><em>Epic</em> jewelry.</p>"
+      },
+      "rarity": "epic",
+      "tier": "Epic",
+      "slot": "neck",
+      "slotGroup": "neck",
+      "equippable": true,
+      "bonuses": {
+        "ac": 3,
+        "hp": 20,
+        "mana": 20
+      },
+      "value": {
+        "gp": 100
+      },
+      "weight": 0.2
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_mythic_mithril_necklace",
+        "sourceId": "jwl_mythic_mithril_necklace",
+        "tier": "Epic",
+        "rarity": "Epic",
+        "slot": "neck",
+        "slotGroup": "neck"
+      }
+    }
+  },
+  {
+    "name": "Archmage Star Ruby Amulet",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Archmage Star Ruby Amulet.</p><p><em>Epic</em> jewelry.</p>"
+      },
+      "rarity": "epic",
+      "tier": "Epic",
+      "slot": "neck",
+      "slotGroup": "neck",
+      "equippable": true,
+      "bonuses": {
+        "ac": 3,
+        "hp": 20,
+        "mana": 20
+      },
+      "value": {
+        "gp": 100
+      },
+      "weight": 0.2
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_archmage_star_ruby_amulet",
+        "sourceId": "jwl_archmage_star_ruby_amulet",
+        "tier": "Epic",
+        "rarity": "Epic",
+        "slot": "neck",
+        "slotGroup": "neck"
+      }
+    }
+  },
+  {
+    "name": "Mythic Mithril Bracelet",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Mythic Mithril Bracelet.</p><p><em>Epic</em> jewelry.</p>"
+      },
+      "rarity": "epic",
+      "tier": "Epic",
+      "slot": "wrists",
+      "slotGroup": "wrist",
+      "equippable": true,
+      "bonuses": {
+        "ac": 3,
+        "hp": 20,
+        "mana": 20
+      },
+      "value": {
+        "gp": 100
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_mythic_mithril_bracelet",
+        "sourceId": "jwl_mythic_mithril_bracelet",
+        "tier": "Epic",
+        "rarity": "Epic",
+        "slot": "wrists",
+        "slotGroup": "wrist"
+      }
+    }
+  },
+  {
+    "name": "Archmage Star Ruby Bracer",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Archmage Star Ruby Bracer.</p><p><em>Epic</em> jewelry.</p>"
+      },
+      "rarity": "epic",
+      "tier": "Epic",
+      "slot": "wrists",
+      "slotGroup": "wrist",
+      "equippable": true,
+      "bonuses": {
+        "ac": 3,
+        "hp": 20,
+        "mana": 20
+      },
+      "value": {
+        "gp": 100
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_archmage_star_ruby_bracer",
+        "sourceId": "jwl_archmage_star_ruby_bracer",
+        "tier": "Epic",
+        "rarity": "Epic",
+        "slot": "wrists",
+        "slotGroup": "wrist"
+      }
+    }
+  },
+  {
+    "name": "Legendary Ethereal Earring",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Legendary Ethereal Earring.</p><p><em>Legendary</em> jewelry.</p>"
+      },
+      "rarity": "legendary",
+      "tier": "Legendary",
+      "slot": "ear1",
+      "slotGroup": "ear",
+      "equippable": true,
+      "bonuses": {
+        "ac": 4,
+        "hp": 35,
+        "mana": 35
+      },
+      "value": {
+        "gp": 125
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_legendary_ethereal_earring",
+        "sourceId": "jwl_legendary_ethereal_earring",
+        "tier": "Legendary",
+        "rarity": "Legendary",
+        "slot": "ear1",
+        "slotGroup": "ear"
+      }
+    }
+  },
+  {
+    "name": "Fatewoven Prismatic Stud",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Fatewoven Prismatic Stud.</p><p><em>Legendary</em> jewelry.</p>"
+      },
+      "rarity": "legendary",
+      "tier": "Legendary",
+      "slot": "ear1",
+      "slotGroup": "ear",
+      "equippable": true,
+      "bonuses": {
+        "ac": 4,
+        "hp": 35,
+        "mana": 35
+      },
+      "value": {
+        "gp": 125
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_fatewoven_prismatic_stud",
+        "sourceId": "jwl_fatewoven_prismatic_stud",
+        "tier": "Legendary",
+        "rarity": "Legendary",
+        "slot": "ear1",
+        "slotGroup": "ear"
+      }
+    }
+  },
+  {
+    "name": "Legendary Ethereal Ring",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Legendary Ethereal Ring.</p><p><em>Legendary</em> jewelry.</p>"
+      },
+      "rarity": "legendary",
+      "tier": "Legendary",
+      "slot": "ring1",
+      "slotGroup": "ring",
+      "equippable": true,
+      "bonuses": {
+        "ac": 4,
+        "hp": 35,
+        "mana": 35
+      },
+      "value": {
+        "gp": 125
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_legendary_ethereal_ring",
+        "sourceId": "jwl_legendary_ethereal_ring",
+        "tier": "Legendary",
+        "rarity": "Legendary",
+        "slot": "ring1",
+        "slotGroup": "ring"
+      }
+    }
+  },
+  {
+    "name": "Fatewoven Prismatic Band",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Fatewoven Prismatic Band.</p><p><em>Legendary</em> jewelry.</p>"
+      },
+      "rarity": "legendary",
+      "tier": "Legendary",
+      "slot": "ring1",
+      "slotGroup": "ring",
+      "equippable": true,
+      "bonuses": {
+        "ac": 4,
+        "hp": 35,
+        "mana": 35
+      },
+      "value": {
+        "gp": 125
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_fatewoven_prismatic_band",
+        "sourceId": "jwl_fatewoven_prismatic_band",
+        "tier": "Legendary",
+        "rarity": "Legendary",
+        "slot": "ring1",
+        "slotGroup": "ring"
+      }
+    }
+  },
+  {
+    "name": "Legendary Ethereal Necklace",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Legendary Ethereal Necklace.</p><p><em>Legendary</em> jewelry.</p>"
+      },
+      "rarity": "legendary",
+      "tier": "Legendary",
+      "slot": "neck",
+      "slotGroup": "neck",
+      "equippable": true,
+      "bonuses": {
+        "ac": 4,
+        "hp": 35,
+        "mana": 35
+      },
+      "value": {
+        "gp": 125
+      },
+      "weight": 0.2
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_legendary_ethereal_necklace",
+        "sourceId": "jwl_legendary_ethereal_necklace",
+        "tier": "Legendary",
+        "rarity": "Legendary",
+        "slot": "neck",
+        "slotGroup": "neck"
+      }
+    }
+  },
+  {
+    "name": "Fatewoven Prismatic Amulet",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Fatewoven Prismatic Amulet.</p><p><em>Legendary</em> jewelry.</p>"
+      },
+      "rarity": "legendary",
+      "tier": "Legendary",
+      "slot": "neck",
+      "slotGroup": "neck",
+      "equippable": true,
+      "bonuses": {
+        "ac": 4,
+        "hp": 35,
+        "mana": 35
+      },
+      "value": {
+        "gp": 125
+      },
+      "weight": 0.2
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_fatewoven_prismatic_amulet",
+        "sourceId": "jwl_fatewoven_prismatic_amulet",
+        "tier": "Legendary",
+        "rarity": "Legendary",
+        "slot": "neck",
+        "slotGroup": "neck"
+      }
+    }
+  },
+  {
+    "name": "Legendary Ethereal Bracelet",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Legendary Ethereal Bracelet.</p><p><em>Legendary</em> jewelry.</p>"
+      },
+      "rarity": "legendary",
+      "tier": "Legendary",
+      "slot": "wrists",
+      "slotGroup": "wrist",
+      "equippable": true,
+      "bonuses": {
+        "ac": 4,
+        "hp": 35,
+        "mana": 35
+      },
+      "value": {
+        "gp": 125
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_legendary_ethereal_bracelet",
+        "sourceId": "jwl_legendary_ethereal_bracelet",
+        "tier": "Legendary",
+        "rarity": "Legendary",
+        "slot": "wrists",
+        "slotGroup": "wrist"
+      }
+    }
+  },
+  {
+    "name": "Fatewoven Prismatic Bracer",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-teal.webp",
+    "system": {
+      "description": {
+        "value": "<p>Fatewoven Prismatic Bracer.</p><p><em>Legendary</em> jewelry.</p>"
+      },
+      "rarity": "legendary",
+      "tier": "Legendary",
+      "slot": "wrists",
+      "slotGroup": "wrist",
+      "equippable": true,
+      "bonuses": {
+        "ac": 4,
+        "hp": 35,
+        "mana": 35
+      },
+      "value": {
+        "gp": 125
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_fatewoven_prismatic_bracer",
+        "sourceId": "jwl_fatewoven_prismatic_bracer",
+        "tier": "Legendary",
+        "rarity": "Legendary",
+        "slot": "wrists",
+        "slotGroup": "wrist"
+      }
+    }
+  },
+  {
+    "name": "Journeyman's Ring",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-round-blue.webp",
+    "system": {
+      "description": {
+        "value": "<p>A ring favored by seasoned travelers. Rumored to resonate with distant waystones.</p><p><em>Rare</em></p>"
+      },
+      "rarity": "rare",
+      "tier": "Rare",
+      "slot": "ring1",
+      "slotGroup": "ring",
+      "equippable": true,
+      "bonuses": {
+        "ac": 2,
+        "hp": 10,
+        "mana": 10
+      },
+      "value": {
+        "gp": 240
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_journeyman_s_ring",
+        "sourceId": "jwl_journeyman_s_ring",
+        "tier": "Rare",
+        "rarity": "Rare",
+        "slot": "ring1",
+        "slotGroup": "ring"
+      }
+    }
+  },
+  {
+    "name": "Mask of the Deceiver (Pendant)",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-teardrop-purple.webp",
+    "system": {
+      "description": {
+        "value": "<p>A pendant bearing a shifting visage. It feels... amused.</p><p><em>Epic</em></p>"
+      },
+      "rarity": "epic",
+      "tier": "Epic",
+      "slot": "neck",
+      "slotGroup": "neck",
+      "equippable": true,
+      "bonuses": {
+        "ac": 3,
+        "hp": 20,
+        "mana": 20
+      },
+      "value": {
+        "gp": 300
+      },
+      "weight": 0.2
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_mask_of_the_deceiver_pendant",
+        "sourceId": "jwl_mask_of_the_deceiver_pendant",
+        "tier": "Epic",
+        "rarity": "Epic",
+        "slot": "neck",
+        "slotGroup": "neck"
+      }
+    }
+  },
+  {
+    "name": "Cazic's Whisper Earring",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-oval-green.webp",
+    "system": {
+      "description": {
+        "value": "<p>An earring that hums with dread. Priests swear it listens back.</p><p><em>Legendary</em></p>"
+      },
+      "rarity": "legendary",
+      "tier": "Legendary",
+      "slot": "ear1",
+      "slotGroup": "ear",
+      "equippable": true,
+      "bonuses": {
+        "ac": 4,
+        "hp": 35,
+        "mana": 35
+      },
+      "value": {
+        "gp": 360
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_cazic_s_whisper_earring",
+        "sourceId": "jwl_cazic_s_whisper_earring",
+        "tier": "Legendary",
+        "rarity": "Legendary",
+        "slot": "ear1",
+        "slotGroup": "ear"
+      }
+    }
+  },
+  {
+    "name": "Band of the Tides",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-round-aqua.webp",
+    "system": {
+      "description": {
+        "value": "<p>Salt-scented and cold to the touch, like moonlit water.</p><p><em>Epic</em></p>"
+      },
+      "rarity": "epic",
+      "tier": "Epic",
+      "slot": "ring1",
+      "slotGroup": "ring",
+      "equippable": true,
+      "bonuses": {
+        "ac": 3,
+        "hp": 20,
+        "mana": 20
+      },
+      "value": {
+        "gp": 300
+      },
+      "weight": 0.1
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_band_of_the_tides",
+        "sourceId": "jwl_band_of_the_tides",
+        "tier": "Epic",
+        "rarity": "Epic",
+        "slot": "ring1",
+        "slotGroup": "ring"
+      }
+    }
+  },
+  {
+    "name": "Golden Star Amulet",
+    "type": "jewelry",
+    "img": "icons/commodities/gems/gem-faceted-star-yellow.webp",
+    "system": {
+      "description": {
+        "value": "<p>An amulet set with a star-cut gem that catches even dim torchlight.</p><p><em>Rare</em></p>"
+      },
+      "rarity": "rare",
+      "tier": "Rare",
+      "slot": "neck",
+      "slotGroup": "neck",
+      "equippable": true,
+      "bonuses": {
+        "ac": 2,
+        "hp": 10,
+        "mana": 10
+      },
+      "value": {
+        "gp": 240
+      },
+      "weight": 0.2
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jwl_golden_star_amulet",
+        "sourceId": "jwl_golden_star_amulet",
+        "tier": "Rare",
+        "rarity": "Rare",
+        "slot": "neck",
+        "slotGroup": "neck"
+      }
+    }
+  }
+]

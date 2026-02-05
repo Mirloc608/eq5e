@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Companion (Wolf)",
+    "type": "npc",
+    "img": "icons/creatures/mammals/wolf-grey.webp",
+    "system": {
+      "attributes": {
+        "hp": {
+          "value": 20,
+          "max": 20
+        },
+        "movement": {
+          "walk": 40
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "pet": {
+          "role": "melee",
+          "ai": "dps",
+          "ownerClass": "ranger",
+          "family": "wolf"
+        }
+      }
+    }
+  },
+  {
+    "name": "Companion (Bear)",
+    "type": "npc",
+    "img": "icons/creatures/mammals/bear-brown.webp",
+    "system": {
+      "attributes": {
+        "hp": {
+          "value": 28,
+          "max": 28
+        },
+        "movement": {
+          "walk": 35
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "pet": {
+          "role": "melee",
+          "ai": "tank-lite",
+          "ownerClass": "ranger",
+          "family": "bear"
+        }
+      }
+    }
+  },
+  {
+    "name": "Companion (Hawk)",
+    "type": "npc",
+    "img": "icons/creatures/birds/hawk-brown.webp",
+    "system": {
+      "attributes": {
+        "hp": {
+          "value": 16,
+          "max": 16
+        },
+        "movement": {
+          "walk": 10
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "pet": {
+          "role": "support",
+          "ai": "assist",
+          "ownerClass": "ranger",
+          "family": "hawk"
+        }
+      }
+    }
+  }
+]

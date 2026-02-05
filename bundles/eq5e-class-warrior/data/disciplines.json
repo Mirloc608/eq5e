@@ -1,0 +1,105 @@
+[
+  {
+    "name": "Defensive Discipline",
+    "type": "feat",
+    "img": "icons/skills/melee/shield-block-gray.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "war.disc.defensive",
+          "cooldownRounds": 9,
+          "durationRounds": 4,
+          "exclusiveGroup": "warrior",
+          "effects": {
+            "incomingPhysicalMult": 0.7
+          },
+          "desc": "Iconic warrior defense: reduces incoming physical damage for a short time."
+        }
+      }
+    }
+  },
+  {
+    "name": "Weapon Shield",
+    "type": "feat",
+    "img": "icons/skills/melee/shield-reflect-boss.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "war.disc.weapon-shield",
+          "cooldownRounds": 14,
+          "durationRounds": 2,
+          "exclusiveGroup": "warrior",
+          "effects": {
+            "incomingPhysicalMult": 0.5,
+            "rootSelf": true
+          },
+          "desc": "Braces behind a shield wall. Massive physical reduction; intended to restrict movement."
+        }
+      }
+    }
+  },
+  {
+    "name": "Fortitude",
+    "type": "feat",
+    "img": "icons/skills/melee/steel-plate-armour.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "war.disc.fortitude",
+          "cooldownRounds": 12,
+          "durationRounds": 3,
+          "exclusiveGroup": "warrior",
+          "effects": {
+            "incomingPhysicalMult": 0.35,
+            "incomingSpellMult": 0.7
+          },
+          "desc": "Emergency survival. Strong mitigation versus physical and partial mitigation versus spells."
+        }
+      }
+    }
+  },
+  {
+    "name": "Offensive Discipline",
+    "type": "feat",
+    "img": "icons/skills/melee/sword-winged-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "war.disc.offensive",
+          "cooldownRounds": 9,
+          "durationRounds": 3,
+          "exclusiveGroup": "warrior",
+          "effects": {
+            "outgoingDamageMult": 1.15,
+            "threatMult": 1.2
+          },
+          "desc": "Aggressive stance: increased damage and threat."
+        }
+      }
+    }
+  },
+  {
+    "name": "Evasive Discipline",
+    "type": "feat",
+    "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "war.disc.evasive",
+          "cooldownRounds": 10,
+          "durationRounds": 3,
+          "exclusiveGroup": "warrior",
+          "effects": {
+            "avoidanceBonus": 0.15
+          },
+          "desc": "Improves avoidance for a short time."
+        }
+      }
+    }
+  }
+]

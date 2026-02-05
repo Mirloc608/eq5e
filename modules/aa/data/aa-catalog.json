@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "eq5e-aa-catalog",
+  "title": "EQ5e Alternate Advancement Catalog",
+  "defaultEra": 1,
+  "eras": {
+    "1": {
+      "title": "Era 1: New Beginnings",
+      "minLevel": 1,
+      "maxLevel": 10,
+      "aaCap": 50,
+      "description": "Level cap 10. Low-mudflation AA set focused on identity and utility."
+    }
+  },
+  "nodes": [
+    {
+      "id": "era1-general-stamina",
+      "name": "Stalwart",
+      "era": 1,
+      "category": "General",
+      "tier": 1,
+      "maxRank": 3,
+      "costPerRank": 1,
+      "requires": [],
+      "tags": [
+        "defense"
+      ],
+      "summary": "+1 HP per rank (placeholder until finalized).",
+      "effects": []
+    }
+  ]
+}

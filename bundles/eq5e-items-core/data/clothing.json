@@ -1,0 +1,454 @@
+[
+  {
+    "name": "Traveler's Clothes",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Durable clothes suitable for long travel.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 4,
+      "price": {
+        "value": 2,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:travelers-clothes",
+        "sourceId": "equipment:travelers-clothes",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "clothing",
+        "tags": [
+          "clothing"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Common Clothes",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Plain everyday clothing.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 3,
+      "price": {
+        "value": 0.5,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:common-clothes",
+        "sourceId": "equipment:common-clothes",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "clothing",
+        "tags": [
+          "clothing"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Cold Weather Outfit",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Furs and layers for harsh climates.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 6,
+      "price": {
+        "value": 8,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:cold-weather-outfit",
+        "sourceId": "equipment:cold-weather-outfit",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "clothing",
+        "tags": [
+          "clothing",
+          "weather"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Rain Cloak",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A waxed cloak that sheds rain.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 2,
+      "price": {
+        "value": 3,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:rain-cloak",
+        "sourceId": "equipment:rain-cloak",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "back",
+        "tags": [
+          "clothing",
+          "weather"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Desert Wraps",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Breathable wraps that protect from sun and sand.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 2,
+      "price": {
+        "value": 4,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:desert-wraps",
+        "sourceId": "equipment:desert-wraps",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "clothing",
+        "tags": [
+          "clothing",
+          "weather"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Fine Clothes",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Tailored clothing suited for courts and cities.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 3,
+      "price": {
+        "value": 15,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:fine-clothes",
+        "sourceId": "equipment:fine-clothes",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "slot": "clothing",
+        "tags": [
+          "clothing"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Ceremonial Robes",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Embroidered robes used for rituals and formal occasions.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 4,
+      "price": {
+        "value": 50,
+        "denomination": "gp"
+      },
+      "rarity": "rare"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:ceremonial-robes",
+        "sourceId": "equipment:ceremonial-robes",
+        "rarity": "Rare",
+        "tier": 3,
+        "slot": "clothing",
+        "tags": [
+          "clothing"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Guild Tabard",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A sleeveless tabard bearing a crest.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 2,
+      "price": {
+        "value": 5,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:guild-tabard",
+        "sourceId": "equipment:guild-tabard",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "clothing",
+        "tags": [
+          "clothing"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Bandana",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A cloth wrap for dust or disguise.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 0.1,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:bandana",
+        "sourceId": "equipment:bandana",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "face",
+        "tags": [
+          "clothing"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Work Gloves",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Leather gloves for labor.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 0.2,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:work-gloves",
+        "sourceId": "equipment:work-gloves",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "hands",
+        "tags": [
+          "clothing"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Boots (sturdy)",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Sturdy boots for rough terrain.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 2,
+      "price": {
+        "value": 2,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:boots-(sturdy)",
+        "sourceId": "equipment:boots-(sturdy)",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "feet",
+        "tags": [
+          "clothing"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Boots (silent tread)",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Soft-soled boots designed to reduce noise.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 2,
+      "price": {
+        "value": 75,
+        "denomination": "gp"
+      },
+      "rarity": "rare"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:boots-(silent-tread)",
+        "sourceId": "equipment:boots-(silent-tread)",
+        "rarity": "Rare",
+        "tier": 3,
+        "slot": "feet",
+        "tags": [
+          "clothing",
+          "stealth"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Cloak (travel)",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A practical travel cloak.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 1,
+      "price": {
+        "value": 1,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:cloak-(travel)",
+        "sourceId": "equipment:cloak-(travel)",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "back",
+        "tags": [
+          "clothing"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Cloak of the Wanderer",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A legendary travel cloak said to never tear and always stay warm.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 1,
+      "price": {
+        "value": 250,
+        "denomination": "gp"
+      },
+      "rarity": "epic"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:cloak-of-the-wanderer",
+        "sourceId": "equipment:cloak-of-the-wanderer",
+        "rarity": "Epic",
+        "tier": 4,
+        "slot": "back",
+        "tags": [
+          "clothing"
+        ]
+      }
+    }
+  }
+]

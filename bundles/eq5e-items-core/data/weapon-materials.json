@@ -1,0 +1,42 @@
+[
+  {
+    "id": "bronze",
+    "name": "Bronze",
+    "tier": 1,
+    "rarity": "common",
+    "priceMult": 0.9,
+    "notes": "Soft metal; cheap starter gear."
+  },
+  {
+    "id": "fine-steel",
+    "name": "Fine Steel",
+    "tier": 2,
+    "rarity": "uncommon",
+    "priceMult": 1.5,
+    "notes": "Common upgrade; better workmanship."
+  },
+  {
+    "id": "mithril",
+    "name": "Mithril",
+    "tier": 3,
+    "rarity": "rare",
+    "priceMult": 3.0,
+    "notes": "Light, strong; often sought by adventurers."
+  },
+  {
+    "id": "adamantite",
+    "name": "Adamantite",
+    "tier": 4,
+    "rarity": "very-rare",
+    "priceMult": 6.0,
+    "notes": "Extremely durable; high-end crafting."
+  },
+  {
+    "id": "prismatic",
+    "name": "Prismatic",
+    "tier": 5,
+    "rarity": "legendary",
+    "priceMult": 12.0,
+    "notes": "Mythic material; usually quest-locked."
+  }
+]

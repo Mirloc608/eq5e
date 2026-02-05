@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Taunt",
+    "type": "feat",
+    "img": "icons/skills/melee/shout-imperial-strong.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "abilityId": "war.abil.taunt",
+          "cooldownRounds": 2,
+          "kind": "utility",
+          "desc": "Single-target taunt: forces attention (threat parity + bonus)."
+        },
+        "spell": {
+          "spellId": "war.abil.taunt",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 0,
+          "rangeFt": 5,
+          "meta": {
+            "mana": 0,
+            "range": 5,
+            "threatBonus": 50,
+            "snapPct": 1.15,
+            "notes": "Taunt ability (buffed for threat stability).",
+            "durationRounds": 1
+          }
+        },
+        "cooldown": {
+          "type": "rounds",
+          "value": 2
+        }
+      }
+    }
+  },
+  {
+    "name": "Bash",
+    "type": "feat",
+    "img": "icons/skills/melee/shield-bash-gray.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "abilityId": "war.abil.bash",
+          "cooldownRounds": 3,
+          "kind": "utility",
+          "desc": "Shield bash: minor damage + short stun placeholder + threat."
+        },
+        "spell": {
+          "spellId": "war.abil.bash",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 0,
+          "rangeFt": 5,
+          "damage": [
+            {
+              "formula": "1d6+2",
+              "type": "bludgeoning",
+              "category": "melee",
+              "tags": [
+                "bash"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "stunned",
+              "label": "Stunned",
+              "durationRounds": 1,
+              "changes": [
+                {
+                  "key": "flags.eq5e.conditions.root",
+                  "mode": "OVERRIDE",
+                  "value": "true"
+                }
+              ],
+              "flags": {
+                "eq5e": {
+                  "disposition": "hostile"
+                }
+              }
+            }
+          ],
+          "meta": {
+            "mana": 0,
+            "range": 5,
+            "threatBonus": 15,
+            "notes": "Stun is modeled as 1-round Root placeholder."
+          }
+        },
+        "cooldown": {
+          "type": "rounds",
+          "value": 3
+        }
+      }
+    }
+  },
+  {
+    "name": "Knee Strike",
+    "type": "feat",
+    "img": "icons/skills/melee/kick-boot-stomp.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "abilityId": "war.abil.knee-strike",
+          "cooldownRounds": 3,
+          "kind": "utility",
+          "desc": "Minor damage + extra threat."
+        },
+        "spell": {
+          "spellId": "war.abil.knee-strike",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 0,
+          "rangeFt": 5,
+          "damage": [
+            {
+              "formula": "1d8+2",
+              "type": "piercing",
+              "category": "melee",
+              "tags": [
+                "knee"
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 0,
+            "range": 5,
+            "threatBonus": 20,
+            "notes": "Threat bonus applied via damage\u2192threat pipeline."
+          }
+        },
+        "cooldown": {
+          "type": "rounds",
+          "value": 3
+        }
+      }
+    }
+  },
+  {
+    "name": "Area Taunt",
+    "type": "feat",
+    "img": "icons/skills/social/intimidation-impressing.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "abilityId": "war.abil.area-taunt",
+          "cooldownRounds": 8,
+          "kind": "utility",
+          "desc": "AE snap taunt (AA-gated)."
+        },
+        "spell": {
+          "spellId": "war.abil.area-taunt",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 0,
+          "rangeFt": 10,
+          "meta": {
+            "mana": 0,
+            "range": 10,
+            "threatBonus": 40,
+            "snapPct": 1.08,
+            "notes": "Area taunt (buffed for snap).",
+            "durationRounds": 1
+          }
+        },
+        "cooldown": {
+          "type": "rounds",
+          "value": 8
+        }
+      }
+    }
+  }
+]

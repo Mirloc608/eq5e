@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Snow Leopard",
+    "type": "consumable",
+    "img": "icons/svg/cat.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Velious Mount.</strong> Agile mount for ice fields and cliffs.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 900,
+        "denomination": "gp"
+      },
+      "rarity": "Epic",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Velious",
+        "type": "cat",
+        "speed": 55
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.velious.snow-leopard",
+        "category": "mount",
+        "mount": {
+          "era": "Velious",
+          "type": "cat",
+          "speed": 55
+        }
+      }
+    }
+  },
+  {
+    "name": "Ice Wolf",
+    "type": "consumable",
+    "img": "icons/svg/wolf.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Velious Mount.</strong> Cold-resistant mount with keen senses.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 700,
+        "denomination": "gp"
+      },
+      "rarity": "Rare",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Velious",
+        "type": "wolf",
+        "speed": 50
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.velious.ice-wolf",
+        "category": "mount",
+        "mount": {
+          "era": "Velious",
+          "type": "wolf",
+          "speed": 50
+        }
+      }
+    }
+  },
+  {
+    "name": "Frost Steed",
+    "type": "consumable",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Velious Mount.</strong> Bears the chill; sure-footed on ice.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 800,
+        "denomination": "gp"
+      },
+      "rarity": "Epic",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Velious",
+        "type": "horse",
+        "speed": 55
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.velious.frost-steed",
+        "category": "mount",
+        "mount": {
+          "era": "Velious",
+          "type": "horse",
+          "speed": 55
+        }
+      }
+    }
+  },
+  {
+    "name": "Rhino (Velious)",
+    "type": "consumable",
+    "img": "icons/svg/rhino.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Velious Mount.</strong> Massive charge mount. Slower but brutal.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 1200,
+        "denomination": "gp"
+      },
+      "rarity": "Epic",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Velious",
+        "type": "rhino",
+        "speed": 45
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.velious.rhino-velious",
+        "category": "mount",
+        "mount": {
+          "era": "Velious",
+          "type": "rhino",
+          "speed": 45
+        }
+      }
+    }
+  },
+  {
+    "name": "Snow Griffin (Grounded)",
+    "type": "consumable",
+    "img": "icons/svg/bird.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Velious Mount.</strong> No sustained flight; short glides/leaps.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 1600,
+        "denomination": "gp"
+      },
+      "rarity": "Legendary",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Velious",
+        "type": "griffin",
+        "speed": 60
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.velious.snow-griffin-grounded",
+        "category": "mount",
+        "mount": {
+          "era": "Velious",
+          "type": "griffin",
+          "speed": 60
+        }
+      }
+    }
+  },
+  {
+    "name": "Mammoth Calf (Trained)",
+    "type": "consumable",
+    "img": "icons/svg/elephant.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Velious Mount.</strong> A young mammoth trained for hauling and war.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 1000,
+        "denomination": "gp"
+      },
+      "rarity": "Epic",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Velious",
+        "type": "mammoth",
+        "speed": 40
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.velious.mammoth-calf-trained",
+        "category": "mount",
+        "mount": {
+          "era": "Velious",
+          "type": "mammoth",
+          "speed": 40
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Spirit Companion (Lesser)",
+    "type": "npc",
+    "img": "icons/creatures/magical/spirit-undead-blue.webp",
+    "system": {
+      "attributes": {
+        "hp": {
+          "value": 40,
+          "max": 40
+        },
+        "mana": {
+          "value": 24,
+          "max": 24
+        },
+        "movement": {
+          "walk": 35
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "pet": {
+          "role": "caster",
+          "ai": "support",
+          "ownerClass": "shaman",
+          "family": "spirit",
+          "tier": 1
+        },
+        "ai": {
+          "enabled": true,
+          "mode": "assist",
+          "allowSpells": true,
+          "casterPreference": {
+            "preferCasting": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Spirit Companion (Greater)",
+    "type": "npc",
+    "img": "icons/creatures/magical/spirit-undead-purple.webp",
+    "system": {
+      "attributes": {
+        "hp": {
+          "value": 60,
+          "max": 60
+        },
+        "mana": {
+          "value": 36,
+          "max": 36
+        },
+        "movement": {
+          "walk": 35
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "pet": {
+          "role": "caster",
+          "ai": "support",
+          "ownerClass": "shaman",
+          "family": "spirit",
+          "tier": 2
+        },
+        "ai": {
+          "enabled": true,
+          "mode": "assist",
+          "allowSpells": true,
+          "casterPreference": {
+            "preferCasting": true
+          }
+        }
+      }
+    }
+  }
+]

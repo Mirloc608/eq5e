@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Spirit Strike",
+    "type": "spell",
+    "img": "icons/magic/nature/strike-vine-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "bl.spirit.strike.1",
+          "kind": "spell",
+          "manaCost": 5,
+          "rangeFt": 30,
+          "damage": [
+            {
+              "formula": "1d8",
+              "type": "force"
+            }
+          ],
+          "conditions": []
+        }
+      }
+    }
+  },
+  {
+    "name": "Growl of the Warder",
+    "type": "spell",
+    "img": "icons/creatures/mammals/wolf-growl.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "bl.warder.growl.1",
+          "kind": "spell",
+          "manaCost": 8,
+          "rangeFt": 30,
+          "meta": {
+            "taunt": true
+          },
+          "conditions": []
+        }
+      }
+    }
+  },
+  {
+    "name": "Summon Warder: (Wolf)",
+    "type": "spell",
+    "img": "icons/creatures/mammals/wolf-companion.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "bl.summon.warder.wolf.1",
+          "kind": "spell",
+          "manaCost": 12,
+          "rangeFt": 0,
+          "meta": {
+            "summon": {
+              "pack": "world.eq5e-beastlord-warders",
+              "name": "Warder (Wolf)",
+              "tokenName": "Warder (Wolf)",
+              "ai": {
+                "mode": "assist",
+                "enabled": true
+              },
+              "summonId": "beastlord-warder",
+              "durationRounds": null,
+              "summonType": "warder"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Summon Warder: (Bear)",
+    "type": "spell",
+    "img": "icons/creatures/mammals/wolf-companion.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "bl.summon.warder.bear.1",
+          "kind": "spell",
+          "manaCost": 12,
+          "rangeFt": 0,
+          "meta": {
+            "summon": {
+              "pack": "world.eq5e-beastlord-warders",
+              "name": "Warder (Bear)",
+              "tokenName": "Warder (Bear)",
+              "ai": {
+                "mode": "assist",
+                "enabled": true
+              },
+              "summonId": "beastlord-warder",
+              "durationRounds": null,
+              "summonType": "warder"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Summon Warder: (Tiger)",
+    "type": "spell",
+    "img": "icons/creatures/mammals/wolf-companion.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "bl.summon.warder.tiger.1",
+          "kind": "spell",
+          "manaCost": 12,
+          "rangeFt": 0,
+          "meta": {
+            "summon": {
+              "pack": "world.eq5e-beastlord-warders",
+              "name": "Warder (Tiger)",
+              "tokenName": "Warder (Tiger)",
+              "ai": {
+                "mode": "assist",
+                "enabled": true
+              },
+              "summonId": "beastlord-warder",
+              "durationRounds": null,
+              "summonType": "warder"
+            }
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,398 @@
+[
+  {
+    "name": "Enhanced Warder (AA Example)",
+    "type": "feat",
+    "img": "icons/creatures/mammals/wolf-howl-grey.webp",
+    "system": {},
+    "effects": [
+      {
+        "name": "Enhanced Warder",
+        "changes": [
+          {
+            "key": "flags.eq5e.pet.hpBonus",
+            "mode": 2,
+            "value": "5",
+            "priority": 20
+          }
+        ]
+      }
+    ],
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.enhanced-warder",
+          "category": "Pet",
+          "cost": 3,
+          "maxRank": 5,
+          "rank": 0,
+          "scales": {
+            "petHpPerRank": 5
+          },
+          "prereq": {
+            "minLevel": 10
+          }
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Bestial Frenzy (AA Example)",
+    "type": "feat",
+    "img": "icons/skills/melee/strike-claw-red.webp",
+    "system": {},
+    "effects": [
+      {
+        "name": "Bestial Frenzy",
+        "changes": [
+          {
+            "key": "flags.eq5e.combat.attackBonus",
+            "mode": 2,
+            "value": "1",
+            "priority": 20
+          }
+        ]
+      }
+    ],
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.bestial-frenzy",
+          "category": "Combat",
+          "cost": 2,
+          "maxRank": 3,
+          "rank": 0,
+          "scales": {
+            "attackBonusPerRank": 1
+          },
+          "prereq": {
+            "minLevel": 15
+          }
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Warder Aggression",
+    "type": "feat",
+    "img": "icons/creatures/mammals/bear-brown.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.bst.warder-aggression",
+          "tab": "Warder",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Increases your warder's threat generation by 10% per rank (deterministic).",
+          "scales": {
+            "threatPctPerRank": 0.1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.beastlord.warderThreatPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Warder Taunt Mastery",
+    "type": "feat",
+    "img": "icons/skills/social/intimidation-impressing.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.bst.warder-taunt-mastery",
+          "tab": "Warder",
+          "maxRank": 3,
+          "costPerRank": 4,
+          "description": "When your warder taunts, it snaps further above the top threat target (+1 threat per rank).",
+          "scales": {
+            "tauntBonusPerRank": 1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.beastlord.warderTauntBonus",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Warder Threat Persistence",
+    "type": "feat",
+    "img": "icons/skills/social/intimidation-impressing.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.bst.warder-threat-persistence",
+          "tab": "Warder",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Reduces threat decay against your warder by 5% per rank (deterministic).",
+          "scales": {
+            "decayReductionPctPerRank": 0.05
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.beastlord.warderThreatDecayRedPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Warder Fortitude",
+    "type": "feat",
+    "img": "icons/creatures/mammals/bear-brown.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.bst.warder-fortitude",
+          "tab": "Warder",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Increases warder HP and toughness (deterministic).",
+          "scales": {
+            "petHpBonusPerRank": 6,
+            "petMitigationPerRank": 0.2,
+            "petWardingPerRank": 0.5
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.beastlord.warderHpBonus",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.beastlord.warderMitigationBonus",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.beastlord.warderWardingBonus",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Warder Aggro Stickiness",
+    "type": "feat",
+    "img": "icons/skills/social/intimidation-impressing.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.bst.warder-stickiness",
+          "tab": "Warder",
+          "maxRank": 3,
+          "costPerRank": 4,
+          "description": "Makes enemies less likely to switch off your warder (adds +10% stickiness per rank).",
+          "scales": {
+            "stickinessPctPerRank": 0.1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.beastlord.warderStickinessPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Warder Threat Transfer",
+    "type": "feat",
+    "img": "icons/creatures/mammals/wolf-howl-moonlit-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.bst.warder-threat-transfer",
+          "tab": "Warder",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Transfers 6% of your generated threat to your active pet per rank while the pet is in Guard/Protect stance (deterministic).",
+          "scales": {
+            "transferPctPerRank": 0.06
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.beastlord.warderThreatTransferPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  }
+]

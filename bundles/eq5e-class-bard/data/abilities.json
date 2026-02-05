@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Bard (Class Feature)",
+    "type": "feat",
+    "img": "icons/magic/sonic/sound-wave-swoosh.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "class": {
+          "id": "bard",
+          "role": "support",
+          "primary": "cha"
+        },
+        "sourceId": "bard.feature.class.1"
+      }
+    }
+  },
+  {
+    "name": "Song Twisting",
+    "type": "feat",
+    "img": "icons/magic/sonic/sound-wave-fire.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "class": {
+          "id": "bard",
+          "feature": "song-twisting"
+        },
+        "sourceId": "bard.feature.twist.1"
+      }
+    }
+  },
+  {
+    "name": "Instrument Mastery",
+    "type": "feat",
+    "img": "icons/tools/instruments/harp-gold-glow.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "class": {
+          "id": "bard",
+          "feature": "instrument-mastery"
+        },
+        "sourceId": "bard.feature.inst.1"
+      }
+    }
+  }
+]

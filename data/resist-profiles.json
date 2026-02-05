@@ -1,0 +1,72 @@
+[
+  {
+    "id": "profile.none",
+    "name": "No Resists",
+    "values": {}
+  },
+  {
+    "id": "profile.fire-immune",
+    "name": "Fire Immune",
+    "values": {
+      "fire": 200
+    }
+  },
+  {
+    "id": "profile.cold-immune",
+    "name": "Cold Immune",
+    "values": {
+      "cold": 200
+    }
+  },
+  {
+    "id": "profile.elemental",
+    "name": "Elemental (High Fire/Cold)",
+    "values": {
+      "fire": 120,
+      "cold": 120,
+      "magic": 40
+    }
+  },
+  {
+    "id": "profile.undead",
+    "name": "Undead (High Disease/Poison)",
+    "values": {
+      "disease": 120,
+      "poison": 120,
+      "magic": 30
+    }
+  },
+  {
+    "id": "profile.dragon",
+    "name": "Dragon (High All)",
+    "values": {
+      "fire": 120,
+      "cold": 120,
+      "electric": 120,
+      "poison": 80,
+      "disease": 80,
+      "magic": 80
+    }
+  },
+  {
+    "id": "profile.caster",
+    "name": "Caster (High Magic)",
+    "values": {
+      "magic": 120,
+      "fire": 40,
+      "cold": 40
+    }
+  },
+  {
+    "id": "profile.beast",
+    "name": "Beast (Low All)",
+    "values": {
+      "fire": 20,
+      "cold": 20,
+      "electric": 20,
+      "poison": 20,
+      "disease": 20,
+      "magic": 20
+    }
+  }
+]

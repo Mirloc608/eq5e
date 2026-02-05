@@ -1,0 +1,292 @@
+[
+  {
+    "name": "Technique of Master Wu",
+    "type": "feat",
+    "img": "icons/skills/melee/unarmed-punch-fist.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "mnk.aa.master-wu",
+          "maxRank": 5,
+          "desc": "Chance to make an additional unarmed strike after a melee hit (wired later).",
+          "effects": [
+            {
+              "key": "flags.eq5e.monk.extraStrikeChance",
+              "mode": "ADD",
+              "value": "0.03"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Hastened Mend",
+    "type": "feat",
+    "img": "icons/skills/wounds/bandage-roll.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "mnk.aa.hastened-mend",
+          "maxRank": 5,
+          "desc": "Reduces Mend cooldown.",
+          "effects": [
+            {
+              "key": "flags.eq5e.monk.mendCdAdj",
+              "mode": "ADD",
+              "value": "-1"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Improved Mend",
+    "type": "feat",
+    "img": "icons/skills/wounds/bandage-roll.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "mnk.aa.improved-mend",
+          "maxRank": 5,
+          "desc": "Improves Mend healing.",
+          "effects": [
+            {
+              "key": "flags.eq5e.monk.mendHealPct",
+              "mode": "ADD",
+              "value": "0.05"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Hastened Feign Death",
+    "type": "feat",
+    "img": "icons/skills/social/silhouette-lying-down.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "mnk.aa.hastened-fd",
+          "maxRank": 3,
+          "desc": "Reduces Feign Death cooldown.",
+          "effects": [
+            {
+              "key": "flags.eq5e.monk.fdCdAdj",
+              "mode": "ADD",
+              "value": "-1"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Combat Agility",
+    "type": "feat",
+    "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "mnk.aa.combat-agility",
+          "maxRank": 5,
+          "desc": "Improves avoidance.",
+          "effects": [
+            {
+              "key": "flags.eq5e.monk.avoidanceBonus",
+              "mode": "ADD",
+              "value": "0.02"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Combat Stability",
+    "type": "feat",
+    "img": "icons/skills/melee/armor-upgrade-steel.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "mnk.aa.combat-stability",
+          "maxRank": 5,
+          "desc": "Improves mitigation.",
+          "effects": [
+            {
+              "key": "system.mitigation.physicalPct",
+              "mode": "ADD",
+              "value": "0.01"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Improved Feign Death",
+    "type": "feat",
+    "img": "icons/skills/social/silhouette-lying-down.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "mnk.aa.improved-fd",
+          "maxRank": 3,
+          "desc": "Improves Feign Death: reduces DC, grants advantage on the check, and turns failure into partial success (threat reduced but FD remains briefly).",
+          "effects": [
+            {
+              "key": "flags.eq5e.monk.fdDcAdj",
+              "mode": "ADD",
+              "value": "-1"
+            },
+            {
+              "key": "flags.eq5e.monk.fdAdvantage",
+              "mode": "OVERRIDE",
+              "value": "true"
+            },
+            {
+              "key": "flags.eq5e.monk.fdFailPartial",
+              "mode": "OVERRIDE",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  }
+]

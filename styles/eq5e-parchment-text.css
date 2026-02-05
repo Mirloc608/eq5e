@@ -1,0 +1,38 @@
+/* EQ5E parchment-friendly text colors */
+
+.eq5e.sheet.actor {
+  color: #2b241a;
+}
+
+/* Inputs */
+.eq5e.sheet.actor input,
+.eq5e.sheet.actor select,
+.eq5e.sheet.actor textarea {
+  color: #2b241a;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+/* Headings */
+.eq5e.sheet.actor h1,
+.eq5e.sheet.actor h2,
+.eq5e.sheet.actor h3,
+.eq5e.sheet.actor h4 {
+  color: #1f1a12;
+}
+
+/* Muted text */
+.eq5e.sheet.actor .muted,
+.eq5e.sheet.actor footer {
+  color: #4a4032;
+}
+
+/* Numbers inside vitals */
+.eq5e.sheet.actor .eq5e-num {
+  color: #1f1a12;
+}
+
+/* Inventory / cards */
+.eq5e.sheet.actor .eq5e-card {
+  color: #2b241a;
+}

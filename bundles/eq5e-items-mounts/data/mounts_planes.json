@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Nightmare Steed",
+    "type": "mount",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "era": "planes",
+      "speed": 55,
+      "carry": 600,
+      "hp": 65,
+      "canFight": false,
+      "traits": [
+        "planar",
+        "nightmare",
+        "magical"
+      ],
+      "requires": [
+        "saddle"
+      ],
+      "bonuses": {
+        "fearResist": 5
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "mount": {
+          "mountId": "nightmare_steed"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "planes"
+        }
+      }
+    }
+  },
+  {
+    "name": "Celestial Charger",
+    "type": "mount",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "era": "planes",
+      "speed": 55,
+      "carry": 580,
+      "hp": 60,
+      "canFight": false,
+      "traits": [
+        "planar",
+        "celestial",
+        "magical"
+      ],
+      "requires": [
+        "saddle"
+      ],
+      "bonuses": {
+        "savingThrows": 1
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "mount": {
+          "mountId": "celestial_charger"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "planes"
+        }
+      }
+    }
+  },
+  {
+    "name": "Planar Bear",
+    "type": "mount",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "era": "planes",
+      "speed": 50,
+      "carry": 720,
+      "hp": 70,
+      "canFight": false,
+      "traits": [
+        "planar",
+        "beast",
+        "magical",
+        "bulky"
+      ],
+      "requires": [
+        "saddle"
+      ],
+      "bonuses": {
+        "fortitude": 1
+      },
+      "notes": "A bulky planar mount; slower but very sturdy."
+    },
+    "flags": {
+      "eq5e": {
+        "mount": {
+          "mountId": "planar_bear"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "planes"
+        }
+      }
+    }
+  }
+]

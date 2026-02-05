@@ -1,0 +1,1886 @@
+[
+  {
+    "name": "Lifetap",
+    "type": "spell",
+    "img": "icons/magic/unholy/hand-claw-fire-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sk.lifetap.1",
+          "kind": "lifetap",
+          "rangeFt": 30,
+          "manaCost": 4,
+          "priority": 30,
+          "damage": [
+            {
+              "type": "necrotic",
+              "formula": "2d6",
+              "category": "spell"
+            },
+            {
+              "type": "healing",
+              "formula": "1d6",
+              "category": "lifetap"
+            }
+          ],
+          "meta": {
+            "lifetap": true,
+            "tags": [
+              "lifetap",
+              "nuke"
+            ],
+            "threatBonus": 20
+          },
+          "conditions": [],
+          "cooldown": {
+            "value": 2
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Disease Cloud",
+    "type": "spell",
+    "img": "icons/magic/death/undead-ghosts-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sk.dot.disease-cloud.1",
+          "kind": "dot",
+          "rangeFt": 30,
+          "manaCost": 5,
+          "priority": 20,
+          "damage": [
+            {
+              "type": "necrotic",
+              "formula": "1d6",
+              "category": "dot"
+            }
+          ],
+          "meta": {
+            "dot": true,
+            "tags": [
+              "debuff",
+              "snare",
+              "dot"
+            ]
+          },
+          "conditions": [],
+          "cooldown": {
+            "value": 3
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Unholy Aura",
+    "type": "spell",
+    "img": "icons/magic/unholy/aura-shadow-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.buff.unholy-aura.1",
+          "kind": "utility",
+          "enabled": true,
+          "manaCost": 6,
+          "rangeFt": 0,
+          "meta": {
+            "mana": 6,
+            "range": 0,
+            "notes": "Self buff: minor physical mitigation and +threat generation for 5 rounds."
+          },
+          "conditions": [
+            {
+              "id": "unholyAura",
+              "duration": {
+                "rounds": 5
+              },
+              "meta": {
+                "mitigationPhysicalPct": 0.02,
+                "threatModPct": 0.15
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Disease Cloud",
+    "type": "spell",
+    "img": "icons/magic/poison/bubble-spew-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.dot.disease.1",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 4,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 4,
+            "range": 60,
+            "notes": "Disease DoT: 1d6 per round for 3 rounds.",
+            "dot": {
+              "ticks": 3,
+              "interval": "round"
+            },
+            "tags": [
+              "debuff",
+              "snare",
+              "dot"
+            ]
+          },
+          "damage": [
+            {
+              "formula": "1d6",
+              "type": "disease",
+              "category": "spell",
+              "tags": [
+                "dot",
+                "disease"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Plague",
+    "type": "spell",
+    "img": "icons/magic/poison/bubble-spew-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.dot.disease.2",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 6,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 6,
+            "range": 60,
+            "notes": "Disease DoT: 1d8 per round for 4 rounds.",
+            "dot": {
+              "ticks": 4,
+              "interval": "round"
+            }
+          },
+          "damage": [
+            {
+              "formula": "1d8",
+              "type": "disease",
+              "category": "spell",
+              "tags": [
+                "dot",
+                "disease"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Pox of Shadow",
+    "type": "spell",
+    "img": "icons/magic/poison/bubble-spew-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.dot.disease.3",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 8,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 8,
+            "range": 60,
+            "notes": "Disease DoT: 1d10 per round for 4 rounds.",
+            "dot": {
+              "ticks": 4,
+              "interval": "round"
+            }
+          },
+          "damage": [
+            {
+              "formula": "1d10",
+              "type": "disease",
+              "category": "spell",
+              "tags": [
+                "dot",
+                "disease"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Scourge",
+    "type": "spell",
+    "img": "icons/magic/poison/bubble-spew-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.dot.disease.4",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 10,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 10,
+            "range": 60,
+            "notes": "Disease DoT: 2d6 per round for 5 rounds.",
+            "dot": {
+              "ticks": 5,
+              "interval": "round"
+            }
+          },
+          "damage": [
+            {
+              "formula": "2d6",
+              "type": "disease",
+              "category": "spell",
+              "tags": [
+                "dot",
+                "disease"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Epidemic",
+    "type": "spell",
+    "img": "icons/magic/poison/bubble-spew-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.dot.disease.5",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 12,
+            "range": 60,
+            "notes": "Disease DoT: 2d8 per round for 5 rounds.",
+            "dot": {
+              "ticks": 5,
+              "interval": "round"
+            }
+          },
+          "damage": [
+            {
+              "formula": "2d8",
+              "type": "disease",
+              "category": "spell",
+              "tags": [
+                "dot",
+                "disease"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Panic the Dead",
+    "type": "spell",
+    "img": "icons/magic/death/skull-horned-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.fear.1",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 7,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 7,
+            "range": 60,
+            "notes": "Fear: target is panicked and cannot act for 1 rounds (EQ5e: treated like mez for now).",
+            "tags": [
+              "taunt"
+            ],
+            "threatBonus": 25
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "fear"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "feared",
+              "duration": {
+                "rounds": 1
+              },
+              "meta": {
+                "blocksActions": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Terror of Darkness",
+    "type": "spell",
+    "img": "icons/magic/death/skull-horned-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.fear.2",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 10,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 10,
+            "range": 60,
+            "notes": "Fear: target is panicked and cannot act for 2 rounds (EQ5e: treated like mez for now).",
+            "tags": [
+              "taunt",
+              "terror"
+            ],
+            "threatBonus": 25
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "fear"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "feared",
+              "duration": {
+                "rounds": 2
+              },
+              "meta": {
+                "blocksActions": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Grasp of the Dead",
+    "type": "spell",
+    "img": "icons/magic/control/debuff-energy-snare-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.root.1",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 8,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 8,
+            "range": 60,
+            "notes": "Root: prevents movement for 2 rounds.",
+            "tags": [
+              "taunt"
+            ],
+            "threatBonus": 25
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "root"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "rooted",
+              "duration": {
+                "rounds": 2
+              },
+              "meta": {}
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Grasp of the Grave",
+    "type": "spell",
+    "img": "icons/magic/control/debuff-energy-snare-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.root.2",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 11,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 11,
+            "range": 60,
+            "notes": "Root: prevents movement for 3 rounds.",
+            "tags": [
+              "taunt"
+            ],
+            "threatBonus": 25
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "root"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "rooted",
+              "duration": {
+                "rounds": 3
+              },
+              "meta": {}
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Clinging Darkness",
+    "type": "spell",
+    "img": "icons/magic/shadow/energy-vortex-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.snare.1",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 5,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 5,
+            "range": 60,
+            "notes": "Snare: reduces movement by 30% for 3 rounds.",
+            "threatBonus": 25,
+            "tags": [
+              "taunt"
+            ],
+            "cooldown": {
+              "type": "rounds",
+              "value": 2,
+              "sharedGroup": "sk.darkness"
+            }
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "snare"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "snared",
+              "duration": {
+                "rounds": 3
+              },
+              "meta": {
+                "slowPct": 30
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Engulfing Darkness",
+    "type": "spell",
+    "img": "icons/magic/shadow/energy-vortex-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.snare.2",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 7,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 7,
+            "range": 60,
+            "notes": "Snare: reduces movement by 40% for 4 rounds.",
+            "threatBonus": 25,
+            "tags": [
+              "taunt"
+            ],
+            "cooldown": {
+              "type": "rounds",
+              "value": 2,
+              "sharedGroup": "sk.darkness"
+            }
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "snare"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "snared",
+              "duration": {
+                "rounds": 4
+              },
+              "meta": {
+                "slowPct": 40
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Bond of Darkness",
+    "type": "spell",
+    "img": "icons/magic/shadow/energy-vortex-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.snare.3",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 9,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 9,
+            "range": 60,
+            "notes": "Snare: reduces movement by 50% for 5 rounds.",
+            "threatBonus": 25,
+            "tags": [
+              "taunt"
+            ],
+            "cooldown": {
+              "type": "rounds",
+              "value": 2,
+              "sharedGroup": "sk.darkness"
+            }
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "snare"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "snared",
+              "duration": {
+                "rounds": 5
+              },
+              "meta": {
+                "slowPct": 50
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Lifedraw",
+    "type": "spell",
+    "img": "icons/magic/unholy/hand-fire-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.tap.1",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 6,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 6,
+            "range": 30,
+            "notes": "Deals necrotic damage and heals you for 35% of damage dealt.",
+            "lifetapPct": 0.35,
+            "tags": [
+              "nuke",
+              "lifetap"
+            ],
+            "threatBonus": 15
+          },
+          "damage": [
+            {
+              "formula": "3d6+@abilities.cha.mod",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "lifetap",
+                "shadowknight"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Siphon Life",
+    "type": "spell",
+    "img": "icons/magic/unholy/hand-fire-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.tap.2",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 8,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 8,
+            "range": 30,
+            "notes": "Deals necrotic damage and heals you for 40% of damage dealt.",
+            "lifetapPct": 0.4,
+            "tags": [
+              "nuke",
+              "lifetap"
+            ],
+            "threatBonus": 15
+          },
+          "damage": [
+            {
+              "formula": "4d6+@abilities.cha.mod",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "lifetap",
+                "shadowknight"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Drain Soul",
+    "type": "spell",
+    "img": "icons/magic/unholy/hand-fire-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.tap.3",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 10,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 10,
+            "range": 30,
+            "notes": "Deals necrotic damage and heals you for 45% of damage dealt.",
+            "lifetapPct": 0.45,
+            "tags": [
+              "nuke",
+              "lifetap"
+            ],
+            "threatBonus": 15
+          },
+          "damage": [
+            {
+              "formula": "5d6+@abilities.cha.mod",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "lifetap",
+                "shadowknight"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Touch of the Grave",
+    "type": "spell",
+    "img": "icons/magic/unholy/hand-fire-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.tap.4",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 12,
+            "range": 30,
+            "notes": "Deals necrotic damage and heals you for 50% of damage dealt.",
+            "lifetapPct": 0.5,
+            "tags": [
+              "nuke",
+              "lifetap"
+            ],
+            "threatBonus": 15
+          },
+          "damage": [
+            {
+              "formula": "6d6+@abilities.cha.mod",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "lifetap",
+                "shadowknight"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Harvest of Blood",
+    "type": "spell",
+    "img": "icons/magic/unholy/hand-fire-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.tap.5",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 14,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 14,
+            "range": 30,
+            "notes": "Deals necrotic damage and heals you for 55% of damage dealt.",
+            "lifetapPct": 0.55,
+            "tags": [
+              "nuke",
+              "lifetap"
+            ],
+            "threatBonus": 15
+          },
+          "damage": [
+            {
+              "formula": "7d6+@abilities.cha.mod",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "lifetap",
+                "shadowknight"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Virulent Curse",
+    "type": "spell",
+    "img": "icons/magic/poison/skull-poison-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.debuff.disease.2",
+          "kind": "utility",
+          "enabled": true,
+          "manaCost": 8,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 8,
+            "range": 60,
+            "notes": "Debuff: reduces disease resist chance by 25% for 4 rounds."
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "disease",
+              "category": "spell",
+              "tags": [
+                "debuff",
+                "disease"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "diseaseVuln",
+              "duration": {
+                "rounds": 4
+              },
+              "meta": {
+                "resistFamily": "disease",
+                "resistPctAdj": -0.25
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Pestilent Curse",
+    "type": "spell",
+    "img": "icons/magic/poison/skull-poison-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.debuff.disease.3",
+          "kind": "utility",
+          "enabled": true,
+          "manaCost": 10,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 10,
+            "range": 60,
+            "notes": "Debuff: reduces disease resist chance by 30% for 5 rounds."
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "disease",
+              "category": "spell",
+              "tags": [
+                "debuff",
+                "disease"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "diseaseVuln",
+              "duration": {
+                "rounds": 5
+              },
+              "meta": {
+                "resistFamily": "disease",
+                "resistPctAdj": -0.3
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Dark Regeneration",
+    "type": "spell",
+    "img": "icons/magic/unholy/orb-swirling-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.heal.self.1",
+          "kind": "heal",
+          "enabled": true,
+          "manaCost": 6,
+          "rangeFt": 0,
+          "meta": {
+            "mana": 6,
+            "range": 0,
+            "notes": "Self heal. Deterministic.",
+            "selfTarget": true,
+            "cooldown": 4
+          },
+          "damage": [
+            {
+              "formula": "2d8+@attributes.prof",
+              "type": "healing",
+              "category": "spell",
+              "tags": [
+                "self-heal"
+              ]
+            }
+          ],
+          "cooldown": {
+            "type": "rounds",
+            "value": 4
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Command: Minion Taunt",
+    "type": "spell",
+    "img": "icons/creatures/undead/skeleton-warrior-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.pet.command.taunt.1",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 4,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 4,
+            "range": 60,
+            "notes": "Orders your necrotic minion to snap-taunt your target (requires undead minion).",
+            "threatBonus": 30,
+            "durationRounds": 1,
+            "petCommand": {
+              "type": "taunt"
+            },
+            "tags": [
+              "pet:summon"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Devour Life",
+    "type": "spell",
+    "img": "icons/magic/unholy/hand-fire-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.tap.6",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 16,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 16,
+            "range": 30,
+            "notes": "Deals necrotic damage and heals you for 55% of damage dealt.",
+            "lifetapPct": 0.55,
+            "tags": [
+              "nuke",
+              "lifetap"
+            ],
+            "threatBonus": 15
+          },
+          "damage": [
+            {
+              "formula": "8d6+@abilities.cha.mod",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "lifetap",
+                "shadowknight"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Soulrend",
+    "type": "spell",
+    "img": "icons/magic/unholy/hand-fire-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.tap.7",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 18,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 18,
+            "range": 30,
+            "notes": "Deals necrotic damage and heals you for 60% of damage dealt.",
+            "lifetapPct": 0.6,
+            "tags": [
+              "nuke",
+              "lifetap"
+            ],
+            "threatBonus": 15
+          },
+          "damage": [
+            {
+              "formula": "9d6+@abilities.cha.mod",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "lifetap",
+                "shadowknight"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Terror (Focused)",
+    "type": "spell",
+    "img": "icons/magic/unholy/silhouette-evil-horned.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.terror.focus.1",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 6,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 6,
+            "range": 60,
+            "notes": "Snap hate + forced focus for 1 round.",
+            "threatBonus": 45,
+            "durationRounds": 1,
+            "tags": [
+              "taunt",
+              "terror"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Terror of Thule (Focused)",
+    "type": "spell",
+    "img": "icons/magic/unholy/silhouette-evil-horned.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.terror.focus.2",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 8,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 8,
+            "range": 60,
+            "notes": "Stronger snap hate + forced focus for 1 round.",
+            "threatBonus": 70,
+            "durationRounds": 1,
+            "tags": [
+              "taunt",
+              "terror"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Mortal Coil",
+    "type": "spell",
+    "img": "icons/magic/unholy/barrier-shield-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.buff.mortalcoil.1",
+          "kind": "utility",
+          "enabled": true,
+          "manaCost": 10,
+          "rangeFt": 0,
+          "meta": {
+            "mana": 10,
+            "range": 0,
+            "notes": "Self buff: grants a 25 HP ward and +2% physical mitigation for 3 rounds.",
+            "selfTarget": true,
+            "addWard": {
+              "amount": 25,
+              "types": [
+                "all"
+              ],
+              "priority": 10
+            },
+            "cooldown": 8
+          },
+          "conditions": [
+            {
+              "id": "mortalCoil",
+              "duration": {
+                "rounds": 3
+              },
+              "meta": {
+                "mitigationPhysicalPct": 0.02
+              }
+            }
+          ],
+          "cooldown": {
+            "type": "rounds",
+            "value": 8
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Mark of Decay",
+    "type": "spell",
+    "img": "icons/magic/poison/hand-drip-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.debuff.decay.1",
+          "kind": "utility",
+          "enabled": true,
+          "manaCost": 8,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 8,
+            "range": 60,
+            "notes": "Debuff: target takes +15% disease damage for 4 rounds."
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "disease",
+              "category": "spell",
+              "tags": [
+                "debuff",
+                "decay"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "decayMark",
+              "duration": {
+                "rounds": 4
+              },
+              "meta": {
+                "damageFamily": "disease",
+                "damageTakenPctAdj": 0.15
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Invisibility vs Undead",
+    "type": "spell",
+    "img": "icons/magic/air/fog-gas-smoke-swirling-gray.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.util.invisundead.1",
+          "kind": "utility",
+          "enabled": true,
+          "manaCost": 6,
+          "rangeFt": 0,
+          "meta": {
+            "mana": 6,
+            "range": 0,
+            "notes": "Self utility: become unseen by undead for 10 rounds (roleplay + future AI hook).",
+            "selfTarget": true
+          },
+          "conditions": [
+            {
+              "id": "invisUndead",
+              "duration": {
+                "rounds": 10
+              },
+              "meta": {
+                "nonCombat": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Summon Corpse",
+    "type": "spell",
+    "img": "icons/magic/death/graveyard-tombstone-glow-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.util.summoncorpse.1",
+          "kind": "utility",
+          "enabled": true,
+          "manaCost": 5,
+          "rangeFt": 0,
+          "meta": {
+            "mana": 5,
+            "range": 0,
+            "notes": "Utility: requests GM to move your corpse token to you (implementation placeholder).",
+            "selfTarget": true,
+            "summonCorpse": true,
+            "cooldown": 10
+          },
+          "cooldown": {
+            "type": "rounds",
+            "value": 10
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Clinging Darkness (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/shadow/energy-vortex-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.snare.1.2",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 7,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 7,
+            "range": 60,
+            "notes": "Snare: reduces movement by 30% for 3 rounds.",
+            "threatBonus": 35,
+            "tags": [
+              "taunt"
+            ],
+            "cooldown": {
+              "type": "rounds",
+              "value": 2,
+              "sharedGroup": "sk.darkness"
+            }
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "snare"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "snared",
+              "duration": {
+                "rounds": 4
+              },
+              "meta": {
+                "slowPct": 40
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Clinging Darkness (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/shadow/energy-vortex-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.snare.1.3",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 9,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 9,
+            "range": 60,
+            "notes": "Snare: reduces movement by 30% for 3 rounds.",
+            "threatBonus": 45,
+            "tags": [
+              "taunt"
+            ],
+            "cooldown": {
+              "type": "rounds",
+              "value": 2,
+              "sharedGroup": "sk.darkness"
+            }
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "snare"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "snared",
+              "duration": {
+                "rounds": 5
+              },
+              "meta": {
+                "slowPct": 50
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Clinging Darkness (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/shadow/energy-vortex-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.snare.1.4",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 11,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 11,
+            "range": 60,
+            "notes": "Snare: reduces movement by 30% for 3 rounds.",
+            "threatBonus": 55,
+            "tags": [
+              "taunt"
+            ],
+            "cooldown": {
+              "type": "rounds",
+              "value": 2,
+              "sharedGroup": "sk.darkness"
+            }
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "snare"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "snared",
+              "duration": {
+                "rounds": 6
+              },
+              "meta": {
+                "slowPct": 60
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Grasp of the Dead (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/control/debuff-energy-snare-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.root.1.2",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 10,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 10,
+            "range": 60,
+            "notes": "Root: prevents movement for 2 rounds.",
+            "tags": [
+              "taunt"
+            ],
+            "threatBonus": 35
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "root"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "rooted",
+              "duration": {
+                "rounds": 3
+              },
+              "meta": {}
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Grasp of the Dead (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/control/debuff-energy-snare-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.root.1.3",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 12,
+            "range": 60,
+            "notes": "Root: prevents movement for 2 rounds.",
+            "tags": [
+              "taunt"
+            ],
+            "threatBonus": 45
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "root"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "rooted",
+              "duration": {
+                "rounds": 4
+              },
+              "meta": {}
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Grasp of the Dead (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/control/debuff-energy-snare-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.root.1.4",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 14,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 14,
+            "range": 60,
+            "notes": "Root: prevents movement for 2 rounds.",
+            "tags": [
+              "taunt"
+            ],
+            "threatBonus": 55
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "root"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "rooted",
+              "duration": {
+                "rounds": 5
+              },
+              "meta": {}
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Panic the Dead (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/death/skull-horned-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.fear.1.2",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 9,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 9,
+            "range": 60,
+            "notes": "Fear: target is panicked and cannot act for 1 rounds (EQ5e: treated like mez for now).",
+            "tags": [
+              "taunt"
+            ],
+            "threatBonus": 35
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "fear"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "feared",
+              "duration": {
+                "rounds": 2
+              },
+              "meta": {
+                "blocksActions": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Panic the Dead (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/death/skull-horned-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.fear.1.3",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 11,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 11,
+            "range": 60,
+            "notes": "Fear: target is panicked and cannot act for 1 rounds (EQ5e: treated like mez for now).",
+            "tags": [
+              "taunt"
+            ],
+            "threatBonus": 45
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "fear"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "feared",
+              "duration": {
+                "rounds": 3
+              },
+              "meta": {
+                "blocksActions": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Panic the Dead (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/death/skull-horned-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.fear.1.4",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 13,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 13,
+            "range": 60,
+            "notes": "Fear: target is panicked and cannot act for 1 rounds (EQ5e: treated like mez for now).",
+            "tags": [
+              "taunt"
+            ],
+            "threatBonus": 55
+          },
+          "damage": [
+            {
+              "formula": "0",
+              "type": "necrotic",
+              "category": "spell",
+              "tags": [
+                "fear"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "id": "feared",
+              "duration": {
+                "rounds": 4
+              },
+              "meta": {
+                "blocksActions": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Terror (Focused) (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/unholy/silhouette-evil-horned.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.terror.focus.1.2",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 8,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 8,
+            "range": 60,
+            "notes": "Snap hate + forced focus for 1 round.",
+            "threatBonus": 60,
+            "durationRounds": 1,
+            "tags": [
+              "taunt",
+              "terror"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Terror (Focused) (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/unholy/silhouette-evil-horned.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "sk.terror.focus.1.3",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 10,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 10,
+            "range": 60,
+            "notes": "Snap hate + forced focus for 1 round.",
+            "threatBonus": 75,
+            "durationRounds": 2,
+            "tags": [
+              "taunt",
+              "terror"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Disease Cloud (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/death/undead-ghosts-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sk.dot.disease-cloud.1.2",
+          "kind": "dot",
+          "rangeFt": 30,
+          "manaCost": 7,
+          "priority": 20,
+          "damage": [
+            {
+              "type": "necrotic",
+              "formula": "2d6",
+              "category": "dot"
+            }
+          ],
+          "meta": {
+            "dot": true,
+            "tags": [
+              "debuff",
+              "snare",
+              "dot"
+            ]
+          },
+          "conditions": [],
+          "cooldown": {
+            "value": 3
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Disease Cloud (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/death/undead-ghosts-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sk.dot.disease-cloud.1.3",
+          "kind": "dot",
+          "rangeFt": 30,
+          "manaCost": 9,
+          "priority": 20,
+          "damage": [
+            {
+              "type": "necrotic",
+              "formula": "3d6",
+              "category": "dot"
+            }
+          ],
+          "meta": {
+            "dot": true,
+            "tags": [
+              "debuff",
+              "snare",
+              "dot"
+            ]
+          },
+          "conditions": [],
+          "cooldown": {
+            "value": 3
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Disease Cloud (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/death/undead-ghosts-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sk.dot.disease-cloud.1.4",
+          "kind": "dot",
+          "rangeFt": 30,
+          "manaCost": 11,
+          "priority": 20,
+          "damage": [
+            {
+              "type": "necrotic",
+              "formula": "4d6",
+              "category": "dot"
+            }
+          ],
+          "meta": {
+            "dot": true,
+            "tags": [
+              "debuff",
+              "snare",
+              "dot"
+            ]
+          },
+          "conditions": [],
+          "cooldown": {
+            "value": 3
+          }
+        }
+      }
+    }
+  }
+]

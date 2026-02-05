@@ -1,0 +1,213 @@
+const MODULE_ID = "eq5e-class-paladin";
+
+/* ------------------------------ PACK LOADER ------------------------------ */
+
+async function ensureWorldPack({ pack, label, type="Item" }) {
+  const exists = game.packs?.get(pack);
+  if (exists) return exists;
+  const meta = {
+    name: pack.split(".")[1],
+    label,
+    type,
+    system: "eq5e",
+    package: "world",
+    path: `packs/${pack.split(".")[1]}.db`,
+  };
+  return await CompendiumCollection.createCompendium(meta);
+}
+
+async function fetchJSON(rel) {
+  const url = `systems/eq5e/bundles/${MODULE_ID}/${rel}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Fetch failed ${res.status} for ${url}`);
+  return res.json();
+}
+
+function stableHash(obj) {
+  const s = JSON.stringify(obj);
+  let h = 2166136261;
+  for (let i=0;i<s.length;i++) { h ^= s.charCodeAt(i); h = Math.imul(h,16777619); }
+  return (h>>>0).toString(16);
+}
+
+async function upsertJSONToPack({ rel, pack, label, key }) {
+  const docs = await fetchJSON(rel);
+  const p = await ensureWorldPack({ pack, label, type: "Item" });
+  await p.getIndex();
+  const existingDocs = await p.getDocuments();
+  const byKey = new Map();
+  for (const d of existingDocs) {
+    try { byKey.set(String(key(d)), d); } catch {}
+  }
+  const toCreate = [];
+  const toUpdate = [];
+  for (const raw of docs) {
+    const d = foundry.utils.duplicate(raw);
+    d.flags = d.flags ?? {};
+    d.flags.eq5e = d.flags.eq5e ?? {};
+    d.flags.eq5e.derivedHash = stableHash((game.eq5e?.normalizeItemData ? game.eq5e.normalizeItemData(d) : d));
+    const k = String(key(d));
+    const ex = byKey.get(k);
+    if (!ex) toCreate.push(d);
+    else if (ex.flags?.eq5e?.derivedHash !== d.flags.eq5e.derivedHash) {
+      d._id = ex.id;
+      toUpdate.push(d);
+    }
+  }
+  if (toCreate.length) await p.documentClass.createDocuments(toCreate, { pack: p.collection });
+  if (toUpdate.length) await p.documentClass.updateDocuments(toUpdate, { pack: p.collection });
+  return { created: toCreate.length, updated: toUpdate.length };
+}
+
+Hooks.once("ready", async () => {
+  if (!game.user.isGM) return;
+  try {
+    await upsertJSONToPack({ rel:"data/spells.json", pack:"world.eq5e-paladin-spells", label:"EQ5e Paladin Spells", key:d=>d?.flags?.eq5e?.spell?.spellId ?? d?.name });
+    await upsertJSONToPack({ rel:"data/disciplines.json", pack:"world.eq5e-paladin-disciplines", label:"EQ5e Paladin Disciplines", key:d=>d?.flags?.eq5e?.discipline?.disciplineId ?? d?.name });
+    await upsertJSONToPack({ rel:"data/aas.json", pack:"world.eq5e-paladin-aas", label:"EQ5e Paladin AAs", key:d=>d?.flags?.eq5e?.aa?.aaId ?? d?.name });
+    await upsertJSONToPack({ rel:"data/abilities.json", pack:"world.eq5e-paladin-abilities", label:"EQ5e Paladin Abilities", key:d=>d?.flags?.eq5e?.ability?.abilityId ?? d?.name });
+    console.log(`[EQ5E] ${MODULE_ID} loaded Paladin packs.`);
+  } catch (e) { console.error(`[EQ5E] ${MODULE_ID} pack load failed`, e); }
+});
+
+/* ----------------------------- PALADIN WIDGET ----------------------------- */
+
+
+function _getAARankById(actor, aaId) {
+  if (!actor || !aaId) return 0;
+  const id = String(aaId);
+  for (const it of actor.items ?? []) {
+    const aa = it?.flags?.eq5e?.aa;
+    if (!aa) continue;
+    if (String(aa.aaId ?? "") !== id) continue;
+    const r = Number(aa.rank ?? aa.currentRank ?? aa.purchasedRank ?? aa.value ?? 0);
+    if (Number.isFinite(r) && r > 0) return r;
+  }
+  return 0;
+}
+
+function _computeLayOnHands(actor) {
+  const lvl = Number(foundry.utils.getProperty(actor, "system.details.level") ??
+                     foundry.utils.getProperty(actor, "system.attributes.level") ??
+                     foundry.utils.getProperty(actor, "system.level") ?? 1);
+  const healRank = _getAARankById(actor, "pal.aa.healing-light");
+  const reuseRank = _getAARankById(actor, "pal.aa.layhands-reuse");
+
+  const dice = Math.max(6, Math.min(12, 6 + Math.floor(Math.max(0, lvl - 1) / 4)));
+  let bonus = 12 + (2 * Math.max(1, lvl));
+
+  const flagHealPct = Number(actor.flags?.eq5e?.paladin?.healPct ?? 0);
+  const aaHealPct = 0.05 * Math.max(0, healRank);
+  const healPct = Math.max(0, flagHealPct + aaHealPct);
+  bonus = Math.round(bonus * (1 + Math.min(1.0, healPct)));
+
+  const formula = `${dice}d8+${bonus}`;
+  const avg = Math.round((dice * 4.5) + bonus);
+
+  const baseCd = 20;
+  const adjFlag = Number(actor.flags?.eq5e?.paladin?.layHandsCdRounds ?? 0);
+  const adj = (-2 * Math.max(0, reuseRank)) + adjFlag;
+  const cd = Math.max(5, Math.round(baseCd + adj));
+
+  return { lvl, healRank, reuseRank, dice, bonus, formula, avg, cd };
+}
+
+function _isPaladinActor(actor) {
+  const cid = String(actor?.flags?.eq5e?.class?.id ?? actor?.flags?.eq5e?.classId ?? "").toLowerCase();
+  if (cid === "paladin") return true;
+  return actor.items?.some(i => String(i?.flags?.eq5e?.spell?.spellId ?? "").startsWith("pal.")) ?? false;
+}
+
+async function _setupPaladin(actor) {
+  const packs = [
+    "world.eq5e-paladin-spells",
+    "world.eq5e-paladin-disciplines",
+    "world.eq5e-paladin-aas",
+    "world.eq5e-paladin-abilities",
+  ];
+  let added = 0;
+
+  for (const pid of packs) {
+    const pack = game.packs?.get(pid);
+    if (!pack) continue;
+    const docs = await pack.getDocuments();
+    const objs = docs.map(d => d.toObject());
+    const ownedKeys = new Set(actor.items.map(i =>
+      i.flags?.eq5e?.spell?.spellId ??
+      i.flags?.eq5e?.discipline?.disciplineId ??
+      i.flags?.eq5e?.aa?.aaId ??
+      i.flags?.eq5e?.ability?.abilityId ??
+      i.name
+    ));
+    const filtered = objs.filter(o => {
+      const k = o.flags?.eq5e?.spell?.spellId ??
+                o.flags?.eq5e?.discipline?.disciplineId ??
+                o.flags?.eq5e?.aa?.aaId ??
+                o.flags?.eq5e?.ability?.abilityId ??
+                o.name;
+      return !ownedKeys.has(k);
+    });
+    if (filtered.length) {
+      await actor.createEmbeddedDocuments("Item", filtered);
+      added += filtered.length;
+    }
+  }
+
+  ui.notifications?.info(`Paladin setup complete: added ${added} items to ${actor.name}.`);
+}
+
+function _renderPaladinWidget(app, html) {
+  const actor = app?.actor;
+  if (!actor) return;
+  if (!actor.isOwner) return;
+  if (!_isPaladinActor(actor)) return;
+  if (html.find(".eq5e-paladin-widget").length) return;
+
+  const healPct = Number(actor.flags?.eq5e?.paladin?.healPct ?? 0);
+  const threatPct = Number(actor.flags?.eq5e?.paladin?.threatPct ?? 0);
+  const holyforgePct = Number(actor.flags?.eq5e?.paladin?.holyforgePct ?? 0);
+  const cdAdj = Number(actor.flags?.eq5e?.paladin?.layHandsCdRounds ?? 0);
+  const loh = _computeLayOnHands(actor);
+  const aaHint = (loh.healRank || loh.reuseRank) ? `${aaHint || ""}` : "";
+
+
+
+  const widget = $(`
+    <section class="eq5e-paladin-widget" style="border:1px solid rgba(255,255,255,.12); border-radius:8px; padding:8px; margin:6px 0;">
+      <header style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+        <h3 style="margin:0; font-size:14px;">Paladin</h3>
+        <div style="display:flex; gap:6px;">
+          <button type="button" class="eq5e-paladin-setup" title="Import Paladin spells/discipline/AAs/abilities"><i class="fa-solid fa-wand-magic-sparkles"></i> Setup</button>
+          <button type="button" class="eq5e-paladin-refresh" title="Refresh"><i class="fa-solid fa-rotate"></i></button>
+        </div>
+      </header>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+        <div style="border:1px solid rgba(255,255,255,.08); border-radius:8px; padding:8px;">
+          <div style="font-size:12px; opacity:.8;">Bonuses</div>
+          <div style="font-size:12px;">Healing: <b>${Math.round(healPct*100)}%</b></div>
+          <div style="font-size:12px;">Threat: <b>${Math.round(threatPct*100)}%</b></div>
+          <div style="font-size:12px;">Holyforge: <b>${Math.round(holyforgePct*100)}%</b></div>
+        </div>
+        <div style="border:1px solid rgba(255,255,255,.08); border-radius:8px; padding:8px;">
+          <div style="font-size:12px; opacity:.8;">Lay on Hands</div>
+          <div style="font-size:12px;">Heal: <b>${loh.formula}</b> (<span style="opacity:.9;">~${loh.avg}</span>)</div>
+          <div style="font-size:12px;">Cooldown: <b>${loh.cd}</b> rounds</div>
+          <div style="font-size:11px; opacity:.75;">${aaHint || ""}</div>
+          <div style="font-size:12px; opacity:.7;">instant ability, no mana</div>
+        </div>
+      </div>
+    </section>
+  `);
+
+  const form = html.find("form");
+  if (form.length) form.prepend(widget);
+  else html.prepend(widget);
+
+  widget.find(".eq5e-paladin-refresh").on("click", async ()=>{ try { await app.render(false);} catch{} });
+  widget.find(".eq5e-paladin-setup").on("click", async ()=>{ await _setupPaladin(actor); try { await app.render(false);} catch{} });
+}
+
+Hooks.on("renderActorSheet", (app, html) => {
+  try { _renderPaladinWidget(app, html); } catch (e) { console.error("[EQ5E] Paladin widget error", e); }
+});

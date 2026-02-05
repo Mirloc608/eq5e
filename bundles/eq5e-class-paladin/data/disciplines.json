@@ -1,0 +1,103 @@
+[
+  {
+    "name": "Defensive",
+    "type": "feat",
+    "img": "icons/skills/melee/shield-block-gray.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "pal.disc.defensive",
+          "cooldownRounds": 10,
+          "durationRounds": 4,
+          "exclusiveGroup": "paladin",
+          "effects": {
+            "incomingPhysicalMult": 0.85
+          },
+          "desc": "Reduce incoming physical damage."
+        }
+      }
+    }
+  },
+  {
+    "name": "Holyforge",
+    "type": "feat",
+    "img": "icons/magic/holy/sword-light-glow.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "pal.disc.holyforge",
+          "cooldownRounds": 13,
+          "durationRounds": 4,
+          "exclusiveGroup": "paladin",
+          "effects": {
+            "outgoingDamageMult": 1.15
+          },
+          "desc": "Empower strikes with holy power (damage boost)."
+        }
+      }
+    }
+  },
+  {
+    "name": "Divine Stance",
+    "type": "feat",
+    "img": "icons/magic/holy/shield-glow-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "pal.disc.divine-stance",
+          "cooldownRounds": 11,
+          "durationRounds": 4,
+          "exclusiveGroup": "paladin",
+          "effects": {
+            "incomingPhysicalMult": 0.9,
+            "outgoingDamageMult": 1.1
+          },
+          "desc": "Balanced defense and threat via holy resolve."
+        }
+      }
+    }
+  },
+  {
+    "name": "Blessed Weapon",
+    "type": "feat",
+    "img": "icons/magic/holy/meditation-chant-cross.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "pal.disc.blessed-weapon",
+          "cooldownRounds": 7,
+          "durationRounds": 3,
+          "exclusiveGroup": "paladin",
+          "effects": {
+            "outgoingDamageMult": 1.12
+          },
+          "desc": "Bless your weapon to strike harder."
+        }
+      }
+    }
+  },
+  {
+    "name": "Purification",
+    "type": "feat",
+    "img": "icons/magic/holy/prayer-hands-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "pal.disc.purification",
+          "cooldownRounds": 12,
+          "durationRounds": 2,
+          "exclusiveGroup": "paladin",
+          "effects": {
+            "incomingPhysicalMult": 0.95
+          },
+          "desc": "Shake off afflictions and steel your body (cleanse wiring later)."
+        }
+      }
+    }
+  }
+]

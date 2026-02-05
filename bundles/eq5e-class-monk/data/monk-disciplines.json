@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Heel Kick Discipline",
+    "type": "feat",
+    "img": "icons/skills/melee/strike-fist-yellow.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "monk.heel-kick",
+          "durationRounds": 2,
+          "cooldownRounds": 6,
+          "effects": {
+            "damageMult": 1.25,
+            "onlyUnarmed": true,
+            "extraAttacks": 2
+          },
+          "tags": [
+            "monk",
+            "discipline",
+            "offense"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Flying Kick Discipline",
+    "type": "feat",
+    "img": "icons/skills/melee/strike-fist-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "monk.flying-kick",
+          "durationRounds": 1,
+          "cooldownRounds": 5,
+          "effects": {
+            "attackOverride": {
+              "bonusDamage": "4d8",
+              "tags": [
+                "flying-kick",
+                "precision"
+              ],
+              "knockdownRounds": 1
+            }
+          },
+          "tags": [
+            "monk",
+            "discipline",
+            "burst"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Innerflame Discipline",
+    "type": "feat",
+    "img": "icons/magic/defensive/shield-barrier-flaming-pentagon-orange.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "monk.innerflame",
+          "durationRounds": 4,
+          "cooldownRounds": 12,
+          "effects": {
+            "incomingPhysicalMult": 0.7,
+            "outgoingDamageMult": 0.8,
+            "stunResistPct": 0.25
+          },
+          "tags": [
+            "monk",
+            "discipline",
+            "defense"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Whirlwind Discipline",
+    "type": "feat",
+    "img": "icons/skills/melee/strike-axe-spin.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "monk.whirlwind",
+          "durationRounds": 3,
+          "cooldownRounds": 10,
+          "effects": {
+            "cleaveAdjacent": true,
+            "attackPenalty": 2,
+            "onlyUnarmed": true
+          },
+          "tags": [
+            "monk",
+            "discipline",
+            "aoe"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Speed Focus Discipline",
+    "type": "feat",
+    "img": "icons/skills/movement/figure-running-white.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "discipline": {
+          "disciplineId": "monk.speed-focus",
+          "durationRounds": 5,
+          "cooldownRounds": 15,
+          "effects": {
+            "movementMult": 2.0,
+            "extraAttacks": 1,
+            "immune": [
+              "root",
+              "snare"
+            ]
+          },
+          "tags": [
+            "monk",
+            "discipline",
+            "mobility"
+          ]
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,526 @@
+[
+  {
+    "name": "Nature's Boon",
+    "type": "feat",
+    "img": "icons/magic/life/heart-glow-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.dru.natures-boon",
+          "tab": "Healing",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Increases healing output (deterministic bonus).",
+          "scales": {
+            "healBonusPerRank": 1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.druid.healBonus",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Elemental Fury",
+    "type": "feat",
+    "img": "icons/magic/fire/flame-burning-hand-orange.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.dru.elemental-fury",
+          "tab": "Nukes",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Increases elemental spell damage percentage.",
+          "scales": {
+            "spellDamagePctPerRank": 0.03
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.druid.spellDamagePct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Wild Shape Mastery",
+    "type": "feat",
+    "img": "icons/creatures/mammals/wolf-howl-moonlit-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.dru.wildshape-mastery",
+          "tab": "Utility",
+          "maxRank": 3,
+          "costPerRank": 5,
+          "description": "Improves wild shape potency (bonus warding/mitigation depending on form).",
+          "scales": {
+            "wildshapeMitigationPerRank": 1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.druid.wildshapeMastery",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Companion's Vigor",
+    "type": "feat",
+    "img": "icons/creatures/mammals/bear-brown.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.dru.companion-vigor",
+          "tab": "Companion",
+          "maxRank": 3,
+          "costPerRank": 4,
+          "description": "Improves companion durability and damage.",
+          "scales": {
+            "companionHpPerRank": 10,
+            "companionDamagePctPerRank": 0.05
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.druid.companionHpBonus",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.druid.companionDamagePct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Extended Root",
+    "type": "feat",
+    "img": "icons/magic/nature/vines-thorned-entangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.dru.extended-root",
+          "tab": "Control",
+          "maxRank": 3,
+          "costPerRank": 3,
+          "description": "Increases root duration by 10% per rank (deterministic).",
+          "scales": {
+            "rootDurationPctPerRank": 0.1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.druid.rootDurationPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Extended Snare",
+    "type": "feat",
+    "img": "icons/magic/nature/leaf-juggle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.dru.extended-snare",
+          "tab": "Control",
+          "maxRank": 3,
+          "costPerRank": 2,
+          "description": "Increases snare duration by 10% per rank (deterministic).",
+          "scales": {
+            "snareDurationPctPerRank": 0.1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.druid.snareDurationPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Companion Aggression",
+    "type": "feat",
+    "img": "icons/creatures/mammals/bear-brown.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.dru.companion-aggression",
+          "tab": "Companion",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Increases your companion's threat generation by 10% per rank (deterministic).",
+          "scales": {
+            "threatPctPerRank": 0.1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.druid.companionThreatPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Companion Threat Persistence",
+    "type": "feat",
+    "img": "icons/creatures/mammals/bear-brown.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.dru.companion-threat-persistence",
+          "tab": "Companion",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Reduces threat decay against your companion by 5% per rank (deterministic).",
+          "scales": {
+            "decayReductionPctPerRank": 0.05
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.druid.companionThreatDecayRedPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Companion Fortitude",
+    "type": "feat",
+    "img": "icons/creatures/mammals/bear-brown.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.dru.companion-fortitude",
+          "tab": "Companion",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Increases companion HP and toughness (deterministic).",
+          "scales": {
+            "petHpBonusPerRank": 5,
+            "petMitigationPerRank": 0.2,
+            "petWardingPerRank": 0.5
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.druid.companionHpBonus",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.druid.companionMitigationBonus",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.druid.companionWardingBonus",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Companion Aggro Stickiness",
+    "type": "feat",
+    "img": "icons/skills/social/intimidation-impressing.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.dru.companion-stickiness",
+          "tab": "Companion",
+          "maxRank": 3,
+          "costPerRank": 4,
+          "description": "Makes enemies less likely to switch off your companion (adds +10% stickiness per rank).",
+          "scales": {
+            "stickinessPctPerRank": 0.1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.druid.companionStickinessPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Companion Threat Transfer",
+    "type": "feat",
+    "img": "icons/magic/nature/leaf-glow-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.dru.companion-threat-transfer",
+          "tab": "Companion",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Transfers 6% of your generated threat to your active pet per rank while the pet is in Guard/Protect stance (deterministic).",
+          "scales": {
+            "transferPctPerRank": 0.06
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.druid.companionThreatTransferPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  }
+]

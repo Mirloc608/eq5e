@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Summon Necrotic Minion",
+    "type": "spell",
+    "img": "icons/magic/death/silhouette-robe-evil-glow.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sk.summon.necrotic-minion.1",
+          "kind": "utility",
+          "rangeFt": 0,
+          "manaCost": 12,
+          "priority": 60,
+          "damage": [],
+          "conditions": [],
+          "summon": {
+            "pack": "world.eq5e-sk-necrotic-pets",
+            "name": "Minor Necrotic Minion",
+            "tokenName": "Necrotic Minion",
+            "role": "melee",
+            "ai": {
+              "enabled": true,
+              "mode": "assist",
+              "allowSpells": false
+            },
+            "summonId": "sk.necrotic-minion",
+            "durationRounds": 10,
+            "abilitiesPack": "world.eq5e-sk-necrotic-pet-abilities",
+            "abilitiesQuery": ""
+          },
+          "meta": {
+            "summon": {
+              "pack": "world.eq5e-sk-necrotic-pets",
+              "name": "Minor Necrotic Minion",
+              "tokenName": "Necrotic Minion",
+              "role": "melee",
+              "ai": {
+                "enabled": true,
+                "mode": "assist",
+                "allowSpells": false
+              },
+              "summonId": "sk.necrotic-minion",
+              "durationRounds": 10,
+              "abilitiesPack": "world.eq5e-sk-necrotic-pet-abilities",
+              "abilitiesQuery": ""
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Dismiss Necrotic Minion",
+    "type": "spell",
+    "img": "icons/magic/death/hand-skull-pink.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sk.dismiss.necrotic-minion.1",
+          "kind": "utility",
+          "rangeFt": 0,
+          "manaCost": 1,
+          "priority": 70,
+          "damage": [],
+          "conditions": [],
+          "dismissSummon": {
+            "summonId": "sk.necrotic-minion"
+          },
+          "meta": {
+            "dismissSummon": {
+              "summonId": "sk.necrotic-minion"
+            }
+          }
+        }
+      }
+    }
+  }
+]

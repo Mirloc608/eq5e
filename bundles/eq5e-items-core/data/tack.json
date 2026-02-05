@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Saddle",
+    "type": "tack",
+    "system": {
+      "tack": {
+        "slot": "saddle",
+        "required": true
+      }
+    }
+  },
+  {
+    "name": "Saddlebags",
+    "type": "tack",
+    "system": {
+      "tack": {
+        "slot": "bags",
+        "carryBonus": 120
+      }
+    }
+  }
+]

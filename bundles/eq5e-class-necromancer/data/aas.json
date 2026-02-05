@@ -1,0 +1,404 @@
+[
+  {
+    "name": "Enhanced Minion",
+    "type": "feat",
+    "img": "icons/creatures/undead/zombie.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.necro.enhanced-minion",
+          "tab": "Pet",
+          "maxRank": 5,
+          "costPerRank": 2,
+          "description": "Increases undead servant durability and offense.",
+          "scales": {
+            "petHpPerRank": 5,
+            "petAttackPerRank": 1,
+            "petDamagePerRank": 1,
+            "petAcPerRank": 1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.pet.hpBonus",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.pet.attackBonus",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.pet.damageBonus",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.pet.acBonus",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Minion's Tenacity",
+    "type": "feat",
+    "img": "icons/skills/wounds/bone-broken-marrow.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.necro.minion-tenacity",
+          "tab": "Pet",
+          "maxRank": 3,
+          "costPerRank": 3,
+          "description": "Further increases undead servant HP.",
+          "scales": {
+            "petHpPerRank": 10
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.pet.hpBonus",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": [
+            {
+              "aaId": "aa.necro.enhanced-minion",
+              "rank": 2
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "DoT Focus",
+    "type": "feat",
+    "img": "icons/magic/death/skull-horned-worn.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.nec.dot-focus",
+          "tab": "Damage",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Increases damage dealt by DoT spells by 5% per rank (deterministic).",
+          "scales": {
+            "dotDamagePctPerRank": 0.05
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.necromancer.dotDamagePct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Undead Aggression",
+    "type": "feat",
+    "img": "icons/creatures/undead/skeleton-armored.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.nec.undead-aggression",
+          "tab": "Pets",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Increases your undead pet's threat generation by 10% per rank (deterministic).",
+          "scales": {
+            "threatPctPerRank": 0.1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.necromancer.undeadThreatPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Undead Threat Persistence",
+    "type": "feat",
+    "img": "icons/creatures/undead/skeleton-armored.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.nec.undead-threat-persistence",
+          "tab": "Pets",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Reduces threat decay against your undead pet by 5% per rank (deterministic).",
+          "scales": {
+            "decayReductionPctPerRank": 0.05
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.necromancer.undeadThreatDecayRedPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Undead Fortitude",
+    "type": "feat",
+    "img": "icons/creatures/undead/skeleton-armored.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.nec.undead-fortitude",
+          "tab": "Pets",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Increases undead pet HP and toughness (deterministic).",
+          "scales": {
+            "petHpBonusPerRank": 6,
+            "petMitigationPerRank": 0.2,
+            "petWardingPerRank": 0.5
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.necromancer.undeadHpBonus",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.necromancer.undeadMitigationBonus",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.necromancer.undeadWardingBonus",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Undead Aggro Stickiness",
+    "type": "feat",
+    "img": "icons/skills/social/intimidation-impressing.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.nec.undead-stickiness",
+          "tab": "Pets",
+          "maxRank": 3,
+          "costPerRank": 4,
+          "description": "Makes enemies less likely to switch off your undead pet (adds +10% stickiness per rank).",
+          "scales": {
+            "stickinessPctPerRank": 0.1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.necromancer.undeadStickinessPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Undead Threat Transfer",
+    "type": "feat",
+    "img": "icons/creatures/undead/skeleton-armored.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.nec.undead-threat-transfer",
+          "tab": "Pets",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Transfers 6% of your generated threat to your active pet per rank while the pet is in Guard/Protect stance (deterministic).",
+          "scales": {
+            "transferPctPerRank": 0.06
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.necromancer.undeadThreatTransferPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  }
+]

@@ -1,0 +1,161 @@
+[
+  {
+    "name": "Bear: Maul",
+    "type": "spell",
+    "img": "icons/skills/melee/strike-slam-blood-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.dru.bear.maul.1",
+          "kind": "attack",
+          "rangeFt": 5,
+          "manaCost": 0,
+          "priority": 28,
+          "damage": [
+            {
+              "type": "bludgeoning",
+              "formula": "1d8"
+            }
+          ],
+          "conditions": [],
+          "cooldown": {
+            "value": 2
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Bear: Swipe",
+    "type": "spell",
+    "img": "icons/skills/melee/strike-claw-blood-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.dru.bear.swipe.1",
+          "kind": "attack",
+          "rangeFt": 5,
+          "manaCost": 0,
+          "priority": 22,
+          "damage": [
+            {
+              "type": "slashing",
+              "formula": "1d6"
+            }
+          ],
+          "conditions": [],
+          "cooldown": {
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Wolf: Bite",
+    "type": "spell",
+    "img": "icons/skills/melee/strike-bite-fang-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.dru.wolf.bite.1",
+          "kind": "attack",
+          "rangeFt": 5,
+          "manaCost": 0,
+          "priority": 30,
+          "damage": [
+            {
+              "type": "piercing",
+              "formula": "1d6"
+            }
+          ],
+          "conditions": [],
+          "cooldown": {
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Wolf: Hamstring",
+    "type": "spell",
+    "img": "icons/skills/melee/strike-axe-blood-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.dru.wolf.hamstring.1",
+          "kind": "attack",
+          "rangeFt": 5,
+          "manaCost": 0,
+          "priority": 20,
+          "damage": [
+            {
+              "type": "slashing",
+              "formula": "1d4"
+            }
+          ],
+          "conditions": [
+            {
+              "id": "snared",
+              "duration": {
+                "rounds": 2
+              },
+              "meta": {
+                "moveMult": 0.7
+              }
+            }
+          ],
+          "cooldown": {
+            "value": 3
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Hawk: Distracting Screech",
+    "type": "spell",
+    "img": "icons/creatures/birds/corvid-call-black.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.dru.hawk.screech.1",
+          "kind": "debuff",
+          "rangeFt": 30,
+          "manaCost": 0,
+          "priority": 25,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "activeEffect": {
+              "label": "Distracted",
+              "durationRounds": 2,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.magic",
+                  "mode": 2,
+                  "value": "-1",
+                  "priority": 20
+                }
+              ]
+            }
+          },
+          "cooldown": {
+            "value": 3
+          }
+        }
+      }
+    }
+  }
+]

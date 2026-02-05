@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Lay on Hands",
+    "type": "feat",
+    "img": "icons/magic/life/heart-cross-strong-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "abilityId": "pal.abil.lay-on-hands",
+          "cooldownRounds": 22,
+          "kind": "heal",
+          "desc": "Instantly heal a nearby ally. No mana. Long cooldown.",
+          "rangeFt": 5
+        },
+        "spell": {
+          "spellId": "pal.abil.lay-on-hands",
+          "kind": "heal",
+          "enabled": true,
+          "manaCost": 0,
+          "rangeFt": 5,
+          "damage": [
+            {
+              "formula": "8d8+20",
+              "type": "healing",
+              "category": "healing",
+              "tags": []
+            }
+          ],
+          "meta": {
+            "mana": 0,
+            "range": 5,
+            "castTime": "0s",
+            "healThreatMult": 1.5,
+            "notes": "Instant ability heal."
+          }
+        },
+        "cooldown": {
+          "type": "rounds",
+          "value": 22
+        }
+      }
+    }
+  },
+  {
+    "name": "Beacon of the Righteous",
+    "type": "feat",
+    "img": "icons/magic/holy/beam-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "abilityId": "pal.abil.beacon",
+          "cooldownRounds": 12,
+          "kind": "threat",
+          "desc": "Snap attention of nearby foes (uses threat system)."
+        }
+      }
+    }
+  },
+  {
+    "name": "Purifying Touch",
+    "type": "feat",
+    "img": "icons/magic/holy/prayer-hands-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "abilityId": "pal.abil.purifying-touch",
+          "cooldownRounds": 10,
+          "kind": "utility",
+          "desc": "Remove a hostile debuff from an ally (wiring later)."
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,493 @@
+[
+  {
+    "name": "Summon: Spirit Companion",
+    "type": "spell",
+    "img": "icons/creatures/magical/spirit-undead-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.summon.spirit.1",
+          "kind": "summon",
+          "rangeFt": 0,
+          "manaCost": 10,
+          "priority": 60,
+          "damage": [],
+          "heal": [],
+          "conditions": [],
+          "meta": {
+            "summon": {
+              "pack": "world.eq5e-shaman-spirit-pets",
+              "name": "Spirit Companion (Lesser)",
+              "tokenName": "Spirit Companion",
+              "summonId": "sha.spirit.lesser",
+              "abilitiesPack": "world.eq5e-shaman-spirit-abilities",
+              "ai": {
+                "enabled": true,
+                "mode": "assist",
+                "allowSpells": true,
+                "casterPreference": {
+                  "preferCasting": true
+                }
+              }
+            },
+            "tags": []
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Turgur's Insects (Slow)",
+    "type": "spell",
+    "img": "icons/creatures/invertebrates/bee-yellow.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.debuff.slow.1",
+          "kind": "debuff",
+          "rangeFt": 80,
+          "manaCost": 7,
+          "priority": 55,
+          "damage": [],
+          "heal": [],
+          "conditions": [
+            {
+              "id": "snare",
+              "durationRounds": 3
+            }
+          ],
+          "meta": {
+            "tags": [
+              "slow",
+              "debuff",
+              "slow:atk"
+            ],
+            "slowPct": 0.35,
+            "durationRounds": 3,
+            "slowAtkPct": 35
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Malosini (Resist Debuff)",
+    "type": "spell",
+    "img": "icons/magic/unholy/beam-ringed-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.debuff.malo.1",
+          "kind": "debuff",
+          "rangeFt": 80,
+          "manaCost": 6,
+          "priority": 50,
+          "damage": [],
+          "heal": [],
+          "conditions": [],
+          "meta": {
+            "tags": [
+              "malo"
+            ],
+            "resistPenalty": 15,
+            "durationRounds": 4
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Poison Bolt",
+    "type": "spell",
+    "img": "icons/magic/acid/projectile-bubble.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.dot.poison.1",
+          "kind": "dot",
+          "rangeFt": 90,
+          "manaCost": 6,
+          "priority": 45,
+          "damage": [
+            {
+              "formula": "1d6+1",
+              "type": "poison",
+              "category": "tick",
+              "durationRounds": 3
+            }
+          ],
+          "heal": [],
+          "conditions": [],
+          "meta": {
+            "dot": true,
+            "durationRounds": 3,
+            "tags": [
+              "dot",
+              "debuff"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Disease Cloud",
+    "type": "spell",
+    "img": "icons/magic/death/skull-poison-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.dot.disease.1",
+          "kind": "dot",
+          "rangeFt": 90,
+          "manaCost": 6,
+          "priority": 45,
+          "damage": [
+            {
+              "formula": "1d6+1",
+              "type": "disease",
+              "category": "tick",
+              "durationRounds": 3
+            }
+          ],
+          "heal": [],
+          "conditions": [],
+          "meta": {
+            "dot": true,
+            "durationRounds": 3,
+            "tags": [
+              "dot",
+              "debuff"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Frost Strike",
+    "type": "spell",
+    "img": "icons/magic/water/projectile-ice.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.nuke.frost.1",
+          "kind": "nuke",
+          "rangeFt": 120,
+          "manaCost": 7,
+          "priority": 40,
+          "damage": [
+            {
+              "formula": "2d8+2",
+              "type": "cold"
+            }
+          ],
+          "heal": [],
+          "conditions": [],
+          "meta": {
+            "tags": []
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Rejuvenation",
+    "type": "spell",
+    "img": "icons/magic/life/heart-cross-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.heal.small.1",
+          "kind": "heal",
+          "rangeFt": 60,
+          "manaCost": 6,
+          "priority": 52,
+          "damage": [],
+          "heal": [
+            {
+              "formula": "2d8+3"
+            }
+          ],
+          "conditions": [],
+          "meta": {
+            "tags": [
+              "heal",
+              "heal:primary"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Healing Wave",
+    "type": "spell",
+    "img": "icons/magic/life/heart-plus.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.heal.wave.1",
+          "kind": "heal",
+          "rangeFt": 60,
+          "manaCost": 10,
+          "priority": 56,
+          "damage": [],
+          "heal": [
+            {
+              "formula": "3d8+5"
+            }
+          ],
+          "conditions": [],
+          "meta": {
+            "tags": [
+              "heal",
+              "heal:primary"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Spirit Armor",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.buff.armor.1",
+          "kind": "buff",
+          "rangeFt": 60,
+          "manaCost": 8,
+          "priority": 25,
+          "damage": [],
+          "heal": [],
+          "conditions": [],
+          "meta": {
+            "tags": [
+              "ac"
+            ],
+            "acBonus": 1,
+            "durationRounds": 6
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Regeneration",
+    "type": "spell",
+    "img": "icons/magic/life/cross-amber.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.buff.regen.1",
+          "kind": "buff",
+          "rangeFt": 60,
+          "manaCost": 9,
+          "priority": 25,
+          "damage": [],
+          "heal": [
+            {
+              "formula": "1d6",
+              "category": "tick",
+              "durationRounds": 4
+            }
+          ],
+          "conditions": [],
+          "meta": {
+            "hot": true,
+            "durationRounds": 4,
+            "tags": []
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Cannibalize",
+    "type": "spell",
+    "img": "icons/magic/blood/hand-drip-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.utility.canni.1",
+          "kind": "utility",
+          "rangeFt": 0,
+          "manaCost": 1,
+          "priority": 5,
+          "damage": [],
+          "heal": [],
+          "conditions": [],
+          "meta": {
+            "tags": [
+              "canni"
+            ],
+            "selfHpCost": 6,
+            "manaGain": 10,
+            "cooldownRounds": 4
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Pact of the Wolf",
+    "type": "spell",
+    "img": "icons/creatures/mammals/wolf-howl-moon.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.buff.wolf.1",
+          "kind": "buff",
+          "rangeFt": 60,
+          "manaCost": 8,
+          "priority": 20,
+          "damage": [],
+          "heal": [],
+          "conditions": [],
+          "meta": {
+            "tags": [
+              "wolf"
+            ],
+            "movementBonusWalk": 10,
+            "durationRounds": 6
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Slow (Tier 2)",
+    "type": "spell",
+    "img": "icons/creatures/invertebrates/bee-yellow.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.debuff.slow.2",
+          "kind": "debuff",
+          "rangeFt": 80,
+          "manaCost": 9,
+          "priority": 55,
+          "damage": [],
+          "heal": [],
+          "conditions": [
+            {
+              "id": "snare",
+              "durationRounds": 4
+            }
+          ],
+          "meta": {
+            "tags": [
+              "slow",
+              "debuff",
+              "slow:atk"
+            ],
+            "slowPct": 0.45,
+            "durationRounds": 4,
+            "slowAtkPct": 45
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Slow (Tier 3)",
+    "type": "spell",
+    "img": "icons/creatures/invertebrates/bee-yellow.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.debuff.slow.3",
+          "kind": "debuff",
+          "rangeFt": 80,
+          "manaCost": 11,
+          "priority": 55,
+          "damage": [],
+          "heal": [],
+          "conditions": [
+            {
+              "id": "snare",
+              "durationRounds": 5
+            }
+          ],
+          "meta": {
+            "tags": [
+              "slow",
+              "debuff",
+              "slow:atk"
+            ],
+            "slowPct": 0.55,
+            "durationRounds": 5,
+            "slowAtkPct": 55
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Slow (Tier 4)",
+    "type": "spell",
+    "img": "icons/creatures/invertebrates/bee-yellow.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "sha.debuff.slow.4",
+          "kind": "debuff",
+          "rangeFt": 80,
+          "manaCost": 13,
+          "priority": 55,
+          "damage": [],
+          "heal": [],
+          "conditions": [
+            {
+              "id": "snare",
+              "durationRounds": 6
+            }
+          ],
+          "meta": {
+            "tags": [
+              "slow",
+              "debuff",
+              "slow:atk"
+            ],
+            "slowPct": 0.65,
+            "durationRounds": 6,
+            "slowAtkPct": 65
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,1088 @@
+[
+  {
+    "name": "Backpack",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A rugged pack for carrying adventuring supplies.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 5,
+      "price": {
+        "value": 2,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:backpack",
+        "sourceId": "equipment:backpack",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "container"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Bedroll",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A simple roll for sleeping outdoors.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 7,
+      "price": {
+        "value": 1,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:bedroll",
+        "sourceId": "equipment:bedroll",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "camping"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Waterskin",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A leather skin that holds water.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 5,
+      "price": {
+        "value": 0.2,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:waterskin",
+        "sourceId": "equipment:waterskin",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "container"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Rations (1 day)",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Trail rations for one day.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 2,
+      "price": {
+        "value": 0.5,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "consumable:rations-(1-day)",
+        "sourceId": "consumable:rations-(1-day)",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "food"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Rope (50 ft, hemp)",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Sturdy hemp rope (50 feet).",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 10,
+      "price": {
+        "value": 1,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:rope-(50-ft-hemp)",
+        "sourceId": "equipment:rope-(50-ft-hemp)",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "utility"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Rope (50 ft, silk)",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Light, strong silk rope (50 feet).",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 5,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:rope-(50-ft-silk)",
+        "sourceId": "equipment:rope-(50-ft-silk)",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "tags": [
+          "utility"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Torch",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A basic torch for light.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 1,
+      "price": {
+        "value": 0.01,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "consumable:torch",
+        "sourceId": "consumable:torch",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "light"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Lantern (hooded)",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A hooded lantern that shields its flame.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 2,
+      "price": {
+        "value": 5,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:lantern-(hooded)",
+        "sourceId": "equipment:lantern-(hooded)",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "light"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Oil Flask",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Lamp oil for lanterns; can be used as slick/flame accelerant.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 1,
+      "price": {
+        "value": 0.1,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "consumable:oil-flask",
+        "sourceId": "consumable:oil-flask",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "light",
+          "utility"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Tinderbox",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Flint, steel, and tinder for starting fires.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 1,
+      "price": {
+        "value": 0.5,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:tinderbox",
+        "sourceId": "equipment:tinderbox",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "utility"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Grappling Hook",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A metal hook for climbing with rope.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 4,
+      "price": {
+        "value": 2,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:grappling-hook",
+        "sourceId": "equipment:grappling-hook",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "climbing"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Crowbar",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A sturdy iron bar for prying.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 5,
+      "price": {
+        "value": 2,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:crowbar",
+        "sourceId": "equipment:crowbar",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "tool"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Hammer",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A general-purpose hammer.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 3,
+      "price": {
+        "value": 1,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:hammer",
+        "sourceId": "equipment:hammer",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "tool"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Pitons (10)",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Iron spikes for climbing and anchoring rope.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 5,
+      "price": {
+        "value": 0.5,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:pitons-(10)",
+        "sourceId": "equipment:pitons-(10)",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "climbing"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Lock (simple)",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A basic lock and key.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:lock-(simple)",
+        "sourceId": "equipment:lock-(simple)",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "security"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Manacles",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Iron restraints with keyhole.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 6,
+      "price": {
+        "value": 2,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:manacles",
+        "sourceId": "equipment:manacles",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "security"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Chalk (10 pieces)",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Chalk for marking doors, walls, and trails.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 0.05,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:chalk-(10-pieces)",
+        "sourceId": "equipment:chalk-(10-pieces)",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "utility"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Caltrops (bag)",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Sharp spikes scattered to slow foes.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 2,
+      "price": {
+        "value": 1,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:caltrops-(bag)",
+        "sourceId": "equipment:caltrops-(bag)",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "trap"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Ball Bearings (bag)",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Steel bearings to create difficult footing.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 2,
+      "price": {
+        "value": 1,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:ball-bearings-(bag)",
+        "sourceId": "equipment:ball-bearings-(bag)",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "trap"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Mirror (steel)",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Small steel mirror\u2014useful for corners and signals.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 5,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:mirror-(steel)",
+        "sourceId": "equipment:mirror-(steel)",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "utility"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Spyglass",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A precision lens tube for seeing distant objects.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 1,
+      "price": {
+        "value": 1000,
+        "denomination": "gp"
+      },
+      "rarity": "rare"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:spyglass",
+        "sourceId": "equipment:spyglass",
+        "rarity": "Rare",
+        "tier": 3,
+        "tags": [
+          "utility"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Healer's Kit",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Bandages and salves for stabilizing wounds.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 3,
+      "price": {
+        "value": 5,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "consumable:healers-kit",
+        "sourceId": "consumable:healers-kit",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "tags": [
+          "medical"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Antitoxin",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A vial that counters toxins and venoms.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 50,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "consumable:antitoxin",
+        "sourceId": "consumable:antitoxin",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "tags": [
+          "medical"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Alchemist's Fire",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A sticky, volatile incendiary.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 1,
+      "price": {
+        "value": 50,
+        "denomination": "gp"
+      },
+      "rarity": "rare"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "consumable:alchemists-fire",
+        "sourceId": "consumable:alchemists-fire",
+        "rarity": "Rare",
+        "tier": 3,
+        "tags": [
+          "alchemical"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Acid (vial)",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A corrosive substance in a glass vial.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 1,
+      "price": {
+        "value": 25,
+        "denomination": "gp"
+      },
+      "rarity": "rare"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "consumable:acid-(vial)",
+        "sourceId": "consumable:acid-(vial)",
+        "rarity": "Rare",
+        "tier": 3,
+        "tags": [
+          "alchemical"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Fishing Tackle",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Hooks, line, and small tools for fishing.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 4,
+      "price": {
+        "value": 1,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:fishing-tackle",
+        "sourceId": "equipment:fishing-tackle",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "tool"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Tent (2-person)",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A simple canvas tent for shelter.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 20,
+      "price": {
+        "value": 2,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:tent-(2-person)",
+        "sourceId": "equipment:tent-(2-person)",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "camping"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Blanket (wool)",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Warm wool blanket.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 3,
+      "price": {
+        "value": 0.5,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:blanket-(wool)",
+        "sourceId": "equipment:blanket-(wool)",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "camping"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Soap",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A small bar of soap.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 0.02,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "consumable:soap",
+        "sourceId": "consumable:soap",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "hygiene"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Ink (1 oz)",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Ink for writing.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "consumable:ink-(1-oz)",
+        "sourceId": "consumable:ink-(1-oz)",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "writing"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Quill",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A quill pen for writing.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 0.02,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:quill",
+        "sourceId": "equipment:quill",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "writing"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Parchment (sheet)",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A sheet of parchment.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 0.1,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "consumable:parchment-(sheet)",
+        "sourceId": "consumable:parchment-(sheet)",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "writing"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Map Case",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A case for maps and scrolls.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 1,
+      "price": {
+        "value": 1,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:map-case",
+        "sourceId": "equipment:map-case",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "container"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Potion Case",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "A padded case for fragile vials.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 1,
+      "price": {
+        "value": 1,
+        "denomination": "gp"
+      },
+      "rarity": "common"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "equipment:potion-case",
+        "sourceId": "equipment:potion-case",
+        "rarity": "Common",
+        "tier": 1,
+        "tags": [
+          "container"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Repair Kit (field)",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": {
+        "value": "Needles, thread, rivets, and small tools for quick repairs.",
+        "chat": "",
+        "unidentified": ""
+      },
+      "quantity": 1,
+      "weight": 2,
+      "price": {
+        "value": 5,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon"
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "itemId": "consumable:repair-kit-(field)",
+        "sourceId": "consumable:repair-kit-(field)",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "tags": [
+          "tool"
+        ]
+      }
+    }
+  }
+]

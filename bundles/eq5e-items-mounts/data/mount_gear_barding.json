@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Leather Barding",
+    "type": "mountGear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "era": "kunark",
+      "slot": "barding",
+      "gearType": "barding",
+      "acBonus": 1
+    },
+    "flags": {
+      "eq5e": {
+        "mountGear": {
+          "gearId": "leather_barding"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "kunark"
+        }
+      }
+    }
+  },
+  {
+    "name": "Reinforced Barding",
+    "type": "mountGear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "era": "velious",
+      "slot": "barding",
+      "gearType": "barding",
+      "acBonus": 2
+    },
+    "flags": {
+      "eq5e": {
+        "mountGear": {
+          "gearId": "reinforced_barding"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "velious"
+        }
+      }
+    }
+  },
+  {
+    "name": "Planar Barding",
+    "type": "mountGear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "era": "planes",
+      "slot": "barding",
+      "gearType": "barding",
+      "acBonus": 3
+    },
+    "flags": {
+      "eq5e": {
+        "mountGear": {
+          "gearId": "planar_barding"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "planes"
+        }
+      }
+    }
+  }
+]

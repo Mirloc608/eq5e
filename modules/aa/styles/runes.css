@@ -1,0 +1,13 @@
+.eq5e-runes{display:flex;flex-direction:column;height:100%;gap:10px;padding:12px}
+.eq5e-runes__top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.eq5e-runes__grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1;min-height:0}
+.eq5e-runes__panel{border:1px solid var(--color-border-light-2);border-radius:12px;padding:10px;min-height:0;overflow:auto}
+.eq5e-runes__slot{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;border:1px solid var(--color-border-light-2);border-radius:10px;margin-bottom:8px;background:color-mix(in srgb,var(--color-bg-option) 85%,black)}
+.eq5e-runes__slot b{font-weight:800}
+.eq5e-runes__slot small{opacity:.75}
+.eq5e-runes__pill{padding:2px 10px;border-radius:999px;border:1px solid var(--color-border-light-2);font-size:12px;opacity:.9}
+.eq5e-runes__muted{opacity:.75}
+.eq5e-runes__actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.eq5e-runes__infusionCard{border:1px solid var(--color-border-light-2);border-radius:12px;padding:10px;margin-bottom:10px;background:color-mix(in srgb,var(--color-bg-option) 80%,black)}
+.eq5e-runes__kv{display:grid;grid-template-columns:120px 1fr;gap:6px 10px;font-size:12px;opacity:.95}
+.eq5e-runes__kv b{font-weight:800}

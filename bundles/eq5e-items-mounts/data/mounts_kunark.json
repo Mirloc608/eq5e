@@ -1,0 +1,63 @@
+[
+  {
+    "name": "Riding Horse",
+    "type": "mount",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "era": "kunark",
+      "speed": 40,
+      "carry": 420,
+      "hp": 19,
+      "canFight": false,
+      "traits": [
+        "terrestrial",
+        "beast"
+      ],
+      "requires": [
+        "saddle"
+      ]
+    },
+    "flags": {
+      "eq5e": {
+        "mount": {
+          "mountId": "riding_horse"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "kunark"
+        }
+      }
+    }
+  },
+  {
+    "name": "Pack Horse",
+    "type": "mount",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "era": "kunark",
+      "speed": 35,
+      "carry": 640,
+      "hp": 22,
+      "canFight": false,
+      "traits": [
+        "terrestrial",
+        "beast"
+      ],
+      "requires": [
+        "saddle"
+      ],
+      "notes": "Encumbered riders suffer disadvantage on DEX checks (optional rule)."
+    },
+    "flags": {
+      "eq5e": {
+        "mount": {
+          "mountId": "pack_horse"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "kunark"
+        }
+      }
+    }
+  }
+]

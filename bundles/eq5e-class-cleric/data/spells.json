@@ -1,0 +1,3161 @@
+[
+  {
+    "name": "Minor Healing",
+    "type": "spell",
+    "img": "icons/magic/life/cross-yellow-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.heal.minor",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "1d6+1",
+              "type": "healing",
+              "category": "healing",
+              "tags": []
+            }
+          ],
+          "meta": {
+            "mana": 3,
+            "range": 30,
+            "tags": [
+              "heal",
+              "heal:primary"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 3,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Light Healing",
+    "type": "spell",
+    "img": "icons/magic/life/cross-yellow-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.heal.light",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "1d8+2",
+              "type": "healing",
+              "category": "healing",
+              "tags": []
+            }
+          ],
+          "meta": {
+            "mana": 5,
+            "range": 30,
+            "tags": [
+              "heal",
+              "heal:primary"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 5,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Healing",
+    "type": "spell",
+    "img": "icons/magic/life/cross-yellow-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.heal.healing",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "2d8+4",
+              "type": "healing",
+              "category": "healing",
+              "tags": []
+            }
+          ],
+          "meta": {
+            "mana": 10,
+            "range": 30,
+            "tags": [
+              "heal",
+              "heal:primary"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 10,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Greater Healing",
+    "type": "spell",
+    "img": "icons/magic/life/cross-yellow-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.heal.greater",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "5d8+8",
+              "type": "healing",
+              "category": "healing",
+              "tags": []
+            }
+          ],
+          "meta": {
+            "mana": 20,
+            "range": 30,
+            "tags": [
+              "heal",
+              "heal:primary",
+              "heal:big"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 20,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Superior Healing",
+    "type": "spell",
+    "img": "icons/magic/life/cross-yellow-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.heal.superior",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "7d8+12",
+              "type": "healing",
+              "category": "healing",
+              "tags": []
+            }
+          ],
+          "meta": {
+            "mana": 32,
+            "range": 30,
+            "tags": [
+              "heal",
+              "heal:primary",
+              "heal:big"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 32,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Kragg's Salve",
+    "type": "spell",
+    "img": "icons/magic/life/cross-yellow-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.heal.kraggs",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "9d8+16",
+              "type": "healing",
+              "category": "healing",
+              "tags": []
+            }
+          ],
+          "meta": {
+            "mana": 40,
+            "range": 30,
+            "tags": [
+              "heal",
+              "heal:primary"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 40,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Celestial Healing",
+    "type": "spell",
+    "img": "icons/magic/life/cross-yellow-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.heal.celestial",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "11d8+20",
+              "type": "healing",
+              "category": "healing",
+              "tags": []
+            }
+          ],
+          "meta": {
+            "mana": 50,
+            "range": 30,
+            "tags": [
+              "heal",
+              "heal:primary",
+              "heal:big"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 50,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Complete Heal",
+    "type": "spell",
+    "img": "icons/magic/life/heart-cross-strong-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.heal.complete",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "12d8+40",
+              "type": "healing",
+              "category": "healing",
+              "tags": []
+            }
+          ],
+          "meta": {
+            "mana": 60,
+            "range": 30,
+            "castTime": "10s",
+            "healThreatMult": 2.2,
+            "tags": [
+              "heal",
+              "heal:big",
+              "heal:complete",
+              "heal:primary"
+            ],
+            "cooldown": {
+              "type": "rounds",
+              "value": 2,
+              "sharedGroup": "cleric.completeheal"
+            }
+          },
+          "enabled": true,
+          "manaCost": 60,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Complete Heal (Improved)",
+    "type": "spell",
+    "img": "icons/magic/life/heart-cross-strong-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.heal.complete2",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "14d8+45",
+              "type": "healing",
+              "category": "healing",
+              "tags": [
+                "rank2"
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 75,
+            "range": 30,
+            "castTime": "9s",
+            "healThreatMult": 1.9999999999999998,
+            "tags": [
+              "heal",
+              "heal:big",
+              "heal:complete",
+              "heal:primary"
+            ],
+            "cooldown": {
+              "type": "rounds",
+              "value": 2,
+              "sharedGroup": "cleric.completeheal"
+            }
+          },
+          "enabled": true,
+          "manaCost": 75,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Complete Heal (Exalted)",
+    "type": "spell",
+    "img": "icons/magic/life/heart-cross-strong-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.heal.complete3",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "16d8+55",
+              "type": "healing",
+              "category": "healing",
+              "tags": [
+                "rank3"
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 90,
+            "range": 30,
+            "castTime": "8s",
+            "healThreatMult": 1.8,
+            "tags": [
+              "heal",
+              "heal:big",
+              "heal:complete",
+              "heal:primary"
+            ],
+            "cooldown": {
+              "type": "rounds",
+              "value": 2,
+              "sharedGroup": "cleric.completeheal"
+            }
+          },
+          "enabled": true,
+          "manaCost": 90,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Renewal",
+    "type": "spell",
+    "img": "icons/magic/life/heart-cross-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.hot.renewal",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "1d6+3",
+              "type": "healing",
+              "category": "healing",
+              "tags": [
+                "tick"
+              ],
+              "durationRounds": 4
+            }
+          ],
+          "meta": {
+            "mana": 18,
+            "range": 30,
+            "notes": "Heals each round (requires HoT tick extension pass).",
+            "tags": [
+              "heal",
+              "heal:primary"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 18,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Greater Renewal",
+    "type": "spell",
+    "img": "icons/magic/life/heart-cross-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.hot.greater-renewal",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "1d8+4",
+              "type": "healing",
+              "category": "healing",
+              "tags": [
+                "tick"
+              ],
+              "durationRounds": 5
+            }
+          ],
+          "meta": {
+            "mana": 28,
+            "range": 30,
+            "notes": "Heals each round (requires HoT tick extension pass).",
+            "tags": [
+              "heal",
+              "heal:primary"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 28,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Celestial Renewal",
+    "type": "spell",
+    "img": "icons/magic/life/heart-cross-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.hot.celestial-renewal",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "1d10+5",
+              "type": "healing",
+              "category": "healing",
+              "tags": [
+                "tick"
+              ],
+              "durationRounds": 6
+            }
+          ],
+          "meta": {
+            "mana": 40,
+            "range": 30,
+            "notes": "Heals each round (requires HoT tick extension pass).",
+            "tags": [
+              "heal",
+              "heal:primary"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 40,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Word of Healing",
+    "type": "spell",
+    "img": "icons/magic/life/heart-plus-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.gheal.word-healing",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "1d8+4",
+              "type": "healing",
+              "category": "healing",
+              "tags": [
+                "group"
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 18,
+            "range": 30,
+            "notes": "Group heal (small).",
+            "tags": [
+              "heal",
+              "heal:primary"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 18,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Word of Restoration",
+    "type": "spell",
+    "img": "icons/magic/life/heart-plus-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.gheal.word-restoration",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "2d8+6",
+              "type": "healing",
+              "category": "healing",
+              "tags": [
+                "group"
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 30,
+            "range": 30,
+            "notes": "Group heal (medium).",
+            "tags": [
+              "heal",
+              "heal:primary"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 30,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Word of Replenishment",
+    "type": "spell",
+    "img": "icons/magic/life/heart-plus-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.gheal.word-replenishment",
+          "kind": "heal",
+          "damage": [
+            {
+              "formula": "3d8+8",
+              "type": "healing",
+              "category": "healing",
+              "tags": [
+                "group"
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 42,
+            "range": 30,
+            "notes": "Group heal (large).",
+            "tags": [
+              "heal",
+              "heal:primary"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 42,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Courage",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.courage",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "courage",
+              "label": "Courage",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.05"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 6,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 6,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Blessing of Faith",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.blessing-faith",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "blessing-faith",
+              "label": "Blessing of Faith",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.08"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 10,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 10,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Armor of Faith",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.armor-faith",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "armor-faith",
+              "label": "Armor of Faith",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.10"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 12,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resolve",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resolve",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resolve",
+              "label": "Resolve",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.12"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 18,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 18,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Aegolism",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.aegolism",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "aegolism",
+              "label": "Aegolism",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.15"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 40,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 40,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Symbol of Transal",
+    "type": "spell",
+    "img": "icons/magic/life/heart-plus-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.symbol",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "symbol",
+              "label": "Symbol of Transal",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "system.attributes.hp.max",
+                  "mode": "ADD",
+                  "value": "10"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 14,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 14,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Symbol of Naltron",
+    "type": "spell",
+    "img": "icons/magic/life/heart-plus-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.symbol2",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "symbol2",
+              "label": "Symbol of Naltron",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "system.attributes.hp.max",
+                  "mode": "ADD",
+                  "value": "20"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 22,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 22,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Symbol of Kazad",
+    "type": "spell",
+    "img": "icons/magic/life/heart-plus-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.symbol3",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "symbol3",
+              "label": "Symbol of Kazad",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "system.attributes.hp.max",
+                  "mode": "ADD",
+                  "value": "30"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 30,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 30,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Symbol of Marzin",
+    "type": "spell",
+    "img": "icons/magic/life/heart-plus-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.symbol4",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "symbol4",
+              "label": "Symbol of Marzin",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "system.attributes.hp.max",
+                  "mode": "ADD",
+                  "value": "40"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 38,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 38,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Magic",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-magic",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-magic",
+              "label": "Resist Magic",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.magic",
+                  "mode": "ADD",
+                  "value": "10"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 12,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Fire",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-fire",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-fire",
+              "label": "Resist Fire",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.fire",
+                  "mode": "ADD",
+                  "value": "10"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 12,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Cold",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-teal.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-cold",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-cold",
+              "label": "Resist Cold",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.cold",
+                  "mode": "ADD",
+                  "value": "10"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 12,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Poison",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-poison",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-poison",
+              "label": "Resist Poison",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.poison",
+                  "mode": "ADD",
+                  "value": "10"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 12,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Disease",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-olive.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-disease",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-disease",
+              "label": "Resist Disease",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.disease",
+                  "mode": "ADD",
+                  "value": "10"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 12,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Divine Aura",
+    "type": "spell",
+    "img": "icons/magic/holy/angel-wings-gray.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.util.divine-aura",
+          "kind": "utility",
+          "meta": {
+            "mana": 30,
+            "range": 0,
+            "notes": "Temporary immunity (damage application honors flags.eq5e.damageImmunity in a later pass).",
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "conditions": [
+            {
+              "id": "divineAura",
+              "label": "Divine Aura",
+              "durationRounds": 2,
+              "changes": [
+                {
+                  "key": "flags.eq5e.damageImmunity",
+                  "mode": "OVERRIDE",
+                  "value": "true"
+                }
+              ]
+            }
+          ],
+          "enabled": true,
+          "manaCost": 30,
+          "rangeFt": 0
+        }
+      }
+    }
+  },
+  {
+    "name": "Divine Barrier",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-ice-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.util.divine-barrier",
+          "kind": "utility",
+          "meta": {
+            "mana": 40,
+            "range": 0,
+            "notes": "Heavy mitigation for a short time.",
+            "tags": []
+          },
+          "conditions": [
+            {
+              "id": "divineBarrier",
+              "label": "Divine Barrier",
+              "durationRounds": 3,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.50"
+                }
+              ]
+            }
+          ],
+          "enabled": true,
+          "manaCost": 40,
+          "rangeFt": 0
+        }
+      }
+    }
+  },
+  {
+    "name": "Pacify",
+    "type": "spell",
+    "img": "icons/magic/air/wind-gust-gray.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.util.pacify",
+          "kind": "utility",
+          "meta": {
+            "mana": 20,
+            "range": 30,
+            "tags": []
+          },
+          "conditions": [
+            {
+              "id": "pacified",
+              "label": "Pacified",
+              "durationRounds": 3,
+              "changes": [
+                {
+                  "key": "flags.eq5e.ai.pacified",
+                  "mode": "OVERRIDE",
+                  "value": "true"
+                }
+              ]
+            }
+          ],
+          "enabled": true,
+          "manaCost": 20,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resurrection",
+    "type": "spell",
+    "img": "icons/magic/life/ankh-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.util.resurrection",
+          "kind": "utility",
+          "meta": {
+            "mana": 50,
+            "range": 10,
+            "notes": "Revives a dead ally (rez pipeline wiring pass).",
+            "resurrect": {
+              "hpPct": 0.5,
+              "sicknessRounds": 10
+            },
+            "tags": [
+              "utility",
+              "rez"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 50,
+          "rangeFt": 10
+        }
+      }
+    }
+  },
+  {
+    "name": "Revive",
+    "type": "spell",
+    "img": "icons/magic/life/ankh-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.util.revive",
+          "kind": "utility",
+          "meta": {
+            "mana": 35,
+            "range": 10,
+            "notes": "Weaker resurrection (rez pipeline wiring pass).",
+            "resurrect": {
+              "hpPct": 0.25,
+              "sicknessRounds": 10
+            },
+            "tags": [
+              "utility",
+              "rez"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 35,
+          "rangeFt": 10
+        }
+      }
+    }
+  },
+  {
+    "name": "Smite Undead",
+    "type": "spell",
+    "img": "icons/magic/fire/projectile-fireball-orange.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.dd.smite-undead",
+          "kind": "damage",
+          "damage": [
+            {
+              "formula": "4d6+6",
+              "type": "divine",
+              "category": "spell",
+              "tags": [
+                "undeadBonus"
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 22,
+            "range": 60,
+            "tags": []
+          },
+          "enabled": true,
+          "manaCost": 22,
+          "rangeFt": 60
+        }
+      }
+    }
+  },
+  {
+    "name": "Expel Undead",
+    "type": "spell",
+    "img": "icons/magic/fire/projectile-fireball-orange.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.dd.expel-undead",
+          "kind": "damage",
+          "damage": [
+            {
+              "formula": "6d6+10",
+              "type": "divine",
+              "category": "spell",
+              "tags": [
+                "undeadBonus"
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 34,
+            "range": 60,
+            "tags": []
+          },
+          "enabled": true,
+          "manaCost": 34,
+          "rangeFt": 60
+        }
+      }
+    }
+  },
+  {
+    "name": "Banish Undead",
+    "type": "spell",
+    "img": "icons/magic/fire/projectile-fireball-orange.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.dd.banish-undead",
+          "kind": "damage",
+          "damage": [
+            {
+              "formula": "8d6+14",
+              "type": "divine",
+              "category": "spell",
+              "tags": [
+                "undeadBonus"
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 46,
+            "range": 60,
+            "tags": []
+          },
+          "enabled": true,
+          "manaCost": 46,
+          "rangeFt": 60
+        }
+      }
+    }
+  },
+  {
+    "name": "Retribution of the Faithful",
+    "type": "spell",
+    "img": "icons/magic/fire/projectile-fireball-orange.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.dd.retribution",
+          "kind": "damage",
+          "damage": [
+            {
+              "formula": "6d8+8",
+              "type": "divine",
+              "category": "spell",
+              "tags": [
+                "holy"
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 40,
+            "range": 60,
+            "tags": []
+          },
+          "enabled": true,
+          "manaCost": 40,
+          "rangeFt": 60
+        }
+      }
+    }
+  },
+  {
+    "name": "Stun",
+    "type": "spell",
+    "img": "icons/magic/lightning/bolt-strike-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.ctrl.stun1",
+          "kind": "control",
+          "conditions": [
+            {
+              "id": "stun1",
+              "label": "Stunned",
+              "durationRounds": 1,
+              "changes": [
+                {
+                  "key": "flags.eq5e.conditions.root",
+                  "mode": "OVERRIDE",
+                  "value": "true"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 12,
+            "range": 30,
+            "notes": "Implemented as Root 1 round (condition system extension can add true stun later).",
+            "tags": [
+              "control",
+              "stun"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Sound of Force",
+    "type": "spell",
+    "img": "icons/magic/lightning/bolt-strike-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.ctrl.stun2",
+          "kind": "control",
+          "conditions": [
+            {
+              "id": "stun2",
+              "label": "Stunned",
+              "durationRounds": 1,
+              "changes": [
+                {
+                  "key": "flags.eq5e.conditions.root",
+                  "mode": "OVERRIDE",
+                  "value": "true"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 15,
+            "range": 30,
+            "tags": []
+          },
+          "enabled": true,
+          "manaCost": 15,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Sound of Might",
+    "type": "spell",
+    "img": "icons/magic/lightning/bolt-strike-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.ctrl.stun3",
+          "kind": "control",
+          "conditions": [
+            {
+              "id": "stun3",
+              "label": "Stunned",
+              "durationRounds": 1,
+              "changes": [
+                {
+                  "key": "flags.eq5e.conditions.root",
+                  "mode": "OVERRIDE",
+                  "value": "true"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 22,
+            "range": 30,
+            "tags": []
+          },
+          "enabled": true,
+          "manaCost": 22,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Root Undead",
+    "type": "spell",
+    "img": "icons/magic/nature/vines-thorned-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.ctrl.root-undead",
+          "kind": "control",
+          "conditions": [
+            {
+              "id": "root-undead",
+              "label": "Root Undead",
+              "durationRounds": 2,
+              "changes": [
+                {
+                  "key": "flags.eq5e.conditions.root",
+                  "mode": "OVERRIDE",
+                  "value": "true"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 16,
+            "range": 30,
+            "notes": "Effective vs undead (enforced later).",
+            "tags": []
+          },
+          "enabled": true,
+          "manaCost": 16,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Turn Undead",
+    "type": "spell",
+    "img": "icons/magic/holy/beam-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.ctrl.turn-undead",
+          "kind": "utility",
+          "meta": {
+            "mana": 18,
+            "range": 30,
+            "notes": "Only effective vs undead (enforced later).",
+            "tags": []
+          },
+          "conditions": [
+            {
+              "id": "turned",
+              "label": "Turned",
+              "durationRounds": 2,
+              "changes": [
+                {
+                  "key": "flags.eq5e.ai.feared",
+                  "mode": "OVERRIDE",
+                  "value": "true"
+                }
+              ]
+            }
+          ],
+          "enabled": true,
+          "manaCost": 18,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Shield of Words",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.shield-words",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "shield-words",
+              "label": "Shield of Words",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.06"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 26,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 26,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Blessing of Temperance",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.temperance",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "temperance",
+              "label": "Blessing of Temperance",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "system.attributes.hp.max",
+                  "mode": "ADD",
+                  "value": "60"
+                },
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.10"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 55,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 55,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Courage (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.courage.2",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "courage",
+              "label": "Courage",
+              "durationRounds": 12,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.07"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 8,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 8,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Courage (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.courage.3",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "courage",
+              "label": "Courage",
+              "durationRounds": 14,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.09"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 10,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 10,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Courage (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.courage.4",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "courage",
+              "label": "Courage",
+              "durationRounds": 16,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.11"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 12,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Blessing of Faith (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.blessing-faith.2",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "blessing-faith",
+              "label": "Blessing of Faith",
+              "durationRounds": 12,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.1"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 10,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 10,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Blessing of Faith (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.blessing-faith.3",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "blessing-faith",
+              "label": "Blessing of Faith",
+              "durationRounds": 14,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.12"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 12,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Blessing of Faith (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.blessing-faith.4",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "blessing-faith",
+              "label": "Blessing of Faith",
+              "durationRounds": 16,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.14"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 14,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 14,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Armor of Faith (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.armor-faith.2",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "armor-faith",
+              "label": "Armor of Faith",
+              "durationRounds": 12,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.12"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 12,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Armor of Faith (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.armor-faith.3",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "armor-faith",
+              "label": "Armor of Faith",
+              "durationRounds": 14,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.14"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 14,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 14,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Armor of Faith (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.armor-faith.4",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "armor-faith",
+              "label": "Armor of Faith",
+              "durationRounds": 16,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.16"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 16,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 16,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resolve (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resolve.2",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resolve",
+              "label": "Resolve",
+              "durationRounds": 12,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.14"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 14,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 14,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resolve (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resolve.3",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resolve",
+              "label": "Resolve",
+              "durationRounds": 14,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.16"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 16,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 16,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resolve (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resolve.4",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resolve",
+              "label": "Resolve",
+              "durationRounds": 16,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.18"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 18,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 18,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Aegolism (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.aegolism.2",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "aegolism",
+              "label": "Aegolism",
+              "durationRounds": 12,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.17"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 21,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 21,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Aegolism (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.aegolism.3",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "aegolism",
+              "label": "Aegolism",
+              "durationRounds": 14,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.19"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 24,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 24,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Magic (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-magic.2",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-magic",
+              "label": "Resist Magic",
+              "durationRounds": 12,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.magic",
+                  "mode": "ADD",
+                  "value": "15"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 15,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 15,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Magic (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-magic.3",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-magic",
+              "label": "Resist Magic",
+              "durationRounds": 14,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.magic",
+                  "mode": "ADD",
+                  "value": "20"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 18,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 18,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Magic (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-magic.4",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-magic",
+              "label": "Resist Magic",
+              "durationRounds": 16,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.magic",
+                  "mode": "ADD",
+                  "value": "25"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 21,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 21,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Fire (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-fire.2",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-fire",
+              "label": "Resist Fire",
+              "durationRounds": 12,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.fire",
+                  "mode": "ADD",
+                  "value": "15"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 15,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 15,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Fire (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-fire.3",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-fire",
+              "label": "Resist Fire",
+              "durationRounds": 14,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.fire",
+                  "mode": "ADD",
+                  "value": "20"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 18,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 18,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Fire (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-fire.4",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-fire",
+              "label": "Resist Fire",
+              "durationRounds": 16,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.fire",
+                  "mode": "ADD",
+                  "value": "25"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 21,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 21,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Cold (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-teal.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-cold.2",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-cold",
+              "label": "Resist Cold",
+              "durationRounds": 12,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.cold",
+                  "mode": "ADD",
+                  "value": "15"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 15,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 15,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Cold (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-teal.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-cold.3",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-cold",
+              "label": "Resist Cold",
+              "durationRounds": 14,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.cold",
+                  "mode": "ADD",
+                  "value": "20"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 18,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 18,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Cold (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-teal.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-cold.4",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-cold",
+              "label": "Resist Cold",
+              "durationRounds": 16,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.cold",
+                  "mode": "ADD",
+                  "value": "25"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 21,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 21,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Poison (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-poison.2",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-poison",
+              "label": "Resist Poison",
+              "durationRounds": 12,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.poison",
+                  "mode": "ADD",
+                  "value": "15"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 15,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 15,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Poison (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-poison.3",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-poison",
+              "label": "Resist Poison",
+              "durationRounds": 14,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.poison",
+                  "mode": "ADD",
+                  "value": "20"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 18,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 18,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Poison (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-poison.4",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-poison",
+              "label": "Resist Poison",
+              "durationRounds": 16,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.poison",
+                  "mode": "ADD",
+                  "value": "25"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 21,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 21,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Disease (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-olive.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-disease.2",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-disease",
+              "label": "Resist Disease",
+              "durationRounds": 12,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.disease",
+                  "mode": "ADD",
+                  "value": "15"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 15,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 15,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Disease (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-olive.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-disease.3",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-disease",
+              "label": "Resist Disease",
+              "durationRounds": 14,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.disease",
+                  "mode": "ADD",
+                  "value": "20"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 18,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 18,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Resist Disease (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-olive.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.resist-disease.4",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "resist-disease",
+              "label": "Resist Disease",
+              "durationRounds": 16,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.disease",
+                  "mode": "ADD",
+                  "value": "25"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 21,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 21,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Shield of Words (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.shield-words.2",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "shield-words",
+              "label": "Shield of Words",
+              "durationRounds": 12,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.08"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 12,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Shield of Words (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.shield-words.3",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "shield-words",
+              "label": "Shield of Words",
+              "durationRounds": 14,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.1"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 14,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 14,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Shield of Words (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.shield-words.4",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "shield-words",
+              "label": "Shield of Words",
+              "durationRounds": 16,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.12"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 16,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 16,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Blessing of Temperance (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.temperance.2",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "temperance",
+              "label": "Blessing of Temperance",
+              "durationRounds": 12,
+              "changes": [
+                {
+                  "key": "system.attributes.hp.max",
+                  "mode": "ADD",
+                  "value": "80"
+                },
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.12000000000000001"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 35,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 35,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Blessing of Temperance (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.temperance.3",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "temperance",
+              "label": "Blessing of Temperance",
+              "durationRounds": 14,
+              "changes": [
+                {
+                  "key": "system.attributes.hp.max",
+                  "mode": "ADD",
+                  "value": "100"
+                },
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.14"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 40,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 40,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Blessing of Temperance (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.buff.temperance.4",
+          "kind": "buff",
+          "conditions": [
+            {
+              "id": "temperance",
+              "label": "Blessing of Temperance",
+              "durationRounds": 16,
+              "changes": [
+                {
+                  "key": "system.attributes.hp.max",
+                  "mode": "ADD",
+                  "value": "120"
+                },
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.16"
+                }
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 45,
+            "range": 30,
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "enabled": true,
+          "manaCost": 45,
+          "rangeFt": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Divine Aura (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/holy/angel-wings-gray.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.util.divine-aura.2",
+          "kind": "utility",
+          "meta": {
+            "mana": 40,
+            "range": 0,
+            "notes": "Temporary immunity (damage application honors flags.eq5e.damageImmunity in a later pass).",
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "conditions": [
+            {
+              "id": "divineAura",
+              "label": "Divine Aura",
+              "durationRounds": 3,
+              "changes": [
+                {
+                  "key": "flags.eq5e.damageImmunity",
+                  "mode": "OVERRIDE",
+                  "value": "true"
+                }
+              ]
+            }
+          ],
+          "enabled": true,
+          "manaCost": 40,
+          "rangeFt": 0
+        }
+      }
+    }
+  },
+  {
+    "name": "Divine Aura (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/holy/angel-wings-gray.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "clr.util.divine-aura.3",
+          "kind": "utility",
+          "meta": {
+            "mana": 50,
+            "range": 0,
+            "notes": "Temporary immunity (damage application honors flags.eq5e.damageImmunity in a later pass).",
+            "tags": [
+              "buff",
+              "aura"
+            ]
+          },
+          "conditions": [
+            {
+              "id": "divineAura",
+              "label": "Divine Aura",
+              "durationRounds": 4,
+              "changes": [
+                {
+                  "key": "flags.eq5e.damageImmunity",
+                  "mode": "OVERRIDE",
+                  "value": "true"
+                }
+              ]
+            }
+          ],
+          "enabled": true,
+          "manaCost": 50,
+          "rangeFt": 0
+        }
+      }
+    }
+  }
+]

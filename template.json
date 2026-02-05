@@ -1,0 +1,752 @@
+{
+  "Actor": {
+    "character": {
+      "details": {
+        "race": "",
+        "class": "",
+        "level": 1
+      },
+      "attributes": {
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "mana": {
+          "value": 0,
+          "max": 0
+        },
+        "endurance": {
+          "value": 0,
+          "max": 0
+        },
+        "ac": {
+          "value": 10
+        },
+        "speed": {
+          "value": 30
+        },
+        "init": {
+          "value": 0
+        },
+        "prof": {
+          "value": 2
+        }
+      },
+      "resources": {},
+      "flags": {},
+      "abilities": {
+        "str": {
+          "value": 10,
+          "proficient": false
+        },
+        "dex": {
+          "value": 10,
+          "proficient": false
+        },
+        "con": {
+          "value": 10,
+          "proficient": false
+        },
+        "int": {
+          "value": 10,
+          "proficient": false
+        },
+        "wis": {
+          "value": 10,
+          "proficient": false
+        },
+        "cha": {
+          "value": 10,
+          "proficient": false
+        }
+      },
+      "saves": {
+        "str": {
+          "proficient": false
+        },
+        "dex": {
+          "proficient": false
+        },
+        "con": {
+          "proficient": false
+        },
+        "int": {
+          "proficient": false
+        },
+        "wis": {
+          "proficient": false
+        },
+        "cha": {
+          "proficient": false
+        }
+      },
+      "skills": {
+        "acrobatics": {
+          "ability": "dex",
+          "proficient": false
+        },
+        "animalHandling": {
+          "ability": "wis",
+          "proficient": false
+        },
+        "arcana": {
+          "ability": "int",
+          "proficient": false
+        },
+        "athletics": {
+          "ability": "str",
+          "proficient": false
+        },
+        "deception": {
+          "ability": "cha",
+          "proficient": false
+        },
+        "history": {
+          "ability": "int",
+          "proficient": false
+        },
+        "insight": {
+          "ability": "wis",
+          "proficient": false
+        },
+        "intimidation": {
+          "ability": "cha",
+          "proficient": false
+        },
+        "investigation": {
+          "ability": "int",
+          "proficient": false
+        },
+        "medicine": {
+          "ability": "wis",
+          "proficient": false
+        },
+        "nature": {
+          "ability": "int",
+          "proficient": false
+        },
+        "perception": {
+          "ability": "wis",
+          "proficient": false
+        },
+        "performance": {
+          "ability": "cha",
+          "proficient": false
+        },
+        "persuasion": {
+          "ability": "cha",
+          "proficient": false
+        },
+        "religion": {
+          "ability": "int",
+          "proficient": false
+        },
+        "sleightOfHand": {
+          "ability": "dex",
+          "proficient": false
+        },
+        "stealth": {
+          "ability": "dex",
+          "proficient": false
+        },
+        "survival": {
+          "ability": "wis",
+          "proficient": false
+        }
+      }
+    },
+    "npc": {
+      "details": {
+        "race": "",
+        "class": "",
+        "level": 1
+      },
+      "attributes": {
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "mana": {
+          "value": 0,
+          "max": 0
+        },
+        "endurance": {
+          "value": 0,
+          "max": 0
+        },
+        "ac": {
+          "value": 10
+        },
+        "speed": {
+          "value": 30
+        },
+        "init": {
+          "value": 0
+        },
+        "prof": {
+          "value": 2
+        }
+      },
+      "resources": {},
+      "flags": {},
+      "abilities": {
+        "str": {
+          "value": 10,
+          "proficient": false
+        },
+        "dex": {
+          "value": 10,
+          "proficient": false
+        },
+        "con": {
+          "value": 10,
+          "proficient": false
+        },
+        "int": {
+          "value": 10,
+          "proficient": false
+        },
+        "wis": {
+          "value": 10,
+          "proficient": false
+        },
+        "cha": {
+          "value": 10,
+          "proficient": false
+        }
+      },
+      "saves": {
+        "str": {
+          "proficient": false
+        },
+        "dex": {
+          "proficient": false
+        },
+        "con": {
+          "proficient": false
+        },
+        "int": {
+          "proficient": false
+        },
+        "wis": {
+          "proficient": false
+        },
+        "cha": {
+          "proficient": false
+        }
+      },
+      "skills": {
+        "acrobatics": {
+          "ability": "dex",
+          "proficient": false
+        },
+        "animalHandling": {
+          "ability": "wis",
+          "proficient": false
+        },
+        "arcana": {
+          "ability": "int",
+          "proficient": false
+        },
+        "athletics": {
+          "ability": "str",
+          "proficient": false
+        },
+        "deception": {
+          "ability": "cha",
+          "proficient": false
+        },
+        "history": {
+          "ability": "int",
+          "proficient": false
+        },
+        "insight": {
+          "ability": "wis",
+          "proficient": false
+        },
+        "intimidation": {
+          "ability": "cha",
+          "proficient": false
+        },
+        "investigation": {
+          "ability": "int",
+          "proficient": false
+        },
+        "medicine": {
+          "ability": "wis",
+          "proficient": false
+        },
+        "nature": {
+          "ability": "int",
+          "proficient": false
+        },
+        "perception": {
+          "ability": "wis",
+          "proficient": false
+        },
+        "performance": {
+          "ability": "cha",
+          "proficient": false
+        },
+        "persuasion": {
+          "ability": "cha",
+          "proficient": false
+        },
+        "religion": {
+          "ability": "int",
+          "proficient": false
+        },
+        "sleightOfHand": {
+          "ability": "dex",
+          "proficient": false
+        },
+        "stealth": {
+          "ability": "dex",
+          "proficient": false
+        },
+        "survival": {
+          "ability": "wis",
+          "proficient": false
+        }
+      }
+    },
+    "pet": {
+      "details": {
+        "race": "",
+        "class": "",
+        "level": 1
+      },
+      "attributes": {
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "mana": {
+          "value": 0,
+          "max": 0
+        },
+        "endurance": {
+          "value": 0,
+          "max": 0
+        },
+        "ac": {
+          "value": 10
+        },
+        "speed": {
+          "value": 30
+        },
+        "init": {
+          "value": 0
+        },
+        "prof": {
+          "value": 2
+        }
+      },
+      "resources": {},
+      "flags": {},
+      "abilities": {
+        "str": {
+          "value": 10,
+          "proficient": false
+        },
+        "dex": {
+          "value": 10,
+          "proficient": false
+        },
+        "con": {
+          "value": 10,
+          "proficient": false
+        },
+        "int": {
+          "value": 10,
+          "proficient": false
+        },
+        "wis": {
+          "value": 10,
+          "proficient": false
+        },
+        "cha": {
+          "value": 10,
+          "proficient": false
+        }
+      },
+      "saves": {
+        "str": {
+          "proficient": false
+        },
+        "dex": {
+          "proficient": false
+        },
+        "con": {
+          "proficient": false
+        },
+        "int": {
+          "proficient": false
+        },
+        "wis": {
+          "proficient": false
+        },
+        "cha": {
+          "proficient": false
+        }
+      },
+      "skills": {
+        "acrobatics": {
+          "ability": "dex",
+          "proficient": false
+        },
+        "animalHandling": {
+          "ability": "wis",
+          "proficient": false
+        },
+        "arcana": {
+          "ability": "int",
+          "proficient": false
+        },
+        "athletics": {
+          "ability": "str",
+          "proficient": false
+        },
+        "deception": {
+          "ability": "cha",
+          "proficient": false
+        },
+        "history": {
+          "ability": "int",
+          "proficient": false
+        },
+        "insight": {
+          "ability": "wis",
+          "proficient": false
+        },
+        "intimidation": {
+          "ability": "cha",
+          "proficient": false
+        },
+        "investigation": {
+          "ability": "int",
+          "proficient": false
+        },
+        "medicine": {
+          "ability": "wis",
+          "proficient": false
+        },
+        "nature": {
+          "ability": "int",
+          "proficient": false
+        },
+        "perception": {
+          "ability": "wis",
+          "proficient": false
+        },
+        "performance": {
+          "ability": "cha",
+          "proficient": false
+        },
+        "persuasion": {
+          "ability": "cha",
+          "proficient": false
+        },
+        "religion": {
+          "ability": "int",
+          "proficient": false
+        },
+        "sleightOfHand": {
+          "ability": "dex",
+          "proficient": false
+        },
+        "stealth": {
+          "ability": "dex",
+          "proficient": false
+        },
+        "survival": {
+          "ability": "wis",
+          "proficient": false
+        }
+      }
+    }
+  },
+  "Item": {
+    "aa": {
+      "rank": 1,
+      "maxRank": 1,
+      "cost": 0,
+      "prereq": "",
+      "description": ""
+    },
+    "weapon": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "stats": {
+        "str": 0,
+        "dex": 0,
+        "con": 0,
+        "agi": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "hp": 0,
+      "mana": 0,
+      "endurance": 0,
+      "ac": 0,
+      "haste": 0,
+      "attack": 0,
+      "resists": {
+        "magic": 0,
+        "fire": 0,
+        "cold": 0,
+        "poison": 0,
+        "disease": 0
+      },
+      "lore": false,
+      "slot": "",
+      "requirements": {
+        "level": 1,
+        "classes": [],
+        "races": []
+      },
+      "weaponType": "melee",
+      "damage": {
+        "formula": "1d6",
+        "type": "slashing"
+      },
+      "ability": "str",
+      "attackBonus": 0,
+      "range": {
+        "normal": 0,
+        "long": 0
+      },
+      "properties": {
+        "finesse": false,
+        "twoHanded": false,
+        "light": false,
+        "reach": false,
+        "thrown": false,
+        "ammo": false
+      },
+      "skill": ""
+    },
+    "armor": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "stats": {
+        "str": 0,
+        "dex": 0,
+        "con": 0,
+        "agi": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "hp": 0,
+      "mana": 0,
+      "endurance": 0,
+      "ac": 0,
+      "haste": 0,
+      "attack": 0,
+      "resists": {
+        "magic": 0,
+        "fire": 0,
+        "cold": 0,
+        "poison": 0,
+        "disease": 0
+      },
+      "lore": false,
+      "slot": "",
+      "requirements": {
+        "level": 1,
+        "classes": [],
+        "races": []
+      },
+      "armorType": "light",
+      "acData": {
+        "base": 11,
+        "dexCap": null,
+        "bonus": 0
+      },
+      "stealthDisadvantage": false
+    },
+    "shield": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "stats": {
+        "str": 0,
+        "dex": 0,
+        "con": 0,
+        "agi": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "hp": 0,
+      "mana": 0,
+      "endurance": 0,
+      "ac": 0,
+      "haste": 0,
+      "attack": 0,
+      "resists": {
+        "magic": 0,
+        "fire": 0,
+        "cold": 0,
+        "poison": 0,
+        "disease": 0
+      },
+      "lore": false,
+      "slot": "",
+      "requirements": {
+        "level": 1,
+        "classes": [],
+        "races": []
+      },
+      "acData": {
+        "base": 0,
+        "dexCap": null,
+        "bonus": 2
+      }
+    },
+    "jewelry": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "stats": {
+        "str": 0,
+        "dex": 0,
+        "con": 0,
+        "agi": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "hp": 0,
+      "mana": 0,
+      "endurance": 0,
+      "ac": 0,
+      "haste": 0,
+      "attack": 0,
+      "resists": {
+        "magic": 0,
+        "fire": 0,
+        "cold": 0,
+        "poison": 0,
+        "disease": 0
+      },
+      "lore": false,
+      "slot": "ring",
+      "requirements": {
+        "level": 1,
+        "classes": [],
+        "races": []
+      },
+      "charges": {
+        "value": 0,
+        "max": 0,
+        "per": "day"
+      }
+    },
+    "consumable": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "consumeType": "potion",
+      "uses": {
+        "value": 1,
+        "max": 1
+      },
+      "effect": {
+        "type": "heal",
+        "value": "2d4+2"
+      },
+      "duration": {
+        "rounds": 0,
+        "minutes": 0,
+        "hours": 0
+      }
+    },
+    "adventuring": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "consumeType": "supply",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "utility": {
+        "tags": []
+      }
+    },
+    "equipment": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "stats": {
+        "str": 0,
+        "dex": 0,
+        "con": 0,
+        "agi": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "hp": 0,
+      "mana": 0,
+      "endurance": 0,
+      "ac": 0,
+      "haste": 0,
+      "attack": 0,
+      "resists": {
+        "magic": 0,
+        "fire": 0,
+        "cold": 0,
+        "poison": 0,
+        "disease": 0
+      },
+      "lore": false,
+      "slot": "equipment",
+      "requirements": {
+        "level": 1,
+        "classes": [],
+        "races": []
+      }
+    }
+  }
+}

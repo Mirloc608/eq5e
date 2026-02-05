@@ -1,0 +1,1664 @@
+[
+  {
+    "name": "Minor Healing Potion",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_74345a5a35aa",
+        "sourceId": "cons_74345a5a35aa",
+        "category": "consumable",
+        "rarity": "Common",
+        "tier": "common",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Restore a small amount of HP.",
+            "tags": [
+              "healing",
+              "hp"
+            ]
+          },
+          "price": 10,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Minor Mana Draught",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_5cd070b9861d",
+        "sourceId": "cons_5cd070b9861d",
+        "category": "consumable",
+        "rarity": "Common",
+        "tier": "common",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Restore a small amount of Mana.",
+            "tags": [
+              "mana",
+              "mp"
+            ]
+          },
+          "price": 12,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Healing Potion",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_5c447e2df4b3",
+        "sourceId": "cons_5c447e2df4b3",
+        "category": "consumable",
+        "rarity": "Uncommon",
+        "tier": "uncommon",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Restore moderate HP.",
+            "tags": [
+              "healing",
+              "hp"
+            ]
+          },
+          "price": 10,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Mana Draught",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_ad9e04fe38b8",
+        "sourceId": "cons_ad9e04fe38b8",
+        "category": "consumable",
+        "rarity": "Uncommon",
+        "tier": "uncommon",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Restore moderate Mana.",
+            "tags": [
+              "mana",
+              "mp"
+            ]
+          },
+          "price": 12,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Greater Healing Potion",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_ac73e6393168",
+        "sourceId": "cons_ac73e6393168",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Restore significant HP.",
+            "tags": [
+              "healing",
+              "hp"
+            ]
+          },
+          "price": 10,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Greater Mana Draught",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_d06add8cd30c",
+        "sourceId": "cons_d06add8cd30c",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Restore significant Mana.",
+            "tags": [
+              "mana",
+              "mp"
+            ]
+          },
+          "price": 12,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Superior Healing Potion",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_e9fb4b613097",
+        "sourceId": "cons_e9fb4b613097",
+        "category": "consumable",
+        "rarity": "Epic",
+        "tier": "epic",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Restore a large amount of HP.",
+            "tags": [
+              "healing",
+              "hp"
+            ]
+          },
+          "price": 10,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Superior Mana Draught",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_397007579425",
+        "sourceId": "cons_397007579425",
+        "category": "consumable",
+        "rarity": "Epic",
+        "tier": "epic",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Restore a large amount of Mana.",
+            "tags": [
+              "mana",
+              "mp"
+            ]
+          },
+          "price": 12,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Elixir of Celestial Healing",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_cdc8645cb96d",
+        "sourceId": "cons_cdc8645cb96d",
+        "category": "consumable",
+        "rarity": "Legendary",
+        "tier": "legendary",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Restore massive HP and remove minor wounds.",
+            "tags": [
+              "healing",
+              "hp"
+            ]
+          },
+          "price": 10,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Elixir of Arcane Restoration",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_fc1b266dbf6c",
+        "sourceId": "cons_fc1b266dbf6c",
+        "category": "consumable",
+        "rarity": "Legendary",
+        "tier": "legendary",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Restore massive Mana and sharpen focus.",
+            "tags": [
+              "mana",
+              "mp"
+            ]
+          },
+          "price": 12,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Antidote Vial",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_e83bc592a84e",
+        "sourceId": "cons_e83bc592a84e",
+        "category": "consumable",
+        "rarity": "Common",
+        "tier": "common",
+        "consumable": {
+          "kind": "antidote",
+          "charges": 1,
+          "effect": {
+            "text": "Neutralizes common poisons.",
+            "tags": [
+              "poison"
+            ]
+          },
+          "price": 15,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Greater Antidote",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_7535d5eb941e",
+        "sourceId": "cons_7535d5eb941e",
+        "category": "consumable",
+        "rarity": "Common",
+        "tier": "common",
+        "consumable": {
+          "kind": "antidote",
+          "charges": 1,
+          "effect": {
+            "text": "Neutralizes strong poisons.",
+            "tags": [
+              "poison"
+            ]
+          },
+          "price": 15,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Salve of Mending",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_142907f6fe58",
+        "sourceId": "cons_142907f6fe58",
+        "category": "consumable",
+        "rarity": "Common",
+        "tier": "common",
+        "consumable": {
+          "kind": "salve",
+          "charges": 1,
+          "effect": {
+            "text": "Heals minor wounds over time.",
+            "tags": [
+              "regen"
+            ]
+          },
+          "price": 15,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Salve of Greater Mending",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_2984e3394910",
+        "sourceId": "cons_2984e3394910",
+        "category": "consumable",
+        "rarity": "Uncommon",
+        "tier": "uncommon",
+        "consumable": {
+          "kind": "salve",
+          "charges": 1,
+          "effect": {
+            "text": "Heals wounds over time.",
+            "tags": [
+              "regen"
+            ]
+          },
+          "price": 15,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Potion of Spirit Sight",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_050cb031926e",
+        "sourceId": "cons_050cb031926e",
+        "category": "consumable",
+        "rarity": "Uncommon",
+        "tier": "uncommon",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Grants see invis / improved perception.",
+            "tags": [
+              "utility",
+              "vision"
+            ]
+          },
+          "price": 15,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Potion of Enduring Breath",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_79268fc67446",
+        "sourceId": "cons_79268fc67446",
+        "category": "consumable",
+        "rarity": "Uncommon",
+        "tier": "uncommon",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Breathe underwater for a time.",
+            "tags": [
+              "utility"
+            ]
+          },
+          "price": 15,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Potion of Quickness",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_f25c3be7b017",
+        "sourceId": "cons_f25c3be7b017",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Brief haste / speed boost.",
+            "tags": [
+              "haste"
+            ]
+          },
+          "price": 15,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Potion of Stone Skin",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_98b4418044c9",
+        "sourceId": "cons_98b4418044c9",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Temporary damage reduction.",
+            "tags": [
+              "defense"
+            ]
+          },
+          "price": 15,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Elixir of Giant Strength",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_eb1951597e18",
+        "sourceId": "cons_eb1951597e18",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Temporary STR boost.",
+            "tags": [
+              "buff",
+              "str"
+            ]
+          },
+          "price": 15,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Elixir of Keen Mind",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_28e7ead3bc6a",
+        "sourceId": "cons_28e7ead3bc6a",
+        "category": "consumable",
+        "rarity": "Epic",
+        "tier": "epic",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Temporary INT/WIS boost.",
+            "tags": [
+              "buff",
+              "int",
+              "wis"
+            ]
+          },
+          "price": 15,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Philter of Shadowstep",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_bf6c9a73c84e",
+        "sourceId": "cons_bf6c9a73c84e",
+        "category": "consumable",
+        "rarity": "Epic",
+        "tier": "epic",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Brief invisibility.",
+            "tags": [
+              "invisibility"
+            ]
+          },
+          "price": 15,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Vial of Liquid Courage",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_a0dadecfb423",
+        "sourceId": "cons_a0dadecfb423",
+        "category": "consumable",
+        "rarity": "Epic",
+        "tier": "epic",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Temporary fear immunity / morale.",
+            "tags": [
+              "morale"
+            ]
+          },
+          "price": 15,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Trail Rations",
+    "type": "consumable",
+    "img": "icons/consumables/food/bread.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_95e98b1b38c3",
+        "sourceId": "cons_95e98b1b38c3",
+        "category": "consumable",
+        "rarity": "Common",
+        "tier": "common",
+        "consumable": {
+          "kind": "food",
+          "charges": 1,
+          "effect": {
+            "text": "Basic preserved food.",
+            "tags": [
+              "food",
+              "rest"
+            ]
+          },
+          "price": 2,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Iron Rations",
+    "type": "consumable",
+    "img": "icons/consumables/food/bread.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_02312c5f1df4",
+        "sourceId": "cons_02312c5f1df4",
+        "category": "consumable",
+        "rarity": "Common",
+        "tier": "common",
+        "consumable": {
+          "kind": "food",
+          "charges": 1,
+          "effect": {
+            "text": "Hearty preserved meal.",
+            "tags": [
+              "food",
+              "rest"
+            ]
+          },
+          "price": 2,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Mistmoore Tea",
+    "type": "consumable",
+    "img": "icons/consumables/drinks/alcohol-beer-stein.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_687f244d9d40",
+        "sourceId": "cons_687f244d9d40",
+        "category": "consumable",
+        "rarity": "Uncommon",
+        "tier": "uncommon",
+        "consumable": {
+          "kind": "drink",
+          "charges": 1,
+          "effect": {
+            "text": "Calming tea; slight focus.",
+            "tags": [
+              "drink",
+              "rest"
+            ]
+          },
+          "price": 2,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Faydwer Cider",
+    "type": "consumable",
+    "img": "icons/consumables/drinks/alcohol-beer-stein.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_d6d76871cd6f",
+        "sourceId": "cons_d6d76871cd6f",
+        "category": "consumable",
+        "rarity": "Uncommon",
+        "tier": "uncommon",
+        "consumable": {
+          "kind": "drink",
+          "charges": 1,
+          "effect": {
+            "text": "Warmth and morale.",
+            "tags": [
+              "drink",
+              "rest"
+            ]
+          },
+          "price": 2,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Halfling Meat Pie",
+    "type": "consumable",
+    "img": "icons/consumables/food/bread.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_868e1f4d43ba",
+        "sourceId": "cons_868e1f4d43ba",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "food",
+          "charges": 1,
+          "effect": {
+            "text": "Hearty meal; short vigor.",
+            "tags": [
+              "food",
+              "rest"
+            ]
+          },
+          "price": 2,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Dragonfruit Tart",
+    "type": "consumable",
+    "img": "icons/consumables/food/bread.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_dfc51924a44b",
+        "sourceId": "cons_dfc51924a44b",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "food",
+          "charges": 1,
+          "effect": {
+            "text": "Rare dessert; short focus.",
+            "tags": [
+              "food",
+              "rest"
+            ]
+          },
+          "price": 2,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Dwarven Stout",
+    "type": "consumable",
+    "img": "icons/consumables/drinks/alcohol-beer-stein.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_98b9f175e53b",
+        "sourceId": "cons_98b9f175e53b",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "drink",
+          "charges": 1,
+          "effect": {
+            "text": "Strong ale; short fortitude.",
+            "tags": [
+              "drink",
+              "rest"
+            ]
+          },
+          "price": 2,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Elixir of Everfrost",
+    "type": "consumable",
+    "img": "icons/consumables/drinks/alcohol-beer-stein.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_635005647dd4",
+        "sourceId": "cons_635005647dd4",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "drink",
+          "charges": 1,
+          "effect": {
+            "text": "Chilling draught; cold resistance.",
+            "tags": [
+              "drink",
+              "rest"
+            ]
+          },
+          "price": 2,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Vial of Weak Venom",
+    "type": "consumable",
+    "img": "icons/consumables/poisons/poison-bottle-corked-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_e6a260935604",
+        "sourceId": "cons_e6a260935604",
+        "category": "consumable",
+        "rarity": "Common",
+        "tier": "common",
+        "consumable": {
+          "kind": "poison",
+          "charges": 1,
+          "effect": {
+            "text": "Coats a weapon; minor poison damage.",
+            "tags": [
+              "poison",
+              "weapon"
+            ]
+          },
+          "price": 20,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Vial of Venom",
+    "type": "consumable",
+    "img": "icons/consumables/poisons/poison-bottle-corked-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_660b0cf9e4c5",
+        "sourceId": "cons_660b0cf9e4c5",
+        "category": "consumable",
+        "rarity": "Uncommon",
+        "tier": "uncommon",
+        "consumable": {
+          "kind": "poison",
+          "charges": 1,
+          "effect": {
+            "text": "Coats a weapon; poison damage.",
+            "tags": [
+              "poison",
+              "weapon"
+            ]
+          },
+          "price": 20,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Vial of Strong Venom",
+    "type": "consumable",
+    "img": "icons/consumables/poisons/poison-bottle-corked-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_782d8120b372",
+        "sourceId": "cons_782d8120b372",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "poison",
+          "charges": 1,
+          "effect": {
+            "text": "Coats a weapon; strong poison damage.",
+            "tags": [
+              "poison",
+              "weapon"
+            ]
+          },
+          "price": 20,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Vial of Crippling Toxin",
+    "type": "consumable",
+    "img": "icons/consumables/poisons/poison-bottle-corked-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_392bb28ec40f",
+        "sourceId": "cons_392bb28ec40f",
+        "category": "consumable",
+        "rarity": "Epic",
+        "tier": "epic",
+        "consumable": {
+          "kind": "poison",
+          "charges": 1,
+          "effect": {
+            "text": "Coats a weapon; slows target.",
+            "tags": [
+              "poison",
+              "slow"
+            ]
+          },
+          "price": 20,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Vial of Mind-numbing Toxin",
+    "type": "consumable",
+    "img": "icons/consumables/poisons/poison-bottle-corked-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_30d77f21f1d7",
+        "sourceId": "cons_30d77f21f1d7",
+        "category": "consumable",
+        "rarity": "Legendary",
+        "tier": "legendary",
+        "consumable": {
+          "kind": "poison",
+          "charges": 1,
+          "effect": {
+            "text": "Coats a weapon; reduces casting focus.",
+            "tags": [
+              "poison",
+              "debuff"
+            ]
+          },
+          "price": 20,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Vial of Lethal Venom",
+    "type": "consumable",
+    "img": "icons/consumables/poisons/poison-bottle-corked-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_5b61c979f5f0",
+        "sourceId": "cons_5b61c979f5f0",
+        "category": "consumable",
+        "rarity": "Legendary",
+        "tier": "legendary",
+        "consumable": {
+          "kind": "poison",
+          "charges": 1,
+          "effect": {
+            "text": "Coats a weapon; heavy poison damage.",
+            "tags": [
+              "poison",
+              "weapon"
+            ]
+          },
+          "price": 20,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Scroll: Gate",
+    "type": "consumable",
+    "img": "icons/sundries/scrolls/scroll-writing-tan.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_ac68690827c9",
+        "sourceId": "cons_ac68690827c9",
+        "category": "consumable",
+        "rarity": "Uncommon",
+        "tier": "uncommon",
+        "consumable": {
+          "kind": "scroll",
+          "charges": 1,
+          "effect": {
+            "text": "Teleports the caster to a bind point (example).",
+            "tags": [
+              "teleport"
+            ]
+          },
+          "price": 30,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Scroll: Spirit of Wolf",
+    "type": "consumable",
+    "img": "icons/sundries/scrolls/scroll-writing-tan.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_531bc86e5a81",
+        "sourceId": "cons_531bc86e5a81",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "scroll",
+          "charges": 1,
+          "effect": {
+            "text": "Movement speed buff (example).",
+            "tags": [
+              "buff",
+              "speed"
+            ]
+          },
+          "price": 30,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Scroll: Levitate",
+    "type": "consumable",
+    "img": "icons/sundries/scrolls/scroll-writing-tan.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_c781cca04c8d",
+        "sourceId": "cons_c781cca04c8d",
+        "category": "consumable",
+        "rarity": "Epic",
+        "tier": "epic",
+        "consumable": {
+          "kind": "scroll",
+          "charges": 1,
+          "effect": {
+            "text": "Grants levitation (example).",
+            "tags": [
+              "utility"
+            ]
+          },
+          "price": 30,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Rune: Ward of Flame",
+    "type": "consumable",
+    "img": "icons/sundries/scrolls/scroll-writing-tan.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_e490c089a6b6",
+        "sourceId": "cons_e490c089a6b6",
+        "category": "consumable",
+        "rarity": "Legendary",
+        "tier": "legendary",
+        "consumable": {
+          "kind": "rune",
+          "charges": 1,
+          "effect": {
+            "text": "Temporary fire ward (example).",
+            "tags": [
+              "ward",
+              "fire"
+            ]
+          },
+          "price": 30,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Rune: Ward of Frost",
+    "type": "consumable",
+    "img": "icons/sundries/scrolls/scroll-writing-tan.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_aaf4e38e1d4b",
+        "sourceId": "cons_aaf4e38e1d4b",
+        "category": "consumable",
+        "rarity": "Legendary",
+        "tier": "legendary",
+        "consumable": {
+          "kind": "rune",
+          "charges": 1,
+          "effect": {
+            "text": "Temporary cold ward (example).",
+            "tags": [
+              "ward",
+              "cold"
+            ]
+          },
+          "price": 30,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Rune: Ward of Magic",
+    "type": "consumable",
+    "img": "icons/sundries/scrolls/scroll-writing-tan.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_8a6abfa7f4d8",
+        "sourceId": "cons_8a6abfa7f4d8",
+        "category": "consumable",
+        "rarity": "Legendary",
+        "tier": "legendary",
+        "consumable": {
+          "kind": "rune",
+          "charges": 1,
+          "effect": {
+            "text": "Temporary magic ward (example).",
+            "tags": [
+              "ward",
+              "magic"
+            ]
+          },
+          "price": 30,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Bandage Roll",
+    "type": "consumable",
+    "img": "icons/tools/hand/needle-thread.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_4b2d69ef02a1",
+        "sourceId": "cons_4b2d69ef02a1",
+        "category": "consumable",
+        "rarity": "Common",
+        "tier": "common",
+        "consumable": {
+          "kind": "bandage",
+          "charges": 5,
+          "effect": {
+            "text": "Stabilize or stop bleeding (example).",
+            "tags": [
+              "medical"
+            ]
+          },
+          "price": 5,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Medicinal Bandage Roll",
+    "type": "consumable",
+    "img": "icons/tools/hand/needle-thread.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_adf9829b0c4b",
+        "sourceId": "cons_adf9829b0c4b",
+        "category": "consumable",
+        "rarity": "Common",
+        "tier": "common",
+        "consumable": {
+          "kind": "bandage",
+          "charges": 5,
+          "effect": {
+            "text": "Improved stabilization (example).",
+            "tags": [
+              "medical"
+            ]
+          },
+          "price": 5,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Adventurer's Repair Kit",
+    "type": "consumable",
+    "img": "icons/tools/hand/needle-thread.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_8f77202f886e",
+        "sourceId": "cons_8f77202f886e",
+        "category": "consumable",
+        "rarity": "Uncommon",
+        "tier": "uncommon",
+        "consumable": {
+          "kind": "kit",
+          "charges": 10,
+          "effect": {
+            "text": "Field-repair basic gear (example).",
+            "tags": [
+              "utility"
+            ]
+          },
+          "price": 5,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Lockpick Set (Consumable)",
+    "type": "consumable",
+    "img": "icons/tools/hand/needle-thread.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_0e2edb7cf919",
+        "sourceId": "cons_0e2edb7cf919",
+        "category": "consumable",
+        "rarity": "Uncommon",
+        "tier": "uncommon",
+        "consumable": {
+          "kind": "kit",
+          "charges": 10,
+          "effect": {
+            "text": "Basic picks; may break on failure.",
+            "tags": [
+              "thievery"
+            ]
+          },
+          "price": 5,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Potion of Fire Resistance",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-orange.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_cc6fb0dd2b97",
+        "sourceId": "cons_cc6fb0dd2b97",
+        "category": "consumable",
+        "rarity": "Common",
+        "tier": "common",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Grants temporary fire resistance.",
+            "tags": [
+              "resist",
+              "fire"
+            ]
+          },
+          "price": 18,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Potion of Cold Resistance",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-white.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_243cb23dee7c",
+        "sourceId": "cons_243cb23dee7c",
+        "category": "consumable",
+        "rarity": "Common",
+        "tier": "common",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Grants temporary cold resistance.",
+            "tags": [
+              "resist",
+              "cold"
+            ]
+          },
+          "price": 18,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Potion of Poison Resistance",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_953b2dd42fdb",
+        "sourceId": "cons_953b2dd42fdb",
+        "category": "consumable",
+        "rarity": "Uncommon",
+        "tier": "uncommon",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Grants temporary poison resistance.",
+            "tags": [
+              "resist",
+              "poison"
+            ]
+          },
+          "price": 18,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Potion of Disease Resistance",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_b2f4a2512220",
+        "sourceId": "cons_b2f4a2512220",
+        "category": "consumable",
+        "rarity": "Uncommon",
+        "tier": "uncommon",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Grants temporary disease resistance.",
+            "tags": [
+              "resist",
+              "disease"
+            ]
+          },
+          "price": 18,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Potion of Magic Shielding",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_0e24b74c0f51",
+        "sourceId": "cons_0e24b74c0f51",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Grants temporary magic resistance.",
+            "tags": [
+              "resist",
+              "magic"
+            ]
+          },
+          "price": 18,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Potion of Clarity",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_c80d2464ca93",
+        "sourceId": "cons_c80d2464ca93",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Regenerates mana over time (example).",
+            "tags": [
+              "buff",
+              "mana",
+              "regen"
+            ]
+          },
+          "price": 18,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Potion of Regeneration",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_d7051b706458",
+        "sourceId": "cons_d7051b706458",
+        "category": "consumable",
+        "rarity": "Epic",
+        "tier": "epic",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Regenerates health over time (example).",
+            "tags": [
+              "buff",
+              "hp",
+              "regen"
+            ]
+          },
+          "price": 18,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Elixir of Heroism",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_9d6259765e0c",
+        "sourceId": "cons_9d6259765e0c",
+        "category": "consumable",
+        "rarity": "Epic",
+        "tier": "epic",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Temporary attack/AC buff (example).",
+            "tags": [
+              "buff"
+            ]
+          },
+          "price": 18,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Philter of Invisibility",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_c722151b4c93",
+        "sourceId": "cons_c722151b4c93",
+        "category": "consumable",
+        "rarity": "Epic",
+        "tier": "epic",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Temporary invisibility (example).",
+            "tags": [
+              "invisibility"
+            ]
+          },
+          "price": 18,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Philter of See Invisible",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-yellow.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_16611103ce43",
+        "sourceId": "cons_16611103ce43",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Temporary see invisible (example).",
+            "tags": [
+              "vision"
+            ]
+          },
+          "price": 18,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Stone of Recall",
+    "type": "consumable",
+    "img": "icons/commodities/gems/pearl-water.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_6ae5226924e6",
+        "sourceId": "cons_6ae5226924e6",
+        "category": "consumable",
+        "rarity": "Legendary",
+        "tier": "legendary",
+        "consumable": {
+          "kind": "stone",
+          "charges": 1,
+          "effect": {
+            "text": "Single-use return to a set location (example).",
+            "tags": [
+              "teleport"
+            ]
+          },
+          "price": 18,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Vial of Restoration",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-white.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_fe15f58642f2",
+        "sourceId": "cons_fe15f58642f2",
+        "category": "consumable",
+        "rarity": "Uncommon",
+        "tier": "uncommon",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Removes a minor curse/disease (example).",
+            "tags": [
+              "cure"
+            ]
+          },
+          "price": 18,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Greater Vial of Restoration",
+    "type": "consumable",
+    "img": "icons/consumables/potions/potion-white.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_79559e809f7f",
+        "sourceId": "cons_79559e809f7f",
+        "category": "consumable",
+        "rarity": "Rare",
+        "tier": "rare",
+        "consumable": {
+          "kind": "potion",
+          "charges": 1,
+          "effect": {
+            "text": "Removes a strong curse/disease (example).",
+            "tags": [
+              "cure"
+            ]
+          },
+          "price": 18,
+          "weight": 0.0
+        }
+      }
+    }
+  },
+  {
+    "name": "Wisp Essence",
+    "type": "consumable",
+    "img": "icons/commodities/materials/feather-white.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "itemId": "cons_d31beaf2f864",
+        "sourceId": "cons_d31beaf2f864",
+        "category": "consumable",
+        "rarity": "Epic",
+        "tier": "epic",
+        "consumable": {
+          "kind": "reagent",
+          "charges": 1,
+          "effect": {
+            "text": "Single-use reagent; boosts next spell focus (example).",
+            "tags": [
+              "reagent",
+              "focus"
+            ]
+          },
+          "price": 18,
+          "weight": 0.0
+        }
+      }
+    }
+  }
+]

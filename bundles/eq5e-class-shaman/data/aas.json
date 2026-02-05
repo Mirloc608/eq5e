@@ -1,0 +1,315 @@
+[
+  {
+    "name": "Cannibalization Mastery",
+    "type": "feat",
+    "img": "icons/magic/blood/hand-drip-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sha.canni-mastery",
+          "tab": "Utility",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Increases Cannibalize mana gain by 2 per rank.",
+          "scales": {
+            "canniManaPerRank": 2
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.shaman.canniManaBonus",
+              "mode": "override",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Improved Slow",
+    "type": "feat",
+    "img": "icons/creatures/invertebrates/bee-yellow.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sha.improved-slow",
+          "tab": "Debuffs",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Increases slow potency by 3% per rank.",
+          "scales": {
+            "slowPctPerRank": 0.03
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.shaman.slowBonusPct",
+              "mode": "override",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Spiritual Channeling",
+    "type": "feat",
+    "img": "icons/magic/holy/beam-ray-yellow.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sha.spiritual-channeling",
+          "tab": "Healing",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Increases Shaman healing by 4% per rank.",
+          "scales": {
+            "healPctPerRank": 0.04
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.shaman.healPct",
+              "mode": "override",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Spirit Companion's Durability",
+    "type": "feat",
+    "img": "icons/creatures/magical/spirit-undead-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sha.pet-durability",
+          "tab": "Pets",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Your spirit companion gains +6 HP per rank.",
+          "scales": {
+            "petHpPerRank": 6
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.shaman.petHpBonus",
+              "mode": "override",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Spirit Companion's Fury",
+    "type": "feat",
+    "img": "icons/magic/air/wind-swirl.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sha.pet-fury",
+          "tab": "Pets",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Your spirit companion deals +4% damage per rank.",
+          "scales": {
+            "petDmgPctPerRank": 0.04
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.shaman.petDamagePct",
+              "mode": "override",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Spirit Companion's Aggression",
+    "type": "feat",
+    "img": "icons/creatures/mammals/wolf-howl-moon.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sha.pet-aggression",
+          "tab": "Pets",
+          "maxRank": 5,
+          "costPerRank": 2,
+          "description": "Your spirit companion generates +6% threat per rank.",
+          "scales": {
+            "petThreatMultPerRank": 0.06
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.shaman.petThreatMult",
+              "mode": "override",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Spirit of the Ancients",
+    "type": "feat",
+    "img": "icons/magic/holy/angel-wings-golden.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sha.spirit-ancients",
+          "tab": "Utility",
+          "maxRank": 1,
+          "costPerRank": 6,
+          "description": "Upgrades your Spirit Companion to an advanced tier (future scaling hook).",
+          "effects": [],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  }
+]

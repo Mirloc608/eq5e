@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Mesmerize (Example)",
+    "type": "spell",
+    "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "example.mez.1",
+          "kind": "mez",
+          "rangeFt": 60,
+          "manaCost": 8,
+          "priority": 90,
+          "damage": [],
+          "conditions": [
+            {
+              "id": "mezzed",
+              "duration": {
+                "rounds": 2
+              },
+              "meta": {
+                "breakOnDamage": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Entangle (Example Root)",
+    "type": "spell",
+    "img": "icons/magic/nature/vines-thorned-entangle.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "example.root.1",
+          "kind": "root",
+          "rangeFt": 60,
+          "manaCost": 6,
+          "priority": 80,
+          "damage": [],
+          "conditions": [
+            {
+              "id": "rooted",
+              "duration": {
+                "rounds": 3
+              },
+              "meta": {
+                "breakOnMove": false
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Crippling Snare (Example)",
+    "type": "spell",
+    "img": "icons/magic/nature/footsteps-leaves-trail.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "example.snare.1",
+          "kind": "snare",
+          "rangeFt": 60,
+          "manaCost": 6,
+          "priority": 70,
+          "damage": [],
+          "conditions": [
+            {
+              "id": "snared",
+              "duration": {
+                "rounds": 5
+              },
+              "meta": {
+                "moveMult": 0.5
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Arcane Silence (Example)",
+    "type": "spell",
+    "img": "icons/magic/control/silhouette-hold-quiet.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "example.silence.1",
+          "kind": "silence",
+          "rangeFt": 60,
+          "manaCost": 10,
+          "priority": 85,
+          "damage": [],
+          "conditions": [
+            {
+              "id": "silenced",
+              "duration": {
+                "rounds": 2
+              },
+              "meta": {
+                "blockCasting": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+]

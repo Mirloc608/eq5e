@@ -1,0 +1,173 @@
+[
+  {
+    "name": "Backstab",
+    "type": "weapon",
+    "img": "icons/skills/melee/strike-dagger-dark.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "attack": {
+          "enabled": true,
+          "type": "melee",
+          "ability": "dex",
+          "proficient": true,
+          "attackBonus": 0,
+          "priority": 80,
+          "category": "melee",
+          "damage": [
+            {
+              "formula": "1d6+@mod",
+              "type": "physical",
+              "category": "physical"
+            },
+            {
+              "formula": "2d6",
+              "type": "physical",
+              "category": "precision",
+              "tags": [
+                "backstab"
+              ]
+            }
+          ],
+          "crit": {
+            "extraDamage": "2d6"
+          }
+        },
+        "cooldown": {
+          "value": {
+            "rounds": 1
+          }
+        },
+        "ability": {
+          "abilityId": "rog.backstab",
+          "tags": [
+            "rogue",
+            "backstab",
+            "melee"
+          ],
+          "requires": {
+            "position": "behind",
+            "melee": true
+          },
+          "threat": {
+            "mult": 1.15
+          },
+          "notes": "High-damage melee strike. Bonus precision damage when striking from behind (token-facing enforcement can be added later)."
+        }
+      }
+    }
+  },
+  {
+    "name": "Sneak Attack",
+    "type": "feat",
+    "img": "icons/skills/melee/blade-tip-smoke.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "passive": {
+          "enabled": true,
+          "passiveId": "rog.sneak-attack",
+          "notes": "Adds bonus precision damage once per turn when you have advantage or the target is distracted. (Enforcement hook can be added later.)"
+        }
+      }
+    }
+  },
+  {
+    "name": "Evade",
+    "type": "feat",
+    "img": "icons/skills/movement/arrow-curve-left.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "enabled": true,
+          "abilityId": "rog.evade",
+          "kind": "threat",
+          "cooldownRounds": 3,
+          "threat": {
+            "dropPct": 0.35
+          },
+          "notes": "Drops threat against your current target."
+        }
+      }
+    }
+  },
+  {
+    "name": "Evasion",
+    "type": "feat",
+    "img": "icons/skills/movement/figure-running-gray.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "enabled": true,
+          "abilityId": "rog.evasion",
+          "kind": "defensive",
+          "cooldownRounds": 4,
+          "notes": "Reduces incoming area damage for 1 round (future hook)."
+        }
+      }
+    }
+  },
+  {
+    "name": "Apply Poison: Venom",
+    "type": "feat",
+    "img": "icons/magic/acid/projectile-bubble.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "enabled": true,
+          "abilityId": "rog.poison.venom",
+          "kind": "poison",
+          "cooldownRounds": 2,
+          "notes": "Your next successful melee hit applies a poison DoT (deterministic proc hook).",
+          "proc": {
+            "kind": "onHit",
+            "charges": 1,
+            "effect": {
+              "damage": [
+                {
+                  "formula": "1d4",
+                  "type": "poison",
+                  "category": "tick",
+                  "durationRounds": 3
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Throwing Knife",
+    "type": "weapon",
+    "img": "icons/skills/ranged/arrow-flying-white.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "attack": {
+          "enabled": true,
+          "type": "ranged",
+          "category": "ranged",
+          "ability": "dex",
+          "proficient": true,
+          "attackBonus": 0,
+          "priority": 40,
+          "rangeFt": 60,
+          "damage": [
+            {
+              "formula": "1d4+@mod",
+              "type": "physical",
+              "category": "physical"
+            }
+          ],
+          "crit": {
+            "extraDamage": "1d4"
+          }
+        }
+      }
+    }
+  }
+]

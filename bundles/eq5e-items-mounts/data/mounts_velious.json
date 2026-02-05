@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Warhorse",
+    "type": "mount",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "era": "velious",
+      "speed": 45,
+      "carry": 520,
+      "hp": 30,
+      "canFight": false,
+      "traits": [
+        "terrestrial",
+        "trained"
+      ],
+      "requires": [
+        "saddle"
+      ],
+      "restrictedClasses": [
+        "paladin",
+        "shadowknight"
+      ]
+    },
+    "flags": {
+      "eq5e": {
+        "mount": {
+          "mountId": "warhorse"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "velious"
+        }
+      }
+    }
+  },
+  {
+    "name": "Coldain Ram",
+    "type": "mount",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "era": "velious",
+      "speed": 40,
+      "carry": 600,
+      "hp": 34,
+      "canFight": false,
+      "traits": [
+        "terrestrial",
+        "cold",
+        "stout"
+      ],
+      "requires": [
+        "saddle"
+      ],
+      "restrictedRaces": [
+        "dwarf"
+      ]
+    },
+    "flags": {
+      "eq5e": {
+        "mount": {
+          "mountId": "coldain_ram"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "velious"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,18 @@
+/* Necromancer Undead widget */
+.eq5e-undead-widget{margin:8px 0;padding:10px;border:1px solid rgba(255,255,255,0.14);border-radius:12px;background:rgba(0,0,0,0.18)}
+.eq5e-undead-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.eq5e-undead-head .title{font-weight:700}
+.eq5e-undead-widget .row{display:flex;gap:10px;align-items:center;margin:4px 0}
+.eq5e-undead-widget .label{min-width:80px;opacity:0.85}
+.eq5e-undead-widget .muted{opacity:0.75;font-size:12px}
+.eq5e-undead-widget .pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;border:1px solid rgba(255,255,255,0.14)}
+.eq5e-undead-widget .pill.on{background:rgba(0,180,120,0.18)}
+.eq5e-undead-widget .pill.off{background:rgba(180,60,60,0.18)}
+.eq5e-undead-widget .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.eq5e-undead-widget .cell{padding:6px;border-radius:10px;border:1px solid rgba(255,255,255,0.10);background:rgba(255,255,255,0.04)}
+.eq5e-undead-widget .cell .k{font-size:11px;opacity:0.75}
+.eq5e-undead-widget .cell .v{font-weight:700;margin-top:2px}
+.eq5e-undead-widget .actions{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.eq5e-undead-widget .actions .swap{display:flex;gap:8px;align-items:center}
+.eq5e-undead-widget select{border-radius:10px}
+.eq5e-undead-widget button{padding:4px 10px;border-radius:10px}

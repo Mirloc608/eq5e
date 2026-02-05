@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Healing Adept",
+    "type": "feat",
+    "img": "icons/magic/life/cross-yellow-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "clr.aa.healing-adept",
+          "maxRank": 3,
+          "desc": "Improves healing done.",
+          "effects": [
+            {
+              "key": "flags.eq5e.cleric.healPct",
+              "mode": "ADD",
+              "value": "0.05"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Healing Gift",
+    "type": "feat",
+    "img": "icons/magic/life/heart-cross-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "clr.aa.healing-gift",
+          "maxRank": 3,
+          "desc": "Chance for critical heals.",
+          "effects": [
+            {
+              "key": "flags.eq5e.cleric.healCritPct",
+              "mode": "ADD",
+              "value": "0.05"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Improved Complete Heal",
+    "type": "feat",
+    "img": "icons/magic/life/heart-cross-strong-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "clr.aa.improved-complete-heal",
+          "maxRank": 3,
+          "desc": "Reduces Complete Heal threat.",
+          "effects": [
+            {
+              "key": "flags.eq5e.cleric.completeHealThreatMult",
+              "mode": "ADD",
+              "value": "-0.25"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Quick Resurrection",
+    "type": "feat",
+    "img": "icons/magic/life/ankh-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "clr.aa.quick-rez",
+          "maxRank": 2,
+          "desc": "Faster resurrection casting.",
+          "effects": [
+            {
+              "key": "flags.eq5e.cleric.rezCastPct",
+              "mode": "ADD",
+              "value": "-0.15"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  }
+]

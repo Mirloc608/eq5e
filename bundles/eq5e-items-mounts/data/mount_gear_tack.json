@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Saddle",
+    "type": "mountGear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "era": "kunark",
+      "slot": "saddle",
+      "gearType": "tack",
+      "notes": "Required to ride most mounts."
+    },
+    "flags": {
+      "eq5e": {
+        "mountGear": {
+          "gearId": "saddle"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "kunark"
+        }
+      }
+    }
+  },
+  {
+    "name": "Bit & Bridle",
+    "type": "mountGear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "era": "kunark",
+      "slot": "bridle",
+      "gearType": "tack",
+      "notes": "Optional control gear; some GMs may require it."
+    },
+    "flags": {
+      "eq5e": {
+        "mountGear": {
+          "gearId": "bit_bridle"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "kunark"
+        }
+      }
+    }
+  },
+  {
+    "name": "Saddlebags",
+    "type": "mountGear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "era": "kunark",
+      "slot": "bags",
+      "gearType": "tack",
+      "notes": "Adds storage capacity (implementation optional)."
+    },
+    "flags": {
+      "eq5e": {
+        "mountGear": {
+          "gearId": "saddlebags"
+        },
+        "source": {
+          "bundle": "eq5e-items-mounts",
+          "era": "kunark"
+        }
+      }
+    }
+  }
+]

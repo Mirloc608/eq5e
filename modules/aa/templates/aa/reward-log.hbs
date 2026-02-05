@@ -1,0 +1,81 @@
+<section class="eq5e-rewardlog">
+  <header class="eq5e-rewardlog__top">
+    <div>
+      <h2 style="margin:0;">{{actor.name}}</h2>
+      <p style="margin:4px 0 0 0; opacity:0.85;">Reward history and undo controls.</p>
+    </div>
+
+    {{#if isGM}}
+      <label class="eq5e-rewardlog__force">
+        <input type="checkbox" data-action="toggle-force" {{#if force}}checked{{/if}} />
+        Force (safe rewind to older entry)
+      </label>
+    {{/if}}
+  </header>
+
+  <div class="eq5e-rewardlog__list">
+    {{#if entries.length}}
+      {{#each entries as |e|}}
+        <article class="eq5e-rewardlog__entry">
+          <div class="eq5e-rewardlog__row">
+            <div class="eq5e-rewardlog__meta">
+              <div class="eq5e-rewardlog__title">
+                <strong>{{e.sourceLabel}}</strong>
+
+                {{#if e.isLatest}}
+                  <span class="pill">latest</span>
+                {{else}}
+                  {{#if ../force}}
+                    <span class="pill pill--warn">rewind {{e.rewindCount}}</span>
+                  {{/if}}
+                {{/if}}
+              </div>
+              <div class="eq5e-rewardlog__sub">
+                <span>{{e.tsLocal}}</span>
+                {{#if e.userName}}<span>• by {{e.userName}}</span>{{/if}}
+              </div>
+            </div>
+
+            {{#if ../isGM}}
+              <button type="button" class="btn sm" data-action="undo-entry" data-entry-id="{{e.id}}" {{#unless (or e.isLatest ../force)}}disabled{{/unless}}>
+                <i class="fa-solid fa-rotate-left"></i> Undo
+              </button>
+            {{/if}}
+          </div>
+
+          {{#if e.reason}}
+            <p class="eq5e-rewardlog__reason"><b>Reason:</b> {{e.reason}}</p>
+          {{/if}}
+
+          <div class="eq5e-rewardlog__summary">
+            {{#if e.summaryText}}
+              <div class="eq5e-rewardlog__summaryLine">
+                <span>{{e.summaryText}}</span>
+                <i class="fa-solid fa-circle-info eq5e-tooltip-icon"
+                   data-tooltip="{{e.summaryTooltip}}"
+                   title="{{e.summaryTooltip}}"></i>
+              </div>
+            {{else}}
+              <div class="eq5e-rewardlog__summaryLine" style="opacity:.7;">
+                (no reward payload)
+              </div>
+            {{/if}}
+          </div>
+
+          {{#if e.applied.itemsCreated.length}}
+            <details class="eq5e-rewardlog__details">
+              <summary>Items created (for undo)</summary>
+              <ul>
+                {{#each e.applied.itemsCreated as |it|}}
+                  <li>{{it.itemName}} (id: {{it.itemId}})</li>
+                {{/each}}
+              </ul>
+            </details>
+          {{/if}}
+        </article>
+      {{/each}}
+    {{else}}
+      <p style="opacity:0.8;">No rewards logged yet.</p>
+    {{/if}}
+  </div>
+</section>

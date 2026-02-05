@@ -1,0 +1,282 @@
+[
+  {
+    "name": "Combat Stability",
+    "type": "feat",
+    "img": "icons/skills/melee/armor-upgrade-steel.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "war.aa.combat-stability",
+          "maxRank": 5,
+          "desc": "Improves durability via mitigation.",
+          "effects": [
+            {
+              "key": "system.mitigation.physicalPct",
+              "mode": "ADD",
+              "value": "0.01"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Combat Agility",
+    "type": "feat",
+    "img": "icons/skills/melee/armor-upgrade-steel.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "war.aa.combat-agility",
+          "maxRank": 5,
+          "desc": "Improves avoidance (modeled as avoidance bonus).",
+          "effects": [
+            {
+              "key": "flags.eq5e.warrior.avoidanceBonus",
+              "mode": "ADD",
+              "value": "0.02"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Hate Adept",
+    "type": "feat",
+    "img": "icons/skills/melee/armor-upgrade-steel.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "war.aa.hate-adept",
+          "maxRank": 5,
+          "desc": "Increases threat generated.",
+          "effects": [
+            {
+              "key": "flags.eq5e.warrior.threatPct",
+              "mode": "ADD",
+              "value": "0.05"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Enhanced Taunt",
+    "type": "feat",
+    "img": "icons/skills/melee/armor-upgrade-steel.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "war.aa.enhanced-taunt",
+          "maxRank": 3,
+          "desc": "Increases Taunt threat bonus and reliability.",
+          "effects": [
+            {
+              "key": "flags.eq5e.warrior.tauntBonus",
+              "mode": "ADD",
+              "value": "5"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Area Taunt",
+    "type": "feat",
+    "img": "icons/skills/melee/armor-upgrade-steel.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "war.aa.area-taunt",
+          "maxRank": 3,
+          "desc": "Improves Area Taunt potency.",
+          "effects": [
+            {
+              "key": "flags.eq5e.warrior.areaTauntPct",
+              "mode": "ADD",
+              "value": "0.10"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Defensive Discipline Extension",
+    "type": "feat",
+    "img": "icons/skills/melee/armor-upgrade-steel.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "war.aa.defensive-extension",
+          "maxRank": 3,
+          "desc": "Extends Defensive Discipline duration.",
+          "effects": [
+            {
+              "key": "flags.eq5e.warrior.defensiveExtraRounds",
+              "mode": "ADD",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Reduced Discipline Reuse",
+    "type": "feat",
+    "img": "icons/skills/melee/armor-upgrade-steel.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "war.aa.reduced-reuse",
+          "maxRank": 5,
+          "desc": "Reduces discipline cooldowns.",
+          "effects": [
+            {
+              "key": "flags.eq5e.warrior.discCdAdj",
+              "mode": "ADD",
+              "value": "-1"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+/* EQ5E Foundry-style popover (hover) */
+
+.eq5e-popover {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4px;
+}
+
+.eq5e-popover__icon {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  cursor: help;
+  opacity: 0.9;
+  user-select: none;
+}
+
+/* Panel hidden by default */
+.eq5e-popover__panel {
+  display: none;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  min-width: 220px;
+  max-width: 320px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  z-index: 1000;
+
+  /* Foundry-ish look */
+  background: var(--color-bg-option, rgba(0, 0, 0, 0.85));
+  color: var(--color-text-light-0, #f0f0f0);
+  border: 1px solid var(--color-border-dark, rgba(255, 255, 255, 0.15));
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+
+  font-size: 12px;
+  line-height: 1.25;
+  white-space: normal;
+}
+
+/* Show on hover/focus */
+.eq5e-popover:hover .eq5e-popover__panel,
+.eq5e-popover:focus-within .eq5e-popover__panel {
+  display: block;
+}
+
+/* Small arrow */
+.eq5e-popover__panel::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 8px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  background: var(--color-bg-option, rgba(0, 0, 0, 0.85));
+  border-left: 1px solid var(--color-border-dark, rgba(255, 255, 255, 0.15));
+  border-top: 1px solid var(--color-border-dark, rgba(255, 255, 255, 0.15));
+}

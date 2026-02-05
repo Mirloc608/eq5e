@@ -1,0 +1,458 @@
+[
+  {
+    "name": "T1 Earring of Uncommon Guarding",
+    "type": "jewelry",
+    "img": "icons/equipment/ear/earring-hoop-gold.webp",
+    "system": {
+      "description": {
+        "value": "<p>Very rare: jewelry with AC. Named/Boss standout.</p>"
+      },
+      "eq5e": {
+        "jewelry": {
+          "slot": "ear"
+        },
+        "bonuses": {
+          "ac": 1,
+          "hp": 2
+        },
+        "price": {
+          "cp": 378
+        },
+        "tier": 1,
+        "levelBand": {
+          "min": 1,
+          "max": 5
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jewelry-t01-ear-ac-rare",
+        "tier": 1,
+        "tags": [
+          "core",
+          "jewelry",
+          "ac-rare"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T2 Earring of Uncommon Guarding",
+    "type": "jewelry",
+    "img": "icons/equipment/ear/earring-hoop-gold.webp",
+    "system": {
+      "description": {
+        "value": "<p>Very rare: jewelry with AC. Named/Boss standout.</p>"
+      },
+      "eq5e": {
+        "jewelry": {
+          "slot": "ear"
+        },
+        "bonuses": {
+          "ac": 1,
+          "hp": 3
+        },
+        "price": {
+          "cp": 1512
+        },
+        "tier": 2,
+        "levelBand": {
+          "min": 6,
+          "max": 10
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jewelry-t02-ear-ac-rare",
+        "tier": 2,
+        "tags": [
+          "core",
+          "jewelry",
+          "ac-rare"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T3 Earring of Uncommon Guarding",
+    "type": "jewelry",
+    "img": "icons/equipment/ear/earring-hoop-gold.webp",
+    "system": {
+      "description": {
+        "value": "<p>Very rare: jewelry with AC. Named/Boss standout.</p>"
+      },
+      "eq5e": {
+        "jewelry": {
+          "slot": "ear"
+        },
+        "bonuses": {
+          "ac": 1,
+          "hp": 4
+        },
+        "price": {
+          "cp": 3402
+        },
+        "tier": 3,
+        "levelBand": {
+          "min": 11,
+          "max": 15
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jewelry-t03-ear-ac-rare",
+        "tier": 3,
+        "tags": [
+          "core",
+          "jewelry",
+          "ac-rare"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T4 Earring of Uncommon Guarding",
+    "type": "jewelry",
+    "img": "icons/equipment/ear/earring-hoop-gold.webp",
+    "system": {
+      "description": {
+        "value": "<p>Very rare: jewelry with AC. Named/Boss standout.</p>"
+      },
+      "eq5e": {
+        "jewelry": {
+          "slot": "ear"
+        },
+        "bonuses": {
+          "ac": 1,
+          "hp": 5
+        },
+        "price": {
+          "cp": 6048
+        },
+        "tier": 4,
+        "levelBand": {
+          "min": 16,
+          "max": 20
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jewelry-t04-ear-ac-rare",
+        "tier": 4,
+        "tags": [
+          "core",
+          "jewelry",
+          "ac-rare"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T5 Earring of Uncommon Guarding",
+    "type": "jewelry",
+    "img": "icons/equipment/ear/earring-hoop-gold.webp",
+    "system": {
+      "description": {
+        "value": "<p>Very rare: jewelry with AC. Named/Boss standout.</p>"
+      },
+      "eq5e": {
+        "jewelry": {
+          "slot": "ear"
+        },
+        "bonuses": {
+          "ac": 1,
+          "hp": 6
+        },
+        "price": {
+          "cp": 9450
+        },
+        "tier": 5,
+        "levelBand": {
+          "min": 21,
+          "max": 25
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jewelry-t05-ear-ac-rare",
+        "tier": 5,
+        "tags": [
+          "core",
+          "jewelry",
+          "ac-rare"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T6 Earring of Uncommon Guarding",
+    "type": "jewelry",
+    "img": "icons/equipment/ear/earring-hoop-gold.webp",
+    "system": {
+      "description": {
+        "value": "<p>Very rare: jewelry with AC. Named/Boss standout.</p>"
+      },
+      "eq5e": {
+        "jewelry": {
+          "slot": "ear"
+        },
+        "bonuses": {
+          "ac": 2,
+          "hp": 7
+        },
+        "price": {
+          "cp": 13608
+        },
+        "tier": 6,
+        "levelBand": {
+          "min": 26,
+          "max": 30
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jewelry-t06-ear-ac-rare",
+        "tier": 6,
+        "tags": [
+          "core",
+          "jewelry",
+          "ac-rare"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T7 Earring of Uncommon Guarding",
+    "type": "jewelry",
+    "img": "icons/equipment/ear/earring-hoop-gold.webp",
+    "system": {
+      "description": {
+        "value": "<p>Very rare: jewelry with AC. Named/Boss standout.</p>"
+      },
+      "eq5e": {
+        "jewelry": {
+          "slot": "ear"
+        },
+        "bonuses": {
+          "ac": 2,
+          "hp": 8
+        },
+        "price": {
+          "cp": 18522
+        },
+        "tier": 7,
+        "levelBand": {
+          "min": 31,
+          "max": 35
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jewelry-t07-ear-ac-rare",
+        "tier": 7,
+        "tags": [
+          "core",
+          "jewelry",
+          "ac-rare"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T8 Earring of Uncommon Guarding",
+    "type": "jewelry",
+    "img": "icons/equipment/ear/earring-hoop-gold.webp",
+    "system": {
+      "description": {
+        "value": "<p>Very rare: jewelry with AC. Named/Boss standout.</p>"
+      },
+      "eq5e": {
+        "jewelry": {
+          "slot": "ear"
+        },
+        "bonuses": {
+          "ac": 2,
+          "hp": 9
+        },
+        "price": {
+          "cp": 24192
+        },
+        "tier": 8,
+        "levelBand": {
+          "min": 36,
+          "max": 40
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jewelry-t08-ear-ac-rare",
+        "tier": 8,
+        "tags": [
+          "core",
+          "jewelry",
+          "ac-rare"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T9 Earring of Uncommon Guarding",
+    "type": "jewelry",
+    "img": "icons/equipment/ear/earring-hoop-gold.webp",
+    "system": {
+      "description": {
+        "value": "<p>Very rare: jewelry with AC. Named/Boss standout.</p>"
+      },
+      "eq5e": {
+        "jewelry": {
+          "slot": "ear"
+        },
+        "bonuses": {
+          "ac": 3,
+          "hp": 10
+        },
+        "price": {
+          "cp": 30618
+        },
+        "tier": 9,
+        "levelBand": {
+          "min": 41,
+          "max": 45
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jewelry-t09-ear-ac-rare",
+        "tier": 9,
+        "tags": [
+          "core",
+          "jewelry",
+          "ac-rare"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T10 Earring of Uncommon Guarding",
+    "type": "jewelry",
+    "img": "icons/equipment/ear/earring-hoop-gold.webp",
+    "system": {
+      "description": {
+        "value": "<p>Very rare: jewelry with AC. Named/Boss standout.</p>"
+      },
+      "eq5e": {
+        "jewelry": {
+          "slot": "ear"
+        },
+        "bonuses": {
+          "ac": 3,
+          "hp": 11
+        },
+        "price": {
+          "cp": 37800
+        },
+        "tier": 10,
+        "levelBand": {
+          "min": 46,
+          "max": 50
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jewelry-t10-ear-ac-rare",
+        "tier": 10,
+        "tags": [
+          "core",
+          "jewelry",
+          "ac-rare"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T11 Earring of Uncommon Guarding",
+    "type": "jewelry",
+    "img": "icons/equipment/ear/earring-hoop-gold.webp",
+    "system": {
+      "description": {
+        "value": "<p>Very rare: jewelry with AC. Named/Boss standout.</p>"
+      },
+      "eq5e": {
+        "jewelry": {
+          "slot": "ear"
+        },
+        "bonuses": {
+          "ac": 3,
+          "hp": 12
+        },
+        "price": {
+          "cp": 45738
+        },
+        "tier": 11,
+        "levelBand": {
+          "min": 51,
+          "max": 55
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jewelry-t11-ear-ac-rare",
+        "tier": 11,
+        "tags": [
+          "core",
+          "jewelry",
+          "ac-rare"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T12 Earring of Uncommon Guarding",
+    "type": "jewelry",
+    "img": "icons/equipment/ear/earring-hoop-gold.webp",
+    "system": {
+      "description": {
+        "value": "<p>Very rare: jewelry with AC. Named/Boss standout.</p>"
+      },
+      "eq5e": {
+        "jewelry": {
+          "slot": "ear"
+        },
+        "bonuses": {
+          "ac": 4,
+          "hp": 13
+        },
+        "price": {
+          "cp": 54432
+        },
+        "tier": 12,
+        "levelBand": {
+          "min": 56,
+          "max": 60
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "jewelry-t12-ear-ac-rare",
+        "tier": 12,
+        "tags": [
+          "core",
+          "jewelry",
+          "ac-rare"
+        ]
+      }
+    }
+  }
+]

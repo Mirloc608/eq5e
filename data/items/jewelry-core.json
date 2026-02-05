@@ -1,0 +1,450 @@
+[
+  {
+    "_id": "cfa6ccb690be4e32",
+    "name": "Copper Ring",
+    "type": "jewelry",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "stats": {
+        "str": 0,
+        "dex": 0,
+        "con": 0,
+        "agi": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 1
+      },
+      "hp": 0,
+      "mana": 0,
+      "endurance": 0,
+      "ac": 0,
+      "haste": 0,
+      "attack": 0,
+      "resists": {
+        "magic": 0,
+        "fire": 0,
+        "cold": 0,
+        "poison": 0,
+        "disease": 0
+      },
+      "lore": false,
+      "slot": "ring",
+      "requirements": {
+        "level": 1,
+        "classes": [],
+        "races": []
+      },
+      "charges": {
+        "value": 0,
+        "max": 0,
+        "per": "day"
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "726022037e9a4c78",
+    "name": "Silver Ring",
+    "type": "jewelry",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Uncommon",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "stats": {
+        "str": 0,
+        "dex": 1,
+        "con": 0,
+        "agi": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "hp": 0,
+      "mana": 0,
+      "endurance": 0,
+      "ac": 0,
+      "haste": 0,
+      "attack": 0,
+      "resists": {
+        "magic": 0,
+        "fire": 0,
+        "cold": 0,
+        "poison": 0,
+        "disease": 0
+      },
+      "lore": false,
+      "slot": "ring",
+      "requirements": {
+        "level": 1,
+        "classes": [],
+        "races": []
+      },
+      "charges": {
+        "value": 0,
+        "max": 0,
+        "per": "day"
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "fe93d33cf1e34aa7",
+    "name": "Golden Ring",
+    "type": "jewelry",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Rare",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "stats": {
+        "str": 0,
+        "dex": 0,
+        "con": 0,
+        "agi": 0,
+        "int": 1,
+        "wis": 0,
+        "cha": 0
+      },
+      "hp": 0,
+      "mana": 10,
+      "endurance": 0,
+      "ac": 0,
+      "haste": 0,
+      "attack": 0,
+      "resists": {
+        "magic": 0,
+        "fire": 0,
+        "cold": 0,
+        "poison": 0,
+        "disease": 0
+      },
+      "lore": false,
+      "slot": "ring",
+      "requirements": {
+        "level": 1,
+        "classes": [],
+        "races": []
+      },
+      "charges": {
+        "value": 0,
+        "max": 0,
+        "per": "day"
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "eafba42f2dce4bbb",
+    "name": "Platinum Ring of Stamina",
+    "type": "jewelry",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Epic",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "stats": {
+        "str": 0,
+        "dex": 0,
+        "con": 2,
+        "agi": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "hp": 20,
+      "mana": 0,
+      "endurance": 0,
+      "ac": 0,
+      "haste": 0,
+      "attack": 0,
+      "resists": {
+        "magic": 0,
+        "fire": 0,
+        "cold": 0,
+        "poison": 0,
+        "disease": 0
+      },
+      "lore": false,
+      "slot": "ring",
+      "requirements": {
+        "level": 1,
+        "classes": [],
+        "races": []
+      },
+      "charges": {
+        "value": 0,
+        "max": 0,
+        "per": "day"
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "9e4afa6ff1b546f8",
+    "name": "Amulet of the Mist",
+    "type": "jewelry",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Rare",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "stats": {
+        "str": 0,
+        "dex": 0,
+        "con": 0,
+        "agi": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "hp": 0,
+      "mana": 15,
+      "endurance": 0,
+      "ac": 0,
+      "haste": 0,
+      "attack": 0,
+      "resists": {
+        "magic": 10,
+        "fire": 0,
+        "cold": 0,
+        "poison": 0,
+        "disease": 0
+      },
+      "lore": false,
+      "slot": "neck",
+      "requirements": {
+        "level": 1,
+        "classes": [],
+        "races": []
+      },
+      "charges": {
+        "value": 0,
+        "max": 0,
+        "per": "day"
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "c003654c2de9408b",
+    "name": "Earring of Fire",
+    "type": "jewelry",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Uncommon",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "stats": {
+        "str": 0,
+        "dex": 0,
+        "con": 0,
+        "agi": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "hp": 0,
+      "mana": 0,
+      "endurance": 0,
+      "ac": 0,
+      "haste": 0,
+      "attack": 0,
+      "resists": {
+        "magic": 0,
+        "fire": 5,
+        "cold": 0,
+        "poison": 0,
+        "disease": 0
+      },
+      "lore": false,
+      "slot": "ear",
+      "requirements": {
+        "level": 1,
+        "classes": [],
+        "races": []
+      },
+      "charges": {
+        "value": 0,
+        "max": 0,
+        "per": "day"
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "3f62cbd54fb94520",
+    "name": "Bracelet of Frost",
+    "type": "jewelry",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Uncommon",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "stats": {
+        "str": 0,
+        "dex": 0,
+        "con": 0,
+        "agi": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "hp": 0,
+      "mana": 0,
+      "endurance": 0,
+      "ac": 0,
+      "haste": 0,
+      "attack": 0,
+      "resists": {
+        "magic": 0,
+        "fire": 0,
+        "cold": 5,
+        "poison": 0,
+        "disease": 0
+      },
+      "lore": false,
+      "slot": "wrist",
+      "requirements": {
+        "level": 1,
+        "classes": [],
+        "races": []
+      },
+      "charges": {
+        "value": 0,
+        "max": 0,
+        "per": "day"
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "4dfed9575c2e4626",
+    "name": "Idol of Hate",
+    "type": "jewelry",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Legendary",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "stats": {
+        "str": 2,
+        "dex": 0,
+        "con": 0,
+        "agi": 0,
+        "int": 0,
+        "wis": 0,
+        "cha": 2
+      },
+      "hp": 0,
+      "mana": 0,
+      "endurance": 0,
+      "ac": 0,
+      "haste": 0,
+      "attack": 0,
+      "resists": {
+        "magic": 0,
+        "fire": 0,
+        "cold": 0,
+        "poison": 15,
+        "disease": 15
+      },
+      "lore": true,
+      "slot": "neck",
+      "requirements": {
+        "level": 1,
+        "classes": [],
+        "races": []
+      },
+      "charges": {
+        "value": 0,
+        "max": 0,
+        "per": "day"
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  }
+]

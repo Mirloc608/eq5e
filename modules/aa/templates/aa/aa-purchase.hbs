@@ -1,0 +1,88 @@
+<section class="eq5e-aa">
+  <aside class="eq5e-aa__left">
+    <div class="eq5e-aa__topbar">
+      <div>
+        <h2 style="margin:0;">{{actor.name}}</h2>
+        <div class="eq5e-aa__stats">
+          <span class="pill">AA available: {{aa.points.available}}</span>
+          <span class="pill">AA spent: {{aa.points.spent}}</span>
+          <span class="pill">Level: {{level}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="eq5e-aa__filters">
+      <input type="text" placeholder="Search AAs…" value="{{search}}" data-action="set-search"/>
+      <label style="display:flex; gap:6px; align-items:center;">
+        <input type="checkbox" {{#if filterOwned}}checked{{/if}} data-action="toggle-owned"/>
+        Owned only
+      </label>
+      <label style="display:flex; gap:6px; align-items:center;">
+        <input type="checkbox" {{#if filterAffordable}}checked{{/if}} data-action="toggle-available"/>
+        Affordable only
+      </label>
+    </div>
+
+    <div class="eq5e-aa__list">
+      {{#each categories as |cat|}}
+        <section class="eq5e-aa__cat">
+          <h3>{{cat.label}}</h3>
+
+          {{#each cat.children as |aa|}}
+            <div class="eq5e-aa__node
+                        {{#if aa.locked}}eq5e-aa__node--locked{{/if}}
+                        {{#if aa.isSelected}}eq5e-aa__node--selected{{/if}}"
+                 data-action="select-aa"
+                 data-aa-id="{{aa.id}}">
+              <div>
+                <div class="eq5e-aa__nodeTitle">{{aa.name}}</div>
+                <div class="eq5e-aa__nodeMeta">
+                  Rank {{aa.rank}} / {{aa.maxRank}}
+                  {{#if aa.costNext}} • Next cost {{aa.costNext}}{{/if}}
+                </div>
+              </div>
+              <div style="text-align:right; font-size:12px; opacity:.8;">
+                {{#if aa.locked}}Locked{{else}}{{#if aa.canBuy}}Buyable{{else}}—{{/if}}{{/if}}
+              </div>
+            </div>
+          {{/each}}
+        </section>
+      {{/each}}
+
+      {{#unless categories.length}}
+        <p style="opacity:.8;">No AAs match your filters.</p>
+      {{/unless}}
+    </div>
+  </aside>
+
+  <main class="eq5e-aa__right">
+    {{#if selected}}
+      <div class="eq5e-aa__detailTitle">
+        <h2>{{selected.name}}</h2>
+        <span class="pill">Rank {{selectedRank}} / {{selected.maxRank}}</span>
+      </div>
+
+      <div class="eq5e-aa__req">
+        {{#if selected.reqText}}<b>Requirements:</b> {{selected.reqText}}{{/if}}
+      </div>
+
+      <div class="eq5e-aa__desc">{{selected.description}}</div>
+
+      <div class="eq5e-aa__actions">
+        <button type="button" class="btn" data-action="buy-rank" data-aa-id="{{selected.id}}" {{#unless canBuySelected}}disabled{{/unless}}>
+          <i class="fa-solid fa-plus"></i> Buy rank (cost {{selectedCostNext}})
+        </button>
+
+        <button type="button" class="btn" data-action="refund-rank" data-aa-id="{{selected.id}}" {{#unless canRefundSelected}}disabled{{/unless}}>
+          <i class="fa-solid fa-minus"></i> Refund rank
+        </button>
+      </div>
+
+      <p class="eq5e-aa__hint">
+        Purchases modify <code>actor.flags.eq5e.aa</code>. Reward undo will restore AA state from reward snapshots.
+      </p>
+    {{else}}
+      <p style="opacity:.85;">Select an AA on the left to view details and buy ranks.</p>
+    {{/if}}
+  </main>
+</section>

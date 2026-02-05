@@ -1,0 +1,146 @@
+[
+  {
+    "id": "human",
+    "label": "Human",
+    "traits": [
+      "Adaptive",
+      "Versatile"
+    ],
+    "home": "Antonica"
+  },
+  {
+    "id": "barbarian",
+    "label": "Barbarian",
+    "traits": [
+      "Hardy",
+      "Cold Resistance"
+    ],
+    "home": "Everfrost"
+  },
+  {
+    "id": "erudite",
+    "label": "Erudite",
+    "traits": [
+      "Intellectual",
+      "Arcane Aptitude"
+    ],
+    "home": "Odus"
+  },
+  {
+    "id": "wood-elf",
+    "label": "Wood Elf",
+    "traits": [
+      "Keen Senses",
+      "Forestborn"
+    ],
+    "home": "Faydwer"
+  },
+  {
+    "id": "high-elf",
+    "label": "High Elf",
+    "traits": [
+      "Graceful",
+      "Magical Lineage"
+    ],
+    "home": "Faydwer"
+  },
+  {
+    "id": "dark-elf",
+    "label": "Dark Elf",
+    "traits": [
+      "Night Vision",
+      "Shadow Affinity"
+    ],
+    "home": "Faydwer"
+  },
+  {
+    "id": "half-elf",
+    "label": "Half Elf",
+    "traits": [
+      "Diplomatic",
+      "Adaptable"
+    ],
+    "home": "Antonica/Faydwer"
+  },
+  {
+    "id": "dwarf",
+    "label": "Dwarf",
+    "traits": [
+      "Stout",
+      "Stonecunning"
+    ],
+    "home": "Faydwer"
+  },
+  {
+    "id": "halfling",
+    "label": "Halfling",
+    "traits": [
+      "Lucky",
+      "Stealthy"
+    ],
+    "home": "Antonica"
+  },
+  {
+    "id": "gnome",
+    "label": "Gnome",
+    "traits": [
+      "Tinkering",
+      "Curious"
+    ],
+    "home": "Faydwer"
+  },
+  {
+    "id": "ogre",
+    "label": "Ogre",
+    "traits": [
+      "Mighty",
+      "Fearless"
+    ],
+    "home": "Antonica"
+  },
+  {
+    "id": "troll",
+    "label": "Troll",
+    "traits": [
+      "Regeneration",
+      "Savage"
+    ],
+    "home": "Antonica"
+  },
+  {
+    "id": "iksar",
+    "label": "Iksar",
+    "traits": [
+      "Scaled",
+      "Discipline"
+    ],
+    "home": "Kunark"
+  },
+  {
+    "id": "vah-shir",
+    "label": "Vah Shir",
+    "traits": [
+      "Feral Agility",
+      "Pride"
+    ],
+    "home": "Luclin"
+  },
+  {
+    "id": "froglok",
+    "label": "Froglok",
+    "traits": [
+      "Amphibious",
+      "Stalwart"
+    ],
+    "home": "Antonica/Kunark"
+  },
+  {
+    "id": "drakkin",
+    "label": "Drakkin",
+    "traits": [
+      "Draconic Heritage",
+      "Resilient"
+    ],
+    "home": "Norrath"
+  }
+]

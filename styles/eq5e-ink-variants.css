@@ -1,0 +1,158 @@
+/* -------------------------------------------- */
+/* EQ5E Ink Variants + Focus Glow + Embossing   */
+/* -------------------------------------------- */
+
+.eq5e-sheet {
+  --eq5e-ink: #2b241a;         /* default dark ink */
+  --eq5e-ink-strong: #1f1a12;
+  --eq5e-ink-muted: #4a4032;
+  --eq5e-focus: rgba(80, 60, 30, 0.35);
+  --eq5e-emboss-light: rgba(255, 255, 255, 0.35);
+  --eq5e-emboss-dark: rgba(0, 0, 0, 0.25);
+}
+
+/* Variants */
+.eq5e-ink-dark {
+  --eq5e-ink: #2b241a;
+  --eq5e-ink-strong: #1f1a12;
+  --eq5e-ink-muted: #4a4032;
+  --eq5e-focus: rgba(80, 60, 30, 0.35);
+}
+
+.eq5e-ink-charcoal {
+  --eq5e-ink: #1f2326;
+  --eq5e-ink-strong: #0f1112;
+  --eq5e-ink-muted: #3a3f44;
+  --eq5e-focus: rgba(30, 40, 60, 0.30);
+}
+
+.eq5e-ink-blood {
+  --eq5e-ink: #3a0e10;
+  --eq5e-ink-strong: #220607;
+  --eq5e-ink-muted: #5a2022;
+  --eq5e-focus: rgba(90, 20, 22, 0.28);
+}
+
+/* Apply ink colors */
+.eq5e.sheet.actor .eq5e-sheet,
+.eq5e.sheet.actor .eq5e-sheet * {
+  color: var(--eq5e-ink);
+}
+
+.eq5e.sheet.actor .eq5e-sheet h1,
+.eq5e.sheet.actor .eq5e-sheet h2,
+.eq5e.sheet.actor .eq5e-sheet h3,
+.eq5e.sheet.actor .eq5e-sheet h4 {
+  color: var(--eq5e-ink-strong);
+  /* Embossed text feel on parchment */
+  text-shadow:
+    0 1px 0 var(--eq5e-emboss-light),
+    0 -1px 0 var(--eq5e-emboss-dark);
+  letter-spacing: 0.2px;
+}
+
+.eq5e.sheet.actor .eq5e-sheet .muted,
+.eq5e.sheet.actor .eq5e-sheet footer {
+  color: var(--eq5e-ink-muted);
+}
+
+/* Inputs */
+.eq5e.sheet.actor .eq5e-sheet input,
+.eq5e.sheet.actor .eq5e-sheet select,
+.eq5e.sheet.actor .eq5e-sheet textarea {
+  color: var(--eq5e-ink-strong);
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  transition: box-shadow 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+/* Hover/Focus glow */
+.eq5e.sheet.actor .eq5e-sheet input:hover,
+.eq5e.sheet.actor .eq5e-sheet select:hover,
+.eq5e.sheet.actor .eq5e-sheet textarea:hover,
+.eq5e.sheet.actor .eq5e-sheet input:focus,
+.eq5e.sheet.actor .eq5e-sheet select:focus,
+.eq5e.sheet.actor .eq5e-sheet textarea:focus {
+  outline: none;
+  border-color: rgba(0,0,0,0.45);
+  box-shadow: 0 0 0 3px var(--eq5e-focus);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+/* -------------------------------------------- */
+/* Item name darkening by rarity / AA rank      */
+/* -------------------------------------------- */
+
+.eq5e-items .eq5e-item-line {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  padding: 2px 0;
+}
+
+.eq5e-item-meta {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.eq5e-item-name {
+  font-weight: 600;
+}
+
+/* Rarity heuristics (best-effort; adjust to your naming) */
+.eq5e-item-name.eq5e-rarity-common { opacity: 0.95; }
+.eq5e-item-name.eq5e-rarity-uncommon { opacity: 0.98; }
+.eq5e-item-name.eq5e-rarity-rare { text-shadow: 0 1px 0 rgba(255,255,255,0.25); }
+.eq5e-item-name.eq5e-rarity-epic { text-shadow: 0 1px 0 rgba(255,255,255,0.25), 0 -1px 0 rgba(0,0,0,0.2); }
+.eq5e-item-name.eq5e-rarity-legendary { text-shadow: 0 1px 0 rgba(255,255,255,0.35), 0 -1px 0 rgba(0,0,0,0.25); }
+
+
+/* Rarity styling (Common/Uncommon/Rare/Epic/Legendary)
+   Goal: readable on parchment without neon colors.
+*/
+.eq5e-item-name.eq5e-rarity-common { opacity: 0.92; font-weight: 600; }
+.eq5e-item-name.eq5e-rarity-uncommon { opacity: 0.96; font-weight: 650; }
+.eq5e-item-name.eq5e-rarity-rare { opacity: 1; font-weight: 700; text-shadow: 0 1px 0 rgba(255,255,255,0.18); }
+.eq5e-item-name.eq5e-rarity-epic { opacity: 1; font-weight: 750; text-shadow: 0 1px 0 rgba(255,255,255,0.22), 0 -1px 0 rgba(0,0,0,0.22); }
+.eq5e-item-name.eq5e-rarity-legendary { opacity: 1; font-weight: 800; text-shadow: 0 1px 0 rgba(255,255,255,0.28), 0 -1px 0 rgba(0,0,0,0.28); }
+
+/* AA rank emphasis */
+.eq5e-item-name.eq5e-aa-rank-1 { font-weight: 600; }
+.eq5e-item-name.eq5e-aa-rank-2 { font-weight: 650; }
+.eq5e-item-name.eq5e-aa-rank-3 { font-weight: 700; }
+.eq5e-item-name.eq5e-aa-rank-4 { font-weight: 750; }
+.eq5e-item-name.eq5e-aa-rank-5 { font-weight: 800; }
+
+
+/* Inventory: rarity badge + AA pips */
+.eq5e-rarity-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 18px;
+  border: 1px solid rgba(0,0,0,0.28);
+  background: rgba(255,255,255,0.25);
+  color: var(--eq5e-ink-strong);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+/* Subtle differentiation by rarity without neon colors */
+.eq5e-rarity-badge--common { opacity: 0.85; }
+.eq5e-rarity-badge--uncommon { opacity: 0.90; }
+.eq5e-rarity-badge--rare { opacity: 0.95; }
+.eq5e-rarity-badge--epic { opacity: 1; box-shadow: inset 0 1px 0 rgba(255,255,255,0.28), 0 1px 0 rgba(0,0,0,0.08); }
+.eq5e-rarity-badge--legendary { opacity: 1; box-shadow: inset 0 1px 0 rgba(255,255,255,0.32), 0 2px 6px rgba(0,0,0,0.10); }
+
+.eq5e-aa-pips {
+  font-size: 11px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  color: var(--eq5e-ink-strong);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+}

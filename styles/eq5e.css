@@ -1,0 +1,141 @@
+/* ================================
+   Option 3: EverQuest flavor layer
+   (keeps the D&D-ish layout)
+   ================================ */
+
+.eq5e-sheet {
+  --eq-ink: rgba(30, 24, 18, 0.9);
+  --eq-border: rgba(70, 52, 28, 0.55);
+  --eq-border-strong: rgba(70, 52, 28, 0.85);
+  --eq-panel: rgba(255, 255, 255, 0.62);
+  --eq-panel-strong: rgba(255, 255, 255, 0.75);
+  --eq-shadow: rgba(0, 0, 0, 0.14);
+  --eq-gold: rgba(170, 130, 55, 0.9);
+  --eq-gold-soft: rgba(170, 130, 55, 0.35);
+}
+
+/* Outer “EQ frame” feel */
+.eq5e-sheet .sheet-content {
+  border: 1px solid var(--eq-border);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.10);
+  box-shadow: 0 3px 10px var(--eq-shadow);
+}
+
+/* Upgrade panels to feel like framed parchment cards */
+.eq5e-sheet .panel {
+  background: var(--eq-panel);
+  border: 1px solid var(--eq-border);
+  box-shadow:
+    0 1px 2px rgba(0,0,0,0.10),
+    inset 0 0 0 1px rgba(255,255,255,0.25);
+}
+
+.eq5e-sheet .panel:hover {
+  border-color: var(--eq-border-strong);
+}
+
+/* Headings with “rune divider” */
+.eq5e-sheet .block-header h3,
+.eq5e-sheet .subblock-header h4 {
+  color: var(--eq-ink);
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.eq5e-sheet .block-header {
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(70, 52, 28, 0.25);
+  position: relative;
+}
+
+.eq5e-sheet .block-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--eq-gold-soft),
+    transparent
+  );
+}
+
+/* Inputs: slightly “inkier” and less modern */
+.eq5e-sheet input[type="text"],
+.eq5e-sheet input[type="number"],
+.eq5e-sheet textarea {
+  border: 1px solid rgba(70, 52, 28, 0.35);
+  background: rgba(255,255,255,0.72);
+}
+
+.eq5e-sheet input[type="text"]:focus,
+.eq5e-sheet input[type="number"]:focus,
+.eq5e-sheet textarea:focus {
+  outline: none;
+  border-color: var(--eq-gold);
+  box-shadow: 0 0 0 2px rgba(170, 130, 55, 0.18);
+}
+
+/* Abilities/skills blocks: “etched” rows */
+.eq5e-sheet .ability,
+.eq5e-sheet .skill,
+.eq5e-sheet .action,
+.eq5e-sheet .gem {
+  border: 1px solid rgba(70, 52, 28, 0.18);
+  background: rgba(255,255,255,0.35);
+}
+
+.eq5e-sheet .ability:hover,
+.eq5e-sheet .skill:hover,
+.eq5e-sheet .action:hover,
+.eq5e-sheet .gem:hover {
+  border-color: rgba(170, 130, 55, 0.55);
+}
+
+/* Bars: EQ-ish muted fill */
+.eq5e-sheet .bar {
+  border-color: rgba(70, 52, 28, 0.28);
+  background: rgba(70, 52, 28, 0.08);
+}
+.eq5e-sheet .bar .fill {
+  background: rgba(70, 52, 28, 0.38);
+}
+
+/* Tabs: more “inscribed” */
+.eq5e-sheet .sheet-tabs .item {
+  border-color: rgba(70, 52, 28, 0.30);
+  background: rgba(255,255,255,0.55);
+}
+.eq5e-sheet .sheet-tabs .item.active {
+  border-color: rgba(170, 130, 55, 0.70);
+  background: rgba(255,255,255,0.72);
+  box-shadow: inset 0 0 0 1px rgba(170, 130, 55, 0.18);
+}
+
+/* Subtle EQ badge/pill */
+.eq5e-sheet .pill,
+.eq5e-sheet button.pill {
+  border-color: rgba(170, 130, 55, 0.45);
+  background: rgba(255,255,255,0.60);
+}
+.eq5e-sheet .pill:hover,
+.eq5e-sheet button.pill:hover {
+  border-color: rgba(170, 130, 55, 0.75);
+}
+
+/* Spell gems: make them feel like “slots” */
+.eq5e-sheet .gem-slot {
+  width: 44px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid rgba(70, 52, 28, 0.30);
+  background: rgba(255,255,255,0.55);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25);
+}

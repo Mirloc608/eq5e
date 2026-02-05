@@ -1,0 +1,678 @@
+[
+  {
+    "name": "Lifetap Potency",
+    "type": "feat",
+    "img": "icons/magic/unholy/hand-claw-fire-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.lifetap-potency",
+          "tab": "Necrotic",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Increases lifetap healing by +1 per rank (deterministic).",
+          "scales": {
+            "lifetapHealBonusPerRank": 1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.shadowknight.lifetapHealBonus",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Lifetap Fury",
+    "type": "feat",
+    "img": "icons/magic/death/energy-burst-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.lifetap-fury",
+          "tab": "Necrotic",
+          "maxRank": 5,
+          "costPerRank": 5,
+          "description": "Increases lifetap damage by 4% per rank (deterministic).",
+          "scales": {
+            "lifetapDamagePctPerRank": 0.04
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.shadowknight.lifetapDamagePct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Necrotic Minion Aggression",
+    "type": "feat",
+    "img": "icons/creatures/undead/zombie-male.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.necrotic-minion-aggression",
+          "tab": "Necrotic",
+          "maxRank": 3,
+          "costPerRank": 4,
+          "description": "Increases your necrotic minion's threat generation by 10% per rank (deterministic).",
+          "scales": {
+            "threatPctPerRank": 0.1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.shadowknight.minionThreatPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Minion Threat Persistence",
+    "type": "feat",
+    "img": "icons/creatures/undead/zombie-male.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.minion-threat-persistence",
+          "tab": "Necrotic",
+          "maxRank": 3,
+          "costPerRank": 4,
+          "description": "Reduces threat decay against your necrotic minion by 5% per rank (deterministic).",
+          "scales": {
+            "decayReductionPctPerRank": 0.05
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.shadowknight.minionThreatDecayRedPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Minion Fortitude",
+    "type": "feat",
+    "img": "icons/creatures/undead/zombie-male.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.minion-fortitude",
+          "tab": "Necrotic",
+          "maxRank": 3,
+          "costPerRank": 5,
+          "description": "Increases minion HP and toughness (deterministic).",
+          "scales": {
+            "petHpBonusPerRank": 6,
+            "petMitigationPerRank": 0.2,
+            "petWardingPerRank": 0.5
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.shadowknight.minionHpBonus",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.shadowknight.minionMitigationBonus",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.shadowknight.minionWardingBonus",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Minion Aggro Stickiness",
+    "type": "feat",
+    "img": "icons/skills/social/intimidation-impressing.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.minion-stickiness",
+          "tab": "Necrotic",
+          "maxRank": 3,
+          "costPerRank": 4,
+          "description": "Makes enemies less likely to switch off your minion (adds +10% stickiness per rank).",
+          "scales": {
+            "stickinessPctPerRank": 0.1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.shadowknight.minionStickinessPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Minion Threat Transfer",
+    "type": "feat",
+    "img": "icons/magic/death/energy-burst-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.minion-threat-transfer",
+          "tab": "Necrotic",
+          "maxRank": 3,
+          "costPerRank": 4,
+          "description": "Transfers 6% of your generated threat to your active pet per rank while the pet is in Guard/Protect stance (deterministic).",
+          "scales": {
+            "transferPctPerRank": 0.06
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.shadowknight.minionThreatTransferPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Improved Harm Touch",
+    "type": "feat",
+    "img": "icons/skills/wounds/bone-broken-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.improved-harmtouch",
+          "tab": "Necrotic",
+          "maxRank": 5,
+          "costPerRank": 6,
+          "description": "Increases Harm Touch damage by +5% per rank (deterministic).",
+          "scales": {},
+          "effects": [],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Harm Touch Reuse",
+    "type": "feat",
+    "img": "icons/skills/wounds/bone-broken-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.harmtouch-reuse",
+          "tab": "Necrotic",
+          "maxRank": 5,
+          "costPerRank": 6,
+          "description": "Reduces Harm Touch cooldown by 1 round per rank (min 10).",
+          "scales": {},
+          "effects": [],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Terror Mastery",
+    "type": "feat",
+    "img": "icons/skills/wounds/bone-broken-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.terror-mastery",
+          "tab": "Aggro",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Increases Terror threat bonus by +10% per rank; at rank 5, +1 forced-focus round.",
+          "scales": {},
+          "effects": [],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Unholy Aura",
+    "type": "feat",
+    "img": "icons/skills/wounds/bone-broken-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.unholy-aura",
+          "tab": "Aggro",
+          "maxRank": 3,
+          "costPerRank": 8,
+          "description": "Passive hate-over-time aura: adds a small amount of threat each round while engaged (deterministic).",
+          "scales": {},
+          "effects": [],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Mark of Decay Mastery",
+    "type": "feat",
+    "img": "icons/skills/wounds/bone-broken-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.decay-mastery",
+          "tab": "Necrotic",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Increases Mark of Decay disease vulnerability by +2% per rank.",
+          "scales": {},
+          "effects": [],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Mortal Coil Mastery",
+    "type": "feat",
+    "img": "icons/skills/wounds/bone-broken-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.mortalcoil-mastery",
+          "tab": "Defensive",
+          "maxRank": 3,
+          "costPerRank": 8,
+          "description": "Increases Mortal Coil ward amount by +10 per rank and duration by +1 round at rank 3.",
+          "scales": {},
+          "effects": [],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Dark Regeneration Reuse",
+    "type": "feat",
+    "img": "icons/skills/wounds/bone-broken-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.darkregen-reuse",
+          "tab": "Defensive",
+          "maxRank": 3,
+          "costPerRank": 6,
+          "description": "Reduces Dark Regeneration cooldown by 1 round per rank (min 1).",
+          "scales": {},
+          "effects": [],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Improved Disease Curses",
+    "type": "feat",
+    "img": "icons/skills/wounds/bone-broken-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.disease-curse-mastery",
+          "tab": "Necrotic",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Increases disease resist debuff strength by +2% per rank.",
+          "scales": {},
+          "effects": [],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Command the Minion",
+    "type": "feat",
+    "img": "icons/skills/wounds/bone-broken-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.sk.command-minion",
+          "tab": "Necrotic",
+          "maxRank": 3,
+          "costPerRank": 4,
+          "description": "Increases necrotic minion command effectiveness (taunt threat +10% per rank).",
+          "scales": {},
+          "effects": [],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  }
+]

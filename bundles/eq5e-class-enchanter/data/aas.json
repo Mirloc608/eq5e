@@ -1,0 +1,253 @@
+[
+  {
+    "name": "Extended Mez",
+    "type": "feat",
+    "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.enc.extended-mez",
+          "tab": "Control",
+          "maxRank": 3,
+          "costPerRank": 2,
+          "description": "Increases mez duration by 1 round per rank.",
+          "scales": {
+            "mezRoundsPerRank": 1,
+            "mezBreakChanceRedPerRank": 0.02
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.enchanter.mezBonusRounds",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.enchanter.mezBreakChanceRed",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Charm Mastery",
+    "type": "feat",
+    "img": "icons/magic/control/mind-control-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.enc.charm-mastery",
+          "tab": "Control",
+          "maxRank": 3,
+          "costPerRank": 3,
+          "description": "Increases charm duration by 1 round per rank.",
+          "scales": {
+            "charmRoundsPerRank": 1,
+            "charmBreakChanceRedPerRank": 0.03
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.enchanter.charmBonusRounds",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.enchanter.charmBreakChanceRed",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Total Domination",
+    "type": "feat",
+    "img": "icons/magic/control/mind-control-pink.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.enc.total-domination",
+          "tab": "Control",
+          "maxRank": 3,
+          "costPerRank": 5,
+          "description": "Greatly stabilizes charm effects (reduces break chance) and extends duration slightly.",
+          "scales": {
+            "charmRoundsPerRank": 1,
+            "charmBreakChanceRedPerRank": 0.05
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.enchanter.charmBonusRounds",
+              "mode": "ADD",
+              "value": "0"
+            },
+            {
+              "key": "flags.eq5e.enchanter.charmBreakChanceRed",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": [
+            {
+              "aaId": "aa.enc.charm-mastery",
+              "rank": 2
+            }
+          ]
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Mesmerization Focus",
+    "type": "feat",
+    "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.enc.mez-duration-focus",
+          "tab": "Control",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Increases mez duration by 8% per rank (deterministic). Stacks with flat bonus rounds.",
+          "scales": {
+            "mezDurationPctPerRank": 0.08
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.enchanter.mezDurationPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Charm Duration Focus",
+    "type": "feat",
+    "img": "icons/magic/control/mind-control-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.enc.charm-duration-focus",
+          "tab": "Control",
+          "maxRank": 5,
+          "costPerRank": 4,
+          "description": "Increases charm duration by 6% per rank (deterministic). Stacks with flat bonus rounds.",
+          "scales": {
+            "charmDurationPctPerRank": 0.06
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.enchanter.charmDurationPct",
+              "mode": "ADD",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  }
+]

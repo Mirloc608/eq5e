@@ -1,0 +1,1602 @@
+[
+  {
+    "name": "Cloth Cap",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Common head armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "head",
+        "rarity": "Common"
+      },
+      "armor": {
+        "ac": 1,
+        "slot": "head"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 5
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_cloth_cap_head_common",
+        "sourceId": "armor_cloth_cap_head_common",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "head"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Leather Coif",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Uncommon head armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "head",
+        "rarity": "Uncommon"
+      },
+      "armor": {
+        "ac": 2,
+        "slot": "head"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 25
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_leather_coif_head_uncommon",
+        "sourceId": "armor_leather_coif_head_uncommon",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "slot": "head"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Chain Coif",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Rare head armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "head",
+        "rarity": "Rare"
+      },
+      "armor": {
+        "ac": 3,
+        "slot": "head"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 125
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_chain_coif_head_rare",
+        "sourceId": "armor_chain_coif_head_rare",
+        "rarity": "Rare",
+        "tier": 3,
+        "slot": "head"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Plate Helm",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Epic head armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "head",
+        "rarity": "Epic"
+      },
+      "armor": {
+        "ac": 4,
+        "slot": "head"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 750
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_plate_helm_head_epic",
+        "sourceId": "armor_plate_helm_head_epic",
+        "rarity": "Epic",
+        "tier": 4,
+        "slot": "head"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Mystic Circlet",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Legendary head armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "head",
+        "rarity": "Legendary"
+      },
+      "armor": {
+        "ac": 5,
+        "slot": "head"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 3500
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_mystic_circlet_head_legendary",
+        "sourceId": "armor_mystic_circlet_head_legendary",
+        "rarity": "Legendary",
+        "tier": 5,
+        "slot": "head"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Cloth Mantle",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Common shoulders armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "shoulders",
+        "rarity": "Common"
+      },
+      "armor": {
+        "ac": 1,
+        "slot": "shoulders"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 5
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_cloth_mantle_shoulders_common",
+        "sourceId": "armor_cloth_mantle_shoulders_common",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "shoulders"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Leather Spaulders",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Uncommon shoulders armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "shoulders",
+        "rarity": "Uncommon"
+      },
+      "armor": {
+        "ac": 2,
+        "slot": "shoulders"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 25
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_leather_spaulders_shoulders_uncommon",
+        "sourceId": "armor_leather_spaulders_shoulders_uncommon",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "slot": "shoulders"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Chain Pauldrons",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Rare shoulders armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "shoulders",
+        "rarity": "Rare"
+      },
+      "armor": {
+        "ac": 3,
+        "slot": "shoulders"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 125
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_chain_pauldrons_shoulders_rare",
+        "sourceId": "armor_chain_pauldrons_shoulders_rare",
+        "rarity": "Rare",
+        "tier": 3,
+        "slot": "shoulders"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Plate Pauldrons",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Epic shoulders armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "shoulders",
+        "rarity": "Epic"
+      },
+      "armor": {
+        "ac": 4,
+        "slot": "shoulders"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 750
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_plate_pauldrons_shoulders_epic",
+        "sourceId": "armor_plate_pauldrons_shoulders_epic",
+        "rarity": "Epic",
+        "tier": 4,
+        "slot": "shoulders"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Runed Spaulders",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Legendary shoulders armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "shoulders",
+        "rarity": "Legendary"
+      },
+      "armor": {
+        "ac": 5,
+        "slot": "shoulders"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 3500
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_runed_spaulders_shoulders_legendary",
+        "sourceId": "armor_runed_spaulders_shoulders_legendary",
+        "rarity": "Legendary",
+        "tier": 5,
+        "slot": "shoulders"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Cloth Tunic",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Common chest armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "chest",
+        "rarity": "Common"
+      },
+      "armor": {
+        "ac": 3,
+        "slot": "chest"
+      },
+      "weight": 6,
+      "price": {
+        "gp": 5
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_cloth_tunic_chest_common",
+        "sourceId": "armor_cloth_tunic_chest_common",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "chest"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Leather Jerkin",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Uncommon chest armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "chest",
+        "rarity": "Uncommon"
+      },
+      "armor": {
+        "ac": 4,
+        "slot": "chest"
+      },
+      "weight": 6,
+      "price": {
+        "gp": 25
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_leather_jerkin_chest_uncommon",
+        "sourceId": "armor_leather_jerkin_chest_uncommon",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "slot": "chest"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Chain Hauberk",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Rare chest armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "chest",
+        "rarity": "Rare"
+      },
+      "armor": {
+        "ac": 5,
+        "slot": "chest"
+      },
+      "weight": 6,
+      "price": {
+        "gp": 125
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_chain_hauberk_chest_rare",
+        "sourceId": "armor_chain_hauberk_chest_rare",
+        "rarity": "Rare",
+        "tier": 3,
+        "slot": "chest"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Plate Breastplate",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Epic chest armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "chest",
+        "rarity": "Epic"
+      },
+      "armor": {
+        "ac": 6,
+        "slot": "chest"
+      },
+      "weight": 6,
+      "price": {
+        "gp": 750
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_plate_breastplate_chest_epic",
+        "sourceId": "armor_plate_breastplate_chest_epic",
+        "rarity": "Epic",
+        "tier": 4,
+        "slot": "chest"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Dragonscale Cuirass",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Legendary chest armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "chest",
+        "rarity": "Legendary"
+      },
+      "armor": {
+        "ac": 7,
+        "slot": "chest"
+      },
+      "weight": 6,
+      "price": {
+        "gp": 3500
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_dragonscale_cuirass_chest_legendary",
+        "sourceId": "armor_dragonscale_cuirass_chest_legendary",
+        "rarity": "Legendary",
+        "tier": 5,
+        "slot": "chest"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Cloth Sleeves",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Common arms armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "arms",
+        "rarity": "Common"
+      },
+      "armor": {
+        "ac": 1,
+        "slot": "arms"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 5
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_cloth_sleeves_arms_common",
+        "sourceId": "armor_cloth_sleeves_arms_common",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "arms"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Leather Sleeves",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Uncommon arms armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "arms",
+        "rarity": "Uncommon"
+      },
+      "armor": {
+        "ac": 2,
+        "slot": "arms"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 25
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_leather_sleeves_arms_uncommon",
+        "sourceId": "armor_leather_sleeves_arms_uncommon",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "slot": "arms"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Chain Sleeves",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Rare arms armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "arms",
+        "rarity": "Rare"
+      },
+      "armor": {
+        "ac": 3,
+        "slot": "arms"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 125
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_chain_sleeves_arms_rare",
+        "sourceId": "armor_chain_sleeves_arms_rare",
+        "rarity": "Rare",
+        "tier": 3,
+        "slot": "arms"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Plate Vambraces",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Epic arms armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "arms",
+        "rarity": "Epic"
+      },
+      "armor": {
+        "ac": 4,
+        "slot": "arms"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 750
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_plate_vambraces_arms_epic",
+        "sourceId": "armor_plate_vambraces_arms_epic",
+        "rarity": "Epic",
+        "tier": 4,
+        "slot": "arms"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Enchanted Vambraces",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Legendary arms armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "arms",
+        "rarity": "Legendary"
+      },
+      "armor": {
+        "ac": 5,
+        "slot": "arms"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 3500
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_enchanted_vambraces_arms_legendary",
+        "sourceId": "armor_enchanted_vambraces_arms_legendary",
+        "rarity": "Legendary",
+        "tier": 5,
+        "slot": "arms"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Cloth Wristwraps",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Common wrists armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "wrists",
+        "rarity": "Common"
+      },
+      "armor": {
+        "ac": 1,
+        "slot": "wrists"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 5
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_cloth_wristwraps_wrists_common",
+        "sourceId": "armor_cloth_wristwraps_wrists_common",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "wrists"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Leather Bracers",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Uncommon wrists armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "wrists",
+        "rarity": "Uncommon"
+      },
+      "armor": {
+        "ac": 2,
+        "slot": "wrists"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 25
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_leather_bracers_wrists_uncommon",
+        "sourceId": "armor_leather_bracers_wrists_uncommon",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "slot": "wrists"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Chain Bracers",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Rare wrists armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "wrists",
+        "rarity": "Rare"
+      },
+      "armor": {
+        "ac": 3,
+        "slot": "wrists"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 125
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_chain_bracers_wrists_rare",
+        "sourceId": "armor_chain_bracers_wrists_rare",
+        "rarity": "Rare",
+        "tier": 3,
+        "slot": "wrists"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Plate Bracers",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Epic wrists armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "wrists",
+        "rarity": "Epic"
+      },
+      "armor": {
+        "ac": 4,
+        "slot": "wrists"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 750
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_plate_bracers_wrists_epic",
+        "sourceId": "armor_plate_bracers_wrists_epic",
+        "rarity": "Epic",
+        "tier": 4,
+        "slot": "wrists"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Arcane Bracers",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Legendary wrists armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "wrists",
+        "rarity": "Legendary"
+      },
+      "armor": {
+        "ac": 5,
+        "slot": "wrists"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 3500
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_arcane_bracers_wrists_legendary",
+        "sourceId": "armor_arcane_bracers_wrists_legendary",
+        "rarity": "Legendary",
+        "tier": 5,
+        "slot": "wrists"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Cloth Gloves",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Common hands armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "hands",
+        "rarity": "Common"
+      },
+      "armor": {
+        "ac": 1,
+        "slot": "hands"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 5
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_cloth_gloves_hands_common",
+        "sourceId": "armor_cloth_gloves_hands_common",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "hands"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Leather Gloves",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Uncommon hands armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "hands",
+        "rarity": "Uncommon"
+      },
+      "armor": {
+        "ac": 2,
+        "slot": "hands"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 25
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_leather_gloves_hands_uncommon",
+        "sourceId": "armor_leather_gloves_hands_uncommon",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "slot": "hands"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Chain Gauntlets",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Rare hands armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "hands",
+        "rarity": "Rare"
+      },
+      "armor": {
+        "ac": 3,
+        "slot": "hands"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 125
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_chain_gauntlets_hands_rare",
+        "sourceId": "armor_chain_gauntlets_hands_rare",
+        "rarity": "Rare",
+        "tier": 3,
+        "slot": "hands"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Plate Gauntlets",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Epic hands armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "hands",
+        "rarity": "Epic"
+      },
+      "armor": {
+        "ac": 4,
+        "slot": "hands"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 750
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_plate_gauntlets_hands_epic",
+        "sourceId": "armor_plate_gauntlets_hands_epic",
+        "rarity": "Epic",
+        "tier": 4,
+        "slot": "hands"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "War Gauntlets",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Legendary hands armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "hands",
+        "rarity": "Legendary"
+      },
+      "armor": {
+        "ac": 5,
+        "slot": "hands"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 3500
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_war_gauntlets_hands_legendary",
+        "sourceId": "armor_war_gauntlets_hands_legendary",
+        "rarity": "Legendary",
+        "tier": 5,
+        "slot": "hands"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Cloth Sash",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Common waist armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "waist",
+        "rarity": "Common"
+      },
+      "armor": {
+        "ac": 1,
+        "slot": "waist"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 5
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_cloth_sash_waist_common",
+        "sourceId": "armor_cloth_sash_waist_common",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "waist"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Leather Belt",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Uncommon waist armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "waist",
+        "rarity": "Uncommon"
+      },
+      "armor": {
+        "ac": 2,
+        "slot": "waist"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 25
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_leather_belt_waist_uncommon",
+        "sourceId": "armor_leather_belt_waist_uncommon",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "slot": "waist"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Chain Girdle",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Rare waist armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "waist",
+        "rarity": "Rare"
+      },
+      "armor": {
+        "ac": 3,
+        "slot": "waist"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 125
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_chain_girdle_waist_rare",
+        "sourceId": "armor_chain_girdle_waist_rare",
+        "rarity": "Rare",
+        "tier": 3,
+        "slot": "waist"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Plate Belt",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Epic waist armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "waist",
+        "rarity": "Epic"
+      },
+      "armor": {
+        "ac": 4,
+        "slot": "waist"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 750
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_plate_belt_waist_epic",
+        "sourceId": "armor_plate_belt_waist_epic",
+        "rarity": "Epic",
+        "tier": 4,
+        "slot": "waist"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Champion's Girdle",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Legendary waist armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "waist",
+        "rarity": "Legendary"
+      },
+      "armor": {
+        "ac": 5,
+        "slot": "waist"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 3500
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_champion_s_girdle_waist_legendary",
+        "sourceId": "armor_champion_s_girdle_waist_legendary",
+        "rarity": "Legendary",
+        "tier": 5,
+        "slot": "waist"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Cloth Pants",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Common legs armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "legs",
+        "rarity": "Common"
+      },
+      "armor": {
+        "ac": 2,
+        "slot": "legs"
+      },
+      "weight": 4,
+      "price": {
+        "gp": 5
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_cloth_pants_legs_common",
+        "sourceId": "armor_cloth_pants_legs_common",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "legs"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Leather Leggings",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Uncommon legs armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "legs",
+        "rarity": "Uncommon"
+      },
+      "armor": {
+        "ac": 3,
+        "slot": "legs"
+      },
+      "weight": 4,
+      "price": {
+        "gp": 25
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_leather_leggings_legs_uncommon",
+        "sourceId": "armor_leather_leggings_legs_uncommon",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "slot": "legs"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Chain Leggings",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Rare legs armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "legs",
+        "rarity": "Rare"
+      },
+      "armor": {
+        "ac": 4,
+        "slot": "legs"
+      },
+      "weight": 4,
+      "price": {
+        "gp": 125
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_chain_leggings_legs_rare",
+        "sourceId": "armor_chain_leggings_legs_rare",
+        "rarity": "Rare",
+        "tier": 3,
+        "slot": "legs"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Plate Greaves",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Epic legs armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "legs",
+        "rarity": "Epic"
+      },
+      "armor": {
+        "ac": 5,
+        "slot": "legs"
+      },
+      "weight": 4,
+      "price": {
+        "gp": 750
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_plate_greaves_legs_epic",
+        "sourceId": "armor_plate_greaves_legs_epic",
+        "rarity": "Epic",
+        "tier": 4,
+        "slot": "legs"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Warlord Greaves",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Legendary legs armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "legs",
+        "rarity": "Legendary"
+      },
+      "armor": {
+        "ac": 6,
+        "slot": "legs"
+      },
+      "weight": 4,
+      "price": {
+        "gp": 3500
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_warlord_greaves_legs_legendary",
+        "sourceId": "armor_warlord_greaves_legs_legendary",
+        "rarity": "Legendary",
+        "tier": 5,
+        "slot": "legs"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Cloth Sandals",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Common feet armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "feet",
+        "rarity": "Common"
+      },
+      "armor": {
+        "ac": 1,
+        "slot": "feet"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 5
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_cloth_sandals_feet_common",
+        "sourceId": "armor_cloth_sandals_feet_common",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "feet"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Leather Boots",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Uncommon feet armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "feet",
+        "rarity": "Uncommon"
+      },
+      "armor": {
+        "ac": 2,
+        "slot": "feet"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 25
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_leather_boots_feet_uncommon",
+        "sourceId": "armor_leather_boots_feet_uncommon",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "slot": "feet"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Chain Boots",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Rare feet armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "feet",
+        "rarity": "Rare"
+      },
+      "armor": {
+        "ac": 3,
+        "slot": "feet"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 125
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_chain_boots_feet_rare",
+        "sourceId": "armor_chain_boots_feet_rare",
+        "rarity": "Rare",
+        "tier": 3,
+        "slot": "feet"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Plate Boots",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Epic feet armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "feet",
+        "rarity": "Epic"
+      },
+      "armor": {
+        "ac": 4,
+        "slot": "feet"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 750
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_plate_boots_feet_epic",
+        "sourceId": "armor_plate_boots_feet_epic",
+        "rarity": "Epic",
+        "tier": 4,
+        "slot": "feet"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Swift Boots",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Legendary feet armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "feet",
+        "rarity": "Legendary"
+      },
+      "armor": {
+        "ac": 5,
+        "slot": "feet"
+      },
+      "weight": 1,
+      "price": {
+        "gp": 3500
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_swift_boots_feet_legendary",
+        "sourceId": "armor_swift_boots_feet_legendary",
+        "rarity": "Legendary",
+        "tier": 5,
+        "slot": "feet"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Traveler's Cloak",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Common back armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "back",
+        "rarity": "Common"
+      },
+      "armor": {
+        "ac": 1,
+        "slot": "back"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 5
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_traveler_s_cloak_back_common",
+        "sourceId": "armor_traveler_s_cloak_back_common",
+        "rarity": "Common",
+        "tier": 1,
+        "slot": "back"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Hunter's Cloak",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Uncommon back armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "back",
+        "rarity": "Uncommon"
+      },
+      "armor": {
+        "ac": 2,
+        "slot": "back"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 25
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_hunter_s_cloak_back_uncommon",
+        "sourceId": "armor_hunter_s_cloak_back_uncommon",
+        "rarity": "Uncommon",
+        "tier": 2,
+        "slot": "back"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Knight's Cloak",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Rare back armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "back",
+        "rarity": "Rare"
+      },
+      "armor": {
+        "ac": 3,
+        "slot": "back"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 125
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_knight_s_cloak_back_rare",
+        "sourceId": "armor_knight_s_cloak_back_rare",
+        "rarity": "Rare",
+        "tier": 3,
+        "slot": "back"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Royal Cape",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Epic back armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "back",
+        "rarity": "Epic"
+      },
+      "armor": {
+        "ac": 4,
+        "slot": "back"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 750
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_royal_cape_back_epic",
+        "sourceId": "armor_royal_cape_back_epic",
+        "rarity": "Epic",
+        "tier": 4,
+        "slot": "back"
+      }
+    },
+    "effects": []
+  },
+  {
+    "name": "Voidweave Cape",
+    "type": "armor",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": {
+        "value": "Legendary back armor. EverQuest-flavored baseline gear for EQ5e."
+      },
+      "details": {
+        "slot": "back",
+        "rarity": "Legendary"
+      },
+      "armor": {
+        "ac": 5,
+        "slot": "back"
+      },
+      "weight": 2,
+      "price": {
+        "gp": 3500
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "armor_voidweave_cape_back_legendary",
+        "sourceId": "armor_voidweave_cape_back_legendary",
+        "rarity": "Legendary",
+        "tier": 5,
+        "slot": "back"
+      }
+    },
+    "effects": []
+  }
+]

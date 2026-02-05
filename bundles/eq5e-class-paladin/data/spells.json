@@ -1,0 +1,493 @@
+[
+  {
+    "name": "Light Healing",
+    "type": "spell",
+    "img": "icons/magic/life/cross-yellow-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "pal.heal.light",
+          "kind": "heal",
+          "enabled": true,
+          "manaCost": 8,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 8,
+            "range": 30,
+            "tags": [
+              "heal"
+            ],
+            "healThreatMult": 0.8
+          },
+          "damage": [
+            {
+              "formula": "1d8+1",
+              "type": "healing",
+              "category": "healing",
+              "tags": []
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Healing",
+    "type": "spell",
+    "img": "icons/magic/life/cross-yellow-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "pal.heal.healing",
+          "kind": "heal",
+          "enabled": true,
+          "manaCost": 14,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 14,
+            "range": 30,
+            "tags": [
+              "heal"
+            ],
+            "healThreatMult": 0.8
+          },
+          "damage": [
+            {
+              "formula": "2d8+2",
+              "type": "healing",
+              "category": "healing",
+              "tags": []
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Greater Healing",
+    "type": "spell",
+    "img": "icons/magic/life/heart-cross-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "pal.heal.greater",
+          "kind": "heal",
+          "enabled": true,
+          "manaCost": 26,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 26,
+            "range": 30,
+            "tags": [
+              "heal"
+            ],
+            "healThreatMult": 0.8
+          },
+          "damage": [
+            {
+              "formula": "3d8+4",
+              "type": "healing",
+              "category": "healing",
+              "tags": []
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Wave of Healing",
+    "type": "spell",
+    "img": "icons/magic/life/heart-plus-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "pal.gheal.wave",
+          "kind": "heal",
+          "enabled": true,
+          "manaCost": 30,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 30,
+            "range": 30,
+            "notes": "Group-lite heal (group target wiring pass).",
+            "tags": [
+              "heal"
+            ],
+            "healThreatMult": 0.8
+          },
+          "damage": [
+            {
+              "formula": "1d8+2",
+              "type": "healing",
+              "category": "healing",
+              "tags": [
+                "group"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Blessing of Faith",
+    "type": "spell",
+    "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "pal.buff.blessing-faith",
+          "kind": "buff",
+          "enabled": true,
+          "manaCost": 12,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 12,
+            "range": 30
+          },
+          "conditions": [
+            {
+              "id": "blessingFaith",
+              "label": "Blessing of Faith",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "system.mitigation.physicalPct",
+                  "mode": "ADD",
+                  "value": "0.06"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Holy Might",
+    "type": "spell",
+    "img": "icons/magic/holy/meditation-chant-cross.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "pal.buff.holy-might",
+          "kind": "buff",
+          "enabled": true,
+          "manaCost": 18,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 18,
+            "range": 30
+          },
+          "conditions": [
+            {
+              "id": "holyMight",
+              "label": "Holy Might",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "flags.eq5e.attackBonus",
+                  "mode": "ADD",
+                  "value": "1"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Stun",
+    "type": "spell",
+    "img": "icons/magic/lightning/bolt-strike-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "pal.ctrl.stun1",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 10,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 10,
+            "range": 30,
+            "notes": "Implemented as Root 1 round (true stun later).",
+            "tags": [
+              "control",
+              "stun",
+              "taunt"
+            ],
+            "threatBonus": 25,
+            "cooldown": {
+              "type": "rounds",
+              "value": 2,
+              "sharedGroup": "pal.stun"
+            }
+          },
+          "conditions": [
+            {
+              "id": "stunned",
+              "duration": {
+                "rounds": 1
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Force of Akera",
+    "type": "spell",
+    "img": "icons/magic/lightning/bolt-strike-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "pal.ctrl.stun2",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 16,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 16,
+            "range": 30,
+            "tags": [
+              "stun",
+              "control",
+              "taunt"
+            ],
+            "threatBonus": 35,
+            "cooldown": {
+              "type": "rounds",
+              "value": 2,
+              "sharedGroup": "pal.stun"
+            }
+          },
+          "conditions": [
+            {
+              "id": "stunned",
+              "duration": {
+                "rounds": 1
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Divine Stun",
+    "type": "spell",
+    "img": "icons/magic/lightning/bolt-strike-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "pal.ctrl.stun3",
+          "kind": "taunt",
+          "enabled": true,
+          "manaCost": 24,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 24,
+            "range": 30,
+            "tags": [
+              "control",
+              "stun",
+              "taunt"
+            ],
+            "threatBonus": 45,
+            "cooldown": {
+              "type": "rounds",
+              "value": 2,
+              "sharedGroup": "pal.stun"
+            }
+          },
+          "conditions": [
+            {
+              "id": "stunned",
+              "duration": {
+                "rounds": 1
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Smite Undead",
+    "type": "spell",
+    "img": "icons/magic/holy/beam-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "pal.dd.smite-undead",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 20,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 20,
+            "range": 60
+          },
+          "damage": [
+            {
+              "formula": "3d6+6",
+              "type": "divine",
+              "category": "spell",
+              "tags": [
+                "undeadBonus"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Banish Undead",
+    "type": "spell",
+    "img": "icons/magic/holy/beam-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "pal.dd.banish-undead",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 35,
+          "rangeFt": 60,
+          "meta": {
+            "mana": 35,
+            "range": 60
+          },
+          "damage": [
+            {
+              "formula": "5d6+10",
+              "type": "divine",
+              "category": "spell",
+              "tags": [
+                "undeadBonus"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Root Undead",
+    "type": "spell",
+    "img": "icons/magic/nature/vines-thorned-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "pal.ctrl.root-undead",
+          "kind": "control",
+          "enabled": true,
+          "manaCost": 18,
+          "rangeFt": 30,
+          "meta": {
+            "mana": 18,
+            "range": 30,
+            "notes": "Only effective vs undead (enforced later)."
+          },
+          "conditions": [
+            {
+              "id": "root",
+              "label": "Rooted",
+              "durationRounds": 2,
+              "changes": [
+                {
+                  "key": "flags.eq5e.conditions.root",
+                  "mode": "OVERRIDE",
+                  "value": "true"
+                }
+              ],
+              "flags": {
+                "eq5e": {
+                  "disposition": "hostile"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Divine Aura",
+    "type": "spell",
+    "img": "icons/magic/holy/angel-wings-gray.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "pal.util.divine-aura",
+          "kind": "utility",
+          "enabled": true,
+          "manaCost": 35,
+          "rangeFt": 0,
+          "meta": {
+            "mana": 35,
+            "range": 0,
+            "notes": "Temporary immunity (immunity honor pass later)."
+          },
+          "conditions": [
+            {
+              "id": "divineAura",
+              "label": "Divine Aura",
+              "durationRounds": 2,
+              "changes": [
+                {
+                  "key": "flags.eq5e.damageImmunity",
+                  "mode": "OVERRIDE",
+                  "value": "true"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Resurrection",
+    "type": "spell",
+    "img": "icons/magic/life/ankh-gold.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "pal.util.resurrection",
+          "kind": "utility",
+          "enabled": true,
+          "manaCost": 65,
+          "rangeFt": 10,
+          "meta": {
+            "mana": 65,
+            "range": 10,
+            "resurrect": {
+              "hpPct": 0.35,
+              "sicknessRounds": 10
+            },
+            "notes": "Paladin resurrection (weaker than Cleric)."
+          }
+        }
+      }
+    }
+  }
+]

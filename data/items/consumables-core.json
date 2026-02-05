@@ -1,0 +1,326 @@
+[
+  {
+    "_id": "a34b9b89b5314a6b",
+    "name": "Minor Healing Potion",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "consumeType": "potion",
+      "uses": {
+        "value": 1,
+        "max": 1
+      },
+      "effect": {
+        "type": "heal",
+        "value": "2d4+2"
+      },
+      "duration": {
+        "rounds": 0,
+        "minutes": 0,
+        "hours": 0
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "9a2e13283bd34f9d",
+    "name": "Lesser Healing Potion",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Uncommon",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "consumeType": "potion",
+      "uses": {
+        "value": 1,
+        "max": 1
+      },
+      "effect": {
+        "type": "heal",
+        "value": "4d4+4"
+      },
+      "duration": {
+        "rounds": 0,
+        "minutes": 0,
+        "hours": 0
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "13caec0a0d2340d2",
+    "name": "Antidote",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "consumeType": "potion",
+      "uses": {
+        "value": 1,
+        "max": 1
+      },
+      "effect": {
+        "type": "cure",
+        "value": "poison"
+      },
+      "duration": {
+        "rounds": 0,
+        "minutes": 0,
+        "hours": 0
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "bd01589801c74772",
+    "name": "Disease Remedy",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "consumeType": "potion",
+      "uses": {
+        "value": 1,
+        "max": 1
+      },
+      "effect": {
+        "type": "cure",
+        "value": "disease"
+      },
+      "duration": {
+        "rounds": 0,
+        "minutes": 0,
+        "hours": 0
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "0212425ba43f4d76",
+    "name": "Spirit Tonic",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Uncommon",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "consumeType": "potion",
+      "uses": {
+        "value": 1,
+        "max": 1
+      },
+      "effect": {
+        "type": "mana",
+        "value": "2d4+2"
+      },
+      "duration": {
+        "rounds": 0,
+        "minutes": 0,
+        "hours": 0
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "8490ddc035154863",
+    "name": "Ration Pack",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "consumeType": "food",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "effect": {
+        "type": "buff",
+        "value": "Well Fed"
+      },
+      "duration": {
+        "rounds": 0,
+        "minutes": 0,
+        "hours": 0
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "7a0710f62b3e4bc0",
+    "name": "Bandages",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "consumeType": "supply",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "effect": {
+        "type": "heal",
+        "value": "1d4"
+      },
+      "duration": {
+        "rounds": 0,
+        "minutes": 0,
+        "hours": 0
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "e1ff2b354b3a4761",
+    "name": "Throwing Knife Bundle (10)",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "consumeType": "ammo",
+      "uses": {
+        "value": 10,
+        "max": 10
+      },
+      "effect": {
+        "type": "ammo",
+        "value": "knife"
+      },
+      "duration": {
+        "rounds": 0,
+        "minutes": 0,
+        "hours": 0
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  },
+  {
+    "_id": "8b8655349e424bc8",
+    "name": "Arrow Bundle (20)",
+    "type": "consumable",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "rarity": "Common",
+      "equipped": false,
+      "cost": {
+        "value": 0,
+        "currency": "gp"
+      },
+      "weight": 0,
+      "description": "",
+      "consumeType": "ammo",
+      "uses": {
+        "value": 20,
+        "max": 20
+      },
+      "effect": {
+        "type": "ammo",
+        "value": "arrow"
+      },
+      "duration": {
+        "rounds": 0,
+        "minutes": 0,
+        "hours": 0
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "source": "core-catalog"
+      }
+    }
+  }
+]

@@ -1,0 +1,302 @@
+<section class="eq5e-sheet eq5e-sheet--parchment" style="--eq5e-parchment: url('{{eq5e.ui.parchment}}');">
+  <style>
+    .eq5e-sheet--parchment { background-image: var(--eq5e-parchment); background-size: cover; background-position: center; padding: 12px 14px; color: rgba(20, 15, 10, 0.95); }
+    .eq5e-sheet input, .eq5e-sheet select, .eq5e-sheet textarea { color: rgba(20, 15, 10, 0.95); }
+    .eq5e-muted { opacity: .8; }
+    .eq5e-header { display: grid; grid-template-columns: 124px 1fr 280px; gap: 12px; align-items: center; margin-bottom: 10px; }
+    .eq5e-portrait-wrap { position: relative; width: 124px; height: 124px; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.25); border: 1px solid rgba(60,40,20,0.35); background: rgba(255,255,255,0.15); }
+    .eq5e-portrait { width: 100%; height: 100%; object-fit: cover; cursor: pointer; }
+    .eq5e-crest { position: absolute; right: -10px; bottom: -10px; width: 74px; height: 74px; opacity: .92; filter: drop-shadow(0 6px 10px rgba(0,0,0,.35)); pointer-events: none; }
+    .eq5e-nameblock input[name="name"]{ font-size: 24px; font-weight: 800; letter-spacing: .3px; border: none; background: rgba(255,255,255,0.22); padding: 6px 10px; border-radius: 10px; width: 100%; }
+    .eq5e-subgrid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px; }
+    .eq5e-pill { background: rgba(255,255,255,0.18); border: 1px solid rgba(60,40,20,0.22); border-radius: 10px; padding: 6px 8px; line-height: 1.1; box-shadow: inset 0 1px 0 rgba(255,255,255,0.25); }
+    .eq5e-pill .label { font-size: 11px; opacity: .85; text-transform: uppercase; }
+    .eq5e-pill .value { font-size: 14px; font-weight: 700; }
+    .eq5e-vitals { display:grid; grid-template-columns: repeat(4, 1fr); gap: 8px; justify-self: end; }
+    .eq5e-vitals .eq5e-pill { text-align:center; }
+    .eq5e-vitals .value { font-size: 18px; }
+
+    nav.eq5e-tabs { display:flex; gap: 8px; padding: 6px; border-radius: 12px; background: rgba(40,25,10,0.18); border: 1px solid rgba(60,40,20,0.25); margin-bottom: 10px; flex-wrap: wrap; }
+    nav.eq5e-tabs a.item { padding: 6px 10px; border-radius: 10px; font-weight: 800; letter-spacing: .2px; text-transform: uppercase; font-size: 12px; opacity: .92; border: 1px solid transparent; }
+    nav.eq5e-tabs a.item.active { background: rgba(255,255,255,0.22); border-color: rgba(60,40,20,0.28); box-shadow: inset 0 1px 0 rgba(255,255,255,0.3); }
+
+    .eq5e-body { display:grid; grid-template-columns: 320px 1fr; gap: 12px; }
+    .eq5e-card { background: rgba(255,255,255,0.16); border: 1px solid rgba(60,40,20,0.22); border-radius: 14px; padding: 10px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.25); }
+    .eq5e-card h3{ margin: 0 0 8px 0; font-size: 12px; letter-spacing: .3px; text-transform: uppercase; border-bottom: 1px solid rgba(60,40,20,0.18); padding-bottom: 6px; }
+    .eq5e-abilities { display:grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .eq5e-ability { text-align:center; border-radius: 12px; padding: 8px 6px; border: 1px solid rgba(60,40,20,0.2); background: rgba(255,255,255,0.12); }
+    .eq5e-ability .abbr { font-weight: 900; font-size: 12px; }
+    .eq5e-ability .score { font-size: 18px; font-weight: 900; margin-top: 2px; }
+    .eq5e-ability .mod { font-size: 12px; opacity: .85; }
+    .eq5e-mini-btn { border-radius: 10px; border: 1px solid rgba(60,40,20,0.25); background: rgba(255,255,255,0.18); padding: 2px 8px; font-size: 11px; font-weight: 800; text-transform: uppercase; cursor: pointer; }
+    .eq5e-skills .row { display:grid; grid-template-columns: 18px 1fr 40px 46px; gap: 8px; align-items:center; padding: 4px 0; border-bottom: 1px dashed rgba(60,40,20,0.15); }
+    .eq5e-dot { width: 10px; height: 10px; border-radius: 999px; border: 1px solid rgba(60,40,20,0.3); background: rgba(255,255,255,0.15); justify-self: center; }
+    .eq5e-dot.on { background: rgba(120,30,30,0.35); }
+
+    .eq5e-inv-row { display:grid; grid-template-columns: 76px 1fr 78px 86px; gap: 8px; align-items:center; padding: 6px 0; border-bottom: 1px dashed rgba(60,40,20,0.15); }
+    .eq5e-slot { font-size: 11px; opacity: .85; text-align:right; }
+
+    .eq5e-paperdoll { display:grid; grid-template-columns: 1fr 170px 1fr; gap: 12px; align-items: start; }
+    .eq5e-doll-silhouette { height: 420px; border-radius: 16px; border: 1px solid rgba(60,40,20,0.22); background: rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; font-weight: 900; opacity: .7; text-align:center; padding: 10px; }
+    .eq5e-slotbox { border-radius: 12px; border: 1px solid rgba(60,40,20,0.22); background: rgba(255,255,255,0.14); padding: 8px; margin-bottom: 8px; outline: 1px dashed rgba(60,40,20,0.25); }
+    .eq5e-slotbox:hover { filter: brightness(1.06); }
+    .eq5e-slotbox .slotlabel { font-size: 11px; text-transform: uppercase; opacity: .85; font-weight: 900; display:flex; justify-content:space-between; align-items:center; gap: 8px; }
+    .eq5e-slotbox .slotitem { font-weight: 900; margin-top: 4px; display:flex; justify-content:space-between; gap: 8px; }
+    .eq5e-slotbox .slotitem .empty { opacity: .7; font-weight: 700; }
+    .eq5e-xbtn { border-radius: 10px; border: 1px solid rgba(60,40,20,0.25); background: rgba(255,255,255,0.18); padding: 0 8px; font-size: 12px; font-weight: 900; cursor: pointer; line-height: 18px; height: 20px; }
+    .eq5e-clear-token { display:inline-flex; align-items:center; gap:6px; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(60,40,20,0.25); background: rgba(255,255,255,0.18); font-weight: 900; text-transform: uppercase; font-size: 11px; cursor: grab; }
+  </style>
+
+  <header class="eq5e-header">
+    <div class="eq5e-portrait-wrap">
+      <img class="eq5e-portrait" src="{{actor.img}}" alt="{{actor.name}}" data-action="editImage"/>
+      <img class="eq5e-crest" src="{{eq5e.ui.crest}}" alt="Class Crest"/>
+    </div>
+
+    <div class="eq5e-nameblock">
+      <input type="text" name="name" value="{{actor.name}}" placeholder="Name"/>
+      <div class="eq5e-subgrid">
+        <div class="eq5e-pill"><div class="label">Class</div><div class="value">{{eq5e.sheet.className}}</div></div>
+        <div class="eq5e-pill"><div class="label">Race</div><div class="value">{{system.details.race}}</div></div>
+        <div class="eq5e-pill"><div class="label">Level</div><div class="value">{{system.details.level}}</div></div>
+      </div>
+    </div>
+
+    <div class="eq5e-vitals">
+      <div class="eq5e-pill"><div class="label">AC</div><div class="value">{{eq5e.sheet.vitals.ac.value}}</div></div>
+      <div class="eq5e-pill"><div class="label">Init</div><div class="value">{{eq5e.sheet.vitals.init.value}}</div></div>
+      <div class="eq5e-pill"><div class="label">Speed</div><div class="value">{{eq5e.sheet.vitals.speed.value}}</div></div>
+      <div class="eq5e-pill"><div class="label">HP</div><div class="value">{{eq5e.sheet.vitals.hp.value}} / {{eq5e.sheet.vitals.hp.max}}</div></div>
+    </div>
+  </header>
+
+  <nav class="eq5e-tabs tabs" data-group="sheet">
+    {{#each tabs.sheet.tabs as |t|}}
+      <a class="item {{t.cssClass}}" data-tab="{{t.id}}" data-group="{{t.group}}">{{t.label}}</a>
+    {{/each}}
+  </nav>
+
+  <section class="eq5e-body">
+    <section class="eq5e-card">
+      <h3>Abilities</h3>
+      <div class="eq5e-abilities">
+        {{#each eq5e.sheet.abilities as |a|}}
+          <div class="eq5e-ability">
+            <div class="abbr">{{a.label}}</div>
+            <div class="score">{{a.value}}</div>
+            <div class="mod">MOD {{a.mod}} • SAVE {{a.save}}</div>
+            <div style="margin-top:6px; display:flex; justify-content:center; gap:6px;">
+              <button type="button" class="eq5e-mini-btn" data-action="rollAbility" data-ability="{{a.key}}">Roll</button>
+              <button type="button" class="eq5e-mini-btn" data-action="rollSave" data-ability="{{a.key}}">Save</button>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+
+      <div style="height:10px;"></div>
+
+      <h3>Skills</h3>
+      <div class="eq5e-skills">
+        {{#each eq5e.sheet.skills as |s|}}
+          <div class="row">
+            <span class="eq5e-dot {{#if s.proficient}}on{{/if}}"></span>
+            <span style="font-weight:700;">{{s.label}}</span>
+            <span style="font-weight:900; text-align:right;">{{s.total}}</span>
+            <span style="text-align:right;"><button type="button" class="eq5e-mini-btn" data-action="rollSkill" data-skill="{{s.key}}">Roll</button></span>
+          </div>
+        {{/each}}
+        {{#unless eq5e.sheet.skills.length}}<div class="eq5e-muted">No skills configured yet.</div>{{/unless}}
+      </div>
+    </section>
+
+    <section>
+      <section class="tab {{tabs.sheet.character.cssClass}} eq5e-card" data-tab="character" data-group="sheet">
+        <h3>Features</h3>
+        {{#if eq5e.items.features.length}}
+          <ul>
+            {{#each eq5e.items.features as |it|}}<li><strong>{{it.name}}</strong></li>{{/each}}
+          </ul>
+        {{else}}<div class="eq5e-muted">No features yet.</div>{{/if}}
+
+        <h3>Feats</h3>
+        {{#if eq5e.items.feats.length}}
+          <ul>
+            {{#each eq5e.items.feats as |it|}}<li><strong>{{it.name}}</strong></li>{{/each}}
+          </ul>
+        {{else}}<div class="eq5e-muted">No feats yet.</div>{{/if}}
+      </section>
+
+      <section class="tab {{tabs.sheet.inventory.cssClass}} eq5e-card" data-tab="inventory" data-group="sheet">
+        <h3>Inventory</h3>
+        <div class="eq5e-muted" style="margin-bottom:8px;">
+          Tip: drag an item onto a Gear/Mount/Pet paper doll slot to equip it.
+        </div>
+
+        {{#if eq5e.items.inventory.length}}
+          {{#each eq5e.items.inventory as |it|}}
+            <div class="eq5e-inv-row">
+              <button type="button" class="eq5e-mini-btn" data-action="toggleEquip" data-item-id="{{it._id}}">Equip</button>
+              <div><div style="font-weight:900;">{{it.name}}</div><div class="eq5e-muted" style="font-size:11px;">{{it.type}}</div></div>
+              <div class="eq5e-slot">{{#if it.flags.eq5e.equip.slot}}{{it.flags.eq5e.equip.slot}}{{else}}—{{/if}}</div>
+              <div style="text-align:right; font-weight:900; font-size:11px;">{{#if it.flags.eq5e.equip.equipped}}ON{{else}}—{{/if}}</div>
+            </div>
+          {{/each}}
+        {{else}}<div class="eq5e-muted">No inventory items yet.</div>{{/if}}
+      </section>
+
+      {{!-- Helper partial-ish: Paper Doll renderer --}}
+      <section class="tab {{tabs.sheet.paperdoll.cssClass}} eq5e-card" data-tab="paperdoll" data-group="sheet">
+        <h3>Gear Paper Doll</h3>
+        <div class="eq5e-muted" style="margin-bottom:8px;">Drop items onto slots to equip. Occupied slots swap.</div>
+
+        <div class="eq5e-clear-token" draggable="true" data-eq5e-clear-token="1"><i class="fa-solid fa-eraser"></i> Empty (Drag to Clear)</div>
+        <div style="height:10px;"></div>
+
+        <div class="eq5e-paperdoll">
+          <div>
+            {{#each eq5e.paperdoll.self.slots as |s|}}
+              {{#if (or (eq s.key "head") (eq s.key "hands") (eq s.key "neck") (eq s.key "ring1") (eq s.key "ring2"))}}
+                <div class="eq5e-slotbox" data-eq5e-drop-slot="1" data-doll="self" data-slot="{{s.key}}" data-allowed="{{s.allowed}}" title="Allowed: {{s.allowed}}">
+                  <div class="slotlabel">
+                    <span>{{s.label}}</span>
+                    <button type="button" class="eq5e-xbtn" data-action="unequipSlot" data-doll="self" data-slot="{{s.key}}" title="Unequip / Clear">×</button>
+                  </div>
+                  <div class="slotitem">
+                    {{#if s.item}}<span>{{s.item.name}}</span>{{else}}<span class="empty">Empty</span>{{/if}}
+                    <span class="eq5e-muted">{{#if s.item}}{{s.item.type}}{{else}}—{{/if}}</span>
+                  </div>
+                </div>
+              {{/if}}
+            {{/each}}
+          </div>
+
+          <div class="eq5e-doll-silhouette">Character<br/>Gear</div>
+
+          <div>
+            {{#each eq5e.paperdoll.self.slots as |s|}}
+              {{#if (or (eq s.key "chest") (eq s.key "legs") (eq s.key "feet") (eq s.key "primary") (eq s.key "secondary"))}}
+                <div class="eq5e-slotbox" data-eq5e-drop-slot="1" data-doll="self" data-slot="{{s.key}}" data-allowed="{{s.allowed}}" title="Allowed: {{s.allowed}}">
+                  <div class="slotlabel">
+                    <span>{{s.label}}</span>
+                    <button type="button" class="eq5e-xbtn" data-action="unequipSlot" data-doll="self" data-slot="{{s.key}}" title="Unequip / Clear">×</button>
+                  </div>
+                  <div class="slotitem">
+                    {{#if s.item}}<span>{{s.item.name}}</span>{{else}}<span class="empty">Empty</span>{{/if}}
+                    <span class="eq5e-muted">{{#if s.item}}{{s.item.type}}{{else}}—{{/if}}</span>
+                  </div>
+                </div>
+              {{/if}}
+            {{/each}}
+          </div>
+        </div>
+      </section>
+
+      <section class="tab {{tabs.sheet.mount.cssClass}} eq5e-card" data-tab="mount" data-group="sheet">
+        <h3>Mount Paper Doll</h3>
+        <div class="eq5e-muted" style="margin-bottom:8px;">
+          Drop your mount (semanticType: <strong>mount</strong>) into the Mount slot, then tack/barding into the other slots.
+          <br/>Tip: you can also drag an Actor from the sidebar here to “link” a mount later (stored as a flag).
+        </div>
+
+        <div class="eq5e-paperdoll">
+          <div>
+            {{#each eq5e.paperdoll.mount.slots as |s|}}
+              {{#if (or (eq s.key "mount") (eq s.key "saddle") (eq s.key "barding"))}}
+                <div class="eq5e-slotbox" data-eq5e-drop-slot="1" data-doll="mount" data-slot="{{s.key}}" data-allowed="{{s.allowed}}" title="Allowed: {{s.allowed}}">
+                  <div class="slotlabel">
+                    <span>{{s.label}}</span>
+                    <button type="button" class="eq5e-xbtn" data-action="unequipSlot" data-doll="mount" data-slot="{{s.key}}" title="Unequip / Clear">×</button>
+                  </div>
+                  <div class="slotitem">
+                    {{#if s.item}}<span>{{s.item.name}}</span>{{else}}<span class="empty">Empty</span>{{/if}}
+                    <span class="eq5e-muted">{{#if s.item}}{{s.item.semantic}}{{else}}—{{/if}}</span>
+                  </div>
+                </div>
+              {{/if}}
+            {{/each}}
+          </div>
+
+          <div class="eq5e-doll-silhouette">Mount</div>
+
+          <div>
+            {{#each eq5e.paperdoll.mount.slots as |s|}}
+              {{#if (or (eq s.key "tack") (eq s.key "bags"))}}
+                <div class="eq5e-slotbox" data-eq5e-drop-slot="1" data-doll="mount" data-slot="{{s.key}}" data-allowed="{{s.allowed}}" title="Allowed: {{s.allowed}}">
+                  <div class="slotlabel">
+                    <span>{{s.label}}</span>
+                    <button type="button" class="eq5e-xbtn" data-action="unequipSlot" data-doll="mount" data-slot="{{s.key}}" title="Unequip / Clear">×</button>
+                  </div>
+                  <div class="slotitem">
+                    {{#if s.item}}<span>{{s.item.name}}</span>{{else}}<span class="empty">Empty</span>{{/if}}
+                    <span class="eq5e-muted">{{#if s.item}}{{s.item.semantic}}{{else}}—{{/if}}</span>
+                  </div>
+                </div>
+              {{/if}}
+            {{/each}}
+          </div>
+        </div>
+      </section>
+
+      <section class="tab {{tabs.sheet.pet.cssClass}} eq5e-card" data-tab="pet" data-group="sheet">
+        <h3>Pet Paper Doll</h3>
+        <div class="eq5e-muted" style="margin-bottom:8px;">
+          Drop your pet (semanticType: <strong>pet</strong>) into the Pet slot, then collar/harness/armor/focus into the other slots.
+          <br/>Tip: you can also drag an Actor from the sidebar here to “link” a pet later (stored as a flag).
+        </div>
+
+        <div class="eq5e-paperdoll">
+          <div>
+            {{#each eq5e.paperdoll.pet.slots as |s|}}
+              {{#if (or (eq s.key "pet") (eq s.key "collar") (eq s.key "harness"))}}
+                <div class="eq5e-slotbox" data-eq5e-drop-slot="1" data-doll="pet" data-slot="{{s.key}}" data-allowed="{{s.allowed}}" title="Allowed: {{s.allowed}}">
+                  <div class="slotlabel">
+                    <span>{{s.label}}</span>
+                    <button type="button" class="eq5e-xbtn" data-action="unequipSlot" data-doll="pet" data-slot="{{s.key}}" title="Unequip / Clear">×</button>
+                  </div>
+                  <div class="slotitem">
+                    {{#if s.item}}<span>{{s.item.name}}</span>{{else}}<span class="empty">Empty</span>{{/if}}
+                    <span class="eq5e-muted">{{#if s.item}}{{s.item.semantic}}{{else}}—{{/if}}</span>
+                  </div>
+                </div>
+              {{/if}}
+            {{/each}}
+          </div>
+
+          <div class="eq5e-doll-silhouette">Pet</div>
+
+          <div>
+            {{#each eq5e.paperdoll.pet.slots as |s|}}
+              {{#if (or (eq s.key "armor") (eq s.key "focus"))}}
+                <div class="eq5e-slotbox" data-eq5e-drop-slot="1" data-doll="pet" data-slot="{{s.key}}" data-allowed="{{s.allowed}}" title="Allowed: {{s.allowed}}">
+                  <div class="slotlabel">
+                    <span>{{s.label}}</span>
+                    <button type="button" class="eq5e-xbtn" data-action="unequipSlot" data-doll="pet" data-slot="{{s.key}}" title="Unequip / Clear">×</button>
+                  </div>
+                  <div class="slotitem">
+                    {{#if s.item}}<span>{{s.item.name}}</span>{{else}}<span class="empty">Empty</span>{{/if}}
+                    <span class="eq5e-muted">{{#if s.item}}{{s.item.semantic}}{{else}}—{{/if}}</span>
+                  </div>
+                </div>
+              {{/if}}
+            {{/each}}
+          </div>
+        </div>
+      </section>
+
+      <section class="tab {{tabs.sheet.spells.cssClass}} eq5e-card" data-tab="spells" data-group="sheet">
+        <h3>Spells</h3>
+        {{#if eq5e.items.spells.length}}<ul>{{#each eq5e.items.spells as |it|}}<li><strong>{{it.name}}</strong></li>{{/each}}</ul>{{else}}<div class="eq5e-muted">No spells yet.</div>{{/if}}
+      </section>
+
+      <section class="tab {{tabs.sheet.aas.cssClass}} eq5e-card" data-tab="aas" data-group="sheet">
+        <h3>Alternate Abilities</h3>
+        {{#if eq5e.items.aas.length}}<ul>{{#each eq5e.items.aas as |it|}}<li><strong>{{it.name}}</strong></li>{{/each}}</ul>{{else}}<div class="eq5e-muted">No AAs yet.</div>{{/if}}
+      </section>
+
+      <section class="tab {{tabs.sheet.bio.cssClass}} eq5e-card" data-tab="bio" data-group="sheet">
+        <h3>Bio</h3>
+        <textarea name="system.details.biography" rows="12" style="width:100%; background: rgba(255,255,255,0.18); border:1px solid rgba(60,40,20,0.22); border-radius: 10px; padding: 8px;"></textarea>
+      </section>
+    </section>
+  </section>
+</section>

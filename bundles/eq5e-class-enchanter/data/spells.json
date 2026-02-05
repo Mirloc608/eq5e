@@ -1,0 +1,536 @@
+[
+  {
+    "name": "Mesmerize",
+    "type": "spell",
+    "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "enc.mez.1",
+          "kind": "control",
+          "rangeFt": 60,
+          "manaCost": 8,
+          "priority": 80,
+          "damage": [],
+          "cooldown": {
+            "value": 2
+          },
+          "conditions": [
+            {
+              "id": "mezzed",
+              "duration": {
+                "rounds": 2
+              },
+              "meta": {
+                "breakOnDamage": true,
+                "breakChance": 0.3
+              }
+            }
+          ],
+          "meta": {
+            "tags": [
+              "control",
+              "mez",
+              "mez:single"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Color Stun",
+    "type": "spell",
+    "img": "icons/magic/light/explosion-star-glitter.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "enc.stun.color.1",
+          "kind": "control",
+          "rangeFt": 30,
+          "manaCost": 6,
+          "priority": 70,
+          "damage": [],
+          "cooldown": {
+            "value": 3
+          },
+          "conditions": [
+            {
+              "id": "stunned",
+              "duration": {
+                "rounds": 1
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Beguile",
+    "type": "spell",
+    "img": "icons/magic/control/mind-control-purple.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "enc.charm.beguile.1",
+          "kind": "control",
+          "rangeFt": 30,
+          "manaCost": 12,
+          "priority": 60,
+          "damage": [],
+          "cooldown": {
+            "value": 3
+          },
+          "meta": {
+            "charm": {
+              "durationRounds": 3,
+              "summonId": "enchanter.charm",
+              "breakChance": 0.22
+            },
+            "tags": [
+              "control",
+              "charm"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Dismiss Charm",
+    "type": "spell",
+    "img": "icons/magic/control/energy-stream-link-spiral.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "enc.charm.dismiss.1",
+          "kind": "utility",
+          "rangeFt": 0,
+          "manaCost": 1,
+          "priority": 90,
+          "damage": [],
+          "cooldown": {
+            "value": 1
+          },
+          "meta": {
+            "dismissSummon": {
+              "summonId": "enchanter.charm"
+            },
+            "tags": [
+              "control",
+              "charm"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Haste",
+    "type": "spell",
+    "img": "icons/magic/time/arrows-circling-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "enc.haste.1",
+          "kind": "buff",
+          "rangeFt": 30,
+          "manaCost": 10,
+          "priority": 40,
+          "damage": [],
+          "cooldown": {
+            "value": 1
+          },
+          "meta": {
+            "activeEffect": {
+              "label": "Haste",
+              "durationRounds": 5,
+              "changes": [
+                {
+                  "key": "system.attributes.movement.walk",
+                  "mode": "ADD",
+                  "value": "10"
+                }
+              ]
+            },
+            "tags": [
+              "buff",
+              "mana",
+              "haste"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Slow",
+    "type": "spell",
+    "img": "icons/magic/time/arrows-circling-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "enc.slow.1",
+          "kind": "debuff",
+          "rangeFt": 30,
+          "manaCost": 10,
+          "priority": 50,
+          "damage": [],
+          "cooldown": {
+            "value": 2
+          },
+          "meta": {
+            "activeEffect": {
+              "label": "Slow",
+              "durationRounds": 3,
+              "changes": [
+                {
+                  "key": "system.attributes.movement.walk",
+                  "mode": "ADD",
+                  "value": "-10"
+                }
+              ]
+            },
+            "tags": [
+              "debuff",
+              "slow"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Clarity",
+    "type": "spell",
+    "img": "icons/magic/control/buff-flight-wings-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "enc.clarity.1",
+          "kind": "buff",
+          "rangeFt": 30,
+          "manaCost": 10,
+          "priority": 30,
+          "damage": [],
+          "cooldown": {
+            "value": 1
+          },
+          "meta": {
+            "activeEffect": {
+              "label": "Clarity",
+              "durationRounds": 10,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resources.manaRegen",
+                  "mode": "ADD",
+                  "value": "1"
+                }
+              ]
+            },
+            "tags": [
+              "buff",
+              "mana",
+              "haste"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Tashan",
+    "type": "spell",
+    "img": "icons/magic/symbols/runes-triangle-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "enc.tashan.1",
+          "kind": "debuff",
+          "rangeFt": 60,
+          "manaCost": 6,
+          "priority": 55,
+          "damage": [],
+          "cooldown": {
+            "value": 2
+          },
+          "meta": {
+            "activeEffect": {
+              "label": "Tashan",
+              "durationRounds": 5,
+              "changes": [
+                {
+                  "key": "flags.eq5e.resists.magic",
+                  "mode": "ADD",
+                  "value": "-2"
+                }
+              ]
+            },
+            "tags": [
+              "debuff",
+              "slow",
+              "debuff:resist"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Mesmerize (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "enc.mez.2",
+          "kind": "control",
+          "rangeFt": 60,
+          "manaCost": 10,
+          "priority": 80,
+          "damage": [],
+          "cooldown": {
+            "value": 2
+          },
+          "conditions": [
+            {
+              "id": "mezzed",
+              "duration": {
+                "rounds": 3
+              },
+              "meta": {
+                "breakOnDamage": true,
+                "breakChance": 0.3
+              }
+            }
+          ],
+          "meta": {
+            "tags": [
+              "control",
+              "mez",
+              "mez:single"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Mesmerize (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "enc.mez.3",
+          "kind": "control",
+          "rangeFt": 60,
+          "manaCost": 12,
+          "priority": 80,
+          "damage": [],
+          "cooldown": {
+            "value": 2
+          },
+          "conditions": [
+            {
+              "id": "mezzed",
+              "duration": {
+                "rounds": 4
+              },
+              "meta": {
+                "breakOnDamage": true,
+                "breakChance": 0.3
+              }
+            }
+          ],
+          "meta": {
+            "tags": [
+              "control",
+              "mez",
+              "mez:single"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Mesmerize (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "enc.mez.4",
+          "kind": "control",
+          "rangeFt": 60,
+          "manaCost": 14,
+          "priority": 80,
+          "damage": [],
+          "cooldown": {
+            "value": 2
+          },
+          "conditions": [
+            {
+              "id": "mezzed",
+              "duration": {
+                "rounds": 5
+              },
+              "meta": {
+                "breakOnDamage": true,
+                "breakChance": 0.3
+              }
+            }
+          ],
+          "meta": {
+            "tags": [
+              "control",
+              "mez",
+              "mez:single"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Slow (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/time/arrows-circling-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "enc.slow.2",
+          "kind": "debuff",
+          "rangeFt": 30,
+          "manaCost": 12,
+          "priority": 50,
+          "damage": [],
+          "cooldown": {
+            "value": 2
+          },
+          "meta": {
+            "activeEffect": {
+              "label": "Slow",
+              "durationRounds": 4,
+              "changes": [
+                {
+                  "key": "system.attributes.movement.walk",
+                  "mode": "ADD",
+                  "value": "-15"
+                }
+              ]
+            },
+            "tags": [
+              "debuff",
+              "slow"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Slow (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/time/arrows-circling-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "enc.slow.3",
+          "kind": "debuff",
+          "rangeFt": 30,
+          "manaCost": 14,
+          "priority": 50,
+          "damage": [],
+          "cooldown": {
+            "value": 2
+          },
+          "meta": {
+            "activeEffect": {
+              "label": "Slow",
+              "durationRounds": 5,
+              "changes": [
+                {
+                  "key": "system.attributes.movement.walk",
+                  "mode": "ADD",
+                  "value": "-20"
+                }
+              ]
+            },
+            "tags": [
+              "debuff",
+              "slow"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Slow (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/time/arrows-circling-red.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "enc.slow.4",
+          "kind": "debuff",
+          "rangeFt": 30,
+          "manaCost": 16,
+          "priority": 50,
+          "damage": [],
+          "cooldown": {
+            "value": 2
+          },
+          "meta": {
+            "activeEffect": {
+              "label": "Slow",
+              "durationRounds": 6,
+              "changes": [
+                {
+                  "key": "system.attributes.movement.walk",
+                  "mode": "ADD",
+                  "value": "-25"
+                }
+              ]
+            },
+            "tags": [
+              "debuff",
+              "slow"
+            ]
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "id": "eq5e",
+  "title": "EverQuest 5e",
+  "description": "EverQuest-inspired campaign system using D&D 5e as a guide.",
+  "version": "1.0.0-beta.ui",
+  "authors": [
+    {
+      "name": "David"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "socket": true,
+  "esmodules": [
+    "scripts/ae-normalizer.mjs",
+    "scripts/eq5e.mjs",
+    "scripts/character-sheet.js"
+  ],
+  "styles": [
+    "styles/eq5e.css",
+    "styles/eq5e-sheet-5e.css"
+  ],
+  "documentTypes": {
+    "Actor": {
+      "character": {},
+      "npc": {},
+      "pet": {}
+    },
+    "Item": {
+      "class": {},
+      "race": {},
+      "spell": {},
+      "feature": {},
+      "feat": {},
+      "weapon": {},
+      "armor": {},
+      "shield": {},
+      "jewelry": {},
+      "consumable": {},
+      "ammo": {},
+      "aa": {}
+    }
+  }
+}

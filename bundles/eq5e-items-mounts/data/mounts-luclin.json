@@ -1,0 +1,247 @@
+[
+  {
+    "name": "Luclin Riding Horse (Bay)",
+    "type": "consumable",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Luclin Mount.</strong> Standard Luclin-era riding horse.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 500,
+        "denomination": "gp"
+      },
+      "rarity": "Uncommon",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Luclin",
+        "type": "horse",
+        "speed": 60
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.luclin.luclin-riding-horse-bay",
+        "category": "mount",
+        "mount": {
+          "era": "Luclin",
+          "type": "horse",
+          "speed": 60
+        }
+      }
+    }
+  },
+  {
+    "name": "Luclin Riding Horse (Black)",
+    "type": "consumable",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Luclin Mount.</strong> Sleek black coat; prized by nobles.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 550,
+        "denomination": "gp"
+      },
+      "rarity": "Uncommon",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Luclin",
+        "type": "horse",
+        "speed": 60
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.luclin.luclin-riding-horse-black",
+        "category": "mount",
+        "mount": {
+          "era": "Luclin",
+          "type": "horse",
+          "speed": 60
+        }
+      }
+    }
+  },
+  {
+    "name": "Armored Warhorse (Luclin)",
+    "type": "consumable",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Luclin Mount.</strong> Plate barding and trained discipline.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 1200,
+        "denomination": "gp"
+      },
+      "rarity": "Rare",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Luclin",
+        "type": "horse",
+        "speed": 65
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.luclin.armored-warhorse-luclin",
+        "category": "mount",
+        "mount": {
+          "era": "Luclin",
+          "type": "horse",
+          "speed": 65
+        }
+      }
+    }
+  },
+  {
+    "name": "Swift Courser (Luclin)",
+    "type": "consumable",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Luclin Mount.</strong> Fastest stable mount of the era.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 2000,
+        "denomination": "gp"
+      },
+      "rarity": "Epic",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Luclin",
+        "type": "horse",
+        "speed": 70
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.luclin.swift-courser-luclin",
+        "category": "mount",
+        "mount": {
+          "era": "Luclin",
+          "type": "horse",
+          "speed": 70
+        }
+      }
+    }
+  },
+  {
+    "name": "Kirin (Lesser)",
+    "type": "consumable",
+    "img": "icons/svg/unicorn.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Luclin Mount.</strong> Mythic-looking mount; calm and bright-eyed.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 2500,
+        "denomination": "gp"
+      },
+      "rarity": "Legendary",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Luclin",
+        "type": "kirin",
+        "speed": 70
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.luclin.kirin-lesser",
+        "category": "mount",
+        "mount": {
+          "era": "Luclin",
+          "type": "kirin",
+          "speed": 70
+        }
+      }
+    }
+  },
+  {
+    "name": "Moonstrider Panther",
+    "type": "consumable",
+    "img": "icons/svg/cat.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Luclin Mount.</strong> Silent and quick; favored by scouts.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 1800,
+        "denomination": "gp"
+      },
+      "rarity": "Epic",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Luclin",
+        "type": "cat",
+        "speed": 70
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.luclin.moonstrider-panther",
+        "category": "mount",
+        "mount": {
+          "era": "Luclin",
+          "type": "cat",
+          "speed": 70
+        }
+      }
+    }
+  },
+  {
+    "name": "Mechamatic Strider",
+    "type": "consumable",
+    "img": "icons/svg/robot.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Luclin Mount.</strong> Clockwork mount from Luclin tinkers.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 1600,
+        "denomination": "gp"
+      },
+      "rarity": "Rare",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Luclin",
+        "type": "mechanical",
+        "speed": 65
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.luclin.mechamatic-strider",
+        "category": "mount",
+        "mount": {
+          "era": "Luclin",
+          "type": "mechanical",
+          "speed": 65
+        }
+      }
+    }
+  }
+]

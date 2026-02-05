@@ -1,0 +1,120 @@
+[
+  {
+    "name": "Elemental Focus: Flame Core",
+    "type": "equipment",
+    "img": "icons/magic/fire/flame-burning-sphere.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "petEquipment": {
+          "enabled": true,
+          "slot": "focus",
+          "bonuses": {
+            "dmgPct": 0.08,
+            "allowSpells": false
+          },
+          "description": "Improves fire elemental melee damage."
+        }
+      }
+    }
+  },
+  {
+    "name": "Elemental Focus: Earthen Bulwark",
+    "type": "equipment",
+    "img": "icons/magic/earth/shield-stone-plate.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "petEquipment": {
+          "enabled": true,
+          "slot": "focus",
+          "bonuses": {
+            "hpFlat": 20,
+            "acFlat": 1,
+            "threatMult": 0.1,
+            "allowSpells": false
+          },
+          "description": "Improves earth elemental tankiness and threat."
+        }
+      }
+    }
+  },
+  {
+    "name": "Elemental Focus: Aerial Spark",
+    "type": "equipment",
+    "img": "icons/magic/air/lightning-bolt-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "petEquipment": {
+          "enabled": true,
+          "slot": "focus",
+          "bonuses": {
+            "dmgPct": 0.04,
+            "allowSpells": true,
+            "rotation": "mag.air.basic"
+          },
+          "description": "Enables air elemental spellcasting rotation."
+        }
+      }
+    }
+  },
+  {
+    "name": "Elemental Focus: Tidal Conduit",
+    "type": "equipment",
+    "img": "icons/magic/water/water-drop-swirl.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "petEquipment": {
+          "enabled": true,
+          "slot": "focus",
+          "bonuses": {
+            "hpFlat": 10,
+            "allowSpells": true,
+            "rotation": "mag.water.basic"
+          },
+          "description": "Enables water elemental spellcasting rotation."
+        }
+      }
+    }
+  },
+  {
+    "name": "Pet Weapon: Elemental Claw",
+    "type": "equipment",
+    "img": "icons/commodities/claws/claw-bear-brown.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "petEquipment": {
+          "enabled": true,
+          "slot": "weapon",
+          "bonuses": {
+            "dmgPct": 0.05,
+            "threatMult": 0.05
+          },
+          "description": "A conjured claw that improves pet melee output and threat."
+        }
+      }
+    }
+  },
+  {
+    "name": "Pet Armor: Runed Carapace",
+    "type": "equipment",
+    "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "petEquipment": {
+          "enabled": true,
+          "slot": "armor",
+          "bonuses": {
+            "hpFlat": 15,
+            "acFlat": 1
+          },
+          "description": "Conjured warding that increases pet durability."
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,842 @@
+[
+  {
+    "name": "T1 Buckler Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-wooden-round-iron.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 5,
+          "kind": "buckler"
+        },
+        "price": {
+          "cp": 240
+        },
+        "tier": 1,
+        "levelBand": {
+          "min": 1,
+          "max": 5
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t01-buckler",
+        "tier": 1,
+        "tags": [
+          "core",
+          "shield",
+          "buckler"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T1 Kite Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-heater-wooden.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 7,
+          "kind": "kite"
+        },
+        "price": {
+          "cp": 240
+        },
+        "tier": 1,
+        "levelBand": {
+          "min": 1,
+          "max": 5
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t01-kite",
+        "tier": 1,
+        "tags": [
+          "core",
+          "shield",
+          "kite"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T2 Buckler Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-wooden-round-iron.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 7,
+          "kind": "buckler"
+        },
+        "price": {
+          "cp": 960
+        },
+        "tier": 2,
+        "levelBand": {
+          "min": 6,
+          "max": 10
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t02-buckler",
+        "tier": 2,
+        "tags": [
+          "core",
+          "shield",
+          "buckler"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T2 Kite Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-heater-wooden.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 9,
+          "kind": "kite"
+        },
+        "price": {
+          "cp": 960
+        },
+        "tier": 2,
+        "levelBand": {
+          "min": 6,
+          "max": 10
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t02-kite",
+        "tier": 2,
+        "tags": [
+          "core",
+          "shield",
+          "kite"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T3 Buckler Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-wooden-round-iron.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 9,
+          "kind": "buckler"
+        },
+        "price": {
+          "cp": 2160
+        },
+        "tier": 3,
+        "levelBand": {
+          "min": 11,
+          "max": 15
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t03-buckler",
+        "tier": 3,
+        "tags": [
+          "core",
+          "shield",
+          "buckler"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T3 Kite Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-heater-wooden.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 12,
+          "kind": "kite"
+        },
+        "price": {
+          "cp": 2160
+        },
+        "tier": 3,
+        "levelBand": {
+          "min": 11,
+          "max": 15
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t03-kite",
+        "tier": 3,
+        "tags": [
+          "core",
+          "shield",
+          "kite"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T4 Buckler Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-wooden-round-iron.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 11,
+          "kind": "buckler"
+        },
+        "price": {
+          "cp": 3840
+        },
+        "tier": 4,
+        "levelBand": {
+          "min": 16,
+          "max": 20
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t04-buckler",
+        "tier": 4,
+        "tags": [
+          "core",
+          "shield",
+          "buckler"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T4 Kite Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-heater-wooden.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 14,
+          "kind": "kite"
+        },
+        "price": {
+          "cp": 3840
+        },
+        "tier": 4,
+        "levelBand": {
+          "min": 16,
+          "max": 20
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t04-kite",
+        "tier": 4,
+        "tags": [
+          "core",
+          "shield",
+          "kite"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T5 Buckler Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-wooden-round-iron.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 12,
+          "kind": "buckler"
+        },
+        "price": {
+          "cp": 6000
+        },
+        "tier": 5,
+        "levelBand": {
+          "min": 21,
+          "max": 25
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t05-buckler",
+        "tier": 5,
+        "tags": [
+          "core",
+          "shield",
+          "buckler"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T5 Kite Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-heater-wooden.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 17,
+          "kind": "kite"
+        },
+        "price": {
+          "cp": 6000
+        },
+        "tier": 5,
+        "levelBand": {
+          "min": 21,
+          "max": 25
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t05-kite",
+        "tier": 5,
+        "tags": [
+          "core",
+          "shield",
+          "kite"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T6 Buckler Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-wooden-round-iron.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 14,
+          "kind": "buckler"
+        },
+        "price": {
+          "cp": 8640
+        },
+        "tier": 6,
+        "levelBand": {
+          "min": 26,
+          "max": 30
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t06-buckler",
+        "tier": 6,
+        "tags": [
+          "core",
+          "shield",
+          "buckler"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T6 Kite Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-heater-wooden.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 19,
+          "kind": "kite"
+        },
+        "price": {
+          "cp": 8640
+        },
+        "tier": 6,
+        "levelBand": {
+          "min": 26,
+          "max": 30
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t06-kite",
+        "tier": 6,
+        "tags": [
+          "core",
+          "shield",
+          "kite"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T7 Buckler Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-wooden-round-iron.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 16,
+          "kind": "buckler"
+        },
+        "price": {
+          "cp": 11760
+        },
+        "tier": 7,
+        "levelBand": {
+          "min": 31,
+          "max": 35
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t07-buckler",
+        "tier": 7,
+        "tags": [
+          "core",
+          "shield",
+          "buckler"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T7 Kite Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-heater-wooden.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 21,
+          "kind": "kite"
+        },
+        "price": {
+          "cp": 11760
+        },
+        "tier": 7,
+        "levelBand": {
+          "min": 31,
+          "max": 35
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t07-kite",
+        "tier": 7,
+        "tags": [
+          "core",
+          "shield",
+          "kite"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T8 Buckler Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-wooden-round-iron.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 18,
+          "kind": "buckler"
+        },
+        "price": {
+          "cp": 15360
+        },
+        "tier": 8,
+        "levelBand": {
+          "min": 36,
+          "max": 40
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t08-buckler",
+        "tier": 8,
+        "tags": [
+          "core",
+          "shield",
+          "buckler"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T8 Kite Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-heater-wooden.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 24,
+          "kind": "kite"
+        },
+        "price": {
+          "cp": 15360
+        },
+        "tier": 8,
+        "levelBand": {
+          "min": 36,
+          "max": 40
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t08-kite",
+        "tier": 8,
+        "tags": [
+          "core",
+          "shield",
+          "kite"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T9 Buckler Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-wooden-round-iron.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 19,
+          "kind": "buckler"
+        },
+        "price": {
+          "cp": 19440
+        },
+        "tier": 9,
+        "levelBand": {
+          "min": 41,
+          "max": 45
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t09-buckler",
+        "tier": 9,
+        "tags": [
+          "core",
+          "shield",
+          "buckler"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T9 Kite Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-heater-wooden.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 26,
+          "kind": "kite"
+        },
+        "price": {
+          "cp": 19440
+        },
+        "tier": 9,
+        "levelBand": {
+          "min": 41,
+          "max": 45
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t09-kite",
+        "tier": 9,
+        "tags": [
+          "core",
+          "shield",
+          "kite"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T10 Buckler Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-wooden-round-iron.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 21,
+          "kind": "buckler"
+        },
+        "price": {
+          "cp": 24000
+        },
+        "tier": 10,
+        "levelBand": {
+          "min": 46,
+          "max": 50
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t10-buckler",
+        "tier": 10,
+        "tags": [
+          "core",
+          "shield",
+          "buckler"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T10 Kite Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-heater-wooden.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 29,
+          "kind": "kite"
+        },
+        "price": {
+          "cp": 24000
+        },
+        "tier": 10,
+        "levelBand": {
+          "min": 46,
+          "max": 50
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t10-kite",
+        "tier": 10,
+        "tags": [
+          "core",
+          "shield",
+          "kite"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T11 Buckler Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-wooden-round-iron.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 23,
+          "kind": "buckler"
+        },
+        "price": {
+          "cp": 29040
+        },
+        "tier": 11,
+        "levelBand": {
+          "min": 51,
+          "max": 55
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t11-buckler",
+        "tier": 11,
+        "tags": [
+          "core",
+          "shield",
+          "buckler"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T11 Kite Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-heater-wooden.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 31,
+          "kind": "kite"
+        },
+        "price": {
+          "cp": 29040
+        },
+        "tier": 11,
+        "levelBand": {
+          "min": 51,
+          "max": 55
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t11-kite",
+        "tier": 11,
+        "tags": [
+          "core",
+          "shield",
+          "kite"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T12 Buckler Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-wooden-round-iron.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 25,
+          "kind": "buckler"
+        },
+        "price": {
+          "cp": 34560
+        },
+        "tier": 12,
+        "levelBand": {
+          "min": 56,
+          "max": 60
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t12-buckler",
+        "tier": 12,
+        "tags": [
+          "core",
+          "shield",
+          "buckler"
+        ]
+      }
+    }
+  },
+  {
+    "name": "T12 Kite Shield",
+    "type": "shield",
+    "img": "icons/equipment/shield/shield-heater-wooden.webp",
+    "system": {
+      "description": {
+        "value": "<p>Shield with meaningful AC contribution.</p>"
+      },
+      "eq5e": {
+        "shield": {
+          "ac": 33,
+          "kind": "kite"
+        },
+        "price": {
+          "cp": 34560
+        },
+        "tier": 12,
+        "levelBand": {
+          "min": 56,
+          "max": 60
+        }
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "itemId": "shield-t12-kite",
+        "tier": 12,
+        "tags": [
+          "core",
+          "shield",
+          "kite"
+        ]
+      }
+    }
+  }
+]

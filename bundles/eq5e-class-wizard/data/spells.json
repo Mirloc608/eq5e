@@ -1,0 +1,255 @@
+[
+  {
+    "name": "Fireball",
+    "type": "spell",
+    "img": "icons/magic/fire/ball-explosion-orange.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "wiz.fireball.1",
+          "kind": "nuke",
+          "rangeFt": 150,
+          "manaCost": 8,
+          "priority": 40,
+          "damage": [
+            {
+              "type": "fire",
+              "formula": "6d6",
+              "category": "spell"
+            }
+          ],
+          "cooldown": {
+            "value": 2
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Ice Comet",
+    "type": "spell",
+    "img": "icons/magic/water/ice-snowball.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "wiz.ice-comet.1",
+          "kind": "nuke",
+          "rangeFt": 120,
+          "manaCost": 10,
+          "priority": 45,
+          "damage": [
+            {
+              "type": "cold",
+              "formula": "8d6",
+              "category": "spell"
+            }
+          ],
+          "cooldown": {
+            "value": 3
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Root",
+    "type": "spell",
+    "img": "icons/magic/nature/root-vine-entangle.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "wiz.root.1",
+          "kind": "control",
+          "rangeFt": 60,
+          "manaCost": 4,
+          "priority": 30,
+          "conditions": [
+            {
+              "id": "rooted",
+              "durationRounds": 3
+            }
+          ],
+          "cooldown": {
+            "value": 2
+          },
+          "meta": {
+            "tags": [
+              "control",
+              "root"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Lure of Fire",
+    "type": "spell",
+    "img": "icons/magic/fire/flame-jet-orange.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "wiz.lure.fire.1",
+          "kind": "nuke",
+          "rangeFt": 150,
+          "manaCost": 9,
+          "priority": 42,
+          "damage": [
+            {
+              "type": "fire",
+              "formula": "5d6",
+              "category": "spell"
+            }
+          ],
+          "meta": {
+            "partialResist": 0.5
+          },
+          "cooldown": {
+            "value": 2
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Rain of Fire",
+    "type": "spell",
+    "img": "icons/magic/fire/rain-fireballs.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "wiz.rain.fire.1",
+          "kind": "rain",
+          "rangeFt": 120,
+          "manaCost": 10,
+          "priority": 35,
+          "damage": [
+            {
+              "type": "fire",
+              "formula": "3d6",
+              "category": "tick",
+              "ticks": 3
+            }
+          ],
+          "meta": {
+            "rain": true,
+            "tags": [
+              "offensive",
+              "nuke:aoe"
+            ]
+          },
+          "cooldown": {
+            "value": 3
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Thunderbolt",
+    "type": "spell",
+    "img": "icons/magic/lightning/bolt-strike-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "wiz.stun.thunderbolt.1",
+          "kind": "control",
+          "rangeFt": 100,
+          "manaCost": 6,
+          "priority": 38,
+          "damage": [
+            {
+              "type": "electric",
+              "formula": "2d6",
+              "category": "spell"
+            }
+          ],
+          "conditions": [
+            {
+              "id": "stunned",
+              "durationRounds": 1
+            }
+          ],
+          "cooldown": {
+            "value": 3
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Sunstrike",
+    "type": "spell",
+    "img": "icons/magic/fire/sun-explosion.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "wiz.sunstrike.1",
+          "kind": "nuke",
+          "rangeFt": 150,
+          "manaCost": 14,
+          "priority": 50,
+          "damage": [
+            {
+              "type": "fire",
+              "formula": "10d6",
+              "category": "spell"
+            }
+          ],
+          "cooldown": {
+            "value": 4
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Manaburn",
+    "type": "spell",
+    "img": "icons/magic/arcane/energy-explosion-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "wiz.manaburn.1",
+          "kind": "special",
+          "rangeFt": 150,
+          "manaCost": 20,
+          "priority": 60,
+          "damage": [
+            {
+              "type": "arcane",
+              "formula": "12d6",
+              "category": "spell"
+            }
+          ],
+          "meta": {
+            "manaburn": true,
+            "tags": [
+              "offensive",
+              "manaburn"
+            ]
+          },
+          "cooldown": {
+            "value": 6
+          }
+        }
+      }
+    }
+  }
+]

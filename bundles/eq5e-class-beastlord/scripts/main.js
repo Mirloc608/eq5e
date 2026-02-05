@@ -1,0 +1,136 @@
+const MODULE_ID = "eq5e-class-beastlord";
+
+
+const MOD = MODULE_ID;
+const BASE = "systems/eq5e/bundles/eq5e-class-beastlord";
+async function _fetchJSON(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(`Fetch failed ${res.status} for ${path}`);
+  return res.json();
+}
+
+
+function _modulePath(moduleId, rel) {
+  // If running as a separate module, use its path.
+  try {
+    const mod = game.modules?.get(moduleId);
+    if (mod?.active && mod?.path) return `${mod.path}/${rel}`;
+  } catch (e) {}
+  // Bundled into the system: fall back to system bundle folder.
+  return `systems/eq5e/bundles/${moduleId}/${rel}`;
+}
+
+function _stableHash(obj) {
+  const s = JSON.stringify(obj);
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return (h >>> 0).toString(16);
+}
+
+async function ensureWorldPack({ key, label, type="Item" }) {
+  const existing = game.packs?.get(key);
+  if (existing) return existing;
+  if (!game.user.isGM) throw new Error("Only GM can create world compendiums.");
+  return foundry.documents.collections.CompendiumCollection.createCompendium({
+    label,
+    name: key.split(".")[1],
+    type,
+    package: "world"
+  });
+}
+
+async function upsertByKey(pack, items, keyFn) {
+  const existing = await pack.getDocuments();
+  const byKey = new Map();
+  for (const d of existing) {
+    const k = keyFn(d);
+    if (k) byKey.set(k, d);
+  }
+
+  const toCreate = [];
+  const toUpdate = [];
+
+  for (const it of (items ?? [])) {
+    const k = keyFn(it);
+    if (!k) continue;
+    const doc = byKey.get(k);
+    const h = _stableHash((game.eq5e?.normalizeItemData ? game.eq5e.normalizeItemData(it) : it));
+
+    if (!doc) {
+      it.flags = it.flags ?? {};
+      it.flags.eq5e = it.flags.eq5e ?? {};
+      it.flags.eq5e.derivedHash = h;
+      toCreate.push(it);
+    } else {
+      const old = doc?.flags?.eq5e?.derivedHash;
+      if (old !== h) {
+        const upd = foundry.utils.duplicate(it);
+        upd._id = doc.id;
+        upd.flags = upd.flags ?? {};
+        upd.flags.eq5e = upd.flags.eq5e ?? {};
+        upd.flags.eq5e.derivedHash = h;
+        toUpdate.push(upd);
+      }
+    }
+  }
+
+  if (toCreate.length) await pack.documentClass.createDocuments(toCreate, { pack: pack.collection });
+  if (toUpdate.length) await pack.documentClass.updateDocuments(toUpdate, { pack: pack.collection });
+  return { created: toCreate.length, updated: toUpdate.length };
+}
+
+export async function generateBeastlordPacks() {
+  const features = await _fetchJSON(_modulePath(MOD, "data/abilities.json"));
+  const spells = await _fetchJSON(_modulePath(MOD, "data/spells.json"));
+
+  const featPack = await ensureWorldPack({ key: "world.eq5e-beastlord-features", label: "EQ5e Beastlord Features" });
+  const spellPack = await ensureWorldPack({ key: "world.eq5e-beastlord-spells", label: "EQ5e Beastlord Spells" });
+
+  for (const f of features) {
+    f.flags = f.flags ?? {}; f.flags.eq5e = f.flags.eq5e ?? {};
+    f.flags.eq5e.spell = f.flags.eq5e.spell ?? {};
+    f.flags.eq5e.spell.spellId = f.flags.eq5e.spell.spellId ?? f.flags.eq5e?.sourceId ?? f.name;
+  }
+
+  await upsertByKey(featPack, features, d => d?.flags?.eq5e?.spell?.spellId);
+  await upsertByKey(spellPack, spells, d => d?.flags?.eq5e?.spell?.spellId);
+
+  ui.notifications?.info("EQ5E: Beastlord packs generated/updated.");
+}
+
+export async function mergeBeastlordAAsIntoSharedPack() {
+  const aas = await _fetchJSON(_modulePath(MOD, "data/aas.json"));
+  const pack = await ensureWorldPack({ key: "world.eq5e-aa", label: "EQ5e Alternate Abilities" });
+  const res = await upsertByKey(pack, aas, d => d?.flags?.eq5e?.aa?.aaId);
+  ui.notifications?.info(`EQ5E: Beastlord AAs merged: created ${res.created}, updated ${res.updated}.`);
+}
+
+Hooks.once("init", () => {
+  game.settings.register("eq5e", "beastlordOnStartup", {
+    name: "Generate Beastlord packs on startup",
+    hint: "Creates/updates Beastlord features & spell packs.",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: true
+  });
+
+  game.settings.register("eq5e", "beastlordAAsOnStartup", {
+    name: "Merge Beastlord AAs into shared AA pack on startup",
+    hint: "Upserts Beastlord AA items into world.eq5e-aa (used by the AA Browser).",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: true
+  });
+});
+
+Hooks.once("ready", async () => {
+  if (!game.user.isGM) return;
+  try {
+    if (game.settings.get("eq5e", "beastlordOnStartup")) await generateBeastlordPacks();
+    if (game.settings.get("eq5e", "beastlordAAsOnStartup")) await mergeBeastlordAAsIntoSharedPack();
+  } catch (e) {
+    console.error("[EQ5E] Beastlord startup failed", e);
+  }
+});

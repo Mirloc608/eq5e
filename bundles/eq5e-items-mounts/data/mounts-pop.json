@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Celestial Steed",
+    "type": "consumable",
+    "img": "icons/svg/angel.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Planes of Power Mount.</strong> Blessed mount; radiant presence.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 5000,
+        "denomination": "gp"
+      },
+      "rarity": "Legendary",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Planes of Power",
+        "type": "celestial",
+        "speed": 75
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.planes-of-power.celestial-steed",
+        "category": "mount",
+        "mount": {
+          "era": "Planes of Power",
+          "type": "celestial",
+          "speed": 75
+        }
+      }
+    }
+  },
+  {
+    "name": "Nightmare Steed",
+    "type": "consumable",
+    "img": "icons/svg/fire.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Planes of Power Mount.</strong> Smoldering hooves and a grim aura.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 5000,
+        "denomination": "gp"
+      },
+      "rarity": "Legendary",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Planes of Power",
+        "type": "fiend",
+        "speed": 75
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.planes-of-power.nightmare-steed",
+        "category": "mount",
+        "mount": {
+          "era": "Planes of Power",
+          "type": "fiend",
+          "speed": 75
+        }
+      }
+    }
+  },
+  {
+    "name": "Spectral Horse",
+    "type": "consumable",
+    "img": "icons/svg/ghost.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Planes of Power Mount.</strong> Ethereal mount; unnerving and swift.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 6500,
+        "denomination": "gp"
+      },
+      "rarity": "Legendary",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Planes of Power",
+        "type": "spectral",
+        "speed": 80
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.planes-of-power.spectral-horse",
+        "category": "mount",
+        "mount": {
+          "era": "Planes of Power",
+          "type": "spectral",
+          "speed": 80
+        }
+      }
+    }
+  },
+  {
+    "name": "Pegasus (Bound)",
+    "type": "consumable",
+    "img": "icons/svg/bird.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Planes of Power Mount.</strong> No sustained flight; dramatic leaps.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 8000,
+        "denomination": "gp"
+      },
+      "rarity": "Legendary",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Planes of Power",
+        "type": "pegasus",
+        "speed": 80
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.planes-of-power.pegasus-bound",
+        "category": "mount",
+        "mount": {
+          "era": "Planes of Power",
+          "type": "pegasus",
+          "speed": 80
+        }
+      }
+    }
+  },
+  {
+    "name": "Planar War Boar",
+    "type": "consumable",
+    "img": "icons/svg/boar.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Planes of Power Mount.</strong> A brutal boar empowered by planar energies.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 3500,
+        "denomination": "gp"
+      },
+      "rarity": "Epic",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Planes of Power",
+        "type": "boar",
+        "speed": 70
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.planes-of-power.planar-war-boar",
+        "category": "mount",
+        "mount": {
+          "era": "Planes of Power",
+          "type": "boar",
+          "speed": 70
+        }
+      }
+    }
+  },
+  {
+    "name": "Gilded Clockwork Charger",
+    "type": "consumable",
+    "img": "icons/svg/robot.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Planes of Power Mount.</strong> Advanced clockwork charger; tireless.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 6000,
+        "denomination": "gp"
+      },
+      "rarity": "Legendary",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Planes of Power",
+        "type": "mechanical",
+        "speed": 75
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.planes-of-power.gilded-clockwork-charger",
+        "category": "mount",
+        "mount": {
+          "era": "Planes of Power",
+          "type": "mechanical",
+          "speed": 75
+        }
+      }
+    }
+  }
+]

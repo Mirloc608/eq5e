@@ -1,0 +1,235 @@
+[
+  {
+    "name": "Improved Backstab",
+    "type": "feat",
+    "img": "icons/skills/melee/strike-dagger-dark.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.rog.improved-backstab",
+          "tab": "Offense",
+          "maxRank": 10,
+          "costPerRank": 3,
+          "description": "Increases Backstab precision damage by +1d6 every 2 ranks.",
+          "scales": {
+            "backstabDicePer2Ranks": 1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.rogue.backstabBonusDice",
+              "mode": "override",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Poison Mastery",
+    "type": "feat",
+    "img": "icons/magic/acid/projectile-bubble.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.rog.poison-mastery",
+          "tab": "Poisons",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Increases poison damage by 6% per rank.",
+          "scales": {
+            "poisonDmgPctPerRank": 0.06
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.rogue.poisonDamagePct",
+              "mode": "override",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Escape",
+    "type": "feat",
+    "img": "icons/skills/movement/figure-running-gray.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.rog.escape",
+          "tab": "Utility",
+          "maxRank": 3,
+          "costPerRank": 4,
+          "description": "Increases Evade threat drop by +10% per rank.",
+          "scales": {
+            "evadeDropPctPerRank": 0.1
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.rogue.evadeDropBonusPct",
+              "mode": "override",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Ambidexterity",
+    "type": "feat",
+    "img": "icons/skills/melee/swords-parry-orange.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.rog.ambidexterity",
+          "tab": "Offense",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Increases offhand damage by 5% per rank (future hook).",
+          "scales": {
+            "offhandDmgPctPerRank": 0.05
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.rogue.offhandDamagePct",
+              "mode": "override",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  },
+  {
+    "name": "Improved Evasion",
+    "type": "feat",
+    "img": "icons/skills/movement/arrow-curve-left.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "aaId": "aa.rog.improved-evasion",
+          "tab": "Defense",
+          "maxRank": 5,
+          "costPerRank": 3,
+          "description": "Improves Evasion (cooldown reduction at ranks 3 and 5).",
+          "scales": {
+            "evasionCdrAtRanks": [
+              3,
+              5
+            ]
+          },
+          "effects": [
+            {
+              "key": "flags.eq5e.rogue.evasionCooldownReduction",
+              "mode": "override",
+              "value": "0"
+            }
+          ],
+          "prereqs": []
+        }
+      }
+    },
+    "maxRank": 3,
+    "ranks": [
+      {
+        "rank": 1,
+        "cost": 3,
+        "bonus": 0.03
+      },
+      {
+        "rank": 2,
+        "cost": 6,
+        "bonus": 0.06
+      },
+      {
+        "rank": 3,
+        "cost": 9,
+        "bonus": 0.1
+      }
+    ]
+  }
+]

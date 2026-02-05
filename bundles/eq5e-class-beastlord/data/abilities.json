@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Beastlord (Class Feature)",
+    "type": "feat",
+    "img": "icons/creatures/mammals/wolf-howl-grey.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "class": {
+          "id": "beastlord",
+          "role": "hybrid",
+          "primary": "wis"
+        }
+      }
+    }
+  },
+  {
+    "name": "Warder Bond",
+    "type": "feat",
+    "img": "icons/creatures/mammals/wolf-companion.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "class": {
+          "id": "beastlord",
+          "feature": "warder"
+        }
+      }
+    }
+  }
+]

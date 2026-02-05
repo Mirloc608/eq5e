@@ -1,0 +1,183 @@
+const MODULE_ID = "eq5e-class-rogue";
+
+async function ensureWorldPack({ pack, label, type="Item" }) {
+  const exists = game.packs?.get(pack);
+  if (exists) return exists;
+  const meta = {
+    name: pack.split(".")[1],
+    label,
+    type,
+    system: "eq5e",
+    package: "world",
+    path: `packs/${pack.split(".")[1]}.db`,
+  };
+  return await CompendiumCollection.createCompendium(meta);
+}
+
+async function fetchJSON(rel) {
+  const url = `systems/eq5e/bundles/${MODULE_ID}/${rel}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Fetch failed ${res.status} for ${url}`);
+  return res.json();
+}
+
+function stableHash(obj) {
+  const s = JSON.stringify(obj);
+  let h = 2166136261;
+  for (let i=0;i<s.length;i++) { h ^= s.charCodeAt(i); h = Math.imul(h,16777619); }
+  return (h>>>0).toString(16);
+}
+
+async function upsertJSONToPack({ rel, pack, label, key }) {
+  const docs = await fetchJSON(rel);
+  const p = await ensureWorldPack({ pack, label, type: "Item" });
+  await p.getIndex();
+  const existingDocs = await p.getDocuments();
+  const byKey = new Map();
+  for (const d of existingDocs) {
+    try { byKey.set(String(key(d)), d); } catch {}
+  }
+  const toCreate = [];
+  const toUpdate = [];
+  for (const raw of docs) {
+    const d = foundry.utils.duplicate(raw);
+    d.flags = d.flags ?? {};
+    d.flags.eq5e = d.flags.eq5e ?? {};
+    d.flags.eq5e.derivedHash = stableHash((game.eq5e?.normalizeItemData ? game.eq5e.normalizeItemData(d) : d));
+    const k = String(key(d));
+    const ex = byKey.get(k);
+    if (!ex) toCreate.push(d);
+    else if (ex.flags?.eq5e?.derivedHash !== d.flags.eq5e.derivedHash) {
+      d._id = ex.id;
+      toUpdate.push(d);
+    }
+  }
+  if (toCreate.length) await p.documentClass.createDocuments(toCreate, { pack: p.collection });
+  if (toUpdate.length) await p.documentClass.updateDocuments(toUpdate, { pack: p.collection });
+  return { created: toCreate.length, updated: toUpdate.length };
+}
+
+const IMPORTS = [
+  { rel: "data/abilities.json", pack: "world.eq5e-rogue-abilities", label: "EQ5e Rogue Abilities",
+    key: d => d?.flags?.eq5e?.ability?.abilityId ?? d?.flags?.eq5e?.passive?.passiveId ?? d?.name },
+  { rel: "data/aas.json", pack: "world.eq5e-aa", label: "EQ5e Alternate Abilities",
+    key: d => d?.flags?.eq5e?.aa?.aaId },
+];
+
+Hooks.once("ready", async () => {
+  if (!game.user.isGM) return;
+  try {
+    for (const imp of IMPORTS) await upsertJSONToPack(imp);
+    console.log(`[EQ5E] ${MODULE_ID} loaded packs.`);
+  } catch (e) { console.error(`[EQ5E] ${MODULE_ID} pack load failed`, e); }
+});
+
+/* ----------------------------- ROGUE SHEET WIDGET -------------------------- */
+
+function _isRogueActor(actor) {
+  const cid = String(actor?.flags?.eq5e?.class?.id ?? actor?.flags?.eq5e?.classId ?? "").toLowerCase();
+  if (cid === "rogue") return true;
+  return actor.items?.some(i => String(i?.flags?.eq5e?.ability?.abilityId ?? "").startsWith("rog.")) ?? false;
+}
+
+function _findRogueAbility(actor, abilityId) {
+  return actor?.items?.find(i => i?.flags?.eq5e?.ability?.abilityId === abilityId) ?? null;
+}
+
+function _getFirstTargetToken() {
+  try { return Array.from(game.user.targets)[0] ?? null; } catch { return null; }
+}
+
+function _renderRogueWidget(app, html) {
+  const actor = app?.actor;
+  if (!actor) return;
+  if (!actor.isOwner) return;
+  if (!_isRogueActor(actor)) return;
+  if (html.find(".eq5e-rogue-widget").length) return;
+
+  const poisonPct = Number(actor.flags?.eq5e?.rogue?.poisonDamagePct ?? 0);
+  const bsDice = Number(actor.flags?.eq5e?.rogue?.backstabBonusDice ?? 0);
+  const evadeBonus = Number(actor.flags?.eq5e?.rogue?.evadeDropBonusPct ?? 0);
+
+  const procs = game.eq5e.api.getOnHitProcs(actor);
+  const venom = procs.find(p => String(p?.procId ?? "") === "rog.poison.venom");
+  const venomCharges = Number(venom?.charges ?? 0);
+
+  const widget = $(`
+    <section class="eq5e-rogue-widget" style="border:1px solid rgba(255,255,255,.12); border-radius:8px; padding:8px; margin:6px 0;">
+      <header style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+        <h3 style="margin:0; font-size:14px;">Rogue</h3>
+        <button type="button" class="eq5e-rogue-refresh" title="Refresh"><i class="fa-solid fa-rotate"></i></button>
+      </header>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px;">
+        <div style="border:1px solid rgba(255,255,255,.08); border-radius:8px; padding:8px;">
+          <div style="font-size:12px; opacity:.8; margin-bottom:6px;">Poisons / Threat</div>
+
+          <div style="display:flex; gap:6px; align-items:center;">
+            <button type="button" class="eq5e-rogue-arm-venom"><i class="fa-solid fa-vial"></i> Arm Venom</button>
+            <span style="font-size:12px; opacity:.85;">Charges: <b class="eq5e-rogue-venom-ch">${venomCharges}</b></span>
+          </div>
+
+          <div style="display:flex; gap:6px; margin-top:8px; align-items:center;">
+            <button type="button" class="eq5e-rogue-evade"><i class="fa-solid fa-user-ninja"></i> Evade</button>
+            <span style="font-size:12px; opacity:.75;">(Requires a targeted NPC)</span>
+          </div>
+
+          <div style="font-size:12px; opacity:.75; margin-top:8px;">
+            Poison Mastery: <b>${Math.round(poisonPct*100)}%</b> bonus poison damage.
+          </div>
+        </div>
+
+        <div style="border:1px solid rgba(255,255,255,.08); border-radius:8px; padding:8px;">
+          <div style="font-size:12px; opacity:.8; margin-bottom:6px;">AA Readout</div>
+          <div style="font-size:12px; display:grid; grid-template-columns: 1fr auto; gap:4px 10px;">
+            <span>Backstab Bonus Dice</span><b>${bsDice}d6</b>
+            <span>Poison Damage %</span><b>${Math.round(poisonPct*100)}%</b>
+            <span>Evade Bonus Drop %</span><b>${Math.round(evadeBonus*100)}%</b>
+          </div>
+        </div>
+      </div>
+    </section>
+  `);
+
+  const form = html.find("form");
+  if (form.length) form.prepend(widget);
+  else html.prepend(widget);
+
+  async function _refresh() { try { await app.render(false); } catch {} }
+  widget.find(".eq5e-rogue-refresh").on("click", _refresh);
+
+  widget.find(".eq5e-rogue-arm-venom").on("click", async () => {
+    const item = _findRogueAbility(actor, "rog.poison.venom");
+    if (!item) return ui.notifications?.warn("You don't have Apply Poison: Venom on this actor.");
+    const proc = item.flags?.eq5e?.ability?.proc ?? null;
+    if (!proc) return ui.notifications?.warn("Venom ability is missing proc definition.");
+    await game.eq5e.api.armOnHitProc({
+      actor,
+      procId: "rog.poison.venom",
+      charges: Number(proc.charges ?? 1),
+      effect: proc.effect ?? {},
+      sourceItemUuid: item.uuid
+    });
+    ui.notifications?.info("Venom armed: your next melee hit will apply poison.");
+    await _refresh();
+  });
+
+  widget.find(".eq5e-rogue-evade").on("click", async () => {
+    const item = _findRogueAbility(actor, "rog.evade");
+    if (!item) return ui.notifications?.warn("You don't have Evade on this actor.");
+    const dropPct = Number(item.flags?.eq5e?.ability?.threat?.dropPct ?? 0.35) + Number(actor.flags?.eq5e?.rogue?.evadeDropBonusPct ?? 0);
+    const tgt = _getFirstTargetToken();
+    if (!tgt) return ui.notifications?.warn("Target an NPC token first (click target).");
+    const npc = tgt.actor;
+    if (!npc) return ui.notifications?.warn("Target has no actor.");
+    await game.eq5e.api.dropThreat({ npcActor: npc, sourceActor: actor, dropPct });
+    ui.notifications?.info(`Evade: reduced threat on ${npc.name}.`);
+    await _refresh();
+  });
+}
+
+Hooks.on("renderActorSheet", (app, html) => {
+  try { _renderRogueWidget(app, html); } catch (e) { console.error("[EQ5E] Rogue widget error", e); }
+});

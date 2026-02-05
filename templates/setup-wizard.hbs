@@ -1,0 +1,97 @@
+<form class="eq5e-setup">
+  <p class="notes">
+    This wizard imports EQ5e content into <b>world compendiums</b> (safe to edit) while keeping system/module compendiums pristine.
+  </p>
+
+  <fieldset>
+    <legend>Core Imports</legend>
+    <label class="checkbox">
+      <input type="checkbox" name="importConditions" checked>
+      Import core Conditions into <code>world.eq5e-conditions</code>
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" name="importAAs" checked>
+      Ensure shared AA pack <code>world.eq5e-aa</code> and import AA definitions from selected class modules
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" name="importClasses" checked>
+      Import spells/disciplines/features from selected class modules into world packs
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Class Modules</legend>
+    <p class="notes">Only installed & enabled modules will import.</p>
+    {{#each classes as |c|}}
+      <label class="checkbox {{#unless c.installed}}disabled{{/unless}}">
+        <input type="checkbox" name="classes" value="{{c.module}}" {{#if c.installed}}checked{{else}}disabled{{/if}}>
+        {{c.name}} <span class="muted">({{c.module}})</span>
+      </label>
+    {{/each}}
+  </fieldset>
+
+
+<fieldset>
+  <legend>Apply to Actors</legend>
+  <label class="checkbox">
+    <input type="checkbox" name="applyToActors">
+    Apply imported class content directly onto selected character sheets (adds missing items; safe to rerun)
+  </label>
+
+  <div class="actor-grid">
+    {{#each actors as |a|}}
+  <div class="actor-row">
+    <label class="actor checkbox">
+      <input type="checkbox" name="actors" value="{{a.id}}">
+      <span class="nm">{{a.name}}</span>
+      <span class="cls">{{a.classId}}</span>
+    </label>
+    <select class="classSel" data-action="set-class" data-actor-id="{{a.id}}">
+      {{#each ../classOptions as |co|}}
+        <option value="{{co.id}}" {{#if (eq co.id a.classId)}}selected{{/if}}>{{co.label}}</option>
+      {{/each}}
+      </select>
+  <select class="raceSel" data-action="set-race" data-actor-id="{{a.id}}">
+    {{#each ../raceOptions as |ro|}}
+      <option value="{{ro.id}}" {{#if (eq ro.id a.raceId)}}selected{{/if}}>{{ro.label}}</option>
+    {{/each}}
+  </select>
+  <span class="raceTraits muted" data-actor-id="{{a.id}}"></span>
+  <span class="racialAAs muted" data-actor-id="{{a.id}}"></span>
+</div>
+{{/each}}
+  </div>
+  <p class="notes muted">Tip: Make sure your character has <code>flags.eq5e.class.id</code> set (e.g., ranger, bard) so the wizard knows which class pack to apply.</p>
+</fieldset>
+
+  <div class="buttons">
+    <button type="button" data-action="run"><i class="fas fa-play"></i> Run Setup</button>
+    <button type="button" data-action="close"><i class="fas fa-xmark"></i> Close</button>
+  </div>
+
+  <div class="eq5e-setup-log"></div>
+</form>
+
+<hr/>
+<section class="eq5e-beta-readiness" style="margin-top:10px;">
+  <h3 style="margin:6px 0;">Beta Readiness</h3>
+  <div class="muted" style="font-size:12px;opacity:0.85;margin-bottom:6px;">
+    Quick sanity checks before tagging v1.0-beta. Use Export to capture a snapshot for GitHub issues/releases.
+  </div>
+
+  <div class="beta-grid" style="display:grid;grid-template-columns:1fr;gap:6px;">
+    <div>
+      <strong>Status:</strong>
+      <span class="betaStatus muted">…</span>
+    </div>
+
+    <div class="betaChecks" style="font-size:12px;line-height:1.4;"></div>
+
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:4px;">
+      <button type="button" class="eq5e-export-beta-report"><i class="fas fa-file-export"></i> Export Beta Report (JSON)</button>
+      <button type="button" class="eq5e-refresh-beta-report"><i class="fas fa-sync"></i> Refresh</button>
+      <span class="muted betaTimestamp" style="font-size:12px;opacity:0.75;"></span>
+    </div>
+  </div>
+</section>
+

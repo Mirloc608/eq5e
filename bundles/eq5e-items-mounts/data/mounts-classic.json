@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Riding Horse (Common)",
+    "type": "consumable",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Classic Mount.</strong> A sturdy riding horse. Simple tack.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 75,
+        "denomination": "gp"
+      },
+      "rarity": "Common",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Classic",
+        "type": "horse",
+        "speed": 40
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.classic.riding-horse-common",
+        "category": "mount",
+        "mount": {
+          "era": "Classic",
+          "type": "horse",
+          "speed": 40
+        }
+      }
+    }
+  },
+  {
+    "name": "Pack Mule",
+    "type": "consumable",
+    "img": "icons/svg/bag.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Classic Mount.</strong> Reliable pack animal; hauling-focused.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 40,
+        "denomination": "gp"
+      },
+      "rarity": "Common",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Classic",
+        "type": "mule",
+        "speed": 30
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.classic.pack-mule",
+        "category": "mount",
+        "mount": {
+          "era": "Classic",
+          "type": "mule",
+          "speed": 30
+        }
+      }
+    }
+  },
+  {
+    "name": "Warhorse (Trained)",
+    "type": "consumable",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Classic Mount.</strong> Bred for battle; steadier under fire.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 250,
+        "denomination": "gp"
+      },
+      "rarity": "Uncommon",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Classic",
+        "type": "horse",
+        "speed": 45
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.classic.warhorse-trained",
+        "category": "mount",
+        "mount": {
+          "era": "Classic",
+          "type": "horse",
+          "speed": 45
+        }
+      }
+    }
+  },
+  {
+    "name": "Karanas Courser",
+    "type": "consumable",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Classic Mount.</strong> Fast plains runner. Popular with travelers.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 400,
+        "denomination": "gp"
+      },
+      "rarity": "Rare",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Classic",
+        "type": "horse",
+        "speed": 50
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.classic.karanas-courser",
+        "category": "mount",
+        "mount": {
+          "era": "Classic",
+          "type": "horse",
+          "speed": 50
+        }
+      }
+    }
+  },
+  {
+    "name": "Desert Camel",
+    "type": "consumable",
+    "img": "icons/svg/anchor.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Classic Mount.</strong> Sure-footed in sand and heat.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 120,
+        "denomination": "gp"
+      },
+      "rarity": "Uncommon",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Classic",
+        "type": "camel",
+        "speed": 40
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.classic.desert-camel",
+        "category": "mount",
+        "mount": {
+          "era": "Classic",
+          "type": "camel",
+          "speed": 40
+        }
+      }
+    }
+  },
+  {
+    "name": "Hill Pony",
+    "type": "consumable",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Classic Mount.</strong> Small but tough; good for rough trails.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 55,
+        "denomination": "gp"
+      },
+      "rarity": "Common",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Classic",
+        "type": "pony",
+        "speed": 35
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.classic.hill-pony",
+        "category": "mount",
+        "mount": {
+          "era": "Classic",
+          "type": "pony",
+          "speed": 35
+        }
+      }
+    }
+  }
+]

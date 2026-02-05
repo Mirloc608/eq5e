@@ -1,0 +1,80 @@
+[
+  {
+    "id": "mag.elemental.fire.advanced",
+    "name": "Greater Fire Elemental",
+    "tier": 2,
+    "role": "dps",
+    "stats": {
+      "hp": 85,
+      "ac": 14,
+      "attackBonus": 6,
+      "damageBonus": 4
+    },
+    "resists": {
+      "fire": 120,
+      "cold": 40
+    },
+    "abilities": [
+      "Flame Strike",
+      "Burning Aura"
+    ]
+  },
+  {
+    "id": "mag.elemental.earth.advanced",
+    "name": "Greater Earth Elemental",
+    "tier": 2,
+    "role": "tank",
+    "stats": {
+      "hp": 130,
+      "ac": 18,
+      "attackBonus": 5,
+      "damageBonus": 2
+    },
+    "resists": {
+      "earth": 120,
+      "magic": 40
+    },
+    "abilities": [
+      "Stone Fists",
+      "Taunting Slam"
+    ]
+  },
+  {
+    "id": "mag.elemental.air.advanced",
+    "name": "Greater Air Elemental",
+    "tier": 2,
+    "role": "dps",
+    "stats": {
+      "hp": 75,
+      "ac": 13,
+      "attackBonus": 7,
+      "damageBonus": 3
+    },
+    "resists": {
+      "electric": 120
+    },
+    "abilities": [
+      "Lightning Jab",
+      "Static Burst"
+    ]
+  },
+  {
+    "id": "mag.elemental.water.advanced",
+    "name": "Greater Water Elemental",
+    "tier": 2,
+    "role": "control",
+    "stats": {
+      "hp": 95,
+      "ac": 15,
+      "attackBonus": 5,
+      "damageBonus": 2
+    },
+    "resists": {
+      "cold": 120
+    },
+    "abilities": [
+      "Freezing Touch",
+      "Crushing Wave"
+    ]
+  }
+]

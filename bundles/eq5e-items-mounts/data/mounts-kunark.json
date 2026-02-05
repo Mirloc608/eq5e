@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Scaled Raptor (Tamed)",
+    "type": "consumable",
+    "img": "icons/svg/dinosaur.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Kunark Mount.</strong> A swift, clawed runner. Requires experienced rider.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 650,
+        "denomination": "gp"
+      },
+      "rarity": "Rare",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Kunark",
+        "type": "raptor",
+        "speed": 50
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.kunark.scaled-raptor-tamed",
+        "category": "mount",
+        "mount": {
+          "era": "Kunark",
+          "type": "raptor",
+          "speed": 50
+        }
+      }
+    }
+  },
+  {
+    "name": "Swamp Strider",
+    "type": "consumable",
+    "img": "icons/svg/lizard.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Kunark Mount.</strong> Handles mire and reeds better than hooves.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 500,
+        "denomination": "gp"
+      },
+      "rarity": "Rare",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Kunark",
+        "type": "lizard",
+        "speed": 45
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.kunark.swamp-strider",
+        "category": "mount",
+        "mount": {
+          "era": "Kunark",
+          "type": "lizard",
+          "speed": 45
+        }
+      }
+    }
+  },
+  {
+    "name": "Iksar War Lizard",
+    "type": "consumable",
+    "img": "icons/svg/lizard.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Kunark Mount.</strong> Tough hide; intimidating presence.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 900,
+        "denomination": "gp"
+      },
+      "rarity": "Epic",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Kunark",
+        "type": "lizard",
+        "speed": 55
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.kunark.iksar-war-lizard",
+        "category": "mount",
+        "mount": {
+          "era": "Kunark",
+          "type": "lizard",
+          "speed": 55
+        }
+      }
+    }
+  },
+  {
+    "name": "Sarnak Battle Drake (Young)",
+    "type": "consumable",
+    "img": "icons/svg/dragon.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Kunark Mount.</strong> Young drake fit for riding. Not a full dragon.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 1500,
+        "denomination": "gp"
+      },
+      "rarity": "Legendary",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Kunark",
+        "type": "drake",
+        "speed": 60
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.kunark.sarnak-battle-drake-young",
+        "category": "mount",
+        "mount": {
+          "era": "Kunark",
+          "type": "drake",
+          "speed": 60
+        }
+      }
+    }
+  },
+  {
+    "name": "Jungle Tiger",
+    "type": "consumable",
+    "img": "icons/svg/cat.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Kunark Mount.</strong> Silent stalker mount; excellent in dense terrain.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 800,
+        "denomination": "gp"
+      },
+      "rarity": "Epic",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Kunark",
+        "type": "cat",
+        "speed": 55
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.kunark.jungle-tiger",
+        "category": "mount",
+        "mount": {
+          "era": "Kunark",
+          "type": "cat",
+          "speed": 55
+        }
+      }
+    }
+  },
+  {
+    "name": "Stubborn Pack Boar",
+    "type": "consumable",
+    "img": "icons/svg/boar.svg",
+    "system": {
+      "description": {
+        "value": "<p><strong>Kunark Mount.</strong> Stubborn and strong; good pack mount.</p>"
+      },
+      "quantity": 1,
+      "weight": 0,
+      "price": {
+        "value": 350,
+        "denomination": "gp"
+      },
+      "rarity": "Uncommon",
+      "consumableType": "trinket",
+      "mount": {
+        "era": "Kunark",
+        "type": "boar",
+        "speed": 45
+      }
+    },
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "sourceId": "mount.kunark.stubborn-pack-boar",
+        "category": "mount",
+        "mount": {
+          "era": "Kunark",
+          "type": "boar",
+          "speed": 45
+        }
+      }
+    }
+  }
+]

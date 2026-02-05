@@ -1,0 +1,138 @@
+[
+  {
+    "name": "Mend",
+    "type": "feat",
+    "img": "icons/skills/wounds/bandage-roll.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "abilityId": "mnk.abil.mend",
+          "cooldownRounds": 10,
+          "kind": "utility",
+          "desc": "Restore a portion of your health. Cooldown reduced by Hastened Mend AA."
+        },
+        "spell": {
+          "spellId": "mnk.abil.mend",
+          "kind": "heal",
+          "enabled": true,
+          "manaCost": 0,
+          "rangeFt": 0,
+          "meta": {
+            "mana": 0,
+            "range": 0,
+            "notes": "Monk Mend (scales lightly with proficiency)."
+          },
+          "damage": [
+            {
+              "formula": "2d8+@attributes.prof",
+              "type": "healing",
+              "tags": [
+                "mend"
+              ]
+            }
+          ]
+        },
+        "cooldown": {
+          "type": "rounds",
+          "value": 10
+        }
+      }
+    }
+  },
+  {
+    "name": "Feign Death",
+    "type": "feat",
+    "img": "icons/skills/social/silhouette-lying-down.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "abilityId": "mnk.abil.feign-death",
+          "cooldownRounds": 8,
+          "kind": "utility",
+          "desc": "Attempt to drop threat and appear dead. (Initial implementation: sets a Feign Death status flag for later threat handling.)"
+        },
+        "spell": {
+          "spellId": "mnk.abil.feign-death",
+          "kind": "utility",
+          "enabled": true,
+          "manaCost": 0,
+          "rangeFt": 0,
+          "meta": {
+            "mana": 0,
+            "range": 0,
+            "notes": "Sets flags.eq5e.monk.feignDeath=true for 1 round (mechanics pass later)."
+          },
+          "conditions": [
+            {
+              "id": "feignDeath",
+              "label": "Feign Death",
+              "durationRounds": 1,
+              "changes": [
+                {
+                  "key": "flags.eq5e.monk.feignDeath",
+                  "mode": "OVERRIDE",
+                  "value": "true"
+                }
+              ],
+              "flags": {
+                "eq5e": {
+                  "disposition": "self"
+                }
+              }
+            }
+          ]
+        },
+        "cooldown": {
+          "type": "rounds",
+          "value": 8
+        }
+      }
+    }
+  },
+  {
+    "name": "Flying Kick",
+    "type": "feat",
+    "img": "icons/skills/melee/kick-boot-steel.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "abilityId": "mnk.abil.flying-kick",
+          "cooldownRounds": 3,
+          "kind": "utility",
+          "desc": "A powerful kick attack. (Pairs with Monk discipline kit; cooldown can be reduced via AA later.)"
+        },
+        "spell": {
+          "spellId": "mnk.abil.flying-kick",
+          "kind": "damage",
+          "enabled": true,
+          "manaCost": 0,
+          "rangeFt": 5,
+          "damage": [
+            {
+              "formula": "1d10+@abilities.dex.mod",
+              "type": "bludgeoning",
+              "category": "melee",
+              "tags": [
+                "kick",
+                "flying"
+              ]
+            }
+          ],
+          "meta": {
+            "mana": 0,
+            "range": 5,
+            "threatBonus": 5,
+            "notes": "Monk Flying Kick (baseline)."
+          }
+        },
+        "cooldown": {
+          "type": "rounds",
+          "value": 3
+        }
+      }
+    }
+  }
+]

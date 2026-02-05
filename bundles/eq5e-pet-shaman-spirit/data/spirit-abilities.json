@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Spirit Bolt",
+    "type": "spell",
+    "img": "icons/magic/air/lightning-bolt-white.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.sha.spirit.bolt",
+          "kind": "nuke",
+          "rangeFt": 90,
+          "manaCost": 4,
+          "cooldownRounds": 2,
+          "priority": 55,
+          "damage": [
+            {
+              "formula": "1d10+2",
+              "type": "magic"
+            }
+          ],
+          "meta": {
+            "petRotation": "sha.spirit.basic"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Withering Hex",
+    "type": "spell",
+    "img": "icons/magic/death/skull-poison-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.sha.spirit.hex",
+          "kind": "dot",
+          "rangeFt": 80,
+          "manaCost": 4,
+          "cooldownRounds": 4,
+          "priority": 45,
+          "damage": [
+            {
+              "formula": "1d6+1",
+              "type": "disease",
+              "category": "tick",
+              "durationRounds": 3
+            }
+          ],
+          "meta": {
+            "petRotation": "sha.spirit.basic",
+            "dot": true,
+            "durationRounds": 3
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Spirit Mend",
+    "type": "spell",
+    "img": "icons/magic/life/heart-cross-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.sha.spirit.mend",
+          "kind": "heal",
+          "rangeFt": 60,
+          "manaCost": 5,
+          "cooldownRounds": 3,
+          "priority": 60,
+          "damage": [],
+          "heal": [
+            {
+              "formula": "1d10+3"
+            }
+          ],
+          "meta": {
+            "petRotation": "sha.spirit.basic",
+            "target": "allyLowestHpPct"
+          }
+        }
+      }
+    }
+  }
+]

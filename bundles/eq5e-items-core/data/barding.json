@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Leather Barding",
+    "type": "barding",
+    "system": {
+      "barding": {
+        "armorType": "light",
+        "acBonus": 1,
+        "speedPenalty": 0
+      }
+    }
+  }
+]

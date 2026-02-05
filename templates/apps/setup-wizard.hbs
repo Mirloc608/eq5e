@@ -1,0 +1,40 @@
+<form class="eq5e setup-wizard" autocomplete="off">
+  <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
+    <p style="margin:0; opacity:0.85;">
+      This wizard sets <code>flags.eq5e.classId</code> and <code>flags.eq5e.raceId</code> on Character actors.
+    </p>
+    <div style="display:flex; gap:6px;">
+      <button type="button" data-action="refresh"><i class="fas fa-sync"></i> Refresh</button>
+      <button type="button" data-action="apply"><i class="fas fa-check"></i> Apply</button>
+    </div>
+  </div>
+
+  <hr/>
+
+  <table style="width:100%;">
+    <thead>
+      <tr>
+        <th style="text-align:left;">Actor</th>
+        <th style="text-align:left;">Class Id</th>
+        <th style="text-align:left;">Race Id</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each rows}}
+      <tr data-actor-id="{{this.id}}">
+        <td style="padding:4px 6px;">{{this.name}}</td>
+        <td style="padding:4px 6px;">
+          <input type="text" name="classId" value="{{this.classId}}" placeholder="{{../classIdHint}}" style="width:100%;">
+        </td>
+        <td style="padding:4px 6px;">
+          <input type="text" name="raceId" value="{{this.raceId}}" placeholder="{{../raceIdHint}}" style="width:100%;">
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <p style="margin-top:10px; opacity:0.8; font-size:0.9em;">
+    Tip: Open <b>Configure Settings → EQ5e</b> and click <b>Open Setup Wizard</b>.
+  </p>
+</form>

@@ -1,0 +1,426 @@
+[
+  {
+    "name": "Battle Hardening",
+    "type": "feat",
+    "img": "icons/skills/melee/shield-block-blue.webp",
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "category": "Racial",
+          "maxRank": 1,
+          "cost": 3,
+          "prereq": {
+            "raceId": "ogre"
+          },
+          "aaId": "race.aa.battle-hardening",
+          "scales": {
+            "sideRearStunResistPctPerRank": 0.25
+          }
+        }
+      }
+    },
+    "system": {
+      "description": {
+        "value": "Reduces the chance to be stunned from side or rear attacks. (Passive)"
+      }
+    },
+    "effects": [
+      {
+        "name": "Battle Hardening",
+        "img": "icons/svg/aura.svg",
+        "disabled": false,
+        "transfer": true,
+        "changes": [
+          {
+            "key": "flags.eq5e.aa.sideRearStunResistPct",
+            "mode": 5,
+            "value": "0",
+            "priority": 20
+          }
+        ],
+        "duration": {},
+        "flags": {
+          "eq5e": {
+            "source": "racial-aa"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Improved Regeneration",
+    "type": "feat",
+    "img": "icons/magic/life/cross-area-circle-green.webp",
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "category": "Racial",
+          "maxRank": 3,
+          "cost": 2,
+          "prereq": {
+            "races": [
+              "iksar",
+              "troll"
+            ]
+          },
+          "aaId": "race.aa.improved-regeneration",
+          "scales": {
+            "hpRegenBonusPerRank": 1
+          }
+        }
+      }
+    },
+    "system": {
+      "description": {
+        "value": "Increases natural regeneration by 1 HP per rank. (Passive)"
+      }
+    },
+    "effects": [
+      {
+        "name": "Improved Regeneration",
+        "img": "icons/svg/aura.svg",
+        "disabled": false,
+        "transfer": true,
+        "changes": [
+          {
+            "key": "flags.eq5e.combat.hpRegenBonus",
+            "mode": 2,
+            "value": "0",
+            "priority": 20
+          }
+        ],
+        "duration": {},
+        "flags": {
+          "eq5e": {
+            "source": "racial-aa"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Innate Camouflage",
+    "type": "feat",
+    "img": "icons/magic/stealth/camouflage-brown-green.webp",
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "category": "Racial",
+          "maxRank": 2,
+          "cost": 2,
+          "prereq": {
+            "raceId": "darkelf"
+          },
+          "aaId": "race.aa.innate-camouflage",
+          "scales": {
+            "threatPctRedPerRank": 0.02,
+            "acBonusPerRank": 1
+          }
+        }
+      }
+    },
+    "system": {
+      "description": {
+        "value": "Slightly reduces threat generation and improves stealth checks. (Passive)"
+      }
+    },
+    "effects": [
+      {
+        "name": "Innate Camouflage",
+        "img": "icons/svg/aura.svg",
+        "disabled": false,
+        "transfer": true,
+        "changes": [
+          {
+            "key": "flags.eq5e.aa.threatPctRed",
+            "mode": 2,
+            "value": "0",
+            "priority": 20
+          },
+          {
+            "key": "flags.eq5e.combat.acBonus",
+            "mode": 2,
+            "value": "0",
+            "priority": 20
+          }
+        ],
+        "duration": {},
+        "flags": {
+          "eq5e": {
+            "source": "racial-aa"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Stonefist",
+    "type": "feat",
+    "img": "icons/skills/melee/unarmed-punch-fist.webp",
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "category": "Racial",
+          "maxRank": 2,
+          "cost": 2,
+          "prereq": {
+            "raceId": "dwarf"
+          },
+          "aaId": "race.aa.stonefist",
+          "scales": {
+            "damageBonusPerRank": 1,
+            "poisonResistPerRank": 2
+          }
+        }
+      }
+    },
+    "system": {
+      "description": {
+        "value": "Grants a small bonus to melee damage and poison resistance. (Passive)"
+      }
+    },
+    "effects": [
+      {
+        "name": "Stonefist",
+        "img": "icons/svg/aura.svg",
+        "disabled": false,
+        "transfer": true,
+        "changes": [
+          {
+            "key": "flags.eq5e.combat.damageBonus",
+            "mode": 2,
+            "value": "0",
+            "priority": 20
+          },
+          {
+            "key": "flags.eq5e.resists.poison",
+            "mode": 2,
+            "value": "0",
+            "priority": 20
+          }
+        ],
+        "duration": {},
+        "flags": {
+          "eq5e": {
+            "source": "racial-aa"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Natural Fortitude",
+    "type": "feat",
+    "img": "icons/magic/defensive/shield-barrier-stone.webp",
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "category": "Racial",
+          "maxRank": 2,
+          "cost": 2,
+          "prereq": {
+            "races": [
+              "barbarian",
+              "vahshir"
+            ]
+          },
+          "aaId": "race.aa.natural-fortitude",
+          "scales": {
+            "hpMaxBonusPerRank": 5
+          }
+        }
+      }
+    },
+    "system": {
+      "description": {
+        "value": "Increases maximum hit points by a small amount per rank. (Passive)"
+      }
+    },
+    "effects": [
+      {
+        "name": "Natural Fortitude",
+        "img": "icons/svg/aura.svg",
+        "disabled": false,
+        "transfer": true,
+        "changes": [
+          {
+            "key": "flags.eq5e.combat.hpMaxBonus",
+            "mode": 2,
+            "value": "0",
+            "priority": 20
+          }
+        ],
+        "duration": {},
+        "flags": {
+          "eq5e": {
+            "source": "racial-aa"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Arcane Attunement",
+    "type": "feat",
+    "img": "icons/magic/light/orb-glow-blue.webp",
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "category": "Racial",
+          "maxRank": 2,
+          "cost": 2,
+          "prereq": {
+            "races": [
+              "erudite",
+              "highelf"
+            ]
+          },
+          "aaId": "race.aa.arcane-attunement",
+          "scales": {
+            "spellDamagePctPerRank": 0.01,
+            "manaReductionPctPerRank": 0.01
+          }
+        }
+      }
+    },
+    "system": {
+      "description": {
+        "value": "Slightly improves spell potency and mana efficiency. (Passive)"
+      }
+    },
+    "effects": [
+      {
+        "name": "Arcane Attunement",
+        "img": "icons/svg/aura.svg",
+        "disabled": false,
+        "transfer": true,
+        "changes": [
+          {
+            "key": "flags.eq5e.combat.spellDamagePct",
+            "mode": 2,
+            "value": "0",
+            "priority": 20
+          },
+          {
+            "key": "flags.eq5e.combat.manaReductionPct",
+            "mode": 2,
+            "value": "0",
+            "priority": 20
+          }
+        ],
+        "duration": {},
+        "flags": {
+          "eq5e": {
+            "source": "racial-aa"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Small Stature",
+    "type": "feat",
+    "img": "icons/creatures/mammals/rodent-mouse-grey.webp",
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "category": "Racial",
+          "maxRank": 1,
+          "cost": 1,
+          "prereq": {
+            "races": [
+              "halfling",
+              "gnome"
+            ]
+          },
+          "aaId": "race.aa.small-stature"
+        }
+      }
+    },
+    "system": {
+      "description": {
+        "value": "Reduces chance to be hit by melee attacks. (Passive)"
+      }
+    },
+    "effects": [
+      {
+        "name": "Small Stature",
+        "img": "icons/svg/aura.svg",
+        "disabled": false,
+        "transfer": true,
+        "changes": [
+          {
+            "key": "flags.eq5e.combat.acBonus",
+            "mode": 2,
+            "value": "1",
+            "priority": 20
+          }
+        ],
+        "duration": {},
+        "flags": {
+          "eq5e": {
+            "source": "racial-aa"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Underground Resilience",
+    "type": "feat",
+    "img": "icons/magic/earth/stone-shield.webp",
+    "flags": {
+      "eq5e": {
+        "aa": {
+          "category": "Racial",
+          "maxRank": 2,
+          "cost": 2,
+          "prereq": {
+            "races": [
+              "dwarf",
+              "gnome"
+            ]
+          },
+          "aaId": "race.aa.underground-resilience",
+          "scales": {
+            "poisonResistPerRank": 2,
+            "diseaseResistPerRank": 2
+          }
+        }
+      }
+    },
+    "system": {
+      "description": {
+        "value": "Improves resistance to poison and disease effects. (Passive)"
+      }
+    },
+    "effects": [
+      {
+        "name": "Underground Resilience",
+        "img": "icons/svg/aura.svg",
+        "disabled": false,
+        "transfer": true,
+        "changes": [
+          {
+            "key": "flags.eq5e.resists.poison",
+            "mode": 2,
+            "value": "0",
+            "priority": 20
+          },
+          {
+            "key": "flags.eq5e.resists.disease",
+            "mode": 2,
+            "value": "0",
+            "priority": 20
+          }
+        ],
+        "duration": {},
+        "flags": {
+          "eq5e": {
+            "source": "racial-aa"
+          }
+        }
+      }
+    ]
+  }
+]

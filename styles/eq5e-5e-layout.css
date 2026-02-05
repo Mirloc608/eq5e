@@ -1,0 +1,323 @@
+/* -------------------------------------------- */
+/* EQ5E 5e-inspired layout scaffold             */
+/* (Visual: D&D 5e-ish columns and boxes)       */
+/* -------------------------------------------- */
+
+.eq5e-5e__form { height: 100%; }
+
+.eq5e-5e__header {
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 12px;
+  align-items: start;
+  padding: 8px 8px 2px 8px;
+}
+
+.eq5e-5e__nameInput {
+  font-size: 28px;
+  font-weight: 800;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+.eq5e-5e__sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.eq5e-5e__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.20);
+  border: 1px solid rgba(0,0,0,0.18);
+  font-size: 12px;
+}
+
+.eq5e-5e__inlineNum { width: 56px; text-align: center; }
+.eq5e-5e__inlineText { width: 140px; }
+
+.eq5e-5e__crest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.98;
+}
+.eq5e-5e__crest img { width: 120px; height: 120px; object-fit: contain; }
+.eq5e-5e__tiny { font-size: 11px; text-align: center; opacity: 0.9; }
+
+.eq5e-5e__body {
+  display: grid;
+  grid-template-columns: 220px 1fr 260px;
+  gap: 10px;
+  padding: 6px 8px 10px 8px;
+}
+
+.eq5e-5e__panel {
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.eq5e-5e__panelTitle {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.95;
+}
+
+.eq5e-5e__hint {
+  margin-top: 8px;
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+/* Abilities column (5e-ish stack) */
+.eq5e-5e__abilities {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.eq5e-5e__ability {
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 10px;
+  padding: 8px;
+  background: rgba(255,255,255,0.18);
+  text-align: center;
+}
+
+.eq5e-5e__abilityLabel { font-weight: 900; font-size: 12px; letter-spacing: 0.5px; }
+.eq5e-5e__abilityScore { font-size: 22px; font-weight: 900; margin-top: 2px; }
+.eq5e-5e__abilityMod { font-size: 14px; font-weight: 800; opacity: 0.9; }
+
+/* Combat row */
+.eq5e-5e__combatRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.eq5e-5e__statBox {
+  background: rgba(255,255,255,0.22);
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 12px;
+  padding: 10px 8px;
+  text-align: center;
+}
+
+.eq5e-5e__statLabel { font-size: 12px; font-weight: 900; text-transform: uppercase; opacity: 0.9; }
+.eq5e-5e__statValue { font-size: 24px; font-weight: 900; margin-top: 2px; }
+
+/* HP + resources */
+.eq5e-5e__hpRow {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.eq5e-5e__hpBox,
+.eq5e-5e__resourceBox {
+  background: rgba(255,255,255,0.22);
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 12px;
+  padding: 10px 10px 8px 10px;
+}
+
+.eq5e-5e__hpLabel { font-size: 12px; font-weight: 900; text-transform: uppercase; opacity: 0.9; }
+.eq5e-5e__hpInputs {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.eq5e-5e__hpNum { width: 72px; text-align: center; font-size: 18px; font-weight: 900; padding: 6px 8px; }
+
+.eq5e-5e__resourceStack { display: grid; gap: 10px; }
+.eq5e-5e__resourceLabel { font-size: 12px; font-weight: 900; text-transform: uppercase; opacity: 0.9; }
+.eq5e-5e__resourceInputs { display: flex; gap: 6px; justify-content: center; align-items: baseline; margin-top: 4px; }
+.eq5e-5e__resNum { width: 60px; text-align: center; font-weight: 800; padding: 4px 6px; }
+
+/* Bars */
+.eq5e-5e__bar {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.10);
+  overflow: hidden;
+  margin-top: 8px;
+}
+.eq5e-5e__bar--small { height: 8px; margin-top: 6px; }
+.eq5e-5e__barFill {
+  position: absolute;
+  inset: 0;
+  width: var(--pct);
+  background: rgba(0,0,0,0.22);
+}
+
+/* Placeholder list */
+.eq5e-5e__placeholderList { display: grid; gap: 6px; }
+.eq5e-5e__placeholderRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px dashed rgba(0,0,0,0.18);
+  background: rgba(255,255,255,0.12);
+  font-size: 12px;
+}
+
+/* Ability score input */
+.eq5e-5e__abilityScoreInput {
+  width: 72px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  padding: 6px 8px;
+  margin-top: 4px;
+}
+
+/* Stat input inside combat boxes */
+.eq5e-5e__statInput {
+  width: 72px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+  padding: 4px 6px;
+}
+
+/* Saves & Skills two-column list */
+.eq5e-5e__twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.eq5e-5e__subTitle {
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 6px;
+}
+
+.eq5e-5e__list {
+  display: grid;
+  gap: 4px;
+  max-height: 360px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.eq5e-5e__listRow {
+  display: grid;
+  grid-template-columns: 16px 1fr 46px;
+  gap: 6px;
+  align-items: center;
+  padding: 4px 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.12);
+  font-size: 12px;
+}
+
+.eq5e-5e__listRow input[type="checkbox"] {
+  margin: 0;
+}
+
+.eq5e-5e__listName { font-weight: 700; }
+.eq5e-5e__listVal { text-align: right; font-weight: 900; }
+
+/* Roll buttons */
+.eq5e-roll {
+  margin-top: 6px;
+  border-radius: 8px;
+  padding: 4px 8px;
+  border: 1px solid rgba(0,0,0,0.18);
+  background: rgba(255,255,255,0.22);
+  cursor: pointer;
+  font-weight: 900;
+  line-height: 1;
+}
+.eq5e-roll--tiny {
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin: 0;
+}
+.eq5e-5e__rollVal { font-weight: 900; min-width: 32px; display: inline-block; text-align: right; }
+
+/* Clickable inline roll values (5e-style) */
+.eq5e-rollval {
+  border: 1px solid rgba(0,0,0,0.18);
+  background: rgba(255,255,255,0.18);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-weight: 900;
+  cursor: pointer;
+  min-width: 40px;
+  text-align: right;
+}
+
+.eq5e-rollval:hover,
+.eq5e-rollval:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--eq5e-focus, rgba(80, 60, 30, 0.35));
+}
+
+.eq5e-rollall {
+  margin-left: 8px;
+}
+
+/* Proficiency styling (checkbox looks like a dot) */
+.eq5e-5e__listRow input[type="checkbox"] {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.35);
+  background: rgba(255,255,255,0.18);
+  display: inline-block;
+  position: relative;
+}
+
+.eq5e-5e__listRow input[type="checkbox"]:checked {
+  background: rgba(0,0,0,0.22);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.20);
+}
+
+.eq5e-5e__listRow input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.28);
+}
+
+/* Trained rows pop slightly */
+.eq5e-5e__listRow:has(input[type="checkbox"]:checked) {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(0,0,0,0.18);
+}
+
+.eq5e-5e__attackRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 4px 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.12);
+}

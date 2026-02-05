@@ -1,0 +1,16 @@
+.eq5e-rewardlog { display:flex; flex-direction:column; gap:12px; padding:12px; height:100%; }
+.eq5e-rewardlog__top { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+.eq5e-rewardlog__force { display:flex; gap:8px; align-items:center; user-select:none; opacity:0.9; }
+.eq5e-rewardlog__list { overflow:auto; display:grid; gap:10px; padding-right:4px; }
+.eq5e-rewardlog__entry { border:1px solid var(--color-border-light-2); border-radius:12px; padding:10px; }
+.eq5e-rewardlog__row { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+.eq5e-rewardlog__title { display:flex; gap:8px; align-items:center; }
+.eq5e-rewardlog__sub { opacity:0.75; font-size:12px; display:flex; gap:6px; flex-wrap:wrap; }
+.eq5e-rewardlog__reason { margin:8px 0 0 0; opacity:0.9; }
+.eq5e-rewardlog__details { margin-top:8px; opacity:0.95; }
+.eq5e-rewardlog__details summary { cursor:pointer; }
+.pill { font-size:11px; padding:2px 8px; border-radius:999px; border:1px solid var(--color-border-light-2); opacity:0.9; }
+.pill--warn { border-style:dashed; opacity:0.95; }
+.eq5e-rewardlog__summaryLine { display:flex; gap:6px; align-items:center; font-size:12px; opacity:0.95; }
+.eq5e-tooltip-icon { cursor:help; opacity:0.8; }
+.eq5e-tooltip-icon:hover { opacity:1; }

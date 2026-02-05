@@ -1,0 +1,822 @@
+[
+  {
+    "name": "Rusty Short Sword",
+    "type": "weapon",
+    "img": "icons/weapons/swords/sword-guard-blue.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Common",
+        "weapon": {
+          "skill": "1hs",
+          "damage": "1d6",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_rusty_short_sword",
+        "tier": 2
+      }
+    }
+  },
+  {
+    "name": "Bronze Long Sword",
+    "type": "weapon",
+    "img": "icons/weapons/swords/sword-guard-blue.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Common",
+        "weapon": {
+          "skill": "1hs",
+          "damage": "1d8",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_bronze_long_sword",
+        "tier": 2
+      }
+    }
+  },
+  {
+    "name": "Fine Steel Long Sword",
+    "type": "weapon",
+    "img": "icons/weapons/swords/sword-guard-blue.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Uncommon",
+        "weapon": {
+          "skill": "1hs",
+          "damage": "1d8+1",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_fine_steel_long_sword",
+        "tier": 5
+      }
+    }
+  },
+  {
+    "name": "Bloodforge Sword",
+    "type": "weapon",
+    "img": "icons/weapons/swords/sword-guard-blue.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Rare",
+        "weapon": {
+          "skill": "1hs",
+          "damage": "1d8+2",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_bloodforge_sword",
+        "tier": 8
+      }
+    }
+  },
+  {
+    "name": "Jagged Blade of War",
+    "type": "weapon",
+    "img": "icons/weapons/swords/sword-guard-blue.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Epic",
+        "weapon": {
+          "skill": "1hs",
+          "damage": "1d8+3",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_jagged_blade_of_war",
+        "tier": 11
+      }
+    }
+  },
+  {
+    "name": "Wooden Club",
+    "type": "weapon",
+    "img": "icons/weapons/clubs/club-bone.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Common",
+        "weapon": {
+          "skill": "1hb",
+          "damage": "1d6",
+          "damageType": "bludgeoning"
+        },
+        "itemId": "wep_wooden_club",
+        "tier": 2
+      }
+    }
+  },
+  {
+    "name": "Bronze Mace",
+    "type": "weapon",
+    "img": "icons/weapons/clubs/club-bone.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Common",
+        "weapon": {
+          "skill": "1hb",
+          "damage": "1d8",
+          "damageType": "bludgeoning"
+        },
+        "itemId": "wep_bronze_mace",
+        "tier": 2
+      }
+    }
+  },
+  {
+    "name": "Fine Steel Warhammer",
+    "type": "weapon",
+    "img": "icons/weapons/thrown/throwing-knife.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Uncommon",
+        "weapon": {
+          "skill": "1hb",
+          "damage": "1d8+1",
+          "damageType": "bludgeoning"
+        },
+        "itemId": "wep_fine_steel_warhammer",
+        "tier": 5
+      }
+    }
+  },
+  {
+    "name": "Sarnak Warhammer",
+    "type": "weapon",
+    "img": "icons/weapons/thrown/throwing-knife.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Rare",
+        "weapon": {
+          "skill": "1hb",
+          "damage": "1d8+2",
+          "damageType": "bludgeoning"
+        },
+        "itemId": "wep_sarnak_warhammer",
+        "tier": 8
+      }
+    }
+  },
+  {
+    "name": "Cudgel of Venomous Hatred",
+    "type": "weapon",
+    "img": "icons/weapons/clubs/club-bone.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Epic",
+        "weapon": {
+          "skill": "1hb",
+          "damage": "1d8+3",
+          "damageType": "bludgeoning"
+        },
+        "itemId": "wep_cudgel_of_venomous_hatred",
+        "tier": 11
+      }
+    }
+  },
+  {
+    "name": "Cracked Staff",
+    "type": "weapon",
+    "img": "icons/weapons/clubs/club-bone.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Common",
+        "weapon": {
+          "skill": "2hb",
+          "damage": "1d8",
+          "damageType": "bludgeoning"
+        },
+        "itemId": "wep_cracked_staff",
+        "tier": 2
+      }
+    }
+  },
+  {
+    "name": "Oak Staff",
+    "type": "weapon",
+    "img": "icons/weapons/clubs/club-bone.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Common",
+        "weapon": {
+          "skill": "2hb",
+          "damage": "1d10",
+          "damageType": "bludgeoning"
+        },
+        "itemId": "wep_oak_staff",
+        "tier": 2
+      }
+    }
+  },
+  {
+    "name": "Runed Staff",
+    "type": "weapon",
+    "img": "icons/weapons/clubs/club-bone.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Uncommon",
+        "weapon": {
+          "skill": "2hb",
+          "damage": "1d10+1",
+          "damageType": "bludgeoning"
+        },
+        "itemId": "wep_runed_staff",
+        "tier": 5
+      }
+    }
+  },
+  {
+    "name": "Staff of the Earthcrafter",
+    "type": "weapon",
+    "img": "icons/weapons/clubs/club-bone.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Rare",
+        "weapon": {
+          "skill": "2hb",
+          "damage": "1d10+2",
+          "damageType": "bludgeoning"
+        },
+        "itemId": "wep_staff_of_the_earthcrafter",
+        "tier": 8
+      }
+    }
+  },
+  {
+    "name": "Truncheon of Doom",
+    "type": "weapon",
+    "img": "icons/weapons/clubs/club-bone.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Epic",
+        "weapon": {
+          "skill": "2hb",
+          "damage": "1d10+3",
+          "damageType": "bludgeoning"
+        },
+        "itemId": "wep_truncheon_of_doom",
+        "tier": 11
+      }
+    }
+  },
+  {
+    "name": "Rusty Spear",
+    "type": "weapon",
+    "img": "icons/weapons/polearms/spear-simple.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Common",
+        "weapon": {
+          "skill": "piercing",
+          "damage": "1d6",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_rusty_spear",
+        "tier": 2
+      }
+    }
+  },
+  {
+    "name": "Bronze Spear",
+    "type": "weapon",
+    "img": "icons/weapons/polearms/spear-simple.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Common",
+        "weapon": {
+          "skill": "piercing",
+          "damage": "1d8",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_bronze_spear",
+        "tier": 2
+      }
+    }
+  },
+  {
+    "name": "Fine Steel Spear",
+    "type": "weapon",
+    "img": "icons/weapons/polearms/spear-simple.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Uncommon",
+        "weapon": {
+          "skill": "piercing",
+          "damage": "1d8+1",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_fine_steel_spear",
+        "tier": 5
+      }
+    }
+  },
+  {
+    "name": "Spear of Fate",
+    "type": "weapon",
+    "img": "icons/weapons/polearms/spear-simple.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Rare",
+        "weapon": {
+          "skill": "piercing",
+          "damage": "1d8+2",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_spear_of_fate",
+        "tier": 8
+      }
+    }
+  },
+  {
+    "name": "Trident of the Seven Seas",
+    "type": "weapon",
+    "img": "icons/weapons/polearms/spear-simple.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Epic",
+        "weapon": {
+          "skill": "piercing",
+          "damage": "1d8+3",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_trident_of_the_seven_seas",
+        "tier": 11
+      }
+    }
+  },
+  {
+    "name": "Rusty Dagger",
+    "type": "weapon",
+    "img": "icons/weapons/thrown/throwing-knife.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Common",
+        "weapon": {
+          "skill": "piercing",
+          "damage": "1d4",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_rusty_dagger",
+        "tier": 2
+      }
+    }
+  },
+  {
+    "name": "Fine Steel Dagger",
+    "type": "weapon",
+    "img": "icons/weapons/thrown/throwing-knife.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Uncommon",
+        "weapon": {
+          "skill": "piercing",
+          "damage": "1d4+1",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_fine_steel_dagger",
+        "tier": 5
+      }
+    }
+  },
+  {
+    "name": "Serrated Bone Dirk",
+    "type": "weapon",
+    "img": "icons/weapons/thrown/throwing-knife.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Rare",
+        "weapon": {
+          "skill": "piercing",
+          "damage": "1d4+2",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_serrated_bone_dirk",
+        "tier": 8
+      }
+    }
+  },
+  {
+    "name": "Assassin's Kris",
+    "type": "weapon",
+    "img": "icons/weapons/thrown/throwing-knife.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Epic",
+        "weapon": {
+          "skill": "piercing",
+          "damage": "1d4+3",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_assassin_s_kris",
+        "tier": 11
+      }
+    }
+  },
+  {
+    "name": "Poisoned Stiletto",
+    "type": "weapon",
+    "img": "icons/weapons/thrown/throwing-knife.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Legendary",
+        "weapon": {
+          "skill": "piercing",
+          "damage": "1d4+4",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_poisoned_stiletto",
+        "tier": 12
+      }
+    }
+  },
+  {
+    "name": "Rusty Axe",
+    "type": "weapon",
+    "img": "icons/weapons/axes/axe-battle.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Common",
+        "weapon": {
+          "skill": "1hs",
+          "damage": "1d6",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_rusty_axe",
+        "tier": 2
+      }
+    }
+  },
+  {
+    "name": "Fine Steel Battle Axe",
+    "type": "weapon",
+    "img": "icons/weapons/axes/axe-battle.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Uncommon",
+        "weapon": {
+          "skill": "1hs",
+          "damage": "1d8+1",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_fine_steel_battle_axe",
+        "tier": 5
+      }
+    }
+  },
+  {
+    "name": "Gorehorn Axe",
+    "type": "weapon",
+    "img": "icons/weapons/axes/axe-battle.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Rare",
+        "weapon": {
+          "skill": "1hs",
+          "damage": "1d8+2",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_gorehorn_axe",
+        "tier": 8
+      }
+    }
+  },
+  {
+    "name": "Axe of the Ebon Flame",
+    "type": "weapon",
+    "img": "icons/weapons/axes/axe-battle.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Epic",
+        "weapon": {
+          "skill": "1hs",
+          "damage": "1d8+3",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_axe_of_the_ebon_flame",
+        "tier": 11
+      }
+    }
+  },
+  {
+    "name": "Executioner's Axe",
+    "type": "weapon",
+    "img": "icons/weapons/axes/axe-battle.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Uncommon",
+        "weapon": {
+          "skill": "2hs",
+          "damage": "1d12",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_executioner_s_axe",
+        "tier": 5
+      }
+    }
+  },
+  {
+    "name": "Greatsword of Thunder",
+    "type": "weapon",
+    "img": "icons/weapons/swords/sword-guard-blue.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Rare",
+        "weapon": {
+          "skill": "2hs",
+          "damage": "1d12+2",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_greatsword_of_thunder",
+        "tier": 8
+      }
+    }
+  },
+  {
+    "name": "Runed Mithril Greatsword",
+    "type": "weapon",
+    "img": "icons/weapons/swords/sword-guard-blue.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Epic",
+        "weapon": {
+          "skill": "2hs",
+          "damage": "1d12+3",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_runed_mithril_greatsword",
+        "tier": 11
+      }
+    }
+  },
+  {
+    "name": "Blade of Carnage",
+    "type": "weapon",
+    "img": "icons/weapons/swords/sword-guard-blue.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Legendary",
+        "weapon": {
+          "skill": "2hs",
+          "damage": "1d12+4",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_blade_of_carnage",
+        "tier": 12
+      }
+    }
+  },
+  {
+    "name": "Hunting Bow",
+    "type": "weapon",
+    "img": "icons/weapons/bows/longbow.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Common",
+        "weapon": {
+          "skill": "ranged",
+          "damage": "1d6",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_hunting_bow",
+        "tier": 2
+      }
+    }
+  },
+  {
+    "name": "Composite Bow",
+    "type": "weapon",
+    "img": "icons/weapons/bows/longbow.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Uncommon",
+        "weapon": {
+          "skill": "ranged",
+          "damage": "1d8",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_composite_bow",
+        "tier": 5
+      }
+    }
+  },
+  {
+    "name": "Longbow of the Moon",
+    "type": "weapon",
+    "img": "icons/weapons/thrown/throwing-knife.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Rare",
+        "weapon": {
+          "skill": "ranged",
+          "damage": "1d8+2",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_longbow_of_the_moon",
+        "tier": 8
+      }
+    }
+  },
+  {
+    "name": "Windstriker Bow",
+    "type": "weapon",
+    "img": "icons/weapons/bows/longbow.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Epic",
+        "weapon": {
+          "skill": "ranged",
+          "damage": "1d8+3",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_windstriker_bow",
+        "tier": 11
+      }
+    }
+  },
+  {
+    "name": "Throwing Knife",
+    "type": "weapon",
+    "img": "icons/weapons/thrown/throwing-knife.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Common",
+        "weapon": {
+          "skill": "thrown",
+          "damage": "1d4",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_throwing_knife",
+        "tier": 2
+      }
+    }
+  },
+  {
+    "name": "Balanced Shuriken",
+    "type": "weapon",
+    "img": "icons/weapons/thrown/throwing-knife.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Uncommon",
+        "weapon": {
+          "skill": "thrown",
+          "damage": "1d4+1",
+          "damageType": "piercing"
+        },
+        "itemId": "wep_balanced_shuriken",
+        "tier": 5
+      }
+    }
+  },
+  {
+    "name": "Jagged Throwing Axe",
+    "type": "weapon",
+    "img": "icons/weapons/axes/axe-battle.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Uncommon",
+        "weapon": {
+          "skill": "thrown",
+          "damage": "1d6+1",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_jagged_throwing_axe",
+        "tier": 5
+      }
+    }
+  },
+  {
+    "name": "Starfall Chakram",
+    "type": "weapon",
+    "img": "icons/weapons/thrown/throwing-knife.webp",
+    "system": {},
+    "effects": [],
+    "flags": {
+      "eq5e": {
+        "catalog": "core",
+        "rarity": "Epic",
+        "weapon": {
+          "skill": "thrown",
+          "damage": "1d6+3",
+          "damageType": "slashing"
+        },
+        "itemId": "wep_starfall_chakram",
+        "tier": 11
+      }
+    }
+  }
+]

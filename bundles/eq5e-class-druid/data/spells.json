@@ -1,0 +1,893 @@
+[
+  {
+    "name": "Skin Like Nature",
+    "type": "spell",
+    "img": "icons/magic/nature/root-vine-entangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.skin-like-nature.1",
+          "kind": "buff",
+          "rangeFt": 30,
+          "manaCost": 4,
+          "priority": 12,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "activeEffect": {
+              "label": "Skin Like Nature",
+              "durationRounds": 5,
+              "changes": [
+                {
+                  "key": "flags.eq5e.mitigation.physical",
+                  "mode": 2,
+                  "value": "1",
+                  "priority": 20
+                },
+                {
+                  "key": "flags.eq5e.resists.magic",
+                  "mode": 2,
+                  "value": "1",
+                  "priority": 20
+                }
+              ]
+            },
+            "tags": [
+              "buff"
+            ]
+          },
+          "cooldown": {
+            "value": 5
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Healing",
+    "type": "spell",
+    "img": "icons/magic/life/cross-flare-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.heal.1",
+          "kind": "heal",
+          "rangeFt": 30,
+          "manaCost": 4,
+          "priority": 8,
+          "damage": [
+            {
+              "type": "healing",
+              "formula": "1d8+2"
+            }
+          ],
+          "conditions": [],
+          "cooldown": {
+            "value": 1
+          },
+          "meta": {
+            "tags": [
+              "heal",
+              "heal:primary"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Firestrike",
+    "type": "spell",
+    "img": "icons/magic/fire/projectile-fireball-orange.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.firestrike.1",
+          "kind": "damage",
+          "rangeFt": 90,
+          "manaCost": 4,
+          "priority": 30,
+          "damage": [
+            {
+              "type": "fire",
+              "formula": "2d6"
+            }
+          ],
+          "conditions": [],
+          "cooldown": {
+            "value": 2
+          },
+          "meta": {
+            "tags": [
+              "nuke"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Root",
+    "type": "spell",
+    "img": "icons/magic/nature/vines-thorned-entangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.root.1",
+          "kind": "debuff",
+          "rangeFt": 60,
+          "manaCost": 3,
+          "priority": 25,
+          "damage": [],
+          "conditions": [
+            {
+              "id": "rooted",
+              "duration": {
+                "rounds": 2
+              }
+            }
+          ],
+          "cooldown": {
+            "value": 2
+          },
+          "meta": {
+            "tags": [
+              "control",
+              "snare",
+              "root"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Snare",
+    "type": "spell",
+    "img": "icons/magic/nature/leaf-juggle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.snare.1",
+          "kind": "debuff",
+          "rangeFt": 60,
+          "manaCost": 2,
+          "priority": 20,
+          "damage": [],
+          "conditions": [
+            {
+              "id": "snared",
+              "duration": {
+                "rounds": 3
+              },
+              "meta": {
+                "moveMult": 0.6
+              }
+            }
+          ],
+          "cooldown": {
+            "value": 1
+          },
+          "meta": {
+            "tags": [
+              "control",
+              "snare",
+              "root",
+              "debuff"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Spirit of Wolf",
+    "type": "spell",
+    "img": "icons/creatures/mammals/wolf-howl-moonlit-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.sow.1",
+          "kind": "buff",
+          "rangeFt": 30,
+          "manaCost": 3,
+          "priority": 10,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "activeEffect": {
+              "label": "Spirit of Wolf",
+              "durationRounds": 5,
+              "changes": [
+                {
+                  "key": "flags.eq5e.movement.mult",
+                  "mode": 2,
+                  "value": "0.25",
+                  "priority": 20
+                }
+              ]
+            },
+            "tags": []
+          },
+          "cooldown": {
+            "value": 5
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Wild Shape: Wolf Form",
+    "type": "spell",
+    "img": "icons/creatures/mammals/wolf-grey.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.wildshape.wolf.1",
+          "kind": "utility",
+          "rangeFt": 0,
+          "manaCost": 2,
+          "priority": 5,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "wildshape": {
+              "form": "wolf",
+              "durationRounds": 5,
+              "changes": [
+                {
+                  "key": "flags.eq5e.druid.wildshape.form",
+                  "mode": 5,
+                  "value": "wolf",
+                  "priority": 5
+                },
+                {
+                  "key": "flags.eq5e.movement.mult",
+                  "mode": 2,
+                  "value": "0.25",
+                  "priority": 20
+                },
+                {
+                  "key": "flags.eq5e.ranger.archeryHitBonus",
+                  "mode": 2,
+                  "value": "0",
+                  "priority": 1
+                }
+              ]
+            },
+            "tags": []
+          },
+          "cooldown": {
+            "value": 6
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Wild Shape: Bear Form",
+    "type": "spell",
+    "img": "icons/creatures/mammals/bear-brown.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.wildshape.bear.1",
+          "kind": "utility",
+          "rangeFt": 0,
+          "manaCost": 2,
+          "priority": 5,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "wildshape": {
+              "form": "bear",
+              "durationRounds": 5,
+              "changes": [
+                {
+                  "key": "flags.eq5e.druid.wildshape.form",
+                  "mode": 5,
+                  "value": "bear",
+                  "priority": 5
+                },
+                {
+                  "key": "flags.eq5e.mitigation.physical",
+                  "mode": 2,
+                  "value": "1",
+                  "priority": 20
+                },
+                {
+                  "key": "flags.eq5e.warding.physical",
+                  "mode": 2,
+                  "value": "2",
+                  "priority": 20
+                }
+              ]
+            },
+            "tags": []
+          },
+          "cooldown": {
+            "value": 6
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Dismiss Wild Shape",
+    "type": "spell",
+    "img": "icons/magic/control/debuff-energy-hold-teal.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.wildshape.dismiss",
+          "kind": "utility",
+          "rangeFt": 0,
+          "manaCost": 1,
+          "priority": 1,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "wildshape": {
+              "dismiss": true
+            },
+            "tags": []
+          },
+          "cooldown": {
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Summon Animal Companion",
+    "type": "spell",
+    "img": "icons/creatures/mammals/elk-deer-brown.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.summon-companion.1",
+          "kind": "utility",
+          "rangeFt": 5,
+          "manaCost": 5,
+          "priority": 5,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "summon": {
+              "pack": "world.eq5e-druid-companions",
+              "name": "Companion (Bear)",
+              "tokenName": "Companion",
+              "summonId": "druid.companion",
+              "summonType": "pet",
+              "durationRounds": null,
+              "abilitiesPack": "world.eq5e-druid-companion-abilities",
+              "abilitiesQuery": "Bear:"
+            },
+            "tags": []
+          },
+          "cooldown": {
+            "value": 10
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Regrowth",
+    "type": "spell",
+    "img": "icons/magic/nature/leaf-glow-green.webp",
+    "system": {
+      "description": {
+        "value": "<p>Regrowth heals the target each round for 4 rounds.</p>"
+      },
+      "activation": {
+        "type": "action",
+        "cost": 1
+      },
+      "target": {
+        "type": "creature",
+        "value": 1
+      },
+      "range": {
+        "value": 60,
+        "units": "ft"
+      },
+      "duration": {
+        "value": 4,
+        "units": "round"
+      },
+      "consumption": {
+        "type": "mana",
+        "target": "attributes.mana.value",
+        "value": 8
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "dru.heal.hot1",
+          "kind": "heal",
+          "manaCost": 8,
+          "cooldownRounds": 1,
+          "damage": [
+            {
+              "formula": "1d4+1",
+              "type": "healing",
+              "category": "healing"
+            }
+          ],
+          "meta": {
+            "tags": [
+              "heal",
+              "hot",
+              "heal:primary",
+              "tier:1"
+            ],
+            "hot": {
+              "dotId": "dru.heal.hot1.hot",
+              "formula": "1d4+1",
+              "remainingRounds": 4
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Greater Regrowth",
+    "type": "spell",
+    "img": "icons/magic/nature/leaf-glow-green.webp",
+    "system": {
+      "description": {
+        "value": "<p>Greater Regrowth heals the target each round for 4 rounds.</p>"
+      },
+      "activation": {
+        "type": "action",
+        "cost": 1
+      },
+      "target": {
+        "type": "creature",
+        "value": 1
+      },
+      "range": {
+        "value": 60,
+        "units": "ft"
+      },
+      "duration": {
+        "value": 4,
+        "units": "round"
+      },
+      "consumption": {
+        "type": "mana",
+        "target": "attributes.mana.value",
+        "value": 12
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "dru.heal.hot2",
+          "kind": "heal",
+          "manaCost": 12,
+          "cooldownRounds": 2,
+          "damage": [
+            {
+              "formula": "1d6+2",
+              "type": "healing",
+              "category": "healing"
+            }
+          ],
+          "meta": {
+            "tags": [
+              "heal",
+              "hot",
+              "heal:primary",
+              "tier:2"
+            ],
+            "hot": {
+              "dotId": "dru.heal.hot2.hot",
+              "formula": "1d6+2",
+              "remainingRounds": 4
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Chloroplast",
+    "type": "spell",
+    "img": "icons/magic/nature/leaf-glow-green.webp",
+    "system": {
+      "description": {
+        "value": "<p>Chloroplast heals the target each round for 5 rounds.</p>"
+      },
+      "activation": {
+        "type": "action",
+        "cost": 1
+      },
+      "target": {
+        "type": "creature",
+        "value": 1
+      },
+      "range": {
+        "value": 60,
+        "units": "ft"
+      },
+      "duration": {
+        "value": 5,
+        "units": "round"
+      },
+      "consumption": {
+        "type": "mana",
+        "target": "attributes.mana.value",
+        "value": 18
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "dru.heal.hot3",
+          "kind": "heal",
+          "manaCost": 18,
+          "cooldownRounds": 2,
+          "damage": [
+            {
+              "formula": "1d8+2",
+              "type": "healing",
+              "category": "healing"
+            }
+          ],
+          "meta": {
+            "tags": [
+              "heal",
+              "hot",
+              "heal:primary",
+              "tier:3"
+            ],
+            "hot": {
+              "dotId": "dru.heal.hot3.hot",
+              "formula": "1d8+2",
+              "remainingRounds": 5
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Nature's Recovery",
+    "type": "spell",
+    "img": "icons/magic/nature/leaf-spiral-green.webp",
+    "system": {
+      "description": {
+        "value": "<p>Nature's Recovery heals the target each round for 5 rounds.</p>"
+      },
+      "activation": {
+        "type": "action",
+        "cost": 1
+      },
+      "target": {
+        "type": "radius",
+        "value": 30,
+        "units": "ft"
+      },
+      "range": {
+        "value": 60,
+        "units": "ft"
+      },
+      "duration": {
+        "value": 5,
+        "units": "round"
+      },
+      "consumption": {
+        "type": "mana",
+        "target": "attributes.mana.value",
+        "value": 22
+      }
+    },
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "spellId": "dru.heal.hot4",
+          "kind": "heal",
+          "manaCost": 22,
+          "cooldownRounds": 3,
+          "damage": [
+            {
+              "formula": "1d6+3",
+              "type": "healing",
+              "category": "healing"
+            }
+          ],
+          "meta": {
+            "tags": [
+              "heal",
+              "hot",
+              "heal:primary",
+              "tier:4",
+              "heal:group"
+            ],
+            "hot": {
+              "dotId": "dru.heal.hot4.hot",
+              "formula": "1d6+3",
+              "remainingRounds": 5,
+              "group": true,
+              "groupRangeFt": 30
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Root (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/nature/vines-thorned-entangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.root.2",
+          "kind": "debuff",
+          "rangeFt": 60,
+          "manaCost": 4,
+          "priority": 25,
+          "damage": [],
+          "conditions": [
+            {
+              "id": "rooted",
+              "duration": {
+                "rounds": 3
+              }
+            }
+          ],
+          "cooldown": {
+            "value": 2
+          },
+          "meta": {
+            "tags": [
+              "control",
+              "snare",
+              "root"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Root (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/nature/vines-thorned-entangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.root.3",
+          "kind": "debuff",
+          "rangeFt": 60,
+          "manaCost": 5,
+          "priority": 25,
+          "damage": [],
+          "conditions": [
+            {
+              "id": "rooted",
+              "duration": {
+                "rounds": 4
+              }
+            }
+          ],
+          "cooldown": {
+            "value": 2
+          },
+          "meta": {
+            "tags": [
+              "control",
+              "snare",
+              "root"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Root (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/nature/vines-thorned-entangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.root.4",
+          "kind": "debuff",
+          "rangeFt": 60,
+          "manaCost": 6,
+          "priority": 25,
+          "damage": [],
+          "conditions": [
+            {
+              "id": "rooted",
+              "duration": {
+                "rounds": 5
+              }
+            }
+          ],
+          "cooldown": {
+            "value": 2
+          },
+          "meta": {
+            "tags": [
+              "control",
+              "snare",
+              "root"
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Skin Like Nature (Tier 2)",
+    "type": "spell",
+    "img": "icons/magic/nature/root-vine-entangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.skin-like-nature.2",
+          "kind": "buff",
+          "rangeFt": 30,
+          "manaCost": 6,
+          "priority": 12,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "activeEffect": {
+              "label": "Skin Like Nature",
+              "durationRounds": 7,
+              "changes": [
+                {
+                  "key": "flags.eq5e.mitigation.physical",
+                  "mode": 2,
+                  "value": "2",
+                  "priority": 20
+                },
+                {
+                  "key": "flags.eq5e.resists.magic",
+                  "mode": 2,
+                  "value": "2",
+                  "priority": 20
+                }
+              ]
+            },
+            "tags": [
+              "buff"
+            ]
+          },
+          "cooldown": {
+            "value": 5
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Skin Like Nature (Tier 3)",
+    "type": "spell",
+    "img": "icons/magic/nature/root-vine-entangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.skin-like-nature.3",
+          "kind": "buff",
+          "rangeFt": 30,
+          "manaCost": 8,
+          "priority": 12,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "activeEffect": {
+              "label": "Skin Like Nature",
+              "durationRounds": 9,
+              "changes": [
+                {
+                  "key": "flags.eq5e.mitigation.physical",
+                  "mode": 2,
+                  "value": "3",
+                  "priority": 20
+                },
+                {
+                  "key": "flags.eq5e.resists.magic",
+                  "mode": 2,
+                  "value": "3",
+                  "priority": 20
+                }
+              ]
+            },
+            "tags": [
+              "buff"
+            ]
+          },
+          "cooldown": {
+            "value": 5
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Skin Like Nature (Tier 4)",
+    "type": "spell",
+    "img": "icons/magic/nature/root-vine-entangle-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "dru.skin-like-nature.4",
+          "kind": "buff",
+          "rangeFt": 30,
+          "manaCost": 10,
+          "priority": 12,
+          "damage": [],
+          "conditions": [],
+          "meta": {
+            "activeEffect": {
+              "label": "Skin Like Nature",
+              "durationRounds": 11,
+              "changes": [
+                {
+                  "key": "flags.eq5e.mitigation.physical",
+                  "mode": 2,
+                  "value": "4",
+                  "priority": 20
+                },
+                {
+                  "key": "flags.eq5e.resists.magic",
+                  "mode": 2,
+                  "value": "4",
+                  "priority": 20
+                }
+              ]
+            },
+            "tags": [
+              "buff"
+            ]
+          },
+          "cooldown": {
+            "value": 5
+          }
+        }
+      }
+    }
+  }
+]

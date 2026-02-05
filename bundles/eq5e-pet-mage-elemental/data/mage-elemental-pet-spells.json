@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Static Bolt",
+    "type": "spell",
+    "img": "icons/magic/air/lightning-bolt-white.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.mag.air.static-bolt",
+          "kind": "nuke",
+          "rangeFt": 90,
+          "manaCost": 4,
+          "cooldownRounds": 2,
+          "priority": 55,
+          "damage": [
+            {
+              "formula": "1d10+2",
+              "type": "electric"
+            }
+          ],
+          "meta": {
+            "petRotation": "mag.air.basic"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Gust Snare",
+    "type": "spell",
+    "img": "icons/magic/air/wind-swirl.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.mag.air.gust-snare",
+          "kind": "debuff",
+          "rangeFt": 60,
+          "manaCost": 3,
+          "cooldownRounds": 4,
+          "priority": 40,
+          "damage": [],
+          "conditions": [
+            {
+              "id": "snare",
+              "durationRounds": 3
+            }
+          ],
+          "meta": {
+            "petRotation": "mag.air.basic"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Ice Shard",
+    "type": "spell",
+    "img": "icons/magic/water/projectile-ice.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.mag.water.ice-shard",
+          "kind": "nuke",
+          "rangeFt": 90,
+          "manaCost": 4,
+          "cooldownRounds": 2,
+          "priority": 55,
+          "damage": [
+            {
+              "formula": "1d10+2",
+              "type": "cold"
+            }
+          ],
+          "meta": {
+            "petRotation": "mag.water.basic"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Chill Touch",
+    "type": "spell",
+    "img": "icons/magic/water/snowflake-ice-blue.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "spell": {
+          "enabled": true,
+          "spellId": "pet.mag.water.chill-touch",
+          "kind": "debuff",
+          "rangeFt": 30,
+          "manaCost": 3,
+          "cooldownRounds": 4,
+          "priority": 40,
+          "damage": [
+            {
+              "formula": "1d6+1",
+              "type": "cold"
+            }
+          ],
+          "conditions": [
+            {
+              "id": "snare",
+              "durationRounds": 2
+            }
+          ],
+          "meta": {
+            "petRotation": "mag.water.basic"
+          }
+        }
+      }
+    }
+  }
+]

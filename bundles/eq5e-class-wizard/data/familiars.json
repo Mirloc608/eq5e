@@ -1,0 +1,26 @@
+{
+  "name": "Wizard Familiar",
+  "type": "npc",
+  "img": "icons/creatures/birds/owl-horned-moon.webp",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 10,
+        "max": 10
+      }
+    },
+    "details": {
+      "type": "familiar"
+    }
+  },
+  "flags": {
+    "eq5e": {
+      "pet": {
+        "role": "support"
+      },
+      "summon": {
+        "active": true
+      }
+    }
+  }
+}

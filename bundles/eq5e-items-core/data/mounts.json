@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Riding Horse",
+    "type": "mount",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "mount": {
+        "tier": "civilian",
+        "speed": 60,
+        "carryCapacity": 480,
+        "canFight": false,
+        "riderSlots": 1
+      }
+    }
+  },
+  {
+    "name": "Warhorse",
+    "type": "mount",
+    "img": "icons/svg/horse.svg",
+    "system": {
+      "mount": {
+        "tier": "war",
+        "speed": 60,
+        "carryCapacity": 540,
+        "canFight": true,
+        "riderSlots": 1,
+        "attacks": [
+          {
+            "name": "Hooves",
+            "damage": "2d6+4",
+            "type": "bludgeoning"
+          }
+        ]
+      }
+    }
+  }
+]

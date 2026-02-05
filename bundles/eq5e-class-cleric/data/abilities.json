@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Divine Arbitration",
+    "type": "feat",
+    "img": "icons/magic/holy/angel-wings-gray.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "abilityId": "clr.abil.arbitration",
+          "cooldownRounds": 12,
+          "kind": "utility",
+          "desc": "Redistribute group health toward average (simplified)."
+        }
+      }
+    }
+  },
+  {
+    "name": "Celestial Regeneration",
+    "type": "feat",
+    "img": "icons/magic/life/heart-plus-green.webp",
+    "system": {},
+    "flags": {
+      "eq5e": {
+        "ability": {
+          "abilityId": "clr.abil.celestial-regen",
+          "cooldownRounds": 10,
+          "kind": "heal",
+          "desc": "Group healing over time (placeholder)."
+        }
+      }
+    }
+  }
+]

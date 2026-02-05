@@ -1,0 +1,11 @@
+.eq5e-ranger-companion{margin-top:10px;padding:8px;border:1px solid rgba(255,255,255,0.12);border-radius:12px;background:rgba(255,255,255,0.03)}
+.eq5e-ranger-companion .head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.eq5e-ranger-companion .head .title{font-weight:800}
+.eq5e-ranger-companion .row{display:flex;gap:8px;align-items:center;margin:4px 0}
+.eq5e-ranger-companion select{flex:1}
+.eq5e-ranger-companion .pill{font-size:11px;padding:1px 8px;border-radius:999px;border:1px solid rgba(255,255,255,0.12);opacity:.95}
+.eq5e-ranger-companion .pill.ok{background:rgba(0,180,120,0.16)}
+.eq5e-ranger-companion .pill.warn{background:rgba(220,160,0,0.18)}
+.eq5e-ranger-companion .muted{opacity:.7;font-size:11px}
+.eq5e-ranger-companion .actions{display:flex;gap:8px;margin-top:8px}
+.eq5e-ranger-companion button{flex:1}

@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "meta": {
+    "name": "EQ5e Era 1 AA Catalog",
+    "era": 1,
+    "levelCap": 10,
+    "aaCap": 50
+  },
+  "categories": []
+}
