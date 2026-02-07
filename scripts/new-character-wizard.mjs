@@ -264,12 +264,26 @@ class EQ5eNewCharacterWizard extends HandlebarsApplicationMixin(ApplicationV2) {
     const root = this.element;
     if (!root) return;
 
-    root.querySelectorAll("[data-action]").forEach(el => {
-      el.addEventListener("click", (ev) => this._onAction(ev));
-    });
-    root.querySelectorAll("input, select").forEach(el => {
-      el.addEventListener("change", (ev) => this._onChange(ev));
-    });
+    // Use event delegation for actions and input changes to avoid missing
+    // events when the template is re-rendered frequently.
+    if (!root._eq5eDelegated) {
+      root.addEventListener("click", (ev) => {
+        const btn = ev.target.closest && ev.target.closest("[data-action]");
+        if (btn) {
+          ev.preventDefault();
+          this._onAction({ currentTarget: btn, preventDefault: () => {} });
+        }
+      });
+
+      root.addEventListener("change", (ev) => {
+        const el = ev.target;
+        if (!el) return;
+        if (el.matches && el.matches("input, select")) {
+          this._onChange({ currentTarget: el });
+        }
+      });
+      root._eq5eDelegated = true;
+    }
 
     // Show contextual help for the current step once per session/render lifecycle.
     this._maybeShowHelp();
