@@ -1,0 +1,8 @@
+<section class="eq5e-help-dialog">
+  <div class="eq5e-help-body">{{{eq5e.help.content}}}</div>
+  <div class="eq5e-help-buttons" style="display:flex; gap:8px; justify-content:flex-end; margin-top:12px;">
+    {{#each eq5e.help.buttons}}
+      <button data-key="{{@key}}" class="eq5e-help-btn">{{this.label}}</button>
+    {{/each}}
+  </div>
+</section>

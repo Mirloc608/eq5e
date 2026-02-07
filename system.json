@@ -13,7 +13,8 @@
   },
   "esmodules": [
     "scripts/eq5e.mjs",
-    "scripts/eq5e-patches.mjs"
+    "scripts/eq5e-patches.mjs",
+    "scripts/new-character-wizard.mjs"
   ],
   "styles": [
     "styles/eq5e.css"

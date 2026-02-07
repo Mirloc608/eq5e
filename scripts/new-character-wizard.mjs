@@ -281,32 +281,52 @@ class EQ5eNewCharacterWizard extends HandlebarsApplicationMixin(ApplicationV2) {
     const msg = WIZARD_HELP[step];
     if (!msg) return;
     this._helpShown.add(step);
-
+    // Use a V2 Application-based dialog to avoid deprecated V1 Application warnings.
     const inst = this;
-    new Dialog({
-      title: msg.title,
-      content: `<div class="eq5e-wiz-help">${msg.body}</div>`,
-      buttons: {
-        ok: {
-          icon: '<i class="fa-solid fa-check"></i>',
-          label: "Got it",
-          callback: () => {}
-        },
-        next: {
-          icon: '<i class="fa-solid fa-arrow-right"></i>',
-          label: "Next Step",
-          callback: () => {
-            inst._step = Math.min(3, Number(inst._step) + 1);
-            inst.render({ parts: ["app"] });
-          }
-        }
-      },
-      default: "ok",
-      render: (html) => {
-        // small styling helper if needed
-        html.find('.eq5e-wiz-help').css({ 'font-size': '0.95rem' });
+    const buttons = {
+      ok: { label: "Got it", callback: () => {} },
+      next: { label: "Next Step", callback: () => { inst._step = Math.min(3, Number(inst._step) + 1); inst.render({ parts: ["app"] }); } }
+    };
+
+    class EQ5eHelpDialog extends HandlebarsApplicationMixin(ApplicationV2) {
+      static DEFAULT_OPTIONS = foundry.utils.mergeObject(super.DEFAULT_OPTIONS, {
+        id: "eq5e-help-dialog",
+        tag: "section",
+        classes: ["eq5e", "eq5e-help-dialog"],
+        window: { title: msg.title, resizable: false },
+        position: { width: 520 }
+      });
+
+      constructor(opts = {}) {
+        super(opts);
+        this._content = opts.content || "";
+        this._buttons = opts.buttons || {};
       }
-    }).render(true);
+
+      async _prepareContext(options) {
+        const ctx = await super._prepareContext(options);
+        ctx.eq5e = ctx.eq5e ?? {};
+        ctx.eq5e.help = { content: this._content, buttons: Object.fromEntries(Object.entries(this._buttons).map(([k,b]) => [k, { label: b.label }])) };
+        return ctx;
+      }
+
+      _onRender(context, options) {
+        super._onRender(context, options);
+        const root = this.element;
+        if (!root) return;
+        root.querySelectorAll('.eq5e-help-btn').forEach(el => {
+          el.addEventListener('click', (ev) => {
+            const key = el.dataset.key;
+            const cb = this._buttons?.[key]?.callback;
+            try { if (typeof cb === 'function') cb(); } catch (e) { console.error(e); }
+            this.close();
+          });
+        });
+      }
+    }
+
+    const dlg = new EQ5eHelpDialog({ template: "systems/eq5e/templates/app/help-dialog.hbs", content: `<div class=\"eq5e-wiz-help\">${msg.body}</div>`, buttons });
+    dlg.render(true);
   }
 
   async _onChange(event) {
@@ -428,7 +448,16 @@ function _injectButton(html) {
       app.render(true);
     });
 
-    headerActions.appendChild(btn);
+    // Prefer to place the button next to the directory Create button (if present).
+    const createBtn = headerActions.querySelector("button.create")
+      || headerActions.querySelector("button[title*='Create']")
+      || headerActions.querySelector("button[data-action='create']");
+    try {
+      if (createBtn && createBtn.parentElement) createBtn.parentElement.insertBefore(btn, createBtn.nextSibling);
+      else headerActions.appendChild(btn);
+    } catch (e) {
+      headerActions.appendChild(btn);
+    }
   } catch (e) {
     console.warn("[EQ5E] Failed to inject New Character button", e);
   }
