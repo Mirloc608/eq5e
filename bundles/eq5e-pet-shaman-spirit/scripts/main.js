@@ -56,7 +56,7 @@ async function upsertJSONToPack({ rel, pack, label, key, type }) {
   }
   const cls = p.documentClass;
   if (toCreate.length) await cls.createDocuments(toCreate, { pack: p.collection });
-  if (toUpdate.length) await cls.updateDocuments(toUpdate, { pack: p.collection });
+  if (toUpdate.length) await cls.updateDocuments(toUpdate, { pack: p.collection, recursive: false });
   return { created: toCreate.length, updated: toUpdate.length };
 }
 

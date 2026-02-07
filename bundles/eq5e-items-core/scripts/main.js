@@ -124,7 +124,7 @@ async function upsertPackItems(pack, items, { defaultType = "item" } = {}) {
   }
 
   if (toCreate.length) await pack.documentClass.createDocuments(toCreate, { pack: pack.collection });
-  if (toUpdate.length) await pack.documentClass.updateDocuments(toUpdate, { pack: pack.collection });
+  if (toUpdate.length) await pack.documentClass.updateDocuments(toUpdate, { pack: pack.collection, recursive: false });
   return { created: toCreate.length, updated: toUpdate.length };
 }
 
@@ -190,7 +190,7 @@ function docsForTier(docs, tier) {
       await lootPack.documentClass.createDocuments([data], {pack: lootPack.collection});
     } else {
       data._id = existing.id;
-      await lootPack.documentClass.updateDocuments([data], {pack: lootPack.collection});
+      await lootPack.documentClass.updateDocuments([data], {pack: lootPack.collection, recursive: false});
     }
   }
 
@@ -326,7 +326,7 @@ async function buildVendorTables(packs) {
       await vendorPack.documentClass.createDocuments([data], {pack: vendorPack.collection});
     } else {
       data._id = existing.id;
-      await vendorPack.documentClass.updateDocuments([data], {pack: vendorPack.collection});
+      await vendorPack.documentClass.updateDocuments([data], {pack: vendorPack.collection, recursive: false});
     }
   }
 

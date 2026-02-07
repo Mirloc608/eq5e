@@ -191,7 +191,7 @@ async function upsertIntoCompendium(pack, items) {
     upd.flags = upd.flags ?? {};
     upd.flags.eq5e = upd.flags.eq5e ?? {};
     upd.flags.eq5e.derivedHash = h;
-    await pack.documentClass.updateDocuments([upd], { pack: pack.collection });
+    await pack.documentClass.updateDocuments([upd], { pack: pack.collection, recursive: false });
   }
 
   return { created: toCreate.length, updated: toUpdate.length };
@@ -287,7 +287,7 @@ async function upsertActorsIntoCompendium(pack, actors) {
     }
   }
 
-  if (toUpdate.length) await pack.documentClass.updateDocuments(toUpdate, { pack: pack.collection });
+  if (toUpdate.length) await pack.documentClass.updateDocuments(toUpdate, { pack: pack.collection, recursive: false });
   return { created: toCreate.length, updated: toUpdate.length };
 }
 

@@ -41,7 +41,7 @@ async function upsertAAs(pack, items) {
   }
 
   if (toCreate.length) await pack.documentClass.createDocuments(toCreate, { pack: pack.collection });
-  if (toUpdate.length) await pack.documentClass.updateDocuments(toUpdate, { pack: pack.collection });
+  if (toUpdate.length) await pack.documentClass.updateDocuments(toUpdate, { pack: pack.collection, recursive: false });
 
   return { created: toCreate.length, updated: toUpdate.length };
 }
@@ -114,7 +114,7 @@ async function upsertByKey(pack, docs, keyFn) {
   }
 
   if (toCreate.length) await pack.documentClass.createDocuments(toCreate, { pack: pack.collection });
-  if (toUpdate.length) await pack.documentClass.updateDocuments(toUpdate, { pack: pack.collection });
+  if (toUpdate.length) await pack.documentClass.updateDocuments(toUpdate, { pack: pack.collection, recursive: false });
   return { created: toCreate.length, updated: toUpdate.length };
 }
 

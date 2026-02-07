@@ -42,7 +42,7 @@ async function upsertJSONToPack({ rel, pack, label, key }) {
   const toCreate = [];
   const toUpdate = [];
   for (const raw of docs) {
-    const d = foundry.utils.duplicate(raw);
+    if (toUpdate.length) await p.documentClass.updateDocuments(toUpdate, { pack: p.collection, recursive: false });
     d.flags = d.flags ?? {};
     d.flags.eq5e = d.flags.eq5e ?? {};
     d.flags.eq5e.derivedHash = stableHash((game.eq5e?.normalizeItemData ? game.eq5e.normalizeItemData(d) : d));
@@ -55,7 +55,7 @@ async function upsertJSONToPack({ rel, pack, label, key }) {
     }
   }
   if (toCreate.length) await p.documentClass.createDocuments(toCreate, { pack: p.collection });
-  if (toUpdate.length) await p.documentClass.updateDocuments(toUpdate, { pack: p.collection });
+  if (toUpdate.length) await p.documentClass.updateDocuments(toUpdate, { pack: p.collection, recursive: false });
   return { created: toCreate.length, updated: toUpdate.length };
 }
 
