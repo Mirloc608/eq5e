@@ -1,507 +1,485 @@
 /**
- * EQ5e Actor Sheet (Foundry VTT v13+) - ApplicationV2 / ActorSheetV2
- * Drop-in: Mount + Pet paper dolls are separate tabs.
- *
- * EQ5E_SHEET_DROPIN_V2_MOUNT_PET_PAPERDOLLS_001
- *
- * Notes:
- * - DEFAULT_OPTIONS.tag MUST be "form"
- * - HBS template MUST render a single root element
- * - HBS template MUST NOT include a <form> element (ActorSheetV2 provides it)
- * - We do not use private fields (#) to avoid transpilation/runtime issues.
+ * EQ5E Actor Sheet (Foundry VTT v13+)
+ * ActorSheetV2 + HandlebarsApplicationMixin
+ * Drop-in: Slot schema + allowed-slot enforcement (EQ5E_SHEET_SLOT_RULES_V1)
  */
-
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
 
-function eq5eGet(obj, path, fallback=null) {
-  try { return foundry.utils.getProperty(obj, path) ?? fallback; } catch (e) { return fallback; }
-}
-function eq5eSet(obj, path, value) {
-  try { return foundry.utils.setProperty(obj, path, value); } catch (e) { /* noop */ }
-}
+const DROPIN_TAG = "EQ5E_SHEET_SLOT_RULES_V1";
 
-function _normalizeClassName(name) {
-  return String(name ?? "").trim().toLowerCase();
-}
+/* ---------------------------------- Slots --------------------------------- */
+// Canonical paper-doll slot schema.
+// Keys become actor.flags.eq5e.equipment.<key> = <itemId>
+const EQ_SLOTS = [
+  // Left column (top->mid)
+  { key: "head", label: "Head", allowed: ["armor", "equipment"] },
+  { key: "face", label: "Face", allowed: ["armor", "equipment", "jewelry"] },
+  { key: "neck", label: "Neck", allowed: ["jewelry"] },
+  { key: "shoulders", label: "Shoulders", allowed: ["armor", "equipment"] },
+  { key: "arms", label: "Arms", allowed: ["armor", "equipment"] },
+  { key: "wrists", label: "Wrists", allowed: ["armor", "equipment", "jewelry"] },
+  { key: "hands", label: "Hands", allowed: ["armor", "equipment"] },
+  { key: "ear1", label: "Ear 1", allowed: ["jewelry"] },
+  { key: "ear2", label: "Ear 2", allowed: ["jewelry"] },
 
+  // Right column (top->bottom)
+  { key: "chest", label: "Chest", allowed: ["armor", "equipment"] },
+  { key: "back", label: "Back", allowed: ["armor", "equipment"] },
+  { key: "waist", label: "Waist", allowed: ["armor", "equipment"] },
+  { key: "legs", label: "Legs", allowed: ["armor", "equipment"] },
+  { key: "feet", label: "Feet", allowed: ["armor", "equipment"] },
+  { key: "ring1", label: "Ring 1", allowed: ["jewelry"] },
+  { key: "ring2", label: "Ring 2", allowed: ["jewelry"] },
+  { key: "primary", label: "Primary", allowed: ["weapon"] },
+  { key: "secondary", label: "Secondary", allowed: ["weapon", "shield"] },
+  { key: "range", label: "Ranged", allowed: ["weapon"] },
+  { key: "ammo", label: "Ammo", allowed: ["ammo"] },
+];
+
+// Human-friendly labels for UI
+const TYPE_LABEL = {
+  weapon: "Weapon",
+  armor: "Armor",
+  shield: "Shield",
+  jewelry: "Jewelry",
+  ammo: "Ammo",
+  equipment: "Equipment",
+  consumable: "Consumable",
+  aa: "AA",
+  spell: "Spell",
+  feat: "Feat",
+  feature: "Feature",
+  class: "Class",
+  race: "Race"
+};
+
+function _normalizeClassName(name) { return String(name ?? "").trim().toLowerCase(); }
+function _getPrimaryClassItem(actor) { return actor?.items?.find(i => i.type === "class") ?? null; }
 function _getPrimaryClassName(actor) {
-  const cls = actor?.items?.find(i => i.type === "class") ?? null;
+  const cls = _getPrimaryClassItem(actor);
   return cls?.name ?? actor?.system?.details?.class ?? actor?.system?.class ?? "";
 }
 
+// Crest: prefer class item icon, fall back to mapping
 function _crestForActor(actor) {
+  const cls = _getPrimaryClassItem(actor);
+  const img = cls?.getFlag?.("eq5e", "icon") || cls?.img;
+  if (img && img !== "icons/svg/mystery-man.svg") return img;
+
   const c = _normalizeClassName(_getPrimaryClassName(actor));
-  if (/(warrior|paladin|shadow|knight)/.test(c)) return "systems/eq5e/assets/ui/crest_knight.png";
-  if (/(druid|ranger|shaman|beast|warden)/.test(c)) return "systems/eq5e/assets/ui/crest_dragon.png";
-  if (/(cleric|priest|templar|healer)/.test(c)) return "systems/eq5e/assets/ui/crest_ankh.png";
-  if (/(wizard|magician|mage|enchanter|necromancer|sorcerer)/.test(c)) return "systems/eq5e/assets/ui/crest_moon.png";
-  if (/(rogue|bard|monk|assassin|skald)/.test(c)) return "systems/eq5e/assets/ui/crest_blades.png";
+  if (/(bard)/.test(c)) return "systems/eq5e/assets/ui/bard.png";
+  if (/(beastlord)/.test(c)) return "systems/eq5e/assets/ui/beastlord.png";
+  if (/(berserker)/.test(c)) return "systems/eq5e/assets/ui/berserker.png";
+  if (/(cleric)/.test(c)) return "systems/eq5e/assets/ui/cleric.png";
+  if (/(druid)/.test(c)) return "systems/eq5e/assets/ui/druid.png";
+  if (/(enchanter)/.test(c)) return "systems/eq5e/assets/ui/enchanter.png";
+  if (/(magician)/.test(c)) return "systems/eq5e/assets/ui/magician.png";
+  if (/(monk)/.test(c)) return "systems/eq5e/assets/ui/monk.png";
+  if (/(necromancer)/.test(c)) return "systems/eq5e/assets/ui/necromancer.png";
+  if (/(paladin)/.test(c)) return "systems/eq5e/assets/ui/paaladin.png";
+  if (/(ranger)/.test(c)) return "systems/eq5e/assets/ui/ranger.png";
+  if (/(rogue)/.test(c)) return "systems/eq5e/assets/ui/rogue.png";
+  if (/(shadowknight)/.test(c)) return "systems/eq5e/assets/ui/shadowknight.png"; 
+  if (/(shaman)/.test(c)) return "systems/eq5e/assets/ui/shaman.png"; 
+  if (/(warrior)/.test(c)) return "systems/eq5e/assets/ui/warrior.png";
+  if (/(wizard)/.test(c)) return "systems/eq5e/assets/ui/wizard.png";
   return "systems/eq5e/assets/ui/crest_knight.png";
 }
 
-function _signed(n) {
-  const x = Number(n ?? 0);
-  return x >= 0 ? `+${x}` : `${x}`;
-}
-
-/** Resolve a dropped document from a drag event. */
-async function _resolveDropDocument(ev) {
-  const data = TextEditor.getDragEventData(ev);
-  if (!data) return null;
-
-  // Common: {type:"Item", uuid:"Actor.xxx.Item.yyy"} or {type:"Item", id:"yyy", pack:"world.foo"}
-  if (data.uuid) return fromUuid(data.uuid);
-  if (data.type === "Item" && data.id && data.pack) {
-    const pack = game.packs?.get(data.pack);
-    if (!pack) return null;
-    return pack.getDocument(data.id);
-  }
-  // Allow dragging Actor to set mount/pet by flag (optional)
-  if (data.type === "Actor" && data.uuid) return fromUuid(data.uuid);
-
+/* ----------------------------- Tab Management ------------------------------ */
+// Simple, sheet-owned tab logic (no Foundry Tabs controller dependency)
+function _asElement(rootish) {
+  // V2 may pass HTMLElement, DocumentFragment, or jQuery-ish wrappers in some cases.
+  if (!rootish) return null;
+  if (rootish instanceof HTMLElement) return rootish;
+  if (rootish?.[0] instanceof HTMLElement) return rootish[0];
+  if (rootish instanceof DocumentFragment) return rootish.firstElementChild;
+  // last resort: if it has "element"
+  if (rootish?.element instanceof HTMLElement) return rootish.element;
   return null;
 }
 
-function _defaultSlots(target) {
-  // target: "self" | "mount" | "pet"
-  if (target === "mount") {
-    return [
-      { key: "mount", label: "Mount", allowed: "mount" },
-      { key: "saddle", label: "Saddle", allowed: "mountGear" },
-      { key: "barding", label: "Barding", allowed: "mountGear" },
-      { key: "tack", label: "Tack", allowed: "mountGear" },
-      { key: "bags", label: "Saddlebags", allowed: "mountGear" }
-    ];
+function _setActiveTab(root, group, tabId) {
+  const el = _asElement(root);
+  if (!el) return;
+
+  const nav = el.querySelector(`nav.eq5e-tabs[data-group="${group}"]`);
+  const items = nav ? Array.from(nav.querySelectorAll(`a.item[data-group="${group}"]`)) : [];
+  const panels = Array.from(el.querySelectorAll(`.tab[data-group="${group}"]`));
+
+  for (const a of items) {
+    const on = a.dataset.tab === tabId;
+    a.classList.toggle("active", on);
   }
-  if (target === "pet") {
-    return [
-      { key: "pet", label: "Pet", allowed: "pet" },
-      { key: "collar", label: "Collar", allowed: "petGear" },
-      { key: "harness", label: "Harness", allowed: "petGear" },
-      { key: "armor", label: "Pet Armor", allowed: "petGear" },
-      { key: "focus", label: "Focus", allowed: "petGear" }
-    ];
+  for (const p of panels) {
+    const on = p.dataset.tab === tabId;
+    p.classList.toggle("active", on);
+    // Force visibility regardless of theme CSS
+    p.style.display = on ? "" : "none";
+  }
+}
+
+/* ------------------------------ Roll Helpers ------------------------------ */
+async function eqRoll(formula, data = {}, label = "Roll") {
+  try {
+    const r = new Roll(formula, data);
+    await r.evaluate(); // async in v13
+    return r.toMessage({ flavor: label });
+  } catch (e) {
+    console.error("[EQ5E] Roll failed", e);
+    ui.notifications?.error("Roll failed (see console).");
+  }
+}
+
+/* ------------------------------ Equip Helpers ------------------------------ */
+function _slotDef(key) { return EQ_SLOTS.find(s => s.key === key) ?? null; }
+
+function _allowedString(slotKey) {
+  const s = _slotDef(slotKey);
+  if (!s) return "";
+  return (s.allowed ?? []).map(t => TYPE_LABEL[t] ?? t).join(", ");
+}
+
+function _itemEqType(item) {
+  // Prefer explicit eq5e category
+  const t = item?.type;
+  // normalize some likely variants
+  if (t === "equipment") return "equipment";
+  return t;
+}
+
+function _canEquipInSlot(item, slotKey) {
+  const s = _slotDef(slotKey);
+  if (!s) return false;
+
+  const itType = _itemEqType(item);
+  if (s.allowed?.includes(itType)) return true;
+
+  // Allow "equipment" items that declare a specific slot
+  const declared = item?.flags?.eq5e?.slot || item?.system?.slot || null;
+  if (declared && String(declared).toLowerCase() === String(slotKey).toLowerCase()) return true;
+
+  return false;
+}
+
+async function _ensureOwnedItem(actor, itemDoc) {
+  if (!actor || !itemDoc) return null;
+  // already owned
+  if (itemDoc.parent?.documentName === "Actor" && itemDoc.parent.id === actor.id) return itemDoc;
+
+  // copy onto actor
+  const obj = itemDoc.toObject();
+  delete obj._id;
+  const created = await actor.createEmbeddedDocuments("Item", [obj]);
+  return created?.[0] ?? null;
+}
+
+async function _unequipSlot(actor, slotKey) {
+  const equip = foundry.utils.getProperty(actor, "flags.eq5e.equipment") ?? {};
+  const currentId = equip?.[slotKey] ?? null;
+  if (!currentId) {
+    await actor.setFlag("eq5e", `equipment.${slotKey}`, null);
+    return;
+  }
+  const it = actor.items?.get(currentId) ?? null;
+  if (it) {
+    await it.setFlag("eq5e", "equipped", false);
+    await it.unsetFlag?.("eq5e", "slot").catch(() => {});
+  }
+  await actor.setFlag("eq5e", `equipment.${slotKey}`, null);
+}
+
+async function _equipToSlot(actor, item, slotKey) {
+  if (!actor || !item) return;
+
+  // enforce allowed
+  if (!_canEquipInSlot(item, slotKey)) {
+    ui.notifications?.warn(`That doesn't fit in ${slotKey.toUpperCase()} (Allowed: ${_allowedString(slotKey) || "—"}).`);
+    return;
   }
 
-  // Character "self" paper doll (minimal; expand later)
-  return [
-    { key: "head", label: "Head", allowed: "armor" },
-    { key: "chest", label: "Chest", allowed: "armor" },
-    { key: "hands", label: "Hands", allowed: "armor" },
-    { key: "legs", label: "Legs", allowed: "armor" },
-    { key: "feet", label: "Feet", allowed: "armor" },
-    { key: "neck", label: "Neck", allowed: "jewelry" },
-    { key: "ring1", label: "Ring 1", allowed: "jewelry" },
-    { key: "ring2", label: "Ring 2", allowed: "jewelry" },
-    { key: "primary", label: "Primary", allowed: "weapon" },
-    { key: "secondary", label: "Secondary", allowed: "weapon/shield" }
-  ];
+  // swap/unequip anything already in that slot
+  const equip = foundry.utils.getProperty(actor, "flags.eq5e.equipment") ?? {};
+  const prevId = equip?.[slotKey] ?? null;
+  if (prevId && prevId !== item.id) {
+    const prev = actor.items?.get(prevId);
+    if (prev) {
+      await prev.setFlag("eq5e", "equipped", false);
+      await prev.unsetFlag?.("eq5e", "slot").catch(() => {});
+    }
+  }
+
+  // If item is equipped in another slot, clear it there (move)
+  for (const s of EQ_SLOTS) {
+    const sid = equip?.[s.key];
+    if (sid && sid === item.id && s.key !== slotKey) {
+      await actor.setFlag("eq5e", `equipment.${s.key}`, null);
+    }
+  }
+
+  await item.setFlag("eq5e", "equipped", true);
+  await item.setFlag("eq5e", "slot", slotKey);
+  await actor.setFlag("eq5e", `equipment.${slotKey}`, item.id);
 }
 
-function _semanticTypeOf(item) {
-  // Prefer semanticType if present, else use Foundry Item type
-  const sem = eq5eGet(item, "flags.eq5e.semanticType", null);
-  return sem ?? item?.type ?? null;
-}
-
-function _equipTargetOf(item) {
-  return String(eq5eGet(item, "flags.eq5e.equip.target", "self") ?? "self");
-}
-
-function _equipSlotOf(item) {
-  return String(eq5eGet(item, "flags.eq5e.equip.slot", "") ?? "");
-}
-
-async function _rollToChat({ label, formula, data, speaker, flavor=null }) {
-  const roll = new Roll(formula, data);
-  await roll.evaluate(); // async by default in v13
-  const chatData = {
-    speaker,
-    flavor: flavor ?? `<strong>${label}</strong>`,
-    type: CONST.CHAT_MESSAGE_TYPES.ROLL,
-    roll
-  };
-  return ChatMessage.create(chatData);
-}
-
+/* ---------------------------------- Sheet --------------------------------- */
 export class EQ5eActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static DEFAULT_OPTIONS = foundry.utils.mergeObject(super.DEFAULT_OPTIONS, {
     id: "eq5e-actor-sheet",
     classes: ["eq5e", "sheet", "actor"],
     tag: "form",
     form: { submitOnChange: true, closeOnSubmit: false },
-    position: { width: 900, height: 740 },
+    position: { width: 940, height: 760 },
     window: { title: "EQ5e Actor Sheet" }
   });
-
-  static TABS = {
-    sheet: {
-      tabs: [
-        { id: "character", group: "sheet", label: "Character" },
-        { id: "inventory", group: "sheet", label: "Inventory" },
-        { id: "paperdoll", group: "sheet", label: "Gear" },
-        { id: "mount", group: "sheet", label: "Mount" },
-        { id: "pet", group: "sheet", label: "Pet" },
-        { id: "spells", group: "sheet", label: "Spells" },
-        { id: "aas", group: "sheet", label: "AAs" },
-        { id: "bio", group: "sheet", label: "Bio" }
-      ],
-      initial: "character"
-    }
-  };
 
   static PARTS = {
     form: { template: "systems/eq5e/templates/actor/character-sheet.hbs" }
   };
 
-  /** Build sheet view model from whatever your template.json/system currently has. */
-  _buildSheetModel() {
-    const actor = this.actor;
-    const system = actor?.system ?? {};
-
-    // Abilities (best-effort)
-    const abil = system.abilities ?? system.ability ?? {};
-    const abilityKeys = Object.keys(abil).length ? Object.keys(abil) : ["str","dex","con","int","wis","cha"];
-    const abilities = abilityKeys.map(k => {
-      const a = abil[k] ?? {};
-      const score = Number(a.value ?? a.score ?? 10);
-      const mod = Number(a.mod ?? Math.floor((score - 10)/2));
-      const save = Number(a.save ?? mod);
-      return { key: k, label: String(k).toUpperCase(), value: score, mod, save };
-    });
-
-    // Skills (best-effort; expects system.skills.<key>.total or .mod)
-    const sk = system.skills ?? {};
-    const skillKeys = Object.keys(sk);
-    const skills = skillKeys.map(k => {
-      const s = sk[k] ?? {};
-      const total = Number(s.total ?? s.mod ?? 0);
-      const prof = !!(s.proficient ?? s.proficiency ?? false);
-      return { key: k, label: s.label ?? k, total, proficient: prof };
-    });
-
-    // Vitals (best-effort)
-    const vitals = {
-      ac: { value: Number(eq5eGet(system, "attributes.ac.value", eq5eGet(system, "ac", 10))) },
-      init: { value: Number(eq5eGet(system, "attributes.init.value", eq5eGet(system, "initiative", 0))) },
-      speed: { value: Number(eq5eGet(system, "attributes.movement.walk", eq5eGet(system, "attributes.speed.value", 30))) },
-      hp: {
-        value: Number(eq5eGet(system, "attributes.hp.value", eq5eGet(system, "hp.value", 0))),
-        max: Number(eq5eGet(system, "attributes.hp.max", eq5eGet(system, "hp.max", 0)))
-      }
-    };
-
-    // Items: group
-    const items = actor?.items?.map(i => i.toObject()) ?? [];
-    const byType = (t) => items.filter(i => i.type === t);
-    const features = byType("feature");
-    const feats = byType("feat");
-    const spells = byType("spell");
-    const aas = byType("aa");
-
-    // Inventory = everything except class/race/spell/feature/feat/aa
-    const inventory = items.filter(i => !["class","race","spell","feature","feat","aa"].includes(i.type));
-
-    // Paperdolls: resolve equipped items by target+slot
-    const allEquip = items.map(i => {
-      const target = _equipTargetOf(i);
-      const slot = _equipSlotOf(i);
-      const equipped = !!eq5eGet(i, "flags.eq5e.equip.equipped", false);
-      const sem = _semanticTypeOf(i);
-      return { ...i, eq5eEquipTarget: target, eq5eSlot: slot, eq5eEquipped: equipped, eq5eSemantic: sem };
-    });
-
-    const dollFor = (target) => {
-      const slots = _defaultSlots(target).map(s => ({ ...s }));
-      for (const s of slots) {
-        const it = allEquip.find(i => i.eq5eEquipped && i.eq5eEquipTarget === target && i.eq5eSlot === s.key) ?? null;
-        s.item = it ? { _id: it._id, name: it.name, type: it.type, semantic: it.eq5eSemantic } : null;
-      }
-      return { slots };
-    };
-
-    const className = _getPrimaryClassName(actor);
-
-    return {
-      className,
-      vitals,
-      abilities,
-      skills,
-      items: { features, feats, spells, aas, inventory, all: items },
-      paperdoll: {
-        self: dollFor("self"),
-        mount: dollFor("mount"),
-        pet: dollFor("pet")
-      }
-    };
-  }
-
   async _prepareContext(options) {
     const ctx = await super._prepareContext(options);
 
-    ctx.actor = ctx.actor ?? this.actor;
-    ctx.system = ctx.system ?? this.actor?.system ?? {};
-    ctx.flags = ctx.flags ?? this.actor?.flags ?? {};
-    ctx.items = ctx.items ?? (this.actor?.items?.map(i => i.toObject()) ?? []);
-    ctx.actorType = this.actor?.type;
+    const actor = this.actor;
+    ctx.actor = actor;
+    ctx.system = actor?.system ?? {};
+    ctx.flags = actor?.flags ?? {};
+    ctx.items = actor?.items?.map(i => i.toObject()) ?? [];
 
     ctx.eq5e = ctx.eq5e ?? {};
     ctx.eq5e.ui = {
-      crest: _crestForActor(this.actor),
-      parchment: "systems/eq5e/assets/ui/parchment.png"
+      crest: _crestForActor(actor),
+      parchment: "systems/eq5e/assets/ui/parchment.png",
+      dropin: DROPIN_TAG
     };
 
-    const model = this._buildSheetModel();
-    ctx.eq5e.sheet = model;
-    ctx.eq5e.items = model.items;
-    ctx.eq5e.paperdoll = model.paperdoll;
+    // Basic sheet data expected by your template
+    const classItem = _getPrimaryClassItem(actor);
+    ctx.eq5e.sheet = ctx.eq5e.sheet ?? {};
+    ctx.eq5e.sheet.className = classItem?.name ?? _getPrimaryClassName(actor) ?? "";
+    ctx.eq5e.sheet.vitals = ctx.eq5e.sheet.vitals ?? {
+      ac: { value: foundry.utils.getProperty(actor, "system.attributes.ac.value") ?? 10 },
+      init: { value: foundry.utils.getProperty(actor, "system.attributes.init.value") ?? 0 },
+      speed: { value: foundry.utils.getProperty(actor, "system.attributes.movement.walk") ?? foundry.utils.getProperty(actor,"system.attributes.speed.value") ?? 30 },
+      hp: {
+        value: foundry.utils.getProperty(actor, "system.attributes.hp.value") ?? 0,
+        max: foundry.utils.getProperty(actor, "system.attributes.hp.max") ?? 0
+      }
+    };
+
+    // Abilities/skills: use whatever template.json populated, but keep safe defaults
+    const abilities = foundry.utils.getProperty(actor, "system.abilities") ?? {};
+    ctx.eq5e.sheet.abilities = Object.entries(abilities).map(([k, v]) => ({
+      key: k,
+      label: (v?.label ?? k).toString().toUpperCase(),
+      value: v?.value ?? 10,
+      mod: v?.mod ?? 0,
+      save: v?.save ?? 0
+    }));
+
+    const skills = foundry.utils.getProperty(actor, "system.skills") ?? {};
+    ctx.eq5e.sheet.skills = Object.entries(skills).map(([k, v]) => ({
+      key: k,
+      label: v?.label ?? k,
+      total: v?.total ?? v?.mod ?? 0,
+      proficient: !!v?.proficient
+    }));
+
+    // Item buckets
+    const items = actor?.items ?? new Collection();
+    const byType = (t) => items.filter(i => i.type === t).map(i => i.toObject());
+    ctx.eq5e.items = {
+      features: byType("feature"),
+      feats: byType("feat"),
+      spells: byType("spell"),
+      aas: byType("aa"),
+      inventory: items.filter(i => ["weapon","armor","shield","jewelry","ammo","equipment","consumable"].includes(i.type))
+        .map(i => {
+          const o = i.toObject();
+          o.eq5eEquipped = !!i.flags?.eq5e?.equipped;
+          o.eq5eSlot = i.flags?.eq5e?.slot ?? null;
+          return o;
+        })
+    };
+
+    // Paper doll state
+    const equip = foundry.utils.getProperty(actor, "flags.eq5e.equipment") ?? {};
+    ctx.eq5e.paperdoll = {
+      slots: EQ_SLOTS.map(s => {
+        const id = equip?.[s.key] ?? null;
+        const doc = id ? actor.items?.get(id) : null;
+        return {
+          key: s.key,
+          label: s.label,
+          allowed: (s.allowed ?? []).map(t => TYPE_LABEL[t] ?? t).join(", "),
+          item: doc ? { _id: doc.id, name: doc.name, type: doc.type } : null
+        };
+      })
+    };
 
     return ctx;
   }
 
-  /** V2: attach listeners to the rendered part */
+  /* V2: this is where we wire DOM listeners for each rendered part */
   _attachPartListeners(partId, html) {
     super._attachPartListeners(partId, html);
+    const root = _asElement(html);
+    if (!root) return;
 
-    // Click actions
-    html.querySelectorAll("[data-action]").forEach(el => {
-      el.addEventListener("click", (ev) => this._onAction(ev));
-    });
+    // Tabs: bind clicks
+    const navItems = root.querySelectorAll("nav.eq5e-tabs a.item");
+    navItems.forEach(a => {
+      a.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        const tab = a.dataset.tab;
+        const group = a.dataset.group || "sheet";
+        _setActiveTab(root, group, tab);
 
-    // Drop targets for equipment slots
-    html.querySelectorAll("[data-eq5e-drop-slot='1']").forEach(el => {
-      el.addEventListener("dragover", (ev) => { ev.preventDefault(); ev.dataTransfer.dropEffect = "copy"; });
-      el.addEventListener("drop", (ev) => this._onDropToSlot(ev));
-    });
-
-    // Optional: clear-token drag
-    html.querySelectorAll("[data-eq5e-clear-token='1']").forEach(el => {
-      el.addEventListener("dragstart", (ev) => {
-        ev.dataTransfer.setData("text/plain", JSON.stringify({ eq5e: "clear-slot" }));
+        // persist per-actor
+        this.actor?.setFlag?.("eq5e", "ui.activeTab", tab).catch(()=>{});
       });
     });
+
+    // Initial tab
+    const saved = this.actor?.getFlag?.("eq5e", "ui.activeTab");
+    _setActiveTab(root, "sheet", saved || "character");
+
+    // data-action buttons
+    root.addEventListener("click", (ev) => {
+      const btn = ev.target?.closest?.("[data-action]");
+      if (!btn) return;
+      const act = btn.dataset.action;
+      if (!act) return;
+      ev.preventDefault();
+      ev.stopPropagation();
+      this._handleAction(act, btn).catch(err => console.error("[EQ5E] action failed", err));
+    });
+
+    // Drop targets: paper doll slots
+    root.querySelectorAll("[data-eq5e-drop-slot='1']").forEach(el => {
+      el.addEventListener("dragover", (ev) => { ev.preventDefault(); });
+      el.addEventListener("drop", (ev) => this._onDropToSlot(ev).catch(err => console.error("[EQ5E] drop failed", err)));
+    });
   }
 
-  async _onAction(event) {
-    const btn = event.currentTarget;
-    const action = btn?.dataset?.action;
-    if (!action) return;
-
-    try {
-      switch (action) {
-        case "editImage": return this._onEditImage(event, btn);
-        case "rollAbility": return this._onRollAbility(event, btn);
-        case "rollSave": return this._onRollSave(event, btn);
-        case "rollSkill": return this._onRollSkill(event, btn);
-        case "unequipSlot": return this._onUnequipSlot(event, btn);
-        case "toggleEquip": return this._onToggleEquip(event, btn);
-        case "focusTab": return this._focusTab(btn.dataset.tab);
-        default:
-          console.warn("[EQ5E] Unknown action:", action);
+  async _handleAction(action, target) {
+    const actor = this.actor;
+    switch (action) {
+      case "editImage": {
+        // Avoid FilePicker positioning crash by rendering centered
+        const field = target.dataset.field || "img";
+        const current = foundry.utils.getProperty(this.document, field);
+        const fp = new foundry.applications.apps.FilePicker({
+          type: "image",
+          current,
+          callback: (path) => this.document.update({ [field]: path })
+        });
+        fp.render(true, { focus: true });
+        return;
       }
-    } catch (e) {
-      console.error("[EQ5E] Action failed", action, e);
-      ui.notifications?.error("Action failed (see console).");
-    }
-  }
 
-  _focusTab(tabId) {
-    // Tabs are handled by ActorSheetV2; triggering click on the tab anchor is the most reliable.
-    const el = this.element?.querySelector?.(`nav[data-group="sheet"] a.item[data-tab="${tabId}"]`);
-    el?.click?.();
-  }
-
-  async _onEditImage(event, target) {
-    event.preventDefault();
-    // Use FilePicker.browse to avoid position issues in some V2 contexts
-    const current = this.actor?.img ?? "";
-    const fp = new FilePicker({
-      type: "image",
-      current,
-      callback: async (path) => {
-        // Only update img; never touch name to avoid "name may not be undefined"
-        await this.actor.update({ img: path });
+      case "rollAbility": {
+        const ab = target.dataset.ability;
+        const a = foundry.utils.getProperty(actor, `system.abilities.${ab}`) ?? {};
+        const mod = Number(a.mod ?? 0);
+        return eqRoll("1d20 + @mod", { mod }, `${ab.toUpperCase()} Check`);
       }
-    });
-    return fp.render(true);
-  }
 
-  async _onRollAbility(event, target) {
-    event.preventDefault();
-    const ability = target.dataset.ability;
-    if (!ability) return;
+      case "rollSave": {
+        const ab = target.dataset.ability;
+        const a = foundry.utils.getProperty(actor, `system.abilities.${ab}`) ?? {};
+        const save = Number(a.save ?? a.mod ?? 0);
+        return eqRoll("1d20 + @save", { save }, `${ab.toUpperCase()} Save`);
+      }
 
-    const model = this._buildSheetModel();
-    const a = model.abilities.find(x => x.key === ability);
-    if (!a) return ui.notifications?.warn(`Unknown ability ${ability}`);
+      case "rollSkill": {
+        const sk = target.dataset.skill;
+        const s = foundry.utils.getProperty(actor, `system.skills.${sk}`) ?? {};
+        const total = Number(s.total ?? s.mod ?? 0);
+        return eqRoll("1d20 + @total", { total }, `${sk} Skill`);
+      }
 
-    const speaker = ChatMessage.getSpeaker({ actor: this.actor });
-    const label = `${this.actor.name} — ${ability.toUpperCase()} Check (${_signed(a.mod)})`;
-    return _rollToChat({
-      label,
-      formula: "1d20 + @mod",
-      data: { mod: a.mod },
-      speaker
-    });
-  }
-
-  async _onRollSave(event, target) {
-    event.preventDefault();
-    const ability = target.dataset.ability;
-    if (!ability) return;
-
-    const model = this._buildSheetModel();
-    const a = model.abilities.find(x => x.key === ability);
-    if (!a) return ui.notifications?.warn(`Unknown save ${ability}`);
-
-    const speaker = ChatMessage.getSpeaker({ actor: this.actor });
-    const label = `${this.actor.name} — ${ability.toUpperCase()} Save (${_signed(a.save)})`;
-    return _rollToChat({
-      label,
-      formula: "1d20 + @mod",
-      data: { mod: a.save },
-      speaker
-    });
-  }
-
-  async _onRollSkill(event, target) {
-    event.preventDefault();
-    const skill = target.dataset.skill;
-    if (!skill) return;
-
-    const model = this._buildSheetModel();
-    const s = model.skills.find(x => x.key === skill);
-    if (!s) return ui.notifications?.warn(`Unknown skill ${skill}`);
-
-    const speaker = ChatMessage.getSpeaker({ actor: this.actor });
-    const label = `${this.actor.name} — ${s.label} (${_signed(s.total)})`;
-    return _rollToChat({
-      label,
-      formula: "1d20 + @mod",
-      data: { mod: s.total },
-      speaker
-    });
-  }
-
-  async _onToggleEquip(event, target) {
-    event.preventDefault();
-    const itemId = target.dataset.itemId;
-    const item = this.actor.items?.get(itemId);
-    if (!item) return;
-
-    const cur = !!eq5eGet(item, "flags.eq5e.equip.equipped", false);
-    await item.setFlag("eq5e", "equip.equipped", !cur);
-    // re-render to update paperdolls
-    return this.render({ force: true });
-  }
-
-  async _onUnequipSlot(event, target) {
-    event.preventDefault();
-    const slot = target.dataset.slot;
-    const doll = target.dataset.doll ?? "self"; // "self"|"mount"|"pet"
-    if (!slot) return;
-
-    // Find an item equipped in that slot+target and clear it
-    const hit = this.actor.items?.find(i =>
-      !!eq5eGet(i, "flags.eq5e.equip.equipped", false) &&
-      _equipTargetOf(i) === doll &&
-      _equipSlotOf(i) === slot
-    );
-
-    if (hit) {
-      await hit.setFlag("eq5e", "equip.equipped", false);
-      await hit.setFlag("eq5e", "equip.slot", "");
-    }
-    return this.render({ force: true });
-  }
-
-  async _onDropToSlot(event) {
-    event.preventDefault();
-
-    const slotEl = event.currentTarget;
-    const slot = slotEl.dataset.slot;
-    const doll = slotEl.dataset.doll ?? "self"; // which paperdoll tab
-
-    // Clear-token support
-    try {
-      const raw = event.dataTransfer?.getData("text/plain") ?? "";
-      if (raw) {
-        const parsed = JSON.parse(raw);
-        if (parsed?.eq5e === "clear-slot") {
-          const fakeBtn = { dataset: { slot, doll } };
-          return this._onUnequipSlot(event, fakeBtn);
+      case "toggleEquip": {
+        const itemId = target.dataset.itemId;
+        const it = actor.items?.get(itemId);
+        if (!it) return;
+        const cur = !!it.flags?.eq5e?.equipped;
+        if (cur) {
+          // If it's in an equipment slot, clear that too
+          const slot = it.flags?.eq5e?.slot ?? null;
+          if (slot) await _unequipSlot(actor, slot);
+          else await it.setFlag("eq5e","equipped", false);
+        } else {
+          // If it has a suggested slot, try to use it; otherwise do nothing but set equipped.
+          const want = it.flags?.eq5e?.slot ?? null;
+          if (want && _slotDef(want)) await _equipToSlot(actor, it, want);
+          else await it.setFlag("eq5e","equipped", true);
         }
+        return;
       }
-    } catch (e) { /* ignore */ }
 
-    const doc = await _resolveDropDocument(event);
-    if (!doc) return;
+      case "unequipSlot": {
+        const slot = target.dataset.slot;
+        if (!slot) return;
+        return _unequipSlot(actor, slot);
+      }
 
-    // If user drops an Actor onto mount/pet "pet/mount" slot, store UUIDs for later automation (optional)
-    if (doc.documentName === "Actor" && (doll === "mount" || doll === "pet")) {
-      const flagPath = (doll === "mount") ? "mount.actorUuid" : "pet.actorUuid";
-      await this.actor.setFlag("eq5e", flagPath, doc.uuid);
-      ui.notifications?.info(`EQ5E: Linked ${doll} to ${doc.name}.`);
-      return this.render({ force: true });
+      case "focusTab": {
+        const tab = target.dataset.tab;
+        if (!tab) return;
+        // find root
+        const root = _asElement(this.element);
+        if (!root) return;
+        _setActiveTab(root, "sheet", tab);
+        return this.actor?.setFlag?.("eq5e", "ui.activeTab", tab).catch(()=>{});
+      }
+    }
+  }
+
+  async _onDropToSlot(ev) {
+    ev.preventDefault();
+    const actor = this.actor;
+    const slotEl = ev.currentTarget;
+    const slotKey = slotEl?.dataset?.slot;
+    if (!slotKey) return;
+
+    let raw = ev.dataTransfer?.getData("text/plain") ?? "";
+    if (!raw) raw = ev.dataTransfer?.getData("text") ?? "";
+
+    let data = null;
+    try { data = JSON.parse(raw); } catch (e) { data = null; }
+
+    // Clear token
+    if (data?.eq5e === "clear-slot") {
+      return _unequipSlot(actor, slotKey);
     }
 
-    // Must be an Item (either embedded or compendium/world)
-    if (doc.documentName !== "Item") return;
-
-    // If the item is from a compendium, import it to the actor first.
-    let item = doc;
-    const isEmbedded = !!(doc.parent && doc.parent.uuid === this.actor.uuid);
-    if (!isEmbedded) {
-      // Create embedded copy
-      const data = doc.toObject();
-      delete data._id;
-      const created = await this.actor.createEmbeddedDocuments("Item", [data]);
-      item = created?.[0] ?? null;
-      if (!item) return;
-    } else {
-      item = this.actor.items.get(doc.id);
-    }
-
-    const sem = _semanticTypeOf(item);
-    const allowed = String(slotEl.dataset.allowed ?? "");
-
-    // Basic compatibility rule:
-    // - If allowed is "mount" or "pet" only accept semanticType mount/pet
-    // - If allowed is "mountGear" accept semanticType mountGear OR type equipment
-    // - If allowed is "petGear" accept semanticType petGear OR type equipment
-    const ok =
-      (allowed === "mount" && sem === "mount") ||
-      (allowed === "pet" && sem === "pet") ||
-      (allowed === "mountGear" && (sem === "mountGear" || item.type === "equipment")) ||
-      (allowed === "petGear" && (sem === "petGear" || item.type === "equipment")) ||
-      (allowed === "weapon/shield" && ["weapon","shield"].includes(item.type)) ||
-      (allowed === "weapon" && item.type === "weapon") ||
-      (allowed === "armor" && ["armor","shield"].includes(item.type)) ||
-      (allowed === "jewelry" && item.type === "jewelry");
-
-    if (!ok) {
-      ui.notifications?.warn(`That item doesn't fit the ${slot} slot.`);
+    // Foundry drag/drop payload usually includes uuid
+    const uuid = data?.uuid || data?.data?.uuid || null;
+    if (!uuid) {
+      ui.notifications?.warn("Drop an item from your inventory onto a slot.");
       return;
     }
 
-    // Swap behavior: if occupied, unequip existing first
-    const existing = this.actor.items?.find(i =>
-      !!eq5eGet(i, "flags.eq5e.equip.equipped", false) &&
-      _equipTargetOf(i) === doll &&
-      _equipSlotOf(i) === slot
-    );
-    if (existing && existing.id !== item.id) {
-      await existing.setFlag("eq5e", "equip.equipped", false);
-      await existing.setFlag("eq5e", "equip.slot", "");
+    const doc = await fromUuid(uuid).catch(() => null);
+    if (!doc || doc.documentName !== "Item") {
+      ui.notifications?.warn("Only Items can be equipped.");
+      return;
     }
 
-    // Equip dropped
-    await item.setFlag("eq5e", "equip.target", doll);
-    await item.setFlag("eq5e", "equip.slot", slot);
-    await item.setFlag("eq5e", "equip.equipped", true);
+    // Only allow inventory-ish items
+    const t = doc.type;
+    if (!["weapon","armor","shield","jewelry","ammo","equipment","consumable"].includes(t)) {
+      ui.notifications?.warn("That item type can't be equipped on the paper doll.");
+      return;
+    }
 
-    return this.render({ force: true });
+    // Ensure owned (if from compendium or elsewhere)
+    const owned = await _ensureOwnedItem(actor, doc);
+    if (!owned) return;
+
+    return _equipToSlot(actor, owned, slotKey);
   }
 }
 
@@ -510,9 +488,9 @@ Hooks.once("init", () => {
     foundry.documents.collections.Actors.registerSheet("eq5e", EQ5eActorSheet, {
       types: ["character", "npc", "pet"],
       makeDefault: true,
-      label: "EQ5e Actor Sheet (V2)"
+      label: `EQ5e Actor Sheet (V2) [${DROPIN_TAG}]`
     });
-    console.log("[EQ5E] Registered EQ5e Actor Sheet (V2) — EQ5E_SHEET_DROPIN_V2_MOUNT_PET_PAPERDOLLS_001");
+    console.log(`[EQ5E] Registered EQ5e Actor Sheet (V2) ${DROPIN_TAG}`);
   } catch (e) {
     console.error("[EQ5E] Failed to register EQ5e Actor Sheet", e);
   }

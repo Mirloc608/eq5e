@@ -1,0 +1,48 @@
+{
+  "defaults": {
+    "scale": 0.95,
+    "opacity": 1.0,
+    "below": true,
+    "offsetX": 0,
+    "offsetY": 14
+  },
+  "types": {
+    "horse": {
+      "scale": 0.95,
+      "offsetY": 16
+    },
+    "wolf": {
+      "scale": 0.9,
+      "offsetY": 12
+    },
+    "cat": {
+      "scale": 0.92,
+      "offsetY": 14
+    },
+    "rhino": {
+      "scale": 1.0,
+      "offsetY": 18
+    },
+    "divine": {
+      "scale": 0.98,
+      "offsetY": 16
+    }
+  },
+  "eras": {
+    "classic": {
+      "type": "horse"
+    },
+    "kunark": {
+      "type": "rhino"
+    },
+    "velious": {
+      "type": "wolf"
+    },
+    "luclin": {
+      "type": "cat"
+    },
+    "pop": {
+      "type": "divine"
+    }
+  }
+}

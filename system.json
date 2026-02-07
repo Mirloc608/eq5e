@@ -16,12 +16,12 @@
   "socket": true,
   "esmodules": [
     "scripts/ae-normalizer.mjs",
+    "scripts/new-character-wizard.mjs",
     "scripts/eq5e.mjs",
     "scripts/character-sheet.js"
   ],
   "styles": [
-    "styles/eq5e.css",
-    "styles/eq5e-sheet-5e.css"
+    "styles/eq5e.css"
   ],
   "documentTypes": {
     "Actor": {
@@ -41,7 +41,8 @@
       "jewelry": {},
       "consumable": {},
       "ammo": {},
-      "aa": {}
+      "aa": {},
+      "equipment": {}
     }
   }
 }

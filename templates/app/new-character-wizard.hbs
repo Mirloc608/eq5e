@@ -1,0 +1,73 @@
+<section class="eq5e-wiz">
+  <style>
+    .eq5e-wiz { padding: 12px; }
+    .eq5e-wiz .row { display: grid; grid-template-columns: 150px 1fr; gap: 10px; align-items: center; margin: 10px 0; }
+    .eq5e-wiz label { font-weight: 800; }
+    .eq5e-wiz input, .eq5e-wiz select { width: 100%; padding: 6px 8px; }
+    .eq5e-wiz .hint { opacity: .8; font-size: 12px; margin-top: 2px; grid-column: 2 / 3; }
+    .eq5e-wiz .box { background: rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.12); border-radius: 10px; padding: 10px; }
+    .eq5e-wiz .pill { display:inline-flex; align-items:center; gap:6px; border: 1px solid rgba(0,0,0,0.15); border-radius: 999px; padding: 3px 10px; font-weight: 800; font-size: 12px; opacity: .9; }
+    .eq5e-wiz .footer { display:flex; justify-content:flex-end; gap: 10px; margin-top: 12px; }
+    .eq5e-wiz button { padding: 6px 12px; font-weight: 800; }
+  </style>
+
+  <div class="box">
+    <div class="pill">
+      <i class="fa-solid fa-scroll"></i>
+      Classic EQ Character Wizard
+    </div>
+
+    <div class="row">
+      <label>Character Name</label>
+      <input name="name" type="text" value="{{state.name}}" placeholder="e.g., Kithicor" />
+    </div>
+
+    <div class="row">
+      <label>Era</label>
+      <select name="era">
+{{#each eq5e.chargen.eras as |e|}}
+  <option value="{{e.id}}" {{#if (eq ../eq5e.chargen.state.era e.id)}}selected{{/if}}>{{e.label}}</option>
+{{/each}}
+</select>
+      <div class="hint">Limits available races/classes (if GM restrictions are enabled).</div>
+    </div>
+
+    <div class="row">
+      <label>Race</label>
+      <select name="race">
+{{#each eq5e.chargen.races as |r|}}
+  <option value="{{r}}" {{#if (eq ../eq5e.chargen.state.race r)}}selected{{/if}}>{{r}}</option>
+{{/each}}
+</select>
+    </div>
+
+    <div class="row">
+      <label>Class</label>
+      <select name="cls">
+{{#each eq5e.chargen.classes as |c|}}
+  <option value="{{c}}" {{#if (eq ../eq5e.chargen.state.cls c)}}selected{{/if}}>{{c}}</option>
+{{/each}}
+</select>
+      <div class="hint">Starter spells/items will be added if matching compendium entries exist.</div>
+    </div>
+
+    <div class="row">
+      <label>Options</label>
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <label style="display:flex; align-items:center; gap:8px; font-weight:700;">
+          <input type="checkbox" name="autoSpells" {{#if state.autoSpells}}checked{{/if}} />
+          Auto-assign starting spells
+        </label>
+        <label style="display:flex; align-items:center; gap:8px; font-weight:700;">
+          <input type="checkbox" name="starterGear" {{#if state.starterGear}}checked{{/if}} />
+          Add starter gear (best effort)
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <button type="button" data-action="cancel">Cancel</button>
+    <button type="button" data-action="create"><i class="fa-solid fa-wand-magic-sparkles"></i> Create Character</button>
+  </div>
+</section>

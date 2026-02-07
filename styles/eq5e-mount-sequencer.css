@@ -1,0 +1,5 @@
+/* Optional: keep token mount FX visually crisp on parchment-themed UI */
+.eq5e .eq5e-mountfx-hint {
+  font-weight: 800;
+  opacity: 0.85;
+}
