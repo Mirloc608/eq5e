@@ -47,6 +47,6 @@
     "icon": "assets/eq5e.png"
   },
   "url": "https://github.com/Mirloc608/EQ5e",
-  "manifest": "https://github.com/Mirloc608/EQ5e/raw/main/system/eq5e/system.json",
+  "manifest": "https://raw.githubusercontent.com/Mirloc608/EQ5e/main/system/eq5e/system.json",
   "download": "https://github.com/Mirloc608/EQ5e/releases/latest/download/eq5e.zip"
 }
