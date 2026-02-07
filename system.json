@@ -14,7 +14,8 @@
   "esmodules": [
     "scripts/eq5e.mjs",
     "scripts/eq5e-patches.mjs",
-    "scripts/new-character-wizard.mjs"
+    "scripts/new-character-wizard.mjs",
+    "scripts/ui/character-sheet.js"
   ],
   "styles": [
     "styles/eq5e.css"
