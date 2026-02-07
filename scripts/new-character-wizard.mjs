@@ -303,6 +303,7 @@ class EQ5eNewCharacterWizard extends HandlebarsApplicationMixin(ApplicationV2) {
     };
 
     class EQ5eHelpDialog extends HandlebarsApplicationMixin(ApplicationV2) {
+      static PARTS = { body: { template: "systems/eq5e/templates/app/help-dialog.hbs" } };
       static DEFAULT_OPTIONS = foundry.utils.mergeObject(super.DEFAULT_OPTIONS, {
         id: "eq5e-help-dialog",
         tag: "section",
@@ -339,7 +340,7 @@ class EQ5eNewCharacterWizard extends HandlebarsApplicationMixin(ApplicationV2) {
       }
     }
 
-    const dlg = new EQ5eHelpDialog({ template: "systems/eq5e/templates/app/help-dialog.hbs", content: `<div class=\"eq5e-wiz-help\">${msg.body}</div>`, buttons });
+    const dlg = new EQ5eHelpDialog({ content: `<div class=\"eq5e-wiz-help\">${msg.body}</div>`, buttons });
     dlg.render(true);
   }
 
