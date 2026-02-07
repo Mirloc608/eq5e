@@ -5,7 +5,9 @@
   "version": "1.0.0-beta.ui",
   "authors": [
     {
-      "name": "David"
+      "name": "David Wruck",
+	  "manifest": "https://github.com/Mirloc608/eq5e/releases/latest/download/system.json",
+      "download": "https://github.com/Mirloc608/eq5e/releases/latest/download/eq5e-1.0.0-beta.ui.zip"
     }
   ],
   "compatibility": {
