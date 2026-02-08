@@ -166,6 +166,22 @@ async function _cloneItemsToActor(actor, docs) {
   return created?.length ?? 0;
 }
 
+function _createPlaceholderClassRaceItem(name, type) {
+  // Create a richer placeholder item with sensible metadata.
+  // type should be "class" or "race".
+  const isClass = type === "class";
+  return {
+    name,
+    type,
+    img: "systems/eq5e/assets/ui/default-portrait.webp",
+    system: isClass ? {
+      description: `${name} class (placeholder). Expand this item to customize.`
+    } : {
+      description: `${name} race (placeholder). Expand this item to customize.`
+    }
+  };
+}
+
 async function _applyRaceClassBasics(actor, { race, cls }) {
   // Keep this conservative: only fields that are known to exist in your earlier sheet context.
   const update = {
@@ -420,11 +436,31 @@ class EQ5eNewCharacterWizard extends HandlebarsApplicationMixin(ApplicationV2) {
         const classDoc = await _findItemInPacks({ name: cls, type: "class" });
         const raceDoc = await _findItemInPacks({ name: race, type: "race" });
         const addDocs = [];
-        if (classDoc) addDocs.push(classDoc);
-        if (raceDoc) addDocs.push(raceDoc);
+        const fallbacks = [];
+        
+        if (classDoc) {
+          addDocs.push(classDoc);
+        } else {
+          // Create a richer placeholder if not found in packs
+          fallbacks.push(_createPlaceholderClassRaceItem(cls, "class"));
+        }
+        
+        if (raceDoc) {
+          addDocs.push(raceDoc);
+        } else {
+          // Create a richer placeholder if not found in packs
+          fallbacks.push(_createPlaceholderClassRaceItem(race, "race"));
+        }
+        
+        // Clone found items first, then create fallback placeholders
         if (addDocs.length) {
           const added = await _cloneItemsToActor(actor, addDocs);
           if (added) ui.notifications?.info(`EQ5E: Added ${added} core item(s) (class/race).`);
+        }
+        
+        if (fallbacks.length) {
+          const created = await actor.createEmbeddedDocuments("Item", fallbacks);
+          if (created) ui.notifications?.info(`EQ5E: Created ${created.length} placeholder item(s) (class/race).`);
         }
       } catch (e) {
         // non-fatal
