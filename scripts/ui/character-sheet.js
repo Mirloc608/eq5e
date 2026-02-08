@@ -21,12 +21,24 @@ function _crestForActor(actor) {
   if (img && img !== "icons/svg/mystery-man.svg") return img;
 
   const c = _normalizeClassName(_getPrimaryClassName(actor));
-  if (/(warrior|paladin|shadow|knight)/.test(c)) return "systems/eq5e/assets/ui/crest_knight.png";
-  if (/(druid|ranger|shaman|beast|warden)/.test(c)) return "systems/eq5e/assets/ui/crest_dragon.png";
-  if (/(cleric|priest|templar|healer)/.test(c)) return "systems/eq5e/assets/ui/crest_ankh.png";
-  if (/(wizard|magician|mage|enchanter|necromancer|sorcerer)/.test(c)) return "systems/eq5e/assets/ui/crest_moon.png";
-  if (/(rogue|bard|monk|assassin|skald)/.test(c)) return "systems/eq5e/assets/ui/crest_blades.png";
-  return "systems/eq5e/assets/ui/crest_knight.png";
+  // Map to actual class PNG files in assets/ui
+  if (/(warrior)/.test(c)) return "systems/eq5e/assets/ui/warrior.png";
+  if (/(paladin)/.test(c)) return "systems/eq5e/assets/ui/paladin.png";
+  if (/(shadow|knight)/.test(c)) return "systems/eq5e/assets/ui/shadowknight.png";
+  if (/(berserker)/.test(c)) return "systems/eq5e/assets/ui/berserker.png";
+  if (/(druid)/.test(c)) return "systems/eq5e/assets/ui/druid.png";
+  if (/(ranger)/.test(c)) return "systems/eq5e/assets/ui/ranger.png";
+  if (/(shaman)/.test(c)) return "systems/eq5e/assets/ui/shaman.png";
+  if (/(beastlord|beast|warden)/.test(c)) return "systems/eq5e/assets/ui/beastlord.png";
+  if (/(cleric|priest|templar|healer)/.test(c)) return "systems/eq5e/assets/ui/cleric.png";
+  if (/(wizard)/.test(c)) return "systems/eq5e/assets/ui/wizard.png";
+  if (/(magician|mage)/.test(c)) return "systems/eq5e/assets/ui/magician.png";
+  if (/(enchanter)/.test(c)) return "systems/eq5e/assets/ui/enchanter.png";
+  if (/(necromancer)/.test(c)) return "systems/eq5e/assets/ui/necromancer.png";
+  if (/(rogue|assassin)/.test(c)) return "systems/eq5e/assets/ui/rogue.png";
+  if (/(bard|skald)/.test(c)) return "systems/eq5e/assets/ui/bard.png";
+  if (/(monk)/.test(c)) return "systems/eq5e/assets/ui/monk.png";
+  return "systems/eq5e/assets/ui/warrior.png";
 }
 
 /* ---------------------------------- Sheet --------------------------------- */
