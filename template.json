@@ -22,24 +22,44 @@
         }
       },
       "spell": {
-        "cooldown": { "duration": 0, "remaining": 0 }
+        "cooldown": {
+          "duration": 0,
+          "remaining": 0
+        }
       },
       "discipline": {
-        "cooldown": { "duration": 0, "remaining": 0 }
+        "cooldown": {
+          "duration": 0,
+          "remaining": 0
+        }
       }
     }
-  }
-}
-},
-
+  },
   "Actor": {
     "templates": {
       "base": {
         "level": 1,
-        "class": { "id": "", "label": "", "activeTab": "" },
-        "race": { "id": "", "label": "", "bonuses": {} },
+        "class": {
+          "id": "",
+          "label": "",
+          "activeTab": ""
+        },
+        "race": {
+          "id": "",
+          "label": "",
+          "bonuses": {}
+        },
         "abilities": {},
-        "resources": { "hp": { "value": 10, "max": 10 }, "mana": { "value": 0, "max": 0 } },
+        "resources": {
+          "hp": {
+            "value": 10,
+            "max": 10
+          },
+          "mana": {
+            "value": 0,
+            "max": 0
+          }
+        },
         "buffs": {}
       }
     }
