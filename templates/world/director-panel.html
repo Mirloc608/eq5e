@@ -1,0 +1,60 @@
+<section class="eq-director-panel">
+  <header><h2>Director Controls</h2></header>
+
+  <div class="eq-grid">
+    <div>
+      <label>Pacing</label>
+      <input type="number" class="eq-dir-pacing" value="{{world.pacing}}" min="0" max="10">
+    </div>
+
+    <div>
+      <label>Personality</label>
+      <select class="eq-dir-personality">
+        <option value="balanced" {{#if (eq world.personality "balanced")}}selected{{/if}}>Balanced</option>
+        <option value="aggressive" {{#if (eq world.personality "aggressive")}}selected{{/if}}>Aggressive</option>
+        <option value="cautious" {{#if (eq world.personality "cautious")}}selected{{/if}}>Cautious</option>
+        <option value="chaotic" {{#if (eq world.personality "chaotic")}}selected{{/if}}>Chaotic</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Mood</label>
+      <select class="eq-dir-mood">
+        <option value="calm" {{#if (eq world.mood "calm")}}selected{{/if}}>Calm</option>
+        <option value="rage" {{#if (eq world.mood "rage")}}selected{{/if}}>Rage</option>
+        <option value="panic" {{#if (eq world.mood "panic")}}selected{{/if}}>Panic</option>
+        <option value="frenzy" {{#if (eq world.mood "frenzy")}}selected{{/if}}>Frenzy</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Mood Intensity</label>
+      <input type="number" class="eq-dir-mood-intensity" value="{{world.moodIntensity}}" min="0" max="10">
+    </div>
+  </div>
+
+  <hr>
+
+  <h3>Regions</h3>
+  <ul class="eq-list">
+    {{#each regions as |r id|}}
+      <li>
+        <span>{{r.label}}</span>
+        <input type="number" class="eq-dir-region-danger" data-id="{{id}}" value="{{r.danger}}" min="0" max="10">
+      </li>
+    {{/each}}
+  </ul>
+
+  <h3>Factions</h3>
+  <ul class="eq-list">
+    {{#each factions as |f id|}}
+      <li>
+        <span>{{f.label}}</span>
+        <input type="number" class="eq-dir-faction-tension" data-id="{{id}}" value="{{f.tension}}" min="0" max="10">
+        <input type="number" class="eq-dir-faction-activity" data-id="{{id}}" value="{{f.activity}}" min="0" max="10">
+      </li>
+    {{/each}}
+  </ul>
+
+  <button class="eq-dir-trigger-beat">Trigger Beat</button>
+</section>

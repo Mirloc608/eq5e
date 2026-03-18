@@ -1,0 +1,14 @@
+# Exclude development and CI files from git-archive exports
+node_modules/ export-ignore
+.vscode/ export-ignore
+.github/ export-ignore
+tools/ export-ignore
+scripts/ export-ignore
+tests/ export-ignore
+*.log export-ignore
+*.ps1 export-ignore
+*.sh export-ignore
+package-lock.json export-ignore
+.env export-ignore
+.DS_Store export-ignore
+.idea/ export-ignore

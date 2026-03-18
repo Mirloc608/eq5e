@@ -1,0 +1,30 @@
+<section class="eq-actor-race">
+  <header>
+    <h3>Race</h3>
+  </header>
+
+  <div class="race-summary">
+    <div><b>Race:</b> {{system.race.label}}</div>
+    <div><b>Bonuses:</b>
+      {{#each system.race.bonuses as |val key|}}
+        <span>{{key}} +{{val}}</span>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="race-features">
+    <h4>Racial Features</h4>
+    {{#each actor.items as |item|}}
+      {{#if (eq item.type "raceFeature")}}
+        <div class="race-feature-row">
+          <span>{{item.name}}</span>
+          <button type="button"
+                  class="eq-roll-race-feature"
+                  data-feature-id="{{item.id}}">
+            Use
+          </button>
+        </div>
+      {{/if}}
+    {{/each}}
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<section class="class-section necromancer-necromancy">
+  <h3>Necromancy</h3>
+
+  <div class="class-grid">
+    {{#each system.class.necromancy as |spell key|}}
+    <div class="class-entry" data-necro="{{key}}">
+      <div class="entry-header">
+        <span class="entry-name">{{spell.label}}</span>
+      </div>
+
+      <div class="entry-body">
+        <textarea name="system.class.necromancy.{{key}}.description"
+                  rows="3">{{spell.description}}</textarea>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</section>

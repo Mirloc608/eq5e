@@ -1,0 +1,266 @@
+/* ------------------------------------------------------------
+   EQ‑UI Component Library — Luclin Era
+   Reusable components for all panels and UI elements
+   ------------------------------------------------------------ */
+
+/* ---------- Root Variables (inherits from eq-ui.css) ---------- */
+:root {
+  --eq-gap-xs: 0.25rem;
+  --eq-gap-sm: 0.5rem;
+  --eq-gap-md: 0.75rem;
+  --eq-gap-lg: 1rem;
+
+  --eq-font-sm: 0.85rem;
+  --eq-font-md: 1rem;
+  --eq-font-lg: 1.2rem;
+
+  --eq-card-bg: var(--eq-panel-alt);
+  --eq-card-border: var(--eq-border);
+  --eq-card-radius: var(--eq-radius);
+
+  --eq-hover: rgba(255,255,255,0.08);
+}
+
+/* ------------------------------------------------------------
+   1. Layout Components
+   ------------------------------------------------------------ */
+
+/* ---------- Flex Row ---------- */
+.eq-row {
+  display: flex;
+  align-items: center;
+  gap: var(--eq-gap-sm);
+}
+
+/* ---------- Flex Column ---------- */
+.eq-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--eq-gap-sm);
+}
+
+/* ---------- Grid (auto-fit) ---------- */
+.eq-grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--eq-gap-sm);
+}
+
+/* ---------- Section Divider ---------- */
+.eq-section {
+  margin-bottom: var(--eq-gap-lg);
+}
+
+.eq-section > h3 {
+  margin-bottom: var(--eq-gap-sm);
+  color: var(--eq-accent);
+  text-shadow: 0 0 6px var(--eq-accent-glow);
+}
+
+/* ------------------------------------------------------------
+   2. Card Components
+   ------------------------------------------------------------ */
+
+.eq-card {
+  background: var(--eq-card-bg);
+  border: 1px solid var(--eq-card-border);
+  border-radius: var(--eq-card-radius);
+  padding: var(--eq-gap-md);
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.eq-card:hover {
+  background: var(--eq-hover);
+}
+
+/* ---------- Card Header ---------- */
+.eq-card-header {
+  font-weight: 600;
+  margin-bottom: var(--eq-gap-sm);
+  color: var(--eq-accent);
+}
+
+/* ---------- Card List ---------- */
+.eq-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.eq-card-list li {
+  padding: var(--eq-gap-xs) 0;
+  border-bottom: 1px solid var(--eq-border);
+}
+
+/* ------------------------------------------------------------
+   3. Form Components
+   ------------------------------------------------------------ */
+
+.eq-input,
+.eq-select,
+.eq-textarea {
+  background: var(--eq-bg-alt);
+  color: var(--eq-text);
+  border: 1px solid var(--eq-border-light);
+  border-radius: var(--eq-radius);
+  padding: 0.35rem;
+  width: 100%;
+  font-size: var(--eq-font-md);
+}
+
+.eq-textarea {
+  min-height: 70px;
+}
+
+/* ---------- Input Row ---------- */
+.eq-input-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--eq-gap-xs);
+}
+
+.eq-input-row label {
+  font-size: var(--eq-font-sm);
+  color: var(--eq-text-dim);
+}
+
+/* ------------------------------------------------------------
+   4. Button Components
+   ------------------------------------------------------------ */
+
+.eq-btn {
+  background: var(--eq-accent);
+  color: #000;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--eq-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+  text-align: center;
+}
+
+.eq-btn:hover {
+  background: var(--eq-accent-strong);
+}
+
+.eq-btn-danger {
+  background: var(--eq-danger);
+  color: #000;
+}
+
+.eq-btn-danger:hover {
+  background: #ff8a8a;
+}
+
+.eq-btn-secondary {
+  background: var(--eq-panel-alt);
+  color: var(--eq-text);
+  border: 1px solid var(--eq-border);
+}
+
+.eq-btn-secondary:hover {
+  background: var(--eq-hover);
+}
+
+/* ---------- Button Row ---------- */
+.eq-btn-row {
+  display: flex;
+  gap: var(--eq-gap-sm);
+}
+
+/* ------------------------------------------------------------
+   5. Tab Components
+   ------------------------------------------------------------ */
+
+.eq-tabs {
+  display: flex;
+  gap: var(--eq-gap-sm);
+  margin-bottom: var(--eq-gap-md);
+}
+
+.eq-tab {
+  padding: 0.4rem 0.7rem;
+  background: var(--eq-panel-alt);
+  border-radius: var(--eq-radius);
+  cursor: pointer;
+  user-select: none;
+}
+
+.eq-tab.active {
+  background: var(--eq-accent);
+  color: #000;
+}
+
+/* ------------------------------------------------------------
+   6. Table Components
+   ------------------------------------------------------------ */
+
+.eq-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.eq-table th,
+.eq-table td {
+  padding: var(--eq-gap-xs);
+  border-bottom: 1px solid var(--eq-border);
+}
+
+.eq-table th {
+  color: var(--eq-accent);
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------
+   7. Bar Components (Heatmap, Influence, Stats)
+   ------------------------------------------------------------ */
+
+.eq-bar {
+  height: 8px;
+  background: var(--eq-bg-alt);
+  border-radius: var(--eq-radius);
+  overflow: hidden;
+}
+
+.eq-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--eq-accent), var(--eq-accent-strong));
+  transition: width 0.3s ease;
+}
+
+/* ------------------------------------------------------------
+   8. Utility Classes
+   ------------------------------------------------------------ */
+
+.eq-muted {
+  color: var(--eq-text-dim);
+}
+
+.eq-bold {
+  font-weight: 600;
+}
+
+.eq-pad-sm {
+  padding: var(--eq-gap-sm);
+}
+
+.eq-pad-md {
+  padding: var(--eq-gap-md);
+}
+
+.eq-pad-lg {
+  padding: var(--eq-gap-lg);
+}
+
+.eq-mb-sm {
+  margin-bottom: var(--eq-gap-sm);
+}
+
+.eq-mb-md {
+  margin-bottom: var(--eq-gap-md);
+}
+
+.eq-mb-lg {
+  margin-bottom: var(--eq-gap-lg);
+}

@@ -1,0 +1,33 @@
+<section class="eq-inventory">
+  <header class="section-header">
+    <h3>Inventory</h3>
+  </header>
+
+  <div class="inventory-grid">
+    {{#each actor.items as |item|}}
+      {{#if (eq item.type "weapon")}}
+        <div class="inv-item weapon">
+          <img src="{{item.img}}" />
+          <div class="inv-name">{{item.name}}</div>
+          <button class="eq-roll-weapon-attack" data-item-id="{{item.id}}">Attack</button>
+        </div>
+      {{/if}}
+
+      {{#if (eq item.type "armor")}}
+        <div class="inv-item armor">
+          <img src="{{item.img}}" />
+          <div class="inv-name">{{item.name}}</div>
+          <button class="eq-show-ac" data-item-id="{{item.id}}">AC</button>
+        </div>
+      {{/if}}
+
+      {{#if (eq item.type "consumable")}}
+        <div class="inv-item consumable">
+          <img src="{{item.img}}" />
+          <div class="inv-name">{{item.name}}</div>
+          <button class="eq-use-consumable" data-item-id="{{item.id}}">Use</button>
+        </div>
+      {{/if}}
+    {{/each}}
+  </div>
+</section>

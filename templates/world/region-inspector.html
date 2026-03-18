@@ -1,0 +1,13 @@
+<section class="eq-region-inspector">
+  <header><h2>{{region.label}}</h2></header>
+
+  <div>Danger: {{region.danger}}</div>
+  <div>Population: {{region.population}}</div>
+  <div>Faction Influence:</div>
+
+  <ul>
+    {{#each region.influence as |val id|}}
+      <li>{{id}}: {{val}}</li>
+    {{/each}}
+  </ul>
+</section>

@@ -1,0 +1,205 @@
+eq5e/
+│   CHANGELOG.md
+│   package.json
+│   README.md
+│   system.json
+│   template.json
+│
+├───lang
+│       en.json
+│
+├───module
+│   │   eq5e-engine.js
+│   │   system-init.js
+│   │
+│   ├───actor
+│   │   │   eq-actor.js
+│   │   │
+│   │   └───sheets
+│   │           eq-actor-sheet-base.js
+│   │           eq-actor-sheet-mercenary.js
+│   │           eq-actor-sheet-npc.js
+│   │           eq-actor-sheet-pc.js
+│   │           eq-actor-sheet-pet.js
+│   │
+│   ├───ai
+│   │       eq-ai-director.js
+│   │
+│   ├───classes
+│   │       eq-class-feature-helper.js
+│   │       eq-class-metadata.js
+│   │       eq-class.bard.js
+│   │       eq-class.beastlord.js
+│   │       eq-class.berserker.js
+│   │       eq-class.cleric.js
+│   │       eq-class.druid.js
+│   │       eq-class.enchanter.js
+│   │       eq-class.magician.js
+│   │       eq-class.monk.js
+│   │       eq-class.necromancer.js
+│   │       eq-class.paladin.js
+│   │       eq-class.ranger.js
+│   │       eq-class.rogue.js
+│   │       eq-class.shadow-knight.js
+│   │       eq-class.shaman.js
+│   │       eq-class.warrior.js
+│   │       eq-class.wizard.js
+│   │
+│   ├───ecosystem
+│   │       eq-ecosystem-manager.js
+│   │       eq-ecosystem-resource.js
+│   │       eq-ecosystem-seasonal.js
+│   │       eq-ecosystem-spawn.js
+│   │
+│   ├───events
+│   │       eq-event-panel.js
+│   │
+│   ├───factions
+│   │
+│   ├───item
+│   │   │   eq-item-armor.js
+│   │   │   eq-item-discipline.js
+│   │   │   eq-item-recipe.js
+│   │   │   eq-item-spell.js
+│   │   │   eq-item-weapon.js
+│   │   │   eq-item.js
+│   │   │
+│   │   └───sheets
+│   │           eq-item-sheet-armor.js
+│   │           eq-item-sheet-base.js
+│   │           eq-item-sheet-discipline.js
+│   │           eq-item-sheet-recipe.js
+│   │           eq-item-sheet-spell.js
+│   │           eq-item-sheet-weapon.js
+│   │
+│   ├───races
+│   │       eq-race-barbarian.js
+│   │       eq-race-dark-elf.js
+│   │       eq-race-drakkin.js
+│   │       eq-race-dwarf.js
+│   │       eq-race-erudite.js
+│   │       eq-race-froglok.js
+│   │       eq-race-gnome.js
+│   │       eq-race-half-elf.js
+│   │       eq-race-halfling.js
+│   │       eq-race-high-elf.js
+│   │       eq-race-human.js
+│   │       eq-race-iksar.js
+│   │       eq-race-ogre.js
+│   │       eq-race-registry.js
+│   │       eq-race-troll.js
+│   │       eq-race-vah-shir.js
+│   │       eq-race-wood-elf.js
+│   │
+│   ├───rolls
+│   │       eq-rolls-discipline.js
+│   │       eq-rolls-skill.js
+│   │       eq-rolls-spell.js
+│   │       eq-rolls-weapon.js
+│   │       eq-rolls.js
+│   │
+│   ├───scripts
+│   │       class-features.js
+│   │       derived.js
+│   │       equipment.js
+│   │       item.js
+│   │
+│   └───world
+│           eq-world-hooks.js
+│           eq-world-panel.js
+│           eq-world-simulation.js
+│           eq-world-state.js
+│           eq-world-ticker.js
+│
+├───packs
+│       classes.db
+│       items.db
+│       npcs.db
+│       races.db
+│       spells.db
+│
+├───styles
+│       eq-actor.css
+│       eq-item.css
+│       eq-ui.css
+│
+└───templates
+    ├───actors
+    │       actor-sheet-base.html
+    │       actor-sheet-mercenary.html
+    │       actor-sheet-npc.html
+    │       actor-sheet-pc.html
+    │       actor-sheet-pet.html
+    │
+    ├───classes
+    │   ├───bard
+    │   │       chants.html
+    │   │       songs.html
+    │   │
+    │   ├───beastlord
+    │   │       claws.html
+    │   │       companions.html
+    │   │
+    │   ├───berserker
+    │   │       rages.html
+    │   │       throws.html
+    │   │
+    │   ├───cleric
+    │   │       blessings.html
+    │   │       prayers.html
+    │   │
+    │   ├───druid
+    │   │       circles.html
+    │   │       nature.html
+    │   │
+    │   ├───enchanter
+    │   │       charms.html
+    │   │       illusions.html
+    │   │
+    │   ├───magician
+    │   │       conjurations.html
+    │   │       elementals.html
+    │   │
+    │   ├───monk
+    │   │       stances.html
+    │   │       techniques.html
+    │   │
+    │   ├───necromancer
+    │   │       necromancy.html
+    │   │       shadows.html
+    │   │
+    │   ├───paladin
+    │   │       smite.html
+    │   │       virtues.html
+    │   │
+    │   ├───ranger
+    │   │       archery.html
+    │   │       tracking.html
+    │   │
+    │   ├───rogue
+    │   │       stealth.html
+    │   │       tricks.html
+    │   │
+    │   ├───shadow-knight
+    │   │       curses.html
+    │   │       darkness.html
+    │   │
+    │   ├───shaman
+    │   │       spirits.html
+    │   │       totems.html
+    │   │
+    │   ├───warrior
+    │   │       maneuvers.html
+    │   │       stances.html
+    │   │
+    │   └───wizard
+    │           focus.html
+    │           spellbook.html
+    │
+    └───items
+            item-sheet-armor.html
+            item-sheet-base.html
+            item-sheet-discipline.html
+            item-sheet-recipe.html
+            item-sheet-spell.html
+            item-sheet-weapon.html

@@ -1,0 +1,15 @@
+<section class="eq-director-timeline">
+  <header><h2>Director Timeline</h2></header>
+
+  <ul class="eq-timeline">
+    {{#each timeline as |b|}}
+      <li>
+        <strong>Beat {{b.beat}}</strong>
+        <span>Time: {{b.time}}s</span>
+        <span>Pacing: {{b.pacing}}</span>
+        <span>Mood: {{b.mood}}</span>
+        <span>Personality: {{b.personality}}</span>
+      </li>
+    {{/each}}
+  </ul>
+</section>

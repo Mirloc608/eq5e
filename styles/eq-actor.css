@@ -1,0 +1,85 @@
+.eq-actor-sheet {
+  font-family: var(--font-primary);
+  padding: 0;
+}
+
+.sheet-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--color-border-dark);
+}
+
+.profile-img {
+  width: 96px;
+  height: 96px;
+  border: 2px solid var(--color-border-dark);
+  border-radius: 6px;
+}
+
+.header-fields {
+  flex: 1;
+}
+
+.summary-fields {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.summary-fields .field {
+  display: flex;
+  flex-direction: column;
+}
+
+.sheet-tabs {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--color-border-dark);
+}
+
+.sheet-tabs .item {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.sheet-body {
+  padding: 1rem;
+}
+
+.eq-class-tabs,
+.eq-race-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.eq-class-tab,
+.eq-race-tab {
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  border: 1px solid var(--color-border-dark);
+  background: var(--color-bg-light);
+}
+
+.eq-class-tab.active,
+.eq-race-tab.active {
+  background: var(--color-accent);
+  color: white;
+}
+
+.race-feature-row,
+.class-feature-row,
+.skill-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}

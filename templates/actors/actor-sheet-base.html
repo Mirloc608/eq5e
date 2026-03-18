@@ -1,0 +1,53 @@
+<form class="eq-actor-sheet" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+
+    <div class="header-fields">
+      <h1 class="char-name">
+        <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
+      </h1>
+
+      <div class="summary-fields">
+        <div class="field">
+          <label>Level</label>
+          <input type="number" name="system.level" value="{{system.level}}"/>
+        </div>
+
+        <div class="field">
+          <label>Class</label>
+          <input type="text" name="system.class.label" value="{{system.class.label}}" disabled/>
+        </div>
+
+        <div class="field">
+          <label>Race</label>
+          <input type="text" name="system.race.label" value="{{system.race.label}}" disabled/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs" data-group="primary">
+    <a class="item" data-tab="summary">Summary</a>
+    <a class="item" data-tab="attributes">Attributes</a>
+    <a class="item" data-tab="inventory">Inventory</a>
+    <a class="item" data-tab="features">Features</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div class="tab summary" data-group="primary" data-tab="summary">
+      {{> "systems/eq5e/templates/actors/parts/actor-summary.html"}}
+    </div>
+
+    <div class="tab attributes" data-group="primary" data-tab="attributes">
+      {{> "systems/eq5e/templates/actors/parts/actor-attributes.html"}}
+    </div>
+
+    <div class="tab inventory" data-group="primary" data-tab="inventory">
+      {{> "systems/eq5e/templates/actors/parts/actor-inventory.html"}}
+    </div>
+
+    <div class="tab features" data-group="primary" data-tab="features">
+      {{> "systems/eq5e/templates/actors/parts/actor-features.html"}}
+    </div>
+  </section>
+</form>

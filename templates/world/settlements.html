@@ -1,0 +1,12 @@
+<section class="eq-settlements">
+  <header><h2>Settlements</h2></header>
+
+  {{#each settlements as |s id|}}
+    <div class="eq-settlement">
+      <h3>{{s.label}}</h3>
+      <div>Population: {{s.population}}</div>
+      <div>Economy: {{s.economy}}</div>
+      <div>Morale: {{s.morale}}</div>
+    </div>
+  {{/each}}
+</section>

@@ -1,0 +1,32 @@
+/* EQ‑UI Icon Pack — Luclin Era */
+
+.eq-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  background: radial-gradient(circle at 30% 20%, #ffffff55, #0000),
+              linear-gradient(135deg, var(--eq-panel-alt), var(--eq-bg));
+  border: 1px solid var(--eq-border-light);
+  box-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+
+.eq-icon-director::before { content: "✦"; }
+.eq-icon-world::before    { content: "◎"; }
+.eq-icon-region::before   { content: "⬢"; }
+.eq-icon-faction::before  { content: "⚔"; }
+.eq-icon-settlement::before { content: "🏰"; }
+.eq-icon-time::before     { content: "⏳"; }
+.eq-icon-timeline::before { content: "☵"; }
+.eq-icon-threat::before   { content: "⚠"; }
+.eq-icon-danger::before   { content: "✹"; }
+.eq-icon-mood::before     { content: "☽"; }
+.eq-icon-arc::before      { content: "✧"; }
+.eq-icon-event::before    { content: "✱"; }
+.eq-icon-play::before     { content: "▶"; }
+.eq-icon-pause::before    { content: "⏸"; }
+.eq-icon-eye::before      { content: "👁"; }
+.eq-icon-map::before      { content: "🗺"; }

@@ -1,0 +1,45 @@
+<section class="eq-panel eq-ecosystem-inspector">
+  <header class="eq-panel-header">
+    <h2>{{region.label}} — Ecosystem</h2>
+  </header>
+
+  <div class="eq-panel-body">
+    <div class="eq-card">
+      <div class="eq-row">
+        <strong>Season:</strong>
+        <span>{{season}}</span>
+      </div>
+      <div class="eq-row">
+        <strong>Spawn Modifier:</strong>
+        <span>{{spawnModifier}}</span>
+      </div>
+    </div>
+
+    <h3>Resources</h3>
+    <div class="eq-card">
+      <div class="eq-row">
+        <span>Forage</span>
+        <div class="eq-bar">
+          <div class="eq-bar-fill" style="width: {{eco.forage}}%;"></div>
+        </div>
+        <span>{{eco.forage}}</span>
+      </div>
+
+      <div class="eq-row">
+        <span>Game</span>
+        <div class="eq-bar">
+          <div class="eq-bar-fill" style="width: {{eco.game}}%;"></div>
+        </div>
+        <span>{{eco.game}}</span>
+      </div>
+
+      <div class="eq-row">
+        <span>Water</span>
+        <div class="eq-bar">
+          <div class="eq-bar-fill" style="width: {{eco.water}}%;"></div>
+        </div>
+        <span>{{eco.water}}</span>
+      </div>
+    </div>
+  </div>
+</section>

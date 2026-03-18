@@ -1,0 +1,26 @@
+<form class="eq-actor-sheet pet" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img"/>
+
+    <div class="header-fields">
+      <h1 class="char-name">
+        <input name="name" type="text" value="{{actor.name}}"/>
+      </h1>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs" data-group="primary">
+    <a class="item" data-tab="summary">Summary</a>
+    <a class="item" data-tab="attributes">Attributes</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div class="tab summary" data-group="primary" data-tab="summary">
+      {{> "systems/eq5e/templates/actors/parts/actor-summary.html"}}
+    </div>
+
+    <div class="tab attributes" data-group="primary" data-tab="attributes">
+      {{> "systems/eq5e/templates/actors/parts/actor-attributes.html"}}
+    </div>
+  </section>
+</form>

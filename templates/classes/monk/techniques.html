@@ -1,0 +1,18 @@
+<section class="class-section monk-techniques">
+  <h3>Techniques</h3>
+
+  <div class="class-grid">
+    {{#each system.class.techniques as |tech key|}}
+    <div class="class-entry" data-tech="{{key}}">
+      <div class="entry-header">
+        <span class="entry-name">{{tech.label}}</span>
+      </div>
+
+      <div class="entry-body">
+        <textarea name="system.class.techniques.{{key}}.description"
+                  rows="3">{{tech.description}}</textarea>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</section>

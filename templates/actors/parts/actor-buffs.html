@@ -1,0 +1,16 @@
+<section class="eq-buffs">
+  <header class="section-header">
+    <h3>Buffs & Debuffs</h3>
+  </header>
+
+  <div class="buff-grid">
+    {{#each system.buffs as |buff id|}}
+      <div class="buff-item">
+        <img src="{{buff.img}}" />
+        <div class="buff-name">{{buff.label}}</div>
+        <div class="buff-timer">Duration: {{buff.remaining}}</div>
+        <button class="eq-remove-buff" data-buff-id="{{id}}">Remove</button>
+      </div>
+    {{/each}}
+  </div>
+</section>

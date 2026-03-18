@@ -1,0 +1,21 @@
+<section class="eq-spellbook">
+  <header class="section-header">
+    <h3>Spellbook</h3>
+  </header>
+
+  <div class="spell-grid">
+    {{#each actor.items as |item|}}
+      {{#if (eq item.type "spell")}}
+        <div class="spell-item">
+          <img src="{{item.img}}" class="spell-gem" />
+          <div class="spell-name">{{item.name}}</div>
+          <div class="spell-meta">
+            <span>Mana: {{item.system.manaCost}}</span>
+            <span>Resist: {{item.system.resistType}}</span>
+          </div>
+          <button class="eq-roll-spell" data-item-id="{{item.id}}">Cast</button>
+        </div>
+      {{/if}}
+    {{/each}}
+  </div>
+</section>

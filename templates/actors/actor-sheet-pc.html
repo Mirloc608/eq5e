@@ -1,0 +1,98 @@
+<form class="eq-actor-sheet pc" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img"/>
+
+    <div class="header-fields">
+      <h1 class="char-name">
+        <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
+      </h1>
+
+      <div class="summary-fields">
+        <div class="field">
+          <label>Level</label>
+          <input type="number" name="system.level" value="{{system.level}}"/>
+        </div>
+
+        <div class="field">
+          <label>Class</label>
+          <input type="text" name="system.class.label" value="{{system.class.label}}" disabled/>
+        </div>
+
+        <div class="field">
+          <label>Race</label>
+          <select name="system.race.id" class="eq-race-select">
+            <option value="">— None —</option>
+            {{#each eqRaceOptions as |race id|}}
+              <option value="{{id}}" {{#if (eq ../system.race.id id)}}selected{{/if}}>
+                {{race.label}}
+              </option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs" data-group="primary">
+    <a class="item" data-tab="summary">Summary</a>
+    <a class="item" data-tab="attributes">Attributes</a>
+    <a class="item" data-tab="class">Class</a>
+    <a class="item" data-tab="race">Race</a>
+    <a class="item" data-tab="inventory">Inventory</a>
+    <a class="item" data-tab="features">Features</a>
+  </nav>
+
+  <section class="sheet-body">
+
+    <!-- SUMMARY -->
+    <div class="tab summary" data-group="primary" data-tab="summary">
+      {{> "systems/eq5e/templates/actors/parts/actor-summary.html"}}
+    </div>
+
+    <!-- ATTRIBUTES -->
+    <div class="tab attributes" data-group="primary" data-tab="attributes">
+      {{> "systems/eq5e/templates/actors/parts/actor-attributes.html"}}
+    </div>
+
+    <!-- CLASS -->
+    <div class="tab class" data-group="primary" data-tab="class">
+      {{#if eqClass}}
+        <nav class="eq-class-tabs">
+          {{#each eqClass.tabs as |tab|}}
+            <button type="button"
+                    class="eq-class-tab {{#if (eq ../activeClassTab tab.id)}}active{{/if}}"
+                    data-tab="{{tab.id}}">
+              {{tab.label}}
+            </button>
+          {{/each}}
+        </nav>
+
+        <section class="eq-class-content">
+          {{#each eqClass.partials as |partial idx|}}
+            {{#if (eq ../activeClassTab (lookup ../eqClass.tabs idx "id"))}}
+              {{> (lookup partial "path") }}
+            {{/if}}
+          {{/each}}
+        </section>
+      {{else}}
+        <p>No class selected.</p>
+      {{/if}}
+    </div>
+
+    <!-- RACE -->
+    <div class="tab race" data-group="primary" data-tab="race">
+      {{> "systems/eq5e/templates/actors/parts/actor-race.html"}}
+    </div>
+
+    <!-- INVENTORY -->
+    <div class="tab inventory" data-group="primary" data-tab="inventory">
+      {{> "systems/eq5e/templates/actors/parts/actor-inventory.html"}}
+    </div>
+
+    <!-- FEATURES -->
+    <div class="tab features" data-group="primary" data-tab="features">
+      {{> "systems/eq5e/templates/actors/parts/actor-features.html"}}
+    </div>
+
+  </section>
+</form>

@@ -1,0 +1,17 @@
+<section class="eq-region-influence">
+  <header><h2>Region Influence</h2></header>
+
+  {{#each regions as |r id|}}
+    <div class="eq-region-block">
+      <h3>{{r.label}}</h3>
+
+      {{#each r.factions as |f|}}
+        <div class="eq-inf-row">
+          <span class="eq-label">{{f.label}}</span>
+          <div class="eq-bar"><div class="eq-fill" style="width: {{f.percent}}%;"></div></div>
+          <span class="eq-value">{{f.percent}}%</span>
+        </div>
+      {{/each}}
+    </div>
+  {{/each}}
+</section>

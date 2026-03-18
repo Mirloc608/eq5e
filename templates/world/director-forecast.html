@@ -1,0 +1,19 @@
+<section class="eq-director-forecast">
+  <header><h2>Threat Forecast</h2></header>
+
+  <h3>Global Pacing: {{pacing}}</h3>
+
+  <h3>Regions</h3>
+  <ul class="eq-list">
+    {{#each regionForecast as |r|}}
+      <li><strong>{{r.label}}</strong> — Danger: {{r.danger}} | Risk: {{r.risk}}</li>
+    {{/each}}
+  </ul>
+
+  <h3>Factions</h3>
+  <ul class="eq-list">
+    {{#each factionForecast as |f|}}
+      <li><strong>{{f.label}}</strong> — Tension: {{f.tension}} | Activity: {{f.activity}} | Risk: {{f.risk}}</li>
+    {{/each}}
+  </ul>
+</section>

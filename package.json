@@ -1,0 +1,16 @@
+{
+  "name": "eq5e",
+  "version": "0.1.1",
+  "description": "EverQuest 5e — A complete rules engine and world simulation system.",
+  "private": true,
+  "scripts": {
+    "build": "node ./tools/eq-build.js || echo \"no build step\"",
+    "lint": "echo \"no lint configured\"",
+    "changelog": "node ./scripts/release-notes.js",
+    "bump": "standard-version",
+    "release:local": "npm run changelog && git add CHANGELOG.md && git commit -m \"chore(release): update changelog\" || true"
+  },
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  }
+}

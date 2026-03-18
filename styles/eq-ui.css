@@ -1,0 +1,236 @@
+/* EQ‑UI Base Theme (Luclin Era)
+   Patched to integrate with component library + HUD + icons */
+
+@import "eq-ui-components.css";
+@import "eq-ui-icons.css";
+@import "eq-ui-animations.css";
+@import "eq-ui-hud.css";
+
+/* ---------- Root Variables ---------- */
+:root {
+  --eq-bg: #1a1f2b;
+  --eq-bg-alt: #222836;
+  --eq-panel: #2a3142;
+  --eq-panel-alt: #323a4e;
+
+  --eq-border: #5f6b85;
+  --eq-border-light: #8a96b8;
+
+  --eq-text: #d7dff7;
+  --eq-text-dim: #9aa3c0;
+
+  --eq-accent: #7fb7ff;
+  --eq-accent-strong: #a7d0ff;
+  --eq-accent-glow: rgba(127, 183, 255, 0.35);
+
+  --eq-danger: #ff6b6b;
+  --eq-warning: #ffd36b;
+  --eq-success: #7bffb0;
+
+  --eq-radius: 6px;
+  --eq-pad: 0.5rem;
+}
+
+/* ---------- Global Panel Styling ---------- */
+.eq-director-panel,
+.eq-director-timeline,
+.eq-director-heatmap,
+.eq-director-forecast,
+.eq-region-influence,
+.eq-settlements,
+.eq-story-arcs,
+.eq-world-dashboard,
+.eq-region-inspector {
+  background: var(--eq-panel);
+  color: var(--eq-text);
+  padding: 1rem;
+  border: 1px solid var(--eq-border);
+  border-radius: var(--eq-radius);
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ---------- Headers ---------- */
+.eq-director-panel h2,
+.eq-director-timeline h2,
+.eq-director-heatmap h2,
+.eq-director-forecast h2,
+.eq-region-influence h2,
+.eq-settlements h2,
+.eq-story-arcs h2,
+.eq-world-dashboard h2,
+.eq-region-inspector h2 {
+  color: var(--eq-accent);
+  text-shadow: 0 0 6px var(--eq-accent-glow);
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Grid Layouts ---------- */
+.eq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--eq-pad);
+}
+
+/* ---------- Lists ---------- */
+.eq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.eq-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--eq-border);
+}
+
+/* ---------- Bars (Heatmap, Influence) ---------- */
+.eq-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--eq-bg-alt);
+  border-radius: var(--eq-radius);
+  overflow: hidden;
+  margin: 0 0.5rem;
+}
+
+.eq-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--eq-accent), var(--eq-accent-strong));
+  transition: width 0.3s ease;
+}
+
+/* ---------- Timeline ---------- */
+.eq-timeline li {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--eq-border);
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- Region Influence ---------- */
+.eq-region-block {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: var(--eq-panel-alt);
+  border-radius: var(--eq-radius);
+}
+
+/* ---------- Settlements ---------- */
+.eq-settlement {
+  padding: 0.5rem;
+  background: var(--eq-panel-alt);
+  border-radius: var(--eq-radius);
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Story Arcs ---------- */
+.eq-arc {
+  background: var(--eq-panel-alt);
+  padding: 0.75rem;
+  border-radius: var(--eq-radius);
+  margin-bottom: 1rem;
+}
+
+.eq-phase-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.eq-phase-table th,
+.eq-phase-table td {
+  border-bottom: 1px solid var(--eq-border);
+  padding: 0.25rem;
+}
+
+/* ---------- Buttons ---------- */
+button,
+.eq-gm-quickbar button {
+  background: var(--eq-accent);
+  color: #000;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--eq-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+button:hover,
+.eq-gm-quickbar button:hover {
+  background: var(--eq-accent-strong);
+}
+
+/* ---------- Inputs ---------- */
+input[type="number"],
+input[type="text"],
+textarea,
+select {
+  background: var(--eq-bg-alt);
+  color: var(--eq-text);
+  border: 1px solid var(--eq-border-light);
+  border-radius: var(--eq-radius);
+  padding: 0.25rem;
+  width: 100%;
+}
+
+textarea {
+  min-height: 60px;
+}
+
+/* ---------- Tabs (Dashboard) ---------- */
+.eq-world-dashboard .tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.eq-world-dashboard .tabs .item {
+  padding: 0.4rem 0.7rem;
+  background: var(--eq-panel-alt);
+  border-radius: var(--eq-radius);
+  cursor: pointer;
+}
+
+.eq-world-dashboard .tabs .item.active {
+  background: var(--eq-accent);
+  color: #000;
+}
+
+/* ---------- GM Quick‑Action Bar ---------- */
+.eq-gm-quickbar {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background: var(--eq-panel);
+  padding: 0.5rem;
+  border-radius: var(--eq-radius);
+  border: 1px solid var(--eq-border);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 9999;
+}
+
+.eq-gm-quickbar button {
+  margin-bottom: 0.25rem;
+}
+
+/* ---------- Region Inspector ---------- */
+.eq-region-inspector {
+  background: var(--eq-panel);
+  padding: 1rem;
+  border-radius: var(--eq-radius);
+}
+
+.eq-region-inspector ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.eq-region-inspector li {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--eq-border);
+}

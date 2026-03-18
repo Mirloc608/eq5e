@@ -1,0 +1,21 @@
+<section class="eq-disciplines">
+  <header class="section-header">
+    <h3>Disciplines</h3>
+  </header>
+
+  <div class="discipline-grid">
+    {{#each actor.items as |item|}}
+      {{#if (eq item.type "discipline")}}
+        <div class="discipline-item">
+          <img src="{{item.img}}" />
+          <div class="discipline-name">{{item.name}}</div>
+          <div class="discipline-meta">
+            <span>Endurance: {{item.system.enduranceCost}}</span>
+            <span>Cooldown: {{item.system.cooldown}}</span>
+          </div>
+          <button class="eq-roll-discipline" data-item-id="{{item.id}}">Use</button>
+        </div>
+      {{/if}}
+    {{/each}}
+  </div>
+</section>

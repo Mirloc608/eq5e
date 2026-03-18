@@ -1,0 +1,51 @@
+<section class="eq-story-arcs">
+  <header>
+    <h2>Story Arcs</h2>
+    <button class="eq-arc-create">New Arc</button>
+    <div class="eq-time">World Time: {{currentTime}}s</div>
+  </header>
+
+  {{#each arcs as |arc id|}}
+    <div class="eq-arc">
+      <h3>
+        <input type="text" class="eq-arc-label" data-id="{{id}}" value="{{arc.label}}">
+      </h3>
+
+      <textarea class="eq-arc-description" data-id="{{id}}">{{arc.description}}</textarea>
+
+      <div class="eq-arc-meta">
+        <span>Active: {{arc.active}}</span>
+        <span>Start: {{arc.startTime}}</span>
+        <button class="eq-arc-activate" data-id="{{id}}">Activate</button>
+      </div>
+
+      <h4>Phases</h4>
+      <button class="eq-arc-add-phase" data-id="{{id}}">Add Phase</button>
+
+      <table class="eq-phase-table">
+        <thead>
+          <tr>
+            <th>Label</th>
+            <th>Offset (sec)</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each arc.phases as |p|}}
+            <tr>
+              <td>
+                <input type="text" class="eq-phase-label" data-arc-id="{{arc.id}}" data-phase-id="{{p.id}}" value="{{p.label}}">
+              </td>
+              <td>
+                <input type="number" class="eq-phase-offset" data-arc-id="{{arc.id}}" data-phase-id="{{p.id}}" value="{{p.offset}}">
+              </td>
+              <td>
+                <input type="text" class="eq-phase-type" data-arc-id="{{arc.id}}" data-phase-id="{{p.id}}" value="{{p.type}}">
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  {{/each}}
+</section>
