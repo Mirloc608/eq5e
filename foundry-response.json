@@ -1,3 +1,0 @@
-﻿# Make sure you have only the response body on the clipboard (do not copy any commands)
-Set-Content -Path .\foundry-response.json -Value (Get-Clipboard -Raw) -Encoding utf8
-
