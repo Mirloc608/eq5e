@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "Item": {
     "types": [
@@ -65,3 +66,72 @@
     }
   }
 }
+=======
+{
+  "Item": {
+    "types": [
+      "weapon",
+      "armor",
+      "spell",
+      "discipline",
+      "recipe",
+      "raceFeature"
+    ],
+    "templates": {
+      "base": {
+        "description": "",
+        "source": ""
+      },
+      "raceFeature": {
+        "description": "",
+        "passive": false,
+        "uses": {
+          "value": 0,
+          "max": 0
+        }
+      },
+      "spell": {
+        "cooldown": {
+          "duration": 0,
+          "remaining": 0
+        }
+      },
+      "discipline": {
+        "cooldown": {
+          "duration": 0,
+          "remaining": 0
+        }
+      }
+    }
+  },
+  "Actor": {
+    "templates": {
+      "base": {
+        "level": 1,
+        "class": {
+          "id": "",
+          "label": "",
+          "activeTab": ""
+        },
+        "race": {
+          "id": "",
+          "label": "",
+          "bonuses": {}
+        },
+        "abilities": {},
+        "resources": {
+          "hp": {
+            "value": 10,
+            "max": 10
+          },
+          "mana": {
+            "value": 0,
+            "max": 0
+          }
+        },
+        "buffs": {}
+      }
+    }
+  }
+}
+>>>>>>> 13df1f6d81300f571c31fd1021871bba10b5c1f9
