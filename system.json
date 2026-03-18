@@ -17,7 +17,7 @@
   ],
 
   "manifest": "https://raw.githubusercontent.com/Mirloc608/eq5e/main/system.json",
-  "download": "https://github.com/Mirloc608/eq5e/releases/download/v0.1.1/eq5e.zip",
+  "download": "https://github.com/Mirloc608/eq5e/releases/download/v0.1.3/eq5e.zip",
   "license": "LICENSE.txt",
 
   "esmodules": [
