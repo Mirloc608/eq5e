@@ -1,93 +1,61 @@
 ﻿{
-    "id":  "eq5e",
-    "title":  "EQ5e",
-    "description":  "EverQuest 5e â€” A complete rules engine and world simulation system.",
-    "version":  "0.1.4",
-    "compatibility":  {
-                          "minimum":  "12.0.0",
-                          "verified":  "13.0.0"
-                      },
-    "authors":  [
-                    {
-                        "name":  "Mirloc",
-                        "url":  "https://github.com/Mirloc608/eq5e"
-                    }
-                ],
-    "manifest":  "https://raw.githubusercontent.com/Mirloc608/eq5e/main/system.json",
-    "download":  "https://github.com/Mirloc608/eq5e/releases/download/v0.1.3/eq5e.zip",
-    "license":  "LICENSE.txt",
-    "esmodules":  [
-                      "module/system-init.js",
-                      "module/world/eq-world-state.js",
-                      "module/world/eq-world-ticker.js",
-                      "module/world/eq-director-engine.js",
-                      "module/regions/eq-region-engine.js",
-                      "module/spawn/eq-spawn-engine.js",
-                      "module/factions/eq-faction-engine.js",
-                      "module/ecosystem/eq-ecosystem-manager.js",
-                      "module/ecosystem/eq-ecosystem-resource.js",
-                      "module/ecosystem/eq-ecosystem-seasonal.js",
-                      "module/ecosystem/eq-ecosystem-spawn.js",
-                      "module/ecosystem/eq-ecosystem-faction.js",
-                      "module/world/ui/eq-director-overlay.js",
-                      "module/world/ui/eq-gm-quickbar.js",
-                      "module/world/ui/eq-region-inspector.js",
-                      "module/world/ui/eq-ecosystem-inspector.js",
-                      "module/world/ui/eq-settlement-panel.js",
-                      "module/world/ui/eq-story-arc-editor.js",
-                      "module/world/ui/eq-world-dashboard.js"
-                  ],
-    "styles":  [
-                   "styles/eq-theme.css",
-                   "styles/eq-ui.css",
-                   "styles/eq-ui-components.css",
-                   "styles/eq-ui-icons.css",
-                   "styles/eq-ui-animations.css",
-                   "styles/eq-ui-hud.css"
-               ],
-    "packs":  [
-                  {
-                      "name":  "classes",
-                      "label":  "Classes",
-                      "path":  "packs/classes.db",
-                      "type":  "Item"
-                  },
-                  {
-                      "name":  "races",
-                      "label":  "Races",
-                      "path":  "packs/races.db",
-                      "type":  "Item"
-                  },
-                  {
-                      "name":  "items",
-                      "label":  "Items",
-                      "path":  "packs/items.db",
-                      "type":  "Item"
-                  },
-                  {
-                      "name":  "spells",
-                      "label":  "Spells",
-                      "path":  "packs/spells.db",
-                      "type":  "Item"
-                  },
-                  {
-                      "name":  "npcs",
-                      "label":  "NPCs",
-                      "path":  "packs/npcs.db",
-                      "type":  "Actor"
-                  }
-              ],
-    "languages":  [
-                      {
-                          "lang":  "en",
-                          "name":  "English",
-                          "path":  "lang/en.json"
-                      }
-                  ],
-    "grid":  {
-                 "distance":  5,
-                 "units":  "ft"
-             },
-    "primaryTokenAttribute":  "resources.hp",
-    "secondaryTokenAttribute":  "resources.mana"
+  "id": "eq5e",
+  "title": "EQ5e",
+  "description": "EverQuest 5e — A complete rules engine and world simulation system.",
+  "version": "0.1.5",
+  "compatibility": {
+    "minimum": "12.0.0",
+    "verified": "13.0.0"
+  },
+  "authors": [
+    {
+      "name": "Mirloc",
+      "url": "https://github.com/Mirloc608/eq5e"
+    }
+  ],
+  "manifest": "https://raw.githubusercontent.com/Mirloc608/eq5e/main/system.json",
+  "download": "https://github.com/Mirloc608/eq5e/releases/download/v0.1.5/eq5e.zip",
+  "license": "LICENSE.txt",
+  "esmodules": [
+    "module/system-init.js",
+    "module/world/eq-world-state.js",
+    "module/world/eq-world-ticker.js",
+    "module/world/eq-director-engine.js",
+    "module/regions/eq-region-engine.js",
+    "module/spawn/eq-spawn-engine.js",
+    "module/factions/eq-faction-engine.js",
+    "module/ecosystem/eq-ecosystem-manager.js",
+    "module/ecosystem/eq-ecosystem-resource.js",
+    "module/ecosystem/eq-ecosystem-seasonal.js",
+    "module/ecosystem/eq-ecosystem-spawn.js",
+    "module/ecosystem/eq-ecosystem-faction.js",
+    "module/world/ui/eq-director-overlay.js",
+    "module/world/ui/eq-gm-quickbar.js",
+    "module/world/ui/eq-region-inspector.js",
+    "module/world/ui/eq-ecosystem-inspector.js",
+    "module/world/ui/eq-settlement-panel.js",
+    "module/world/ui/eq-story-arc-editor.js",
+    "module/world/ui/eq-world-dashboard.js"
+  ],
+  "styles": [
+    "styles/eq-theme.css",
+    "styles/eq-ui.css",
+    "styles/eq-ui-components.css",
+    "styles/eq-ui-icons.css",
+    "styles/eq-ui-animations.css",
+    "styles/eq-ui-hud.css"
+  ],
+  "packs": [
+    { "name": "classes", "label": "Classes", "path": "packs/classes.db", "type": "Item" },
+    { "name": "races", "label": "Races", "path": "packs/races.db", "type": "Item" },
+    { "name": "items", "label": "Items", "path": "packs/items.db", "type": "Item" },
+    { "name": "spells", "label": "Spells", "path": "packs/spells.db", "type": "Item" },
+    { "name": "npcs", "label": "NPCs", "path": "packs/npcs.db", "type": "Actor" }
+  ],
+  "languages": [
+    { "lang": "en", "name": "English", "path": "lang/en.json" }
+  ],
+  "grid": { "distance": 5, "units": "ft" },
+  "primaryTokenAttribute": "resources.hp",
+  "secondaryTokenAttribute": "resources.mana"
 }
