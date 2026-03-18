@@ -68,8 +68,11 @@
   ],
 
   "grid": {
-	"distance": 5,
-    "units": "ft",
+    "distance": 5,
+    "units": "ft"
+  },
+
   "primaryTokenAttribute": "resources.hp",
   "secondaryTokenAttribute": "resources.mana"
+
 }
